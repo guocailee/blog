@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Inbox/Reactor 参考指南/"}
+{"dg-publish":true,"permalink":"/Inbox/Reactor 参考指南/","dgPassFrontmatter":true}
 ---
 
 [](#about-doc)1\. 关于文档
