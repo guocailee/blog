@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/algorithm/deep-learning/deep-learning/"}
+{"dg-publish":true,"permalink":"/Program/Algorithm/DeepLearning/Deep Learning/"}
 ---
 
 - [[Program/Algorithm/DeepLearning/Deep Learning\|Deep Learning]]
