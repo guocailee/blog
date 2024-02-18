@@ -4,7 +4,7 @@
 
 -  [[Program/OS/OS\|OS]]
 - [[Program/Algorithm/Algorithm\|Algorithm]]
-- [[Program/Java/Java\|Java]]
+- [[Java\|Java]]
 -  [[Program/Network/Network\|Network]]
 - [[Program/Database/DataBase\|DataBase]]
 - [[Program/K8S/K8S\|K8S]]
