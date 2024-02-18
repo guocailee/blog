@@ -2,39 +2,9 @@
 {"dg-publish":true,"permalink":"/Inbox/QUIC 是如何解决TCP 性能瓶颈的？/"}
 ---
 
-# QUIC 是如何解决TCP 性能瓶颈的？
-↓推荐关注↓  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dRLouxvzUpDricgUwMibIIanDnUa5wj5BnuqIj08e5rUBE2Rkic1D9iaVug/640?wx_fmt=png)
   
-
-**文章目录**
-
-一、QUIC 如何解决TCP的队头阻塞问题？
-
-*   1.1 TCP 为何会有队头阻塞问题
-    
-*   1.2 QUIC 如何解决队头阻塞问题
-    
-*   1.3 QUIC 没有队头阻塞的多路复用
-    
-
-二、QUIC 如何优化TCP 的连接管理机制？
-
-*   2.1 TCP连接的本质是什么
-    
-*   2.2 QUIC 如何减少TCP 建立连接的开销
-    
-*   2.3 QUIC 如何实现连接的无感迁移
-    
-
-三、QUIC 如何改进TCP 的拥塞控制机制？
-
-*   3.1 TCP 拥塞控制机制的瓶颈在哪？
-    
-*   3.2 QUIC 如何降低重传概率
-    
-*   3.3 QUIC 如何改进拥塞控制机制
     
 
 **1.1 TCP 为何会有队头阻塞问题**
