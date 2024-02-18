@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Inbox/how pnpm links/"}
+{"dg-publish":true,"permalink":"/Inbox/how pnpm links/","dgPassFrontmatter":true}
 ---
 
 [[npm\|npm]]
