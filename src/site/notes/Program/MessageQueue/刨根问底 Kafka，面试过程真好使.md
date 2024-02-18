@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/MessageQueue/刨根问底 Kafka，面试过程真好使/"}
+{"dg-publish":true,"permalink":"/Program/MessageQueue/刨根问底 Kafka，面试过程真好使/","dgPassFrontmatter":true}
 ---
 
 
