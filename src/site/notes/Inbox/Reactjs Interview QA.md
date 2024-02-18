@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Inbox/Reactjs Interview QA/"}
+{"dg-publish":true,"permalink":"/Inbox/Reactjs Interview QA/","dgPassFrontmatter":true}
 ---
 
 
