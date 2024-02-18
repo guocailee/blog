@@ -9,7 +9,7 @@
 - [[Program/Database/DataBase\|DataBase]]
 - [[Program/K8S/K8S\|K8S]]
 -  [[Program/VCS/VCS\|VCS]]
-- [[Program/InterView\|InterView]]
+- [[InterView\|InterView]]
 - other
 - [[Program/Other/Clean  Code\|Clean  Code]]
 - [[Program/Other/Every Programmer Should Know\|Every Programmer Should Know]]
