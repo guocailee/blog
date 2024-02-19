@@ -13,6 +13,7 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Program/JavaScript/TypeScript 之 More on Functions\|TypeScript 之 More on Functions]]                                                    | 2024-02-19 16:21 |
 | [[Life/Fitness/Fitness\|Fitness]]                                                                                                        | 2024-02-19 16:16 |
 | [[Program/Mixed/代码可读性\|代码可读性]]                                                                                                           | 2024-02-19 16:14 |
 | [[Program/Mixed/Clean  Code\|Clean  Code]]                                                                                               | 2024-02-19 16:13 |
@@ -37,7 +38,6 @@
 | [[Inbox/高并发下保证接口幂等的8个锦囊\|高并发下保证接口幂等的8个锦囊]]                                                                                               | 2024-02-19 15:13 |
 | [[Program/JavaScript/JavaScript Interview Q&A\|JavaScript Interview Q&A]]                                                                | 2024-02-19 15:11 |
 | [[Life/Other/住在方舱医院是什么样的体验\|住在方舱医院是什么样的体验]]                                                                                              | 2024-02-19 15:03 |
-| [[Life/Other/你和同桌有过哪些暧昧的事？\|你和同桌有过哪些暧昧的事？]]                                                                                              | 2024-02-19 15:03 |
 
 { .block-language-dataview}
 
