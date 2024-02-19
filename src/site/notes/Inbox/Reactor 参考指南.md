@@ -599,7 +599,7 @@ Reactor引入了可组合的响应式类型，这些类型既实现了 `Publishe
 
 下图显示了 `Flux` 如何转换元素：
 
-![](/img/user/images/flux.png.md)
+![](images/flux.png)
 
 `Flux<T>` 是一个标准的 `Publisher<T>`，表示为发出0到N个元素的异步序列，可由完成或者错误信号进行选择性终止。在响应式流规范中，这三种类型信号转换为调用下游订阅者的 `onNext` ，`onComplete`，和 `onError` 方法。
 
