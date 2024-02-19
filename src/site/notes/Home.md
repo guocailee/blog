@@ -1,5 +1,5 @@
 ---
-{"dg-home":true,"dg-publish":true,"permalink":"/Home/","tags":["gardenEntry"],"dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Home/","tags":["gardenEntry"]}
 ---
 
 
@@ -13,7 +13,7 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| [[Program/JavaScript/TypeScript 之 More on Functions\|TypeScript 之 More on Functions]]                                                    | 2024-02-19 16:21 |
+| [[Program/JavaScript/TypeScript 之 More on Functions\|TypeScript 之 More on Functions]]                                                    | 2024-02-19 16:34 |
 | [[Life/Fitness/Fitness\|Fitness]]                                                                                                        | 2024-02-19 16:16 |
 | [[Program/Mixed/代码可读性\|代码可读性]]                                                                                                           | 2024-02-19 16:14 |
 | [[Program/Mixed/Clean  Code\|Clean  Code]]                                                                                               | 2024-02-19 16:13 |
