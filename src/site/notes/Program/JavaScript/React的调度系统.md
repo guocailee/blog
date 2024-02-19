@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/React的调度系统/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/JavaScript/React的调度系统/"}
 ---
 
 ## 1. 引言
