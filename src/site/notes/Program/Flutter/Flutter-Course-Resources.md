@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Flutter/Flutter-Course-Resources/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Flutter/Flutter-Course-Resources/"}
 ---
 
 # Flutter-Course-Resources
