@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/OS/Linux/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/OS/Linux/"}
 ---
 
 ## 前言
