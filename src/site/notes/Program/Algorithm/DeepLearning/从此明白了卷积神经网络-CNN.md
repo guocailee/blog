@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/DeepLearning/从此明白了卷积神经网络-CNN/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Algorithm/DeepLearning/从此明白了卷积神经网络-CNN/"}
 ---
 
 [[Program/Algorithm/DeepLearning/Deep Learning\|Deep Learning]]
