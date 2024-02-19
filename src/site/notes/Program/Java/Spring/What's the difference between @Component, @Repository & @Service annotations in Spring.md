@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Spring/What's the difference between @Component, @Repository & @Service annotations in Spring/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Java/Spring/What's the difference between @Component, @Repository & @Service annotations in Spring/"}
 ---
 
 From [Spring Documentation](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-stereotype-annotations):
