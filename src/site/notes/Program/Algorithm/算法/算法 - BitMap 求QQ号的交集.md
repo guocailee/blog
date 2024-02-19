@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/算法/算法 - BitMap 求QQ号的交集/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Algorithm/算法/算法 - BitMap 求QQ号的交集/"}
 ---
 
 # 腾讯终面：求两个文件中的QQ交集
