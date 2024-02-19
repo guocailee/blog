@@ -3383,7 +3383,7 @@
 
      The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
 
-     ![flux](/img/user/images/flux.png.md)
+     ![flux](images/flux.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
