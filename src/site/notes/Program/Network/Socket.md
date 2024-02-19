@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Network/Socket/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Network/Socket/"}
 ---
 
 ## 一、I/O 模型
