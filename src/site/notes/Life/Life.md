@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Life/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Life/Life/"}
 ---
 
 # Life
