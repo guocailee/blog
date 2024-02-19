@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/复杂推理模型从服务器移植到Web浏览器的理论和实战/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Mixed/复杂推理模型从服务器移植到Web浏览器的理论和实战/"}
 ---
 
 ## 一  背景
