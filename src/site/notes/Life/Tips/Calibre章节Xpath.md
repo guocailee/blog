@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Tips/Calibre章节Xpath/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Life/Tips/Calibre章节Xpath/"}
 ---
 
 ```
