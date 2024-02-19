@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/What is the difference between expo build android -t apk and expo build android/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/JavaScript/What is the difference between expo build android -t apk and expo build android/"}
 ---
 
 If you type the following you will get some more details:
