@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/VCS/Git/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/VCS/Git/"}
 ---
 
 
