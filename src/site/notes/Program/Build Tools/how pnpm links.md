@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Build Tools/how pnpm links/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Build Tools/how pnpm links/"}
 ---
 
 [[npm\|npm]]
