@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/TS类型体操技巧总结/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/JavaScript/TS类型体操技巧总结/"}
 ---
 
 最近刷类型体操有点上瘾，本文算是最近刷类型体操的一些思考的集合。刷的时候感觉自己长脑子了，但是过段时间又好像没脑子了，还是得通过博客总结沉淀一下
