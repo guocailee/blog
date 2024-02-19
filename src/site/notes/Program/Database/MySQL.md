@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/MySQL/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Database/MySQL/"}
 ---
 
 ## 一、索引
