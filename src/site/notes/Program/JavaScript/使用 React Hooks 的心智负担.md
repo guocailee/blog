@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/使用 React Hooks 的心智负担/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/JavaScript/使用 React Hooks 的心智负担/"}
 ---
 
 
