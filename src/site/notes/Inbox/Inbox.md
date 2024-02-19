@@ -3,7 +3,6 @@
 ---
 
 - [[Inbox/QUIC 是如何解决TCP 性能瓶颈的？\|QUIC 是如何解决TCP 性能瓶颈的？]]
-- [[Inbox/Reactjs Interview QA\|Reactjs Interview QA]]
 - [[Inbox/Reactor 参考指南\|Reactor 参考指南]]
 - [[Inbox/Inbox\|Inbox]]
 - [[Inbox/System Design 101\|System Design 101]]
