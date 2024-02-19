@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Tips/IPtables/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Life/Tips/IPtables/"}
 ---
 
 ```bash
