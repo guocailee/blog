@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/Rust Is The Future of JavaScript Infrastructure/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/JavaScript/Rust Is The Future of JavaScript Infrastructure/"}
 ---
 
 
