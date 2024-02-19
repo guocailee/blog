@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Network/HTTP/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Network/HTTP/"}
 ---
 
 ## 一 、基础概念
