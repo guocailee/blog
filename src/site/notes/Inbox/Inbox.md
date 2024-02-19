@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Inbox/Inbox/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Inbox/Inbox/"}
 ---
 
 - [[Inbox/Inbox\|Inbox]]
