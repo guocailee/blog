@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/V8 引擎特性带来的的 JS 性能变化/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/JavaScript/V8 引擎特性带来的的 JS 性能变化/"}
 ---
 
 # 1 引言
