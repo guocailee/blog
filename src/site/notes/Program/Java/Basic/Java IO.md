@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Basic/Java IO/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Java/Basic/Java IO/"}
 ---
 
 ## 一、概览
