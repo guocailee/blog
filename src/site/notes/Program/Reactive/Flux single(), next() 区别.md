@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Reactive/Flux single(), next() 区别/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Reactive/Flux single(), next() 区别/"}
 ---
 
 
