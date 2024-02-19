@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/DDD/国内酒店交易DDD应用与实践——理论篇/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/DDD/国内酒店交易DDD应用与实践——理论篇/"}
 ---
 
 # 国内酒店交易DDD应用与实践——理论篇
