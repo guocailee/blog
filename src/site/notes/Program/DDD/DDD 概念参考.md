@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/DDD/DDD 概念参考/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/DDD/DDD 概念参考/"}
 ---
 
 
