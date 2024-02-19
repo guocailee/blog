@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Tips/Tips/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Life/Tips/Tips/"}
 ---
 
 [[Life/Life\|Life]]
