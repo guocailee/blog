@@ -84,4 +84,3 @@ export default () => {
 
 
 event.preventDefault() 与 e.defaultPrevented 是否给你的组件设计提供了一种新思路呢？ 
- [https://zhuanlan.zhihu.com/p/425186526](https://zhuanlan.zhihu.com/p/425186526)
