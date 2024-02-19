@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/MessageQueue/一文带你搞定RabbitMQ延迟队列/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/MessageQueue/一文带你搞定RabbitMQ延迟队列/"}
 ---
 
 ## 一、说明 
