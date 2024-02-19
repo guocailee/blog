@@ -98,7 +98,6 @@ return builder.routes()
 **三  流程分析**
 -----------
 
-###   
 
 ### 1  接受请求
 
@@ -169,9 +168,7 @@ return this.routeLocator.getRoutes()
 
 ![](/img/user/attchements/media/640-2.png)
 
-###   
-
-### 4  核心过滤器链执行
+###    4  核心过滤器链执行
 
   
 
@@ -215,7 +212,6 @@ public Mono<Void> handle(ServerWebExchange exchange) {
 
 因为我的配置里包含了一个添加请求参数的逻辑，所以红线箭头处就是我配置的gateway filter名为 AddRequestParameterGatewayFilterFactory，其余全是Gloabl Filter，这些过滤器的功能主要是url解析，请求转发，响应回写等逻辑，因为我们这里用的是forward schema，所以请求转发会由ForwardRoutingFilter进行执行。
 
-###   
 
 ### 5  请求转发
 
@@ -247,7 +243,6 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 ```
 
   
-
 ### 6  响应回写
 
   
