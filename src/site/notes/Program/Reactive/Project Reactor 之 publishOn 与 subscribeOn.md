@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Reactive/Project Reactor 之 publishOn 与 subscribeOn/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Reactive/Project Reactor 之 publishOn 与 subscribeOn/"}
 ---
 
 # 一、概述
