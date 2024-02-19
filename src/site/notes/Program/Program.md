@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Program/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Program/"}
 ---
 
 -  [[Program/OS/OS\|OS]]
