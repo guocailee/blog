@@ -1,5 +1,5 @@
 ---
-{"kanban-plugin":"basic","dg-publish":true,"permalink":"/GTD/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/GTD/"}
 ---
 
 
