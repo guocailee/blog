@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Every Programmer Should Know/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Mixed/Every Programmer Should Know/"}
 ---
 
 # Every Programmer Should Know :thinking:
