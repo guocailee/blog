@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/面试官：断网了，还能 ping 通 127.0.0.1 吗？/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Mixed/面试官：断网了，还能 ping 通 127.0.0.1 吗？/"}
 ---
 
 
