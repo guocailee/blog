@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Clean  Code/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Mixed/Clean  Code/"}
 ---
 
 
