@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Spring/Spring Cloud Stream 体系及原理介绍 Format's Notes/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Java/Spring/Spring Cloud Stream 体系及原理介绍 Format's Notes/"}
 ---
 
 [Spring Cloud Stream](https://spring.io/projects/spring-cloud-stream) 在 Spring Cloud 体系内用于构建高度可扩展的基于事件驱动的微服务。
