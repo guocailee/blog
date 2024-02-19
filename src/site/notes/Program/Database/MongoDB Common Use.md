@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/MongoDB Common Use/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/Program/Database/MongoDB Common Use/"}
 ---
 
 ## 数据库连接
