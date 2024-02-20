@@ -2,11 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/DDD/国内酒店交易DDD应用与实践——理论篇/"}
 ---
 
-# 国内酒店交易DDD应用与实践——理论篇
-
-
 作者介绍——李鑫
-
 *   2014年加入去哪儿网机票目的地事业群
     
 *   担任软件研发工程师，现负责国内酒店交易技术团队
@@ -54,7 +50,7 @@
 
 ## 六、DDD 战略设计
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIhlXuL5jQdTbelEvAgqgUotUAXZUic4GlWI65HSEjmhNUHGIWic2ibsYuw/640?wx_fmt=png)
+![](/img/user/attchements/media/640-42.png)
 
 战略设计是让我们从业务视角出发，建立业务领域模型，划分领域边界，建立通用语言、识别限界上下文的过程。
 
@@ -64,7 +60,7 @@
 
 **战略设计思想**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIlAk2YW0yWB1DDD7WJ4uK8qMiaroF0n3z0Fe95xKEvZeEOpULOibQStFw/640?wx_fmt=png)
+![](/img/user/attchements/media/640-43.png)
 
 战略设计思想、需要考虑问题空间与解决方案空间：
 
@@ -84,7 +80,7 @@
 
 ## 七、DDD 战术设计
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqI4mWkWJ34Pul28vXibjws2biczcPy2foZwXQQfGjjK2QnyGvW66qOv4PQ/640?wx_fmt=png)
+![](/img/user/attchements/media/640-46.png)
 
 图示 DDD 战术建模元模型体系图， 通过元模型我们会对【战略建模】过程中识别出来的问题子域进行抽象， 元模型图用于描述如何去创建一个 DDD 的模型。
 
@@ -94,7 +90,7 @@ DDD 的战术建模包括如下内容：
 
 **战术设计原则**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIIZPCBLSSGMayAolazcZS60PGMjHjXx8G6EicTnt3yC2aick2gofiaPibcg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-47.png)
 
 图示战略设计思想脑图。
 
@@ -119,11 +115,11 @@ DDD 的战术建模包括如下内容：
 
 那么如何构建通用语言: **事件风暴**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqI8O3YZ2alXgHfbNyIAw7013gCnCW8cY7Ak6TicichzrCacrPv9hUcQ5pA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-44.png)
 
 ## 九、事件风暴
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqI34NzYbw7tEkISkniaebcULLa1daibrAjUEqg5GGLcVrRo3Tur648D2vA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-49.png)
 
 事件风暴，是一种快速探索复杂业务领域建模的实践, 从领域中关注业务事件，过程中团队经过充分讨论，统一语言，找到领域模型。
 
@@ -131,7 +127,7 @@ DDD 的战术建模包括如下内容：
 
 **事件风暴过程回顾**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIzqxqM2Iiaj1RIfap4my4Riciau577Mobhrn378yfSOXN2puniaxsUtWBdg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-54.png)
 
 _**以上都是基础概念、接下来我们将结合案例讲解**_
 
@@ -141,11 +137,11 @@ _**以上都是基础概念、接下来我们将结合案例讲解**_
 
 经过高度抽象问题域形成解决方案空间，构建订单领域模型、形成稳定区间、确认不同问题域解决方案空间的大小。如图示
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqINXDnku8rsPTuaneNxdB2NibZK993dgUE874NAoqow6Ml07zuWJOvaLQ/640?wx_fmt=png)
+![](/img/user/attchements/media/640-48.png)
 
 ### 2、识别角色、命令、事件
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIkQws3W6HmX88UKFTUO1n7G6glLo4wC6nk16kyytT681SJfSBjjNCTQ/640?wx_fmt=png)
+![](/img/user/attchements/media/640-53.png)
 
 如何寻找领域事件
 
@@ -163,7 +159,7 @@ _**以上都是基础概念、接下来我们将结合案例讲解**_
 
 ### 3、确认聚合、划定边界
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIVjnt6XMTqZkjEHEhHFh4OGN6gsVbVwgEJQSDbicHVC6ST5uzMlo4XDw/640?wx_fmt=png)
+![](/img/user/attchements/media/640-50.png)
 
 酒店交易 DDD、识别划分报价领域、订单领域、支付领域、履约领域、调度领域等，其中
 
@@ -195,7 +191,7 @@ b. 循环依赖：任何一个上下文发生变更，依赖链条上的上下�
 
 #### 3.1 订单领域
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIJWACRkoGMzrqa96Q9HF8zTOfumoxAxyIVD0mzLMYiaug75k8fQX4Ipw/640?wx_fmt=png)
+![](/img/user/attchements/media/640-51.png)
 
 图示：酒店交易订单领域 聚合根定义、包括实体、值对象、领域服务设计；
 
@@ -219,7 +215,7 @@ b. 循环依赖：任何一个上下文发生变更，依赖链条上的上下�
 
 酒店交易拆分订单聚合、支付聚合、使用最终一致性来保证双方状态的一致性，避免大聚合。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIcALEExVpibf0e6TeQqnIomAn9FT9wm3j5wulbf42BlZvF81E7pAfdQg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-45.png)
 
 #### 3.2 实体
 
@@ -231,7 +227,7 @@ b. 循环依赖：任何一个上下文发生变更，依赖链条上的上下�
 
 **实体模型分四类**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqINHhSb060r6yvm0icpBibf2qmHMuoMdcKrpJlc731zH8HDhtwFQ3SqqUQ/640?wx_fmt=png)
+![](/img/user/attchements/media/640-47.png)
 
 **失血模型** 简单来说，就是对象只有属性的 getter/setter 方法的纯数据类，所有的业务逻辑完全由 business object 来完成。通常在 MVC 模式下一种实体定义的数据模型，仅是一个数据的载体，没有业务含义。
 
@@ -267,11 +263,11 @@ b. 循环依赖：任何一个上下文发生变更，依赖链条上的上下�
 
 **实体和值对象的区别**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIUXwFNiaGlDOaAUxLlOUibMuHOjlfbCEhV6jZ5bFHTUKAJlQSEYDOjxRQ/640?wx_fmt=png)
+![](/img/user/attchements/media/640-47.png)
 
 #### 3.4 应用服务、实体行为、领域服务区别
 
-![](https://mmbiz.qpic.cn/mmbiz_png/YE1dmj1Pw7nFlibh6uqasftiaicECgE9lqIUXwFNiaGlDOaAUxLlOUibMuHOjlfbCEhV6jZ5bFHTUKAJlQSEYDOjxRQ/640?wx_fmt=png)
+![](/img/user/attchements/media/640-52.png)
 
 ## 十、理论小结
 
