@@ -221,9 +221,7 @@ CONNECT www.example.com:443 HTTP/1.1
 -   **401 Unauthorized**  ：该状态码表示发送的请求需要有认证信息（BASIC 认证、DIGEST 认证）。如果之前已进行过一次请求，则表示用户认证失败。
 
 -   **403 Forbidden**  ：请求被拒绝。
-
--   **404 Not Found**  
-
+-   **404 Not Found**  : 请求资源不存在
 ### 5XX 服务器错误
 
 -   **500 Internal Server Error**  ：服务器正在执行请求时发生错误。
