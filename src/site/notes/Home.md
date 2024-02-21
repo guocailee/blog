@@ -2,6 +2,9 @@
 {"dg-publish":true,"permalink":"/Home/","tags":["gardenEntry"],"noteIcon":""}
 ---
 
+### 关于我
+* email : [guocailee@gmail.com](mailto:guocailee@gmail.com)
+* github: [guocailee](https://github.com/guocailee)
 
 ### 一些笔记
 
@@ -13,6 +16,7 @@
 
 | File                                                                       | Last modified    |
 | -------------------------------------------------------------------------- | ---------------- |
+| [[Home\|Home]]                                                          | 2024-02-21 17:01 |
 | [[Program/Cache/用 Reactor& Redis实现简易的分布式锁\|用 Reactor& Redis实现简易的分布式锁]]  | 2024-02-21 16:16 |
 | [[Program/Database/如何写一个读写分离中间件\|如何写一个读写分离中间件]]                         | 2024-02-21 15:56 |
 | [[Program/Cache/16 张图吃透 Redis 架构演进\|16 张图吃透 Redis 架构演进]]                | 2024-02-21 15:49 |
@@ -37,7 +41,6 @@
 | [[Program/Algorithm/LeetCode/Leetcode 题解 - 二分查找\|Leetcode 题解 - 二分查找]]   | 2024-02-21 15:22 |
 | [[Program/Algorithm/LeetCode/Leetcode 题解\|Leetcode 题解]]                 | 2024-02-21 15:22 |
 | [[Program/Algorithm/算法/算法 - BitMap 求QQ号的交集\|算法 - BitMap 求QQ号的交集]]       | 2024-02-21 15:21 |
-| [[Program/Algorithm/算法/图解错位排列\|图解错位排列]]                                 | 2024-02-21 15:21 |
 
 { .block-language-dataview}
 
