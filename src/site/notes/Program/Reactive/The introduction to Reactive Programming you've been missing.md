@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Reactive/The introduction to Reactive Programming you've been missing/"}
+{"dg-publish":true,"permalink":"/Program/Reactive/The introduction to Reactive Programming you've been missing/","noteIcon":""}
 ---
 
 
