@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/DeepLearning/从此明白了卷积神经网络-CNN/"}
+{"dg-publish":true,"permalink":"/Program/Algorithm/DeepLearning/从此明白了卷积神经网络-CNN/","noteIcon":""}
 ---
 
 [[Program/Algorithm/DeepLearning/Deep Learning\|Deep Learning]]
