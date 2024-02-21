@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Basic/Java IO/"}
+{"dg-publish":true,"permalink":"/Program/Java/Basic/Java IO/","noteIcon":""}
 ---
 
 ## 一、概览
