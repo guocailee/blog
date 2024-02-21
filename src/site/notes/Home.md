@@ -13,6 +13,7 @@
 
 | File                                                                                                                             | Last modified    |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Home\|Home]]                                                                                                                | 2024-02-21 10:17 |
 | [[Program/DDD/探秘微信业务优化：DDD从入门到实践\|探秘微信业务优化：DDD从入门到实践]]                                                                        | 2024-02-21 10:13 |
 | [[Program/Mixed/短域名系统实现\|短域名系统实现]]                                                                                            | 2024-02-21 10:11 |
 | [[Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?\|React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?]] | 2024-02-21 10:06 |
@@ -37,8 +38,8 @@
 | [[Life/Tips/移除 Markdown的 links\|移除 Markdown的 links]]                                                                          | 2024-02-20 12:13 |
 | [[Life/Books/为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感\|为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感]]                                                 | 2024-02-20 12:13 |
 | [[Life/Parenting/Parenting\|Parenting]]                                                                                       | 2024-02-20 12:13 |
-| [[Thinking/怀旧\|怀旧]]                                                                                                           | 2024-02-19 17:31 |
 
 { .block-language-dataview}
 
 Powered By [Obsidian.md](https://obsidian.md/)
+All Note is store in [Blog](https://github.com/guocailee/blog)
