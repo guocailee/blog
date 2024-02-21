@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Program/"}
+{"dg-publish":true,"permalink":"/Program/Program/","noteIcon":""}
 ---
 
 -  [[Program/OS/OS\|OS]]
