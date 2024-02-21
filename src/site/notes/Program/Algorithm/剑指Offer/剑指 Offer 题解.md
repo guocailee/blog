@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/剑指Offer/剑指 Offer 题解/"}
+{"dg-publish":true,"permalink":"/Program/Algorithm/剑指Offer/剑指 Offer 题解/","noteIcon":""}
 ---
 
 
