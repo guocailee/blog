@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/你不知道的 TypeScript 泛型/"}
+{"dg-publish":true,"permalink":"/Program/JavaScript/你不知道的 TypeScript 泛型/","noteIcon":""}
 ---
 
 相信大家都经历过，看到过，或者正在写**一些应用，这些应用充斥着各种重复类型定义， any 类型层出不穷，鼠标移到变量上面的提示只有 any，不要说类型操作了，类型能写对都是个问题**。我也经历过这样的阶段，那个时候我对 TS 还比较陌生。
