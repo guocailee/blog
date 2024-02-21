@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Fitness/Fitness/"}
+{"dg-publish":true,"permalink":"/Life/Fitness/Fitness/","noteIcon":""}
 ---
 
 - [[Life/Fitness/Fitness\|Fitness]]
