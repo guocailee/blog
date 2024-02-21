@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Thinking/Thinking/"}
+{"dg-publish":true,"permalink":"/Thinking/Thinking/","noteIcon":""}
 ---
 
 - [[Thinking/Thinking\|Thinking]]
