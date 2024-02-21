@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Parenting/Parenting/"}
+{"dg-publish":true,"permalink":"/Life/Parenting/Parenting/","noteIcon":""}
 ---
 
 - [[Life/Parenting/Parenting\|Parenting]]
