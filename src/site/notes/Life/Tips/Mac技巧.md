@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Tips/Mac技巧/"}
+{"dg-publish":true,"permalink":"/Life/Tips/Mac技巧/","noteIcon":""}
 ---
 
 [[Life/Tips/Tips\|Tips]]
