@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Life/"}
+{"dg-publish":true,"permalink":"/Life/Life/","noteIcon":""}
 ---
 
 # Life
