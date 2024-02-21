@@ -1,16 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/算法/算法 - BitMap 求QQ号的交集/"}
+{"dg-publish":true,"permalink":"/Program/Algorithm/算法/算法 - BitMap 求QQ号的交集/","noteIcon":""}
 ---
-
-# 腾讯终面：求两个文件中的QQ交集
-
-收录于: [[Program/Algorithm/Algorithm\|Algorithm]]
-
-
-
-
-
-
 
 
 **A 文件有 30 亿个 QQ 号码，B 文件有 40 亿个 QQ 号码，求 A 文件和 B 文件中 QQ 号码的交集，内存大小限制为 1GB。** 
