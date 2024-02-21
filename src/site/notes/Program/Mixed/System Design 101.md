@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/System Design 101/"}
+{"dg-publish":true,"permalink":"/Program/Mixed/System Design 101/","noteIcon":""}
 ---
 
 
