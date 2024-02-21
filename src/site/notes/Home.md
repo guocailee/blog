@@ -13,6 +13,9 @@
 
 | File                                                                       | Last modified    |
 | -------------------------------------------------------------------------- | ---------------- |
+| [[Program/Design pattern/设计模式-Kotlin实现\|设计模式-Kotlin实现]]                 | 2024-02-21 15:42 |
+| [[Program/Design pattern/Design Pattern\|Design Pattern]]               | 2024-02-21 15:32 |
+| [[Program/Design pattern/设计模式-Java 实现\|设计模式-Java 实现]]                   | 2024-02-21 15:30 |
 | [[Program/Algorithm/LeetCode/Leetcode 题解 - 链表\|Leetcode 题解 - 链表]]       | 2024-02-21 15:28 |
 | [[Program/Algorithm/LeetCode/Leetcode 题解 - 贪心思想\|Leetcode 题解 - 贪心思想]]   | 2024-02-21 15:28 |
 | [[Program/Algorithm/LeetCode/Leetcode 题解 - 树\|Leetcode 题解 - 树]]         | 2024-02-21 15:26 |
@@ -35,9 +38,6 @@
 | [[Program/Algorithm/算法/算法 - 并查集\|算法 - 并查集]]                             | 2024-02-21 15:17 |
 | [[Program/Algorithm/算法/算法 - 其它\|算法 - 其它]]                               | 2024-02-21 15:17 |
 | [[Program/Algorithm/算法/算法 - 符号表\|算法 - 符号表]]                             | 2024-02-21 15:17 |
-| [[Program/Algorithm/算法/算法 - 栈和队列\|算法 - 栈和队列]]                           | 2024-02-21 15:16 |
-| [[Program/Algorithm/算法/算法 - 排序\|算法 - 排序]]                               | 2024-02-21 15:15 |
-| [[Program/Algorithm/算法/基础算法\|基础算法]]                                     | 2024-02-21 15:15 |
 
 { .block-language-dataview}
 
