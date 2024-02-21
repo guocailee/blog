@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Clean  Code/"}
+{"dg-publish":true,"permalink":"/Program/Mixed/Clean  Code/","noteIcon":""}
 ---
 
 
