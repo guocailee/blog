@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/完全理解React Fiber/"}
+{"dg-publish":true,"permalink":"/Program/JavaScript/完全理解React Fiber/","noteIcon":""}
 ---
 
 ## 一. 目标
