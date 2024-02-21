@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?/"}
+{"dg-publish":true,"permalink":"/Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?/","noteIcon":""}
 ---
 
 
