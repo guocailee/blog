@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Basic/Java 容器/"}
+{"dg-publish":true,"permalink":"/Program/Java/Basic/Java 容器/","noteIcon":""}
 ---
 
 
