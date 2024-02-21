@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/SQL 语法/"}
+{"dg-publish":true,"permalink":"/Program/Database/SQL 语法/","noteIcon":""}
 ---
 
 
