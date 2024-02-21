@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/JVM 面试题第二版，据说看完要一小时/"}
+{"dg-publish":true,"permalink":"/Program/Java/JVM 面试题第二版，据说看完要一小时/","noteIcon":""}
 ---
 
 ## 1.  JVM 的主要作用是什么？
