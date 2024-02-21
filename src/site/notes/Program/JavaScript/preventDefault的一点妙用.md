@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/preventDefault的一点妙用/"}
+{"dg-publish":true,"permalink":"/Program/JavaScript/preventDefault的一点妙用/","noteIcon":""}
 ---
 
 
