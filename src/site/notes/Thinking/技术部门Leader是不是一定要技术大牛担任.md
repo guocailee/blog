@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Thinking/技术部门Leader是不是一定要技术大牛担任/"}
+{"dg-publish":true,"permalink":"/Thinking/技术部门Leader是不是一定要技术大牛担任/","noteIcon":""}
 ---
 
 [技术部门Leader是不是一定要技术大牛担任？](//www.zhihu.com/question/377457299/answer/2865702041)
