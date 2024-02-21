@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Every Programmer Should Know/"}
+{"dg-publish":true,"permalink":"/Program/Mixed/Every Programmer Should Know/","noteIcon":""}
 ---
 
 # Every Programmer Should Know :thinking:
