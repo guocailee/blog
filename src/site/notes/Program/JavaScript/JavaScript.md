@@ -3,8 +3,8 @@
 ---
 
 - [[Program/JavaScript/How to test custom prop validators in Vue.js - Vue.js Tutorials\|How to test custom prop validators in Vue.js - Vue.js Tutorials]]
-- [[Program/JavaScript/JavaScript Interview Q&A\|JavaScript Interview Q&A]]
 - [[Program/JavaScript/JavaScript\|JavaScript]]
+- [[Program/JavaScript/JavaScript Interview Q&A\|JavaScript Interview Q&A]]
 - [[Program/JavaScript/React Hooks 使用误区，驳官方文档\|React Hooks 使用误区，驳官方文档]]
 - [[Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?\|React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?]]
 - [[Program/JavaScript/React的调度系统\|React的调度系统]]
