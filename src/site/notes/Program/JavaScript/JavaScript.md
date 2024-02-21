@@ -1,11 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/JavaScript/"}
+{"dg-publish":true,"permalink":"/Program/JavaScript/JavaScript/","noteIcon":""}
 ---
 
 - [[Program/JavaScript/How to test custom prop validators in Vue.js - Vue.js Tutorials\|How to test custom prop validators in Vue.js - Vue.js Tutorials]]
 - [[Program/JavaScript/JavaScript Interview Q&A\|JavaScript Interview Q&A]]
 - [[Program/JavaScript/JavaScript\|JavaScript]]
 - [[Program/JavaScript/React Hooks 使用误区，驳官方文档\|React Hooks 使用误区，驳官方文档]]
+- [[Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?\|React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?]]
 - [[Program/JavaScript/React的调度系统\|React的调度系统]]
 - [[Program/JavaScript/Rust Is The Future of JavaScript Infrastructure\|Rust Is The Future of JavaScript Infrastructure]]
 - [[Program/JavaScript/TS类型体操技巧总结\|TS类型体操技巧总结]]
@@ -35,6 +36,5 @@
 - [[Program/JavaScript/浏览器是如何工作的？ Chrome V8 引擎让你更懂JavaScript！「三万字精华，从V8角度了解JS」 - 知乎\|浏览器是如何工作的？ Chrome V8 引擎让你更懂JavaScript！「三万字精华，从V8角度了解JS」 - 知乎]]
 - [[Program/JavaScript/深入剖析 React Concurrent\|深入剖析 React Concurrent]]
 - [[Program/JavaScript/爱奇艺 RN 低代码引擎：千变万化、快速搭建的万花筒\|爱奇艺 RN 低代码引擎：千变万化、快速搭建的万花筒]]
-- [[Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?\|React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?]]
 
 { .block-language-dataview}
