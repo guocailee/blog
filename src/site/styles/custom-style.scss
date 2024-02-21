@@ -1,13 +1,13 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLIING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+  .filename {
+    margin-left: 5px;
+    white-space: nowrap;
+  }
+  .toc-container {
+    font-size: 1rem;
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border-left: 1px solid var(--text-accent);
+  }
 }
