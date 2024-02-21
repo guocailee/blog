@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/MySQL/"}
+{"dg-publish":true,"permalink":"/Program/Database/MySQL/","noteIcon":""}
 ---
 
 ## 一、索引
