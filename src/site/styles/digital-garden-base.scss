@@ -151,7 +151,7 @@ ul.task-list {
 
 .toc-container {
     font-size: 1rem;
-    max-height: 50vh;
+    max-height: 220px;
     overflow-y: auto;
     margin-bottom: 10px;
     border-left: 1px solid var(--text-accent);
@@ -410,7 +410,6 @@ ul.task-list {
 
 .filename {
     margin-left: 5px;
-    white-space: nowrap;
 }
 
 .notelink.active-note {
