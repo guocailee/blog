@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Cache/Cache/"}
+{"dg-publish":true,"permalink":"/Program/Cache/Cache/","noteIcon":""}
 ---
 
 - [[Program/Cache/Cache\|Cache]]
