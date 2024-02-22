@@ -16,7 +16,7 @@ Flutter作为一款跨平台UI框架，借鉴了React（Web开发框架）的响
 
 页面的包装类，一个页面想要被路由统一管理，必须包装为一个Route，Route并不是一个widget，但是在页面栈实现中起到至关重要的作用，它是一个抽象类，其继承关系如下，其中每一层都处理了与其相关的一些逻辑。
 
-![](/img/user/attchements/media/640-14.png)
+![](/img/user/Dictionary/attchements/media/640-14.png)
 
 *   **OverlayRoute**：在导航器的Overlay中显示控件的路由。主要将路由转换为Widget插入控件树。
     
@@ -36,7 +36,7 @@ Flutter作为一款跨平台UI框架，借鉴了React（Web开发框架）的响
 *   我们不需要手动创建Navigator，开发中使用的MaterialApp、CupertinoApp、WidgetsApp它们默认是有插入Navigator的，我们在需要的时候可以直接使用Navigator.of(context)。Navigator的widget构建流程如下： 
     
 
-![](/img/user/attchements/media/640-14.png)
+![](/img/user/Dictionary/attchements/media/640-14.png)
 
 *   当我们想使用导航操作时，Navigator提供了如下几个常用的方法：
     
@@ -104,7 +104,7 @@ Widget build() {
 
         \_Theatre控件将页面分为了两种，一种是舞台上的（onstage）演员，另一种则是舞台下的（offstage）观众。当某个包装页面的OverlayEntry的opaque属性为true时，表示占满全屏且不透明，那么以它为分界线，它之下的所有页面都不需要绘制了（因为被挡住了看不见）。如果OverlayEntry的maintainState属性也为true，则被分到舞台下的观众那一组，否则，没有进入剧院的资格。
 
-![](/img/user/attchements/media/640-1.jpg)
+![](/img/user/Dictionary/attchements/media/640-1.jpg)
 
 ### 2.3 导航操作
 
@@ -121,7 +121,7 @@ Future<T> push<T extends Object>(Route<T> route) {
 
         在刷新路由栈的时候push状态的路由也会插入两个新的OverlayEntry，并在所有操作完成后触发Overlay更新。下图是push前后各widget中的栈的变化。
 
-![](/img/user/attchements/media/640-14.png)
+![](/img/user/Dictionary/attchements/media/640-14.png)
 
 **3、**Flutter路由管理实现总结
 
