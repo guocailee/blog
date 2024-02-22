@@ -12,13 +12,13 @@
 
 我们来看一个最简单的例子：“边界检测（edge detection）”，假设我们有这样的一张图片，大小 8×8：
 
-![](/img/user/attchements/media/640-40.png)
+![](/img/user/Dictionary/attchements/media/640-40.png)
 
 图片中的数字代表该位置的像素值，我们知道，像素值越大，颜色越亮，所以为了示意，我们把右边小像素的地方画成深色。图的中间两个颜色的分界线就是我们要检测的边界。
 
 怎么检测这个边界呢？我们可以设计这样的一个 **滤波器（filter，也称为 kernel）**，大小 3×3：
 
-![](/img/user/attchements/media/640-41.png)
+![](/img/user/Dictionary/attchements/media/640-41.png)
 
 然后，我们用这个 filter，往我们的图片上 “盖”，覆盖一块跟 filter 一样大的区域之后，对应元素相乘，然后求和。计算一个区域之后，就向其他区域挪动，接着计算，直到把原图片的每一个角落都覆盖到了为止。这个过程就是 **“卷积”**。  
 （我们不用管卷积在数学上到底是指什么运算，我们只用知道在 CNN 中是怎么计算的。）  
@@ -26,7 +26,7 @@
 
 那么，我们将这 6×6 个区域的卷积结果，拼成一个矩阵：
 
-![](/img/user/attchements/media/640-3.jpg)
+![](/img/user/Dictionary/attchements/media/640-3.jpg)
 
 **诶？！发现了什么？**  
 这个图片，中间颜色浅，两边颜色深，这说明咱们的原图片中间的边界，在这里被反映出来了!
@@ -49,7 +49,7 @@
 -   每次卷积，图像都缩小，这样卷不了几次就没了；
 -   相比于图片中间的点，图片边缘的点在卷积中被计算的次数很少。这样的话，边缘的信息就易于丢失。
 为了解决这个问题，我们可以采用 padding 的方法。我们每次卷积前，先给图片周围都补一圈空白，让卷积之后图片跟原来一样大，同时，原来的边缘也被计算了更多次。
-![](/img/user/attchements/media/640-38.png)
+![](/img/user/Dictionary/attchements/media/640-38.png)
 比如，我们把 (8,8) 的图片给补成 (10,10)，那么经过(3,3) 的 filter 之后，就是(8,8)，没有变。
 我们把上面这种 “让卷积之后的大小不变” 的 padding 方式，称为 **“Same”**方式，  
 把不经过任何填白的，称为 **“Valid”**方式。这个是我们在使用一些框架的时候，需要设置的超参数。
@@ -63,7 +63,7 @@
 3. pooling 池化
 这个 pooling，是为了提取一定区域的主要特征，并减少参数数量，防止模型过拟合。  
 比如下面的 MaxPooling，采用了一个 2×2 的窗口，并取 stride=2：
-![](/img/user/attchements/media/640-3.jpg)
+![](/img/user/Dictionary/attchements/media/640-3.jpg)
 除了 MaxPooling, 还有 AveragePooling，顾名思义就是取那个区域的平均值。
 
 4. 对多通道（channels）图片的**卷积 **（重要！）  
@@ -79,7 +79,7 @@
 
 我特地画了下面这个图，来展示上面的过程：
 
-![](/img/user/attchements/media/640-3.jpg)
+![](/img/user/Dictionary/attchements/media/640-3.jpg)
 
 图中的输入图像是 (8,8,3)，filter 有 4 个，大小均为 (3,3,3)，得到的输出为 (6,6,4)。  
 我觉得这个图已经画的很清晰了，而且给出了 3 和 4 这个两个关键数字是怎么来的，所以我就不啰嗦了（这个图画了我起码 40 分钟）。
@@ -93,7 +93,7 @@
 
 所以，在前面的图中，我加一个激活函数，给对应的部分标上符号，就是这样的：
 
-![](/img/user/attchements/media/640-4.jpg)
+![](/img/user/Dictionary/attchements/media/640-4.jpg)
 【个人觉得，这么好的图不收藏，真的是可惜了】
 
 ### 三、CNN 的结构组成
@@ -115,7 +115,7 @@
 
 接下来，我们随便看一个 CNN 的模样，来获取对 CNN 的一些感性认识：
 
-![](/img/user/attchements/media/640-3.jpg)
+![](/img/user/Dictionary/attchements/media/640-3.jpg)
 
 上面这个 CNN 是我随便拍脑门想的一个。它的结构可以用：  
 X→CONV(relu)→MAXPOOL→CONV(relu)→FC(relu)→FC(softmax)→Y  
@@ -138,13 +138,13 @@ CNN，无非就是把 FC 改成了 CONV 和 POOL，就是把传统的由一个�
 我们对比一下传统神经网络的层和由 filters 构成的 CONV 层：  
 假设我们的图像是 8×8 大小，也就是 64 个像素，假设我们用一个有 9 个单元的全连接层：
 
-![](/img/user/attchements/media/640-3.jpg)
+![](/img/user/Dictionary/attchements/media/640-3.jpg)
 
 那这一层我们需要多少个参数呢？需要 **64×9 = 576 个参数**（先不考虑偏置项 b）。因为每一个链接都需要一个权重 w。
 
 那我们看看 **同样有 9 个单元的 filter**是怎么样的：
 
-![](/img/user/attchements/media/640-41.png)
+![](/img/user/Dictionary/attchements/media/640-41.png)
 
 其实不用看就知道，**有几个单元就几个参数，所以总共就 9 个参数**！
 
@@ -157,7 +157,7 @@ CNN，无非就是把 FC 改成了 CONV 和 POOL，就是把传统的由一个�
 **2. 连接的稀疏性（sparsity of connections）**  
 由卷积的操作可知，输出图像中的任何一个单元，**只跟输入图像的一部分有关**系：
 
-![](/img/user/attchements/media/640-39.png)
+![](/img/user/Dictionary/attchements/media/640-39.png)
 
 而传统神经网络中，由于都是全连接，所以输出的任何一个单元，都要受输入的所有的单元的影响。这样无形中会对图像的识别效果大打折扣。比较，每一个区域都有自己的专属特征，我们不希望它受到其他区域的影响。
 
