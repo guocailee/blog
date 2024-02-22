@@ -6,9 +6,9 @@
 
 上篇文章介绍了 Kotlin Coroutine 的实现原理。因为篇幅所限，并未介绍 Kotlin Coroutine 具体是如何与其它异步编程技术整合的。本文将向大家介绍 Kotlin Coroutine 是如何与 Spring Reactor 整合。
 
-_虽然本文的标题是关于 Kotlin Coroutine 与 Spring WebFlux 的，但其实讲的是 Kotlin Coroutine 是如何与 Spring Reactor 整合的。因为 Spring Reactor 是 Spring WebFlux 的基础，所以不管起哪个标题，内容都是类似的。_
+然本文的标题是关于 Kotlin Coroutine 与 Spring WebFlux 的，但其实讲的是 Kotlin Coroutine 是如何与 Spring Reactor 整合的。因为 Spring Reactor 是 Spring WebFlux 的基础，所以不管起哪个标题，内容都是类似的
 
-_因为 Spring WebFlux 这个名字更容易吸引人，所以本文便做了回标题党。_
+为 Spring WebFlux 这个名字更容易吸引人，所以本文便做了回标题党。
 
 Kotlin Coroutine 与 Spring Reactor 的整合主要是通过 `kotlinx-coroutines-reactive` 和 `kotlinx-coroutines-reactor` 实现的。本文提到的源码都能从这两个模块中找到。
 
@@ -75,12 +75,11 @@ Spring WebFlux 和传统 Spring MVC 最大的不同就是要求方法返回 `Mon
 从方法签名看，`Mono.create` 方法涉及到最主要的接口是 `MonoSink`（此处不解释 `Consumer` 接口）。
 
 `MonoSink` 是什么呢？其 API 文档是这么解释的：
-
 > Wrapper API around an actual downstream Subscriber for emitting nothing, a single value or an error (mutually exclusive).
 
 简单理解就是对后续 Subscriber 的封装。
 
-_可能有些同学对 Sink 这个词有些陌生，我起初也是这种感觉。但是对于一些做过流处理相关开发的同学，这个词应该不陌生。原因是 Sink 这个词经常出现在流处理相关技术中（比如 Flink、Flume）。在 Spring Cloud Stream 中，也能看到这个词。同样，Spring Reactor 是对 Reactive Streams 规范的实现，也可以看做是另一种形式的流技术，所以，出现 Sink 这个词也不足为奇了。_
+可能有些同学对 Sink 这个词有些陌生，我起初也是这种感觉。但是对于一些做过流处理相关开发的同学，这个词应该不陌生。原因是 Sink 这个词经常出现在流处理相关技术中（比如 Flink、Flume）。在 Spring Cloud Stream 中，也能看到这个词。同样，Spring Reactor 是对 Reactive Streams 规范的实现，也可以看做是另一种形式的流技术，所以，出现 Sink 这个词也不足为奇了。
 
 **因为 `MonoSink` 是对后续 Subscriber 的封装，所以可以利用 `MonoSink` 向后续的 Subscriber 输出一些东西的。在 Kotlin Coroutine 与 Spring Reactor 整合的过程中，Kotlin Coroutine 将开启一个 Coroutine，并将执行结果通过 `MonoSink` 输出给 Subscriber。** 
 
@@ -128,7 +127,7 @@ fun <T> mono(
 } 
 ```
 
-_上面这段代码就是 `Consumer` 的 Lambda 形式。_
+上面这段代码就是 `Consumer` 的 Lambda 形式。
 
 最主要的部分是下面两行代码：
 
@@ -182,7 +181,7 @@ private class MonoCoroutine<in T>(
 
 这些方法都是 suspending 方法，能够用命令式的代码风格获取 `Publisher` （`Mono` 或 `Flux`）中的结果。
 
-_因为上一篇文章《Kotlin Coroutine 原理解析》已经介绍了 suspending 方法的工作原理，所以这里就不重复了。本文只介绍 Kotlin Coroutine 是如何与 Reactive Streams 中的 `Publisher` 接口整合的。_
+因为上一篇文章《Kotlin Coroutine 原理解析》已经介绍了 suspending 方法的工作原理，所以这里就不重复了。本文只介绍 Kotlin Coroutine 是如何与 Reactive Streams 中的 `Publisher` 接口整合的。
 
 await 系列方法可以看作是将 `Mono` 或 `Flux` 转换为 `Coroutine` 的方法。这些方法真正的实现集中在了 `awaitOne` 方法中。接下来我们看看 `awaitOne` 方法的源代码：
 
@@ -290,4 +289,3 @@ Mono 向 Kotlin Coroutine 的转换是通过使用 `suspendCancellableCoroutine`
 5.  **Mono/Flux：** Spring Reactor 中对 Publisher 接口的实现，分别代表一个元素和多个元素两种场景。
 6.  **Continuation：** 异步编程中的一个概念，可以简单理解为 Callback。在 Kotlin Coroutine 中，Continuation 也表示一个具体的回调接口。
 7.  **Coroutine：** 协程。在 Kotlin 中，有很多以 Coroutine 命名的类，比如 `CoroutineImpl`、`AbstractCoroutine`。可以简单理解为 Continuation 是一个概念、规范，而 Coroutine 是一种实现机制。 
-    [https://www.jianshu.com/p/17d93f1afc50](https://www.jianshu.com/p/17d93f1afc50)
