@@ -65,8 +65,7 @@ public interface Publisher<T> {
 当 Spring WebFlux 框架得到这个方法返回的 `Mono` 或 `Flux` 之后，会调用它们的 `subscribe(Subcriber)` 方法。此时，真正的请求处理便开始了。
 
 **后面的内容为了简便，会省略 `Flux`，仅会提到 `Mono`，但两者的原理基本类似。** 
-
-## 2. Mono.create(Consumer&lt;MonoSink<T>>) 方法
+## 2. Mono.create(ConsumerltMonoSink) 方法
 
 Spring WebFlux 和传统 Spring MVC 最大的不同就是要求方法返回 `Mono` 或 `Flux`。当 Spring WebFlux 与 Kotlin Coroutine 整合后，我们需要将 Coroutine 转换成一个 `Mono`（或者 `Flux`，后面将省略 `Flux`）。
 
@@ -75,6 +74,7 @@ Spring WebFlux 和传统 Spring MVC 最大的不同就是要求方法返回 `Mon
 从方法签名看，`Mono.create` 方法涉及到最主要的接口是 `MonoSink`（此处不解释 `Consumer` 接口）。
 
 `MonoSink` 是什么呢？其 API 文档是这么解释的：
+
 > Wrapper API around an actual downstream Subscriber for emitting nothing, a single value or an error (mutually exclusive).
 
 简单理解就是对后续 Subscriber 的封装。
@@ -83,17 +83,15 @@ Spring WebFlux 和传统 Spring MVC 最大的不同就是要求方法返回 `Mon
 
 **因为 `MonoSink` 是对后续 Subscriber 的封装，所以可以利用 `MonoSink` 向后续的 Subscriber 输出一些东西的。在 Kotlin Coroutine 与 Spring Reactor 整合的过程中，Kotlin Coroutine 将开启一个 Coroutine，并将执行结果通过 `MonoSink` 输出给 Subscriber。** 
 
-**在 Spring WebFlux 应用中，Subscriber 会将 Mono（或 Flux）以 HTTP 数据的形式输出。** 
+在 Spring WebFlux 应用中，Subscriber 会将 Mono（或 Flux）以 HTTP 数据的形式输出。 
 
-**这样就完成了 Kotlin Coroutine 向 Mono 转换的主要工作。更多细节将在下面的内容介绍。** 
+这样就完成了 Kotlin Coroutine 向 Mono 转换的主要工作。更多细节将在下面的内容介绍。 
 
 # 四、整合的两个关键点
 
 接下来将向大家介绍 Kotlin Coroutine 与 Spring Reactor 整合的两个关键点：`mono` 方法和 `await` 系列方法。
 
 1.  mono 方法
-
-* * *
 
 `mono` 方法连接了 Spring Reactor 环境与 Kotlin Coroutine 环境，可以看做是一个将 Kotlin Coroutine 装换为 Spring Reactor `Mono` 的工厂方法。我们先来看 `mono` 方法的源码：
 
