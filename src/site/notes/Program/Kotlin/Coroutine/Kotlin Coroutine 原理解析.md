@@ -82,33 +82,27 @@ suspending 方法的定义非常简单，只需在普通方法前面加上 `susp
 
 ▼ 示例 2：suspending 版本 postItem 方法编译后的样子
 
-```kotlin
-fun postItem(item: Item, cont: Continuation): Any? {
-  val sm = cont as? ThisSM ?: object : ThisSM {
-	fun resume(…) {
-	  postItem(null, this)
-	}
-  }
+```javascript
   switch (sm.label) {
-	case 0:
-	  sm.item = item
-	  sm.label = 1
-	  return requestToken(sm)
-	case 1:
-	  val item = sm.item
-	  val token = sm.result as Token
-	  sm.label = 2
-	  return createPost(token, item, sm)
-	case 2:
-	  val post = sm.result as Post
-	  sm.label = 3
-	  return processPost(post, sm)
-	case 3:
-	  return sm.result as PostResult
-}
+  	case 0:
+  	  sm.item = item
+  	  sm.label = 1
+  	  return requestToken(sm)
+  	case 1:
+  	  val item = sm.item
+  	  val token = sm.result as Token
+  	  sm.label = 2
+  	  return createPost(token, item, sm)
+  	case 2:
+  	  val post = sm.result as Post
+  	  sm.label = 3
+  	  return processPost(post, sm)
+  	case 3:
+  	  return sm.result as PostResult
+  }
 ```
 
-### 1. Continuation：方法参数和匿名内部类
+### 1. `Continuation`方法参数和匿名内部类
 
 从上面的代码可以看出第一、二项提到的变化。
 
