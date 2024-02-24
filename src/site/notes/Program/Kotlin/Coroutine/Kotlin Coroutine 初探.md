@@ -293,9 +293,9 @@ Kotlin Coroutine 的出现为解决 Java 高并发应用开发提供了新的选
 
 ## 附：参考
 
-- Kotlin Coroutine context and dispatchers：[https://github.com/Kotlin/kotlinx.coroutines/blob/master/coroutines-guide.md#coroutine-context-and-dispatchers](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2FKotlin%2Fkotlinx.coroutines%2Fblob%2Fmaster%2Fcoroutines-guide.md%23coroutine-context-and-dispatchers)
+- [Coroutine context and dispatchers](https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html)
 - Kotlin CoroutineDispatcher Javadoc：[https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.experimental/-coroutine-dispatcher/index.html](https://links.jianshu.com/go?to=https%3A%2F%2Fkotlin.github.io%2Fkotlinx.coroutines%2Fkotlinx-coroutines-core%2Fkotlinx.coroutines.experimental%2F-coroutine-dispatcher%2Findex.html)
-- Quasar 纤程技术文档：[http://docs.paralleluniverse.co/quasar/](https://links.jianshu.com/go?to=http%3A%2F%2Fdocs.paralleluniverse.co%2Fquasar%2F)
+- [Quasar 纤程技术文档](http://docs.paralleluniverse.co/quasar/)
 - Alibaba JDK 协程：[http://www.infoq.com/cn/presentations/free-performance-lunch-alibaba-jdk-association/](https://links.jianshu.com/go?to=http%3A%2F%2Fwww.infoq.com%2Fcn%2Fpresentations%2Ffree-performance-lunch-alibaba-jdk-association%2F)
 - Open JDK Project Loom 提案：[http://cr.openjdk.java.net/~rpressler/loom/Loom-Proposal.html](https://links.jianshu.com/go?to=http%3A%2F%2Fcr.openjdk.java.net%2F%7Erpressler%2Floom%2FLoom-Proposal.html)
   [https://www.jianshu.com/p/2d2e21941461](https://www.jianshu.com/p/2d2e21941461)
