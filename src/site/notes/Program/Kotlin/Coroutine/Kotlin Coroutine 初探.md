@@ -181,7 +181,9 @@ Spring 5 对 Kotlin 提供了完备的支持。同样，Kotlin 也增加了对 S
 
 suspending 方法的声明很简单，只需在方法或 Lambda 定义前面加 `suspend` 关键字即可。下面以 `awaitSingle` 为例：
 
+```kotlin
     public suspend fun <T> Publisher<T>.awaitSingle(): T = awaitOne(Mode.SINGLE)
+```
 
 suspending 方法声明容易，但 suspending 方法的使用却有限制，并不是在任何地方都可以调用 suspending 方法。suspending 方法只能两种地方被调用，一是在另一个 suspending 方法中，二是在 Coroutine Builder 中被调用。所以，我们接下来看看什么是 Coroutine Builder。
 
