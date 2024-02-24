@@ -25,6 +25,8 @@ Mono.just("")
     // 不触发
         println("null")  
         Mono.just("")  
-    }.subscribe { println(it) }
+    }.subscribe {
+      println(it) 
+    }
 
 ```
