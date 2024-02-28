@@ -16,6 +16,7 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Program/K8S/docker compose 配置文件 .yml 全面指南\|docker compose 配置文件 .yml 全面指南]]                                                             | 2024-02-28 16:16 |
 | [[Home\|Home]]                                                                                                                           | 2024-02-28 15:49 |
 | [[Program/Cache/Redis基本讲解\|Redis基本讲解]]                                                                                                   | 2024-02-28 15:49 |
 | [[Program/Cache/16 张图吃透 Redis 架构演进\|16 张图吃透 Redis 架构演进]]                                                                                 | 2024-02-28 15:49 |
@@ -114,7 +115,6 @@
 | [[Program/Network/浏览器开两个窗口分别访问百度，各自窗口会单独创建tcp连接吗，还是复用之前的tcp\|浏览器开两个窗口分别访问百度，各自窗口会单独创建tcp连接吗，还是复用之前的tcp]]                                 | 2024-02-19 16:58 |
 | [[Life/Fitness/Fitness\|Fitness]]                                                                                                        | 2024-02-19 16:57 |
 | [[Program/Build Tools/Gradle 7.0 依赖统一管理的全新方式\|Gradle 7.0 依赖统一管理的全新方式]]                                                                   | 2024-02-19 16:44 |
-| [[Program/JavaScript/TypeScript 之 More on Functions\|TypeScript 之 More on Functions]]                                                    | 2024-02-19 16:34 |
 
 { .block-language-dataview}
 
