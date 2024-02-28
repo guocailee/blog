@@ -3,11 +3,11 @@
 ---
 
 
+## 1、认识 Flutter 路由导航
+
 前面大家了解了 Web 和 Native 端的路由管理，这篇文章出场的是大前端领域备受开发者喜欢的新秀 Flutter。
 
 Flutter 作为一款跨平台 UI 框架，借鉴了 React（Web 开发框架）的响应式的 UI 框架设计思想等。在 Flutter 中，一切皆是 Widget（组件），其中 StatefulWidget（有状态的组件）和 React 中的组件类似，可以通过数据变化去手动更新视图，Flutter 路由管理实现的核心组件 Navigator 就是这样的一个 StatefulWidget。
-
-## 1、认识 Flutter 路由导航
 
 ### 1.1 Route（路由页面）
 
@@ -23,7 +23,7 @@ Flutter 作为一款跨平台 UI 框架，借鉴了 React（Web 开发框架）�
 
 ### 1.2 Navigator（导航器）
 
-管理所有的 Route 的 Widget，实现路由导航的核心 widget。它维护了一个路由栈集合（List<RouteEntry>），当你调用 push，pop 方法时，Navigator 都会以栈的方式对这个集合进行添加或删除，并通过路由栈状态变化实现对页面栈的更新。
+管理所有的 Route 的 Widget，实现路由导航的核心 widget。它维护了一个路由栈集合（`List<RouteEntry>`），当你调用 push，pop 方法时，Navigator 都会以栈的方式对这个集合进行添加或删除，并通过路由栈状态变化实现对页面栈的更新。
 
 - 我们不需要手动创建 Navigator，开发中使用的 MaterialApp、CupertinoApp、WidgetsApp 它们默认是有插入 Navigator 的，我们在需要的时候可以直接使用 Navigator.of(context)。Navigator 的 widget 构建流程如下：
 
