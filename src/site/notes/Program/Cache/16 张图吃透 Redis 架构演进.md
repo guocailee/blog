@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Cache/16 张图吃透 Redis 架构演进/","noteIcon":""}
 ---
 
-现如今 Redis 变得越来越流行，几乎在很多项目中被用到。不知道大家有没有思考过：**Redis 到底是如何稳定、高性能地提供服务的？**  
+现如今 [[Program/Cache/Redis基本讲解\|Redis基本讲解]] 变得越来越流行，几乎在很多项目中被用到。不知道大家有没有思考过：**Redis 到底是如何稳定、高性能地提供服务的？**  
 
 你可以先尝试回答一下这些问题：
 
