@@ -206,8 +206,7 @@ Coroutine Builder，顾名思义，是用来创建 Coroutine 的。对于 Corout
 这个 Coroutine Builder 会创建一个 Coroutine 并执行它，并返回一个 Job 对象，用于控制这个 Coroutine 的执行，但没有结果的返回。
 
 例如，之前 delay 例子也可以这么写
-
-    ```kotlin
+  ```kotlin
     fun main(args: Array<String>) {
         launch { // launch new coroutine in background and continue
             delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
@@ -216,7 +215,7 @@ Coroutine Builder，顾名思义，是用来创建 Coroutine 的。对于 Corout
         println("Hello,") // main thread continues while coroutine is delayed
         Thread.sleep(2000L) // block main thread for 2 seconds to keep JVM alive
     }
-    ```
+```
 
 （说明：因为 `launch` 不会挂起线程，所以需要使用 `Thread.sleep` 避免主线程提前退出）
 
