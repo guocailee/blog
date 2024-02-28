@@ -15,29 +15,19 @@ Kafka 将消息以 topic 为单位进行归纳，发布消息的程序称为 **P
 
 **Kafka 中重要的组件**
 
-_1）Producer_：消息生产者，发布消息到Kafka集群的终端或服务
-
-_2）Broker_：一个 Kafka 节点就是一个 Broker，多个Broker可组成一个Kafka 集群。
-
+1. `Producer`：消息生产者，发布消息到Kafka集群的终端或服务
+2. `Broker`：一个 Kafka 节点就是一个 Broker，多个Broker可组成一个Kafka 集群。
 > 如果某个 Topic 下有 n 个Partition 且集群有 n 个Broker，那么每个 Broker会存储该 Topic 下的一个 Partition
-> 
-> 如果某个 Topic 下有 n 个Partition 且集群中有 m+n 个Broker，那么只有 n 个Broker会存储该Topic下的一个 Partition
-> 
-> 如果某个 Topic 下有 n 个Partition 且集群中的Broker数量小于 n，那么一个 Broker 会存储该 Topic 下的一个或多个 Partition，这种情况尽量避免，会导致集群数据不均衡
+ >如果某个 Topic 下有 n 个Partition 且集群中有 m+n 个Broker，那么只有 n 个Broker会存储该Topic下的一个 Partition
+ >如果某个 Topic 下有 n 个Partition 且集群中的Broker数量小于 n，那么一个 Broker 会存储该 Topic 下的一个或多个 Partition，这种情况尽量避免，会导致集群数据不均衡
 
-_3）Topic_：消息主题，每条发布到Kafka集群的消息都会归集于此，Kafka是面向Topic 的
-
-_4）Partition_：Partition 是Topic在物理上的分区，一个Topic可以分为多个Partition，每个Partition是一个有序的不可变的记录序列。单一主题中的分区有序，但无法保证主题中所有分区的消息有序。
-
-_5）Consumer_：从Kafka集群中消费消息的终端或服务
-
-_6）Consumer Group_：每个Consumer都属于一个Consumer Group，每条消息只能被Consumer Group中的一个Consumer消费，但可以被多个Consumer Group消费。
-
-_7）Replica_：Partition 的副本，用来保障Partition的高可用性。
-
-_8）Controller：_ Kafka 集群中的其中一个服务器，用来进行Leader election以及各种 Failover 操作。
-
-_9）Zookeeper_：Kafka 通过Zookeeper来存储集群中的 meta 消息
+3. Topic：消息主题，每条发布到Kafka集群的消息都会归集于此，Kafka是面向Topic 的
+4. Partition：Partition 是Topic在物理上的分区，一个Topic可以分为多个Partition，每个Partition是一个有序的不可变的记录序列。单一主题中的分区有序，但无法保证主题中所有分区的消息有序。
+5. Consumer：从Kafka集群中消费消息的终端或服务
+6. Consumer Group：每个Consumer都属于一个Consumer Group，每条消息只能被Consumer Group中的一个Consumer消费，但可以被多个Consumer Group消费。
+7. Replica：Partition 的副本，用来保障Partition的高可用性。
+8. Controller： Kafka 集群中的其中一个服务器，用来进行Leader election以及各种 Failover 操作。
+9. Zookeeper：Kafka 通过Zookeeper来存储集群中的 meta 消息
 
 ####  2、Kafka 性能高原因
 
@@ -171,7 +161,7 @@ Kafka 的故障转移是通过使用**会话机制**实现的，每台 Kafka 服
 ####  13、Kafka 中 Zookeeper 的作用
 
 Kafka 是一个使用 Zookeeper 构建的分布式系统。Kafka 的各 Broker 在启动时都要在Zookeeper上注册，由Zookeeper统一协调管理。如果任何节点失败，可通过Zookeeper从先前提交的偏移量中恢复，因为它会做周期性提交偏移量工作。同一个Topic的消息会被分成多个分区并将其分布在多个Broker上，这些分区信息及与Broker的对应关系也是Zookeeper在维护。
-
+> kakfa 2.8 弃用 `zookeeper`
 #### 14、Kafka 提供了哪些系统工具
 
 *   **Kafka 迁移工具**：它有助于将代理从一个版本迁移到另一个版本
