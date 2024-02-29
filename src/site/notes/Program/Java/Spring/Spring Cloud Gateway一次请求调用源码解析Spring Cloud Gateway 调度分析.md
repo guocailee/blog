@@ -87,7 +87,7 @@ return builder.routes()
 
   
 
-![](/img/user/Dictionary/attchements/media/640-5.png)
+![](/img/user/attchements/media/640-5.png)
 
   
 
@@ -136,11 +136,11 @@ Spring Cloud Gateway的底层框架是netty，接受请求的关键类是Reactor
 
 http handler做的事情第一是将request 和 response转为一个exchange，这个exchange非常核心，是各个filter之间参数流转的载体，该类包含request、response、attributes(扩展字段)，接着做的事情就是web filter链的执行，其中的逻辑主要是监控。
 
-![](/img/user/Dictionary/attchements/media/640-3.png)
+![](/img/user/attchements/media/640-3.png)
 
 其中WebfilterChainParoxy 又会引出新的一条filter链，主要是安全、日志、认证相关的逻辑，由此可见Spring Cloud Gateway的过滤器设计是层层嵌套，扩展性很强。
 
-![](/img/user/Dictionary/attchements/media/640-1.png)
+![](/img/user/attchements/media/640-1.png)
 
 ### 3  寻找路由规则
 
@@ -162,11 +162,11 @@ return this.routeLocator.getRoutes()
 
 因为我这里用的是path进行过滤，所以背后的逻辑是PathRoutePredicateFactory来完成的，除了PathRoutePredicateFactory还有很多predicate规则。
 
-![](/img/user/Dictionary/attchements/media/640-4.png)
+![](/img/user/attchements/media/640-4.png)
 
 这些路由规则都能从官方文档上找到影子。  
 
-![](/img/user/Dictionary/attchements/media/640-2.png)
+![](/img/user/attchements/media/640-2.png)
 
 ###    4  核心过滤器链执行
 
@@ -208,7 +208,7 @@ public Mono<Void> handle(ServerWebExchange exchange) {
 4.  执行过滤器链  
     
 
-![](/img/user/Dictionary/attchements/media/640-6.png)
+![](/img/user/attchements/media/640-6.png)
 
 因为我的配置里包含了一个添加请求参数的逻辑，所以红线箭头处就是我配置的gateway filter名为 AddRequestParameterGatewayFilterFactory，其余全是Gloabl Filter，这些过滤器的功能主要是url解析，请求转发，响应回写等逻辑，因为我们这里用的是forward schema，所以请求转发会由ForwardRoutingFilter进行执行。
 
