@@ -16,6 +16,8 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Program/Container/Container\|Container]]                                                                                               | 2024-02-29 11:21 |
+| [[Program/Program\|Program]]                                                                                                             | 2024-02-29 11:21 |
 | [[Program/Algorithm/DeepLearning/通用排序框架在爱奇艺推荐的应用\|通用排序框架在爱奇艺推荐的应用]]                                                                      | 2024-02-29 11:07 |
 | [[Program/Algorithm/DataStructure/二分搜索树\|二分搜索树]]                                                                                         | 2024-02-29 11:03 |
 | [[Program/Algorithm/Java 知识进阶面试之海量数据处理\|Java 知识进阶面试之海量数据处理]]                                                                             | 2024-02-29 10:55 |
@@ -26,7 +28,7 @@
 | [[Program/MessageQueue/刨根问底 Kafka，面试过程真好使\|刨根问底 Kafka，面试过程真好使]]                                                                          | 2024-02-28 17:23 |
 | [[Program/Flutter/大型APP Route管理-Flutter\|大型APP Route管理-Flutter]]                                                                         | 2024-02-28 16:37 |
 | [[Home\|Home]]                                                                                                                           | 2024-02-28 16:19 |
-| [[Program/K8S/docker compose 配置文件 .yml 全面指南\|docker compose 配置文件 .yml 全面指南]]                                                             | 2024-02-28 16:16 |
+| [[Program/Container/docker compose配置文件全面指南\|docker compose配置文件全面指南]]                                                                     | 2024-02-28 16:16 |
 | [[Program/Cache/Redis基本讲解\|Redis基本讲解]]                                                                                                   | 2024-02-28 15:49 |
 | [[Life/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]                                                                                                 | 2024-02-28 10:17 |
 | [[Program/Kotlin/Coroutine/Kotlin Coroutine 初探\|Kotlin Coroutine 初探]]                                                                    | 2024-02-28 10:10 |
@@ -36,8 +38,8 @@
 | [[Program/Kotlin/Coroutine/Kotlin Coroutine 原理解析\|Kotlin Coroutine 原理解析]]                                                                | 2024-02-23 16:48 |
 | [[Program/Kotlin/Coroutine/Kotlin Coroutine 是如何与 Spring WebFlux 整合的\|Kotlin Coroutine 是如何与 Spring WebFlux 整合的]]                          | 2024-02-23 16:41 |
 | [[Program/Android/美图Android编译速度优化实践指南\|美图Android编译速度优化实践指南]]                                                                             | 2024-02-23 15:25 |
-| [[Program/K8S/Kubernetes 入门教程\|Kubernetes 入门教程]]                                                                                         | 2024-02-23 15:01 |
-| [[Program/K8S/一篇搞懂容器技术的基石-cgroup\|一篇搞懂容器技术的基石-cgroup]]                                                                                   | 2024-02-23 14:55 |
+| [[Program/Container/Kubernetes 入门教程\|Kubernetes 入门教程]]                                                                                   | 2024-02-23 15:01 |
+| [[Program/Container/一篇搞懂容器技术的基石-cgroup\|一篇搞懂容器技术的基石-cgroup]]                                                                             | 2024-02-23 14:55 |
 | [[Program/MessageQueue/消息队列\|消息队列]]                                                                                                      | 2024-02-23 14:55 |
 | [[Thinking/为什么专家不再关心技术细节\|为什么专家不再关心技术细节]]                                                                                                | 2024-02-22 10:50 |
 | [[Program/OS/计算机操作系统 - 概述\|计算机操作系统 - 概述]]                                                                                                | 2024-02-21 18:04 |
@@ -113,8 +115,6 @@
 | [[Life/Parenting/Parenting\|Parenting]]                                                                                                  | 2024-02-20 12:13 |
 | [[Thinking/怀旧\|怀旧]]                                                                                                                      | 2024-02-19 17:31 |
 | [[Program/Algorithm/Algorithm\|Algorithm]]                                                                                               | 2024-02-19 17:31 |
-| [[Program/JavaScript/JavaScript\|JavaScript]]                                                                                            | 2024-02-19 17:30 |
-| [[Program/OS/OS\|OS]]                                                                                                                    | 2024-02-19 17:30 |
 
 { .block-language-dataview}
 
