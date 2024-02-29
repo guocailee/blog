@@ -9,11 +9,11 @@
 
 最简单的方法是直接暴力比较，如下：
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
 显然，这种方法要比较的次数是：30 亿\*40 亿，时间复杂度太大了，无法通过腾讯面试。
 
@@ -21,11 +21,11 @@
 
 既然时间复杂度不符合要求，那就要反思一下暴力比较的算法了，显然，应该用哈希表，优化查找速度，如下：
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
 显然，时间复杂度大大降低，只需要遍历上面一层即可。然而，空间的占用还是太大了，1GB 的内存根本无法容纳 40 亿个 QQ 号。
 
@@ -54,7 +54,7 @@
 
 通过切割的方法，可以化大为小，让内存容纳得下，对应的图示如下：
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
 需要强调的是，仅仅以 QQ 号最后一位来划分，那么每个小文件的数据量大约是原来文件的 1/10, 可能还是偏大，怎么办？
 
@@ -70,13 +70,13 @@
 
 在很多实际项目中，bitmap 经常用到。我看了不少组件的源码，发现很多地方都有 bitmap 实现，bitmap 图解如下：
 
-![](/img/user/Dictionary/attchements/media/640-29.png)
+![](/img/user/attchements/media/640-29.png)
 
 这是一个 unsigned char 类型，可以看到，共有 8 位，取值范围是\[0, 255]，如上这个 unsigned char 的值是 255，它能标识 0~7 这些数字都存在。
 
 同理，如下这个 unsigned char 类型的值是 254，它对应的含义是：1~7 这些数字存在，而数字 0 不存在：
 
-![](/img/user/Dictionary/attchements/media/640-30.png)
+![](/img/user/attchements/media/640-30.png)
 
 由此可见，一个 unsigned char 类型的数据，可以标识 0~7 这 8 个整数的存在与否。以此类推：
 
