@@ -13,7 +13,7 @@
 
   
 
-![](/img/user/Dictionary/attchements/media/640.jpg)
+![](/img/user/attchements/media/640.jpg)
 
 我们看下 k8s 集群的架构，从左到右，分为两部分，第一部分是 Master 节点（也就是图中的 Control Plane），第二部分是 Node 节点。
 
@@ -218,7 +218,7 @@ redis-deployment-866c4c6cf9-zskkb   1/1     Running   0          6m32s
 
 ## 四  k8s 组件调用流程
 
-![](/img/user/Dictionary/attchements/media/640.png)
+![](/img/user/attchements/media/640.png)
 
   
 下面我们看下kubectl create deployment redis-deployment --image=redis下发之后，k8s 集群做了什么。
