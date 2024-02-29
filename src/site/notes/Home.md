@@ -16,6 +16,8 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Program/Algorithm/Raft 共识算法\|Raft 共识算法]]                                                                                               | 2024-02-29 10:48 |
+| [[Program/Cache/16 张图吃透 Redis 架构演进\|16 张图吃透 Redis 架构演进]]                                                                                 | 2024-02-29 10:39 |
 | [[Program/MessageQueue/一文带你搞定RabbitMQ死信队列\|一文带你搞定RabbitMQ死信队列]]                                                                          | 2024-02-28 17:41 |
 | [[Program/MessageQueue/一文带你搞定RabbitMQ延迟队列\|一文带你搞定RabbitMQ延迟队列]]                                                                          | 2024-02-28 17:37 |
 | [[Program/MessageQueue/刨根问底 Kafka，面试过程真好使\|刨根问底 Kafka，面试过程真好使]]                                                                          | 2024-02-28 17:23 |
@@ -23,7 +25,6 @@
 | [[Home\|Home]]                                                                                                                           | 2024-02-28 16:19 |
 | [[Program/K8S/docker compose 配置文件 .yml 全面指南\|docker compose 配置文件 .yml 全面指南]]                                                             | 2024-02-28 16:16 |
 | [[Program/Cache/Redis基本讲解\|Redis基本讲解]]                                                                                                   | 2024-02-28 15:49 |
-| [[Program/Cache/16 张图吃透 Redis 架构演进\|16 张图吃透 Redis 架构演进]]                                                                                 | 2024-02-28 15:49 |
 | [[Life/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]                                                                                                 | 2024-02-28 10:17 |
 | [[Program/Kotlin/Coroutine/Kotlin Coroutine 初探\|Kotlin Coroutine 初探]]                                                                    | 2024-02-28 10:10 |
 | [[Program/Reactive/Reactor  map, mapNotNull区别\|Reactor  map, mapNotNull区别]]                                                              | 2024-02-24 22:50 |
@@ -114,7 +115,6 @@
 | [[Program/OS/OS\|OS]]                                                                                                                    | 2024-02-19 17:30 |
 | [[Program/Program\|Program]]                                                                                                             | 2024-02-19 17:29 |
 | [[Thinking/Thinking\|Thinking]]                                                                                                          | 2024-02-19 17:28 |
-| [[GTD\|GTD]]                                                                                                                             | 2024-02-19 17:23 |
 
 { .block-language-dataview}
 
