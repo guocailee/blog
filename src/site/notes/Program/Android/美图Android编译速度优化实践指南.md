@@ -12,7 +12,7 @@
 
 目前优化后全量编译（耗时 **1m49.8s**、降幅达 **79.1%**），增量编译（耗时 **40.6s**、降幅达 **73.9%**）。
 
-![](/img/user/Dictionary/attchements/media/640-21.png)
+![](/img/user/attchements/media/640-21.png)
 
 编译加速优化 1 期包含 jvm 优化、aspectjx 和 firebase 任务屏蔽、res 精简，编译加速优化 2 期包含 AGP 升级和模块 aar 发布；编译加速优化 3 期包含动态版本依赖、自动发布以及模块安全隔离；编译加速优化 4 期包含静态版本、动态计算、依赖查询和配置切换自动化；通过上述 1-4 期优化，我们可以做到和日常开发流程一样，不用关注各种模块版本号、源码和 aar 之类，全局自动检测和适配。该方案已经在美图公司多数产品线 Android 项目上落地，为此希望借此机会，和各位交流美图秀秀 Android 的整体编译优化方案。
 
@@ -21,29 +21,29 @@
 
 **1.\*\***编译优化第 1 期 \*\*
 
-![](/img/user/Dictionary/attchements/media/640-21.png)
+![](/img/user/attchements/media/640-21.png)
 
 编译优化第 1 期通过屏蔽 aspectjx、lint、测试相关任务、jvm 内存优化、resConfigs 精减等手段，增量编译整体耗时降低**22.4%，**但整体降幅有限，因此也为我们后续做二期优化埋下伏笔。
 
 **（1）Task 任务分析**
 
-![](/img/user/Dictionary/attchements/media/640-26.png)
+![](/img/user/attchements/media/640-26.png)
 
 通过上述任务数据截图，我们知道类似 aspectjx 等 transforms 任务是相对比较耗时，达**30s+**，因此自然我们可以在本地开发环境下针对类似的任务进行屏蔽，从而降低编译耗时。
 
 **（2）jvm 优化**
 
-![](/img/user/Dictionary/attchements/media/640-28.png)
+![](/img/user/attchements/media/640-28.png)
 
 根据官方的描述，我们使用并行垃圾回收期要比 G1 垃圾回收器性能更高，所以可以-XX:+UseParallelGC 把这块配置加速。
 
-![](/img/user/Dictionary/attchements/media/640-25.png)
+![](/img/user/attchements/media/640-25.png)
 
 在我们电脑设备硬件条件允许下，可以适当增加包括 dexOptions 中 maxProcessCount 以及线程数、jvm 内存等。
 
 **2.\*\***编译优化第 2 期 \*\*
 
-![](/img/user/Dictionary/attchements/media/640-25.png)
+![](/img/user/attchements/media/640-25.png)
 
 编译优化第 2 期通过把工程中所有子模块发布仓库后进行外部依赖及升级 AGP 至 4.0.2 版本等手段，增量编译速度从**2m35.8s**降低至**40.6s**，降幅达**73.9%**，全量编译速度从**8m45.2s**降低至**1m49.8s**，降幅达**79.1%，**优化效果十分明显，但由于每次都要改版本号，操作比较繁琐，因此我们在编译优化三期对应做了升级和调整。
 
@@ -60,13 +60,13 @@ implementation "com.xxx.library:base:xxx"
 
 **（2）模块发布方案选型**
 
-![](/img/user/Dictionary/attchements/media/640-25.png)
+![](/img/user/attchements/media/640-25.png)
 
 由于我们发布的模块需要支持不同渠道、变体依赖不同的第三方库（如推送分为华为、Vivo、Oppo、Google），因此最终选择 Google 官方最新的 publish 进行仓库管理，如上图所示，通过 components.getByName("all")，在发布模块时就可以针对不同渠道的 aar 包，保证在模块通过外部依赖加载时，程序运行正常运行，不会在某些渠道下报找不到类问题，这个版本 AGP 必须要升级至 3.6.0 + 及以上，因此还需要对 AGP 进行相应升级，官方参考链接：使用 Maven Publish 插件。
 
 **（3）AGP 升级前后对比**
 
-![](/img/user/Dictionary/attchements/media/640-22.png)
+![](/img/user/attchements/media/640-22.png)
 
 从 AGP 升级从 3.5.4 版本升至 4.0.2 版本，greenDao 和插件库等有可能导致会无法编译问题，因此我们针对相应的插件使用的 gradle 相应的 api 进行升级处理。
 
@@ -89,7 +89,7 @@ resolutionStrategy.dependencySubstitution {
 
 **（5）android.support 引发血案**
 
-![](/img/user/Dictionary/attchements/media/640-23.png)
+![](/img/user/attchements/media/640-23.png)
 
 由于美图秀秀的工程是通过官方提供 android.useAndroidX 和 android.enableJetifier 进行迁移的，而我们在进行模块化发布和外部依赖时发现找不到对应的布局相应类，造成的原因是我们自定义的布局是以 android.support 命名，对应的发布的模块已经对自定义布局类包名变更，但加载自定义布局的其他模块没有进行一并修改，为此我们在进行模块化开发时特别需要注意，不要随便以 android.support 对自定义布局相关类进行包名命名，详细大家可以查阅 androidx 官方链接：androidx 迁移。
 
@@ -99,7 +99,7 @@ resolutionStrategy.dependencySubstitution {
 
 **3.\*\***编译优化第 3 期 \*\*
 
-![](/img/user/Dictionary/attchements/media/640-25.png)
+![](/img/user/attchements/media/640-25.png)
 
 编译优化第 3 期是基于动态版本和模块自动发布、以及兼顾安全而设计，主要为了解决研发同学在开发过程中需要手动修改版本，导致版本维护混乱易出错问题；但编译优化第 3 期有个小缺陷，那就是如果研发同学在子分支开发需求时由于模块外部依赖版本也会被动态变更，导致开发中断或者编译失败，而且随着迭代的进行，一个周期内的动态版本会越来越多，那么会增加依赖库查询的时间，不过相比编译优化第 2 期已经有了质的飞跃，已经往自动化方向靠齐，因此我们在编译优化四期针对三期进行全面的迭代和升级。
 
@@ -220,7 +220,7 @@ maven {
 
 **4.\*\***编译优化第 4 期 \*\*
 
-![](/img/user/Dictionary/attchements/media/640-27.png)
+![](/img/user/attchements/media/640-27.png)
 
 编译优化第 4 期是通过模块之间依赖是通过静态版本动态计算，并结合模块本地是否有修改、arr 对应版本仓库中是否存在，最终来决定模块是源码还是 arr 进行依赖，从而解决开发被中断以及线上动态版本越来越多导致的编译速度下降问题，更加自动化和智能化，彻底解决编译优化三期遇到的开发过程中被中断以及版本号堆叠后速度变慢问题。
 
@@ -310,7 +310,7 @@ def isDisableFirebase() {
 
 ## 03  开发规范
 
-![](/img/user/Dictionary/attchements/media/640-21.png)
+![](/img/user/attchements/media/640-21.png)
 
 如上图所示，展示了整个模块化开发的流程，和编译加速优化之前的流程是一致的，减少学习和适应成本，默认情况下所有配置项在 debug 环境下都是自动开启编译加速优化方案，如果对特定业务有需求，比如想打开 aspectjx、全源码依赖、各模块依赖等，则支持 local.properties 进行相应配置。什么依赖开关、版本号、编译配置统统丢掉，我们要做的就是大道至简，全部实现自动化和智能化。
 
@@ -337,7 +337,7 @@ def isDisableFirebase() {
 
 **（2）工程构建监控**
 
-**![](/img/user/Dictionary/attchements/media/640-24.png)**
+**![](/img/user/attchements/media/640-24.png)**
 
 通过官方提供的 scan 产物链接，我们可以非常方便的分析构建过程中可能导致的问题，通过查看日志快速定位和引导修复编译问题，核心配置代码如下所示（tips：需要在 setting.gradle 文件中配置）。
 
