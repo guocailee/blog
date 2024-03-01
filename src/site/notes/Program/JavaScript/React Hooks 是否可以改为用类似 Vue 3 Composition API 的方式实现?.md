@@ -3,7 +3,7 @@
 ---
 
 
-1.  是本文观点不代表公司。我是觉得圈子里不认同 Hooks 的声音太多了（比如  [@徐飞](//www.zhihu.com/people/c5198d4e9c0145aee04dd53cc6590edd) 叔叔、  [@贺师俊](//www.zhihu.com/people/3ec3b166992a5a90a1083945d2490d38) 贺老、  [@题叶](//www.zhihu.com/people/790dccce26904cdcd11b0fad3bac37b7)  同学等老朋友 no offensive），所以自愿出来平衡一下。
+1.  文观点不代表公司。我是觉得圈子里不认同 Hooks 的声音太多了（比如  [@徐飞](//www.zhihu.com/people/c5198d4e9c0145aee04dd53cc6590edd) 叔叔、  [@贺师俊](//www.zhihu.com/people/3ec3b166992a5a90a1083945d2490d38) 贺老、  [@题叶](//www.zhihu.com/people/790dccce26904cdcd11b0fad3bac37b7)  同学等老朋友 no offensive），所以自愿出来平衡一下。
 2.  是我确实好久没有实际写前端了 ，React Hooks 实战还不多，Vue 3 只草草略读了 [Composition API RFC](https://link.zhihu.com/?target=https%3A//vue-composition-api-rfc.netlify.com/) 与之前中文的 [Vue Function-based API RFC](https://zhuanlan.zhihu.com/p/68477600)（所以对细节并不太熟悉。）欢迎大家务必指正、补充（与要求补充）。
 
 ## 引言
