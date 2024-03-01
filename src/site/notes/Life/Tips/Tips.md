@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Tips/Tips/","noteIcon":""}
+{"dg-publish":true,"permalink":"/life/tips/tips/","noteIcon":""}
 ---
 
 [[Life/Life\|Life]]
