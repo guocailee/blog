@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Flutter/Flutter 3.3 之 SelectionArea 好不好用？用 “Bug” 带你全面了解它/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/flutter/flutter-3-3-selection-area-bug/","noteIcon":""}
 ---
 
 
