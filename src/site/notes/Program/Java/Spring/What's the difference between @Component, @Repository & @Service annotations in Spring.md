@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Spring/What's the difference between @Component, @Repository & @Service annotations in Spring/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/java/spring/what-s-the-difference-between-component-repository-and-service-annotations-in-spring/","noteIcon":""}
 ---
 
 From [Spring Documentation](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-stereotype-annotations):
