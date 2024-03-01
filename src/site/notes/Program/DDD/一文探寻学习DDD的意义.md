@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/ddd/ddd/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/DDD/一文探寻学习DDD的意义/","noteIcon":""}
 ---
 
 《阿甘正传》中，阿甘开始了不停地跑步，一段时间后，后面就有了很多追随者一起跑，他们为什么跑哪？
