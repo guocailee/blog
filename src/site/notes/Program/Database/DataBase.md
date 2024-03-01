@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/DataBase/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/database/data-base/","noteIcon":""}
 ---
 
 - [[Program/Database/DataBase\|DataBase]]
