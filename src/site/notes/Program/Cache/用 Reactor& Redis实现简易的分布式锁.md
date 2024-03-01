@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/cache/reactor-and-redis/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Cache/用 Reactor& Redis实现简易的分布式锁/","noteIcon":""}
 ---
 
 ```kotlin
