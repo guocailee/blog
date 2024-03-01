@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Build Tools/how pnpm links/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/build-tools/how-pnpm-links/","noteIcon":""}
 ---
 
 [[npm\|npm]]
