@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Home/","tags":["gardenEntry"],"noteIcon":""}
+{"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"],"noteIcon":""}
 ---
 
 ### 关于我
@@ -16,6 +16,7 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Program/JavaScript/「2021」高频前端面试题汇总之浏览器原理篇\|「2021」高频前端面试题汇总之浏览器原理篇]]                                                                    | 2024-03-01 15:44 |
 | [[Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?\|React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?]]            | 2024-03-01 15:16 |
 | [[Program/Container/Docker基础 - 仓库，镜像，容器详解\|Docker基础 - 仓库，镜像，容器详解]]                                                                       | 2024-03-01 15:02 |
 | [[Program/Mixed/System Design 101\|System Design 101]]                                                                                   | 2024-02-29 18:20 |
@@ -114,7 +115,6 @@
 | [[Program/Cache/缓存\|缓存]]                                                                                                                 | 2024-02-20 12:13 |
 | [[Program/Cache/Cache\|Cache]]                                                                                                           | 2024-02-20 12:13 |
 | [[Life/Tips/移除 Markdown的 links\|移除 Markdown的 links]]                                                                                     | 2024-02-20 12:13 |
-| [[Life/Books/为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感\|为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感]]                                                            | 2024-02-20 12:13 |
 
 { .block-language-dataview}
 
