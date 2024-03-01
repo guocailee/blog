@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Basic/Java 并发/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/java/basic/java/","noteIcon":""}
 ---
 
 
