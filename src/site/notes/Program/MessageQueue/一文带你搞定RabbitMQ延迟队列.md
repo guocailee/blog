@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/message-queue/rabbit-mq/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/MessageQueue/一文带你搞定RabbitMQ延迟队列/","noteIcon":""}
 ---
 
 ## 一、说明 
