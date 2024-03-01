@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/database/sql/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Database/SQL 练习/","noteIcon":""}
 ---
 
 
