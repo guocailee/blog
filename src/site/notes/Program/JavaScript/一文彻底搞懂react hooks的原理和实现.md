@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/一文彻底搞懂react hooks的原理和实现/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/java-script/react-hooks/","noteIcon":""}
 ---
 
 ## 摘要
