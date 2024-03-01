@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/life/parenting/parenting/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Life/Parenting/Parenting/","noteIcon":""}
 ---
 
 - [[Life/Parenting/注意这 4 个小细节，娃突然就听话了\|注意这 4 个小细节，娃突然就听话了]]
