@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/MessageQueue/一文带你搞定RabbitMQ死信队列/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/message-queue/rabbit-mq/","noteIcon":""}
 ---
 
 
