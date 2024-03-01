@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/design-pattern/kotlin/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Design pattern/设计模式-Kotlin实现/","noteIcon":""}
 ---
 
 
