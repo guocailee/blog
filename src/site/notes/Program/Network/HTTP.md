@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/network/http/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Network/HTTP/","noteIcon":""}
 ---
 
 ## 一 、基础概念
