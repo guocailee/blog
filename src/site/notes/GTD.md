@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/GTD/","noteIcon":""}
+{"dg-publish":true,"permalink":"/gtd/","noteIcon":""}
 ---
 
 
