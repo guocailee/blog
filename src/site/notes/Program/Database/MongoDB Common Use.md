@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/MongoDB Common Use/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/database/mongo-db-common-use/","noteIcon":""}
 ---
 
 ## 数据库连接
