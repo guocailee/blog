@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/database/sql/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Database/图解 SQL 的执行顺序，优雅/","noteIcon":""}
 ---
 
 
