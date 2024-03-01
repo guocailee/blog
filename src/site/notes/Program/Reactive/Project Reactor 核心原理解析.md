@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Reactive/Project Reactor 核心原理解析/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/reactive/project-reactor/","noteIcon":""}
 ---
 
 # Project Reactor 核心原理解析
