@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Kotlin/Coroutine/Kotlin Coroutine 初探/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/kotlin/coroutine/kotlin-coroutine/","noteIcon":""}
 ---
 
 
