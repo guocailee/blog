@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/算法/算法 - BitMap 求QQ号的交集/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/algorithm//bit-map-qq/","noteIcon":""}
 ---
 
 
