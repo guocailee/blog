@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/LeetCode/Leetcode 题解 - 动态规划/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/algorithm/leet-code/leetcode/","noteIcon":""}
 ---
 
 
