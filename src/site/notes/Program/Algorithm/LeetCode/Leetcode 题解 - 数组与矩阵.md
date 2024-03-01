@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/algorithm/leet-code/leetcode/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Algorithm/LeetCode/Leetcode 题解 - 数组与矩阵/","noteIcon":""}
 ---
 
 
