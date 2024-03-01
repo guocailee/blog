@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/java-script/java-script/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/JavaScript/JavaScript/","noteIcon":""}
 ---
 
 - [[Program/JavaScript/How to test custom prop validators in Vue.js - Vue.js Tutorials\|How to test custom prop validators in Vue.js - Vue.js Tutorials]]
