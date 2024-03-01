@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/Java 知识进阶面试之海量数据处理/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/algorithm/java/","noteIcon":""}
 ---
 
 
