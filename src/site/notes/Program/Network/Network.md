@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/network/network/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Network/Network/","noteIcon":""}
 ---
 
 - [[Program/Network/HTTP\|HTTP]]
