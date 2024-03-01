@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/design-pattern/design-pattern/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Design pattern/Design Pattern/","noteIcon":""}
 ---
 
 
