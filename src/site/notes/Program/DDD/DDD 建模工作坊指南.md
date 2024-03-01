@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/DDD/DDD 建模工作坊指南/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/ddd/ddd/","noteIcon":""}
 ---
 
 1 写在前面
