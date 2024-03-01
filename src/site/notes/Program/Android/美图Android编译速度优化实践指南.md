@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/android/android/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Android/美图Android编译速度优化实践指南/","noteIcon":""}
 ---
 
 
