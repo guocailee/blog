@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Cache/Redis基本讲解/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/cache/redis/","noteIcon":""}
 ---
 
 ## 一、概述
