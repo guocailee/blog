@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Basic/Java 基础/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/java/basic/java/","noteIcon":""}
 ---
 
 ## 一、数据类型
