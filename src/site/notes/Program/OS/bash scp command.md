@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/os/bash-scp-command/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/OS/bash scp command/","noteIcon":""}
 ---
 
  Linux 命令大全](https://www.runoob.com/linux/linux-command-manual.html)
