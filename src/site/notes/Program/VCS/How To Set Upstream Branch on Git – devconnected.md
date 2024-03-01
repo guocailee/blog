@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/vcs/how-to-set-upstream-branch-on-git-devconnected/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/VCS/How To Set Upstream Branch on Git – devconnected/","noteIcon":""}
 ---
 
 
