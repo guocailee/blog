@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/kotlin/kotlin-inline/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Kotlin/Kotlin 内联函数 inline/","noteIcon":""}
 ---
 
 `Kotlin` 中新增了「内联函数」，内联函数起初是在 `C++` 里面的。
