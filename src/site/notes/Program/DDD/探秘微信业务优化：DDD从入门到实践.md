@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/DDD/探秘微信业务优化：DDD从入门到实践/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/ddd/ddd/","noteIcon":""}
 ---
 
 
