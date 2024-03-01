@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Basic/Java 虚拟机/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/java/basic/java/","noteIcon":""}
 ---
 
 本文大部分内容参考   **周志明《深入理解 Java 虚拟机》**  ，想要深入学习的话请看原书。
