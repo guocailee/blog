@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/java-script/rust-is-the-future-of-java-script-infrastructure/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/JavaScript/Rust Is The Future of JavaScript Infrastructure/","noteIcon":""}
 ---
 
 
