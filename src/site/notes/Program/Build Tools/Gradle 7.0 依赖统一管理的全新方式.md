@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Build Tools/Gradle 7.0 依赖统一管理的全新方式/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/build-tools/gradle-7-0/","noteIcon":""}
 ---
 
 
