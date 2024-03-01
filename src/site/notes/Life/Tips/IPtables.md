@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Tips/IPtables/","noteIcon":""}
+{"dg-publish":true,"permalink":"/life/tips/i-ptables/","noteIcon":""}
 ---
 
 ```bash
