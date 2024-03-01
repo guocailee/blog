@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/Raft 共识算法/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/algorithm/raft/","noteIcon":""}
 ---
 
 
