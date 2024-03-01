@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Network/QUIC 是如何解决TCP 性能瓶颈的？/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/network/quic-tcp/","noteIcon":""}
 ---
 
 
