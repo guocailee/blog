@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/java-script/chrome-v8-java-script-v8-js/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/JavaScript/浏览器是如何工作的？ Chrome V8 引擎让你更懂JavaScript！「三万字精华，从V8角度了解JS」 - 知乎/","noteIcon":""}
 ---
 
 
