@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/reactive/flux-single-next/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Reactive/Flux single(), next() 区别/","noteIcon":""}
 ---
 
 
