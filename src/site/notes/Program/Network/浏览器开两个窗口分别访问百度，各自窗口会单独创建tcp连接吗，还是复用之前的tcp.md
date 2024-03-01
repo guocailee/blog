@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/network/tcp-tcp/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Network/浏览器开两个窗口分别访问百度，各自窗口会单独创建tcp连接吗，还是复用之前的tcp/","noteIcon":""}
 ---
 
 
