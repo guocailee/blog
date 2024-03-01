@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Network/Socket/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/network/socket/","noteIcon":""}
 ---
 
 ## 一、I/O 模型
