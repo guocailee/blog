@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/JavaScript/How to test custom prop validators in Vue.js - Vue.js Tutorials/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/java-script/how-to-test-custom-prop-validators-in-vue-js-vue-js-tutorials/","noteIcon":""}
 ---
 
 In this article, I will show you how you can test props and custom prop validators in a simple and performant way, without spying on the console error.
