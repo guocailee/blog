@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/reactive/rx/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Reactive/你可能错过的Rx入门文章/","noteIcon":""}
 ---
 
 
