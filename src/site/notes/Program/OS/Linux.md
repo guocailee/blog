@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/OS/Linux/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/os/linux/","noteIcon":""}
 ---
 
 ## 前言
