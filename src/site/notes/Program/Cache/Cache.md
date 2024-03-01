@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/cache/cache/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Cache/Cache/","noteIcon":""}
 ---
 
 - [[Program/Cache/16 张图吃透 Redis 架构演进\|16 张图吃透 Redis 架构演进]]
