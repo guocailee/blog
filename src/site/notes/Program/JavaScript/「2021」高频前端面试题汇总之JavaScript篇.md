@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/java-script/2021-java-script/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/JavaScript/「2021」高频前端面试题汇总之JavaScript篇/","noteIcon":""}
 ---
 
 ## 一、数据类型
