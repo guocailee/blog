@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Container/Kubernetes 入门教程/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/container/kubernetes/","noteIcon":""}
 ---
 
 
