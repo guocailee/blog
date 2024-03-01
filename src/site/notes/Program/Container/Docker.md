@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Container/Docker/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/container/docker/","noteIcon":""}
 ---
 
 
