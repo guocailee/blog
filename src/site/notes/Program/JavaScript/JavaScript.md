@@ -8,7 +8,6 @@
 - [[Program/JavaScript/React Hooks 使用误区，驳官方文档\|React Hooks 使用误区，驳官方文档]]
 - [[Program/JavaScript/React的调度系统\|React的调度系统]]
 - [[Program/JavaScript/Rust Is The Future of JavaScript Infrastructure\|Rust Is The Future of JavaScript Infrastructure]]
-- [[Program/JavaScript/React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?\|React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现?]]
 - [[Program/JavaScript/TS类型体操技巧总结\|TS类型体操技巧总结]]
 - [[Program/JavaScript/TypeScript 之 More on Functions\|TypeScript 之 More on Functions]]
 - [[Program/JavaScript/V8 引擎特性带来的的 JS 性能变化\|V8 引擎特性带来的的 JS 性能变化]]
@@ -36,5 +35,6 @@
 - [[Program/JavaScript/爱奇艺 RN 低代码引擎：千变万化、快速搭建的万花筒\|爱奇艺 RN 低代码引擎：千变万化、快速搭建的万花筒]]
 - [[Program/JavaScript/听说「React Fiber」很难？六个问题快速理解 React Fiber\|听说「React Fiber」很难？六个问题快速理解 React Fiber]]
 - [[Program/JavaScript/「2021」高频前端面试题汇总之HTML篇\|「2021」高频前端面试题汇总之HTML篇]]
+- [[Program/JavaScript/React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现\|React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现]]
 
 { .block-language-dataview}
