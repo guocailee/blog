@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/ddd/ddd/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/DDD/DDD 概念参考/","noteIcon":""}
 ---
 
 
