@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/java-script/java-script/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/JavaScript/关于 JavaScript 数据类型，有哪些你不知道的细节？/","noteIcon":""}
 ---
 
 大家好，今天我们再来看点基础知识，看看 JavaScript 数据类型中的一些细节。
