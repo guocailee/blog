@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/如何 “干掉” if...else - 简书/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/mixed/if-else/","noteIcon":""}
 ---
 
 # 前言
