@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/flutter/flutter-course-resources/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Flutter/Flutter-Course-Resources/","noteIcon":""}
 ---
 
 # Flutter-Course-Resources
