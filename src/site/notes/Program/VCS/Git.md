@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/vcs/git/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/VCS/Git/","noteIcon":""}
 ---
 
 
