@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/program/ddd/ddd/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/DDD/DDD落地 - 京东/","noteIcon":""}
 ---
 
 ## 前言
