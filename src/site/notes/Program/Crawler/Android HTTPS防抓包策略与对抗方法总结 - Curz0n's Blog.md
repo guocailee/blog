@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Crawler/Android HTTPS防抓包策略与对抗方法总结 - Curz0n's Blog/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/crawler/android-https-curz0n-s-blog/","noteIcon":""}
 ---
 
 0x01 前言[](#0x01-前言)
