@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Design pattern/设计模式-Java 实现/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/design-pattern/java/","noteIcon":""}
 ---
 
 # 一、概述
