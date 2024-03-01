@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/Algorithm/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/algorithm/algorithm/","noteIcon":""}
 ---
 
 
