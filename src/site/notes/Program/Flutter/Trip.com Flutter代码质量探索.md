@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Flutter/Trip.com Flutter代码质量探索/","noteIcon":""}
+{"dg-publish":true,"permalink":"/program/flutter/trip-com-flutter/","noteIcon":""}
 ---
 
 ## 一、前言
