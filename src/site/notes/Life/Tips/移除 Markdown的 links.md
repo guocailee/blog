@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Life/Tips/移除 Markdown的 links/","noteIcon":""}
+{"dg-publish":true,"permalink":"/life/tips/markdown-links/","noteIcon":""}
 ---
 
 1. using the Regex Find and Replace Add on.
