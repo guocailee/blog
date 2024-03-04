@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Flutter/Trip.com Flutter代码质量探索/","noteIcon":""}
 ---
 
+#flutter 
 ## 一、前言
 
 距离 Flutter 正式发布已经 3 年了，国内各大互联网公司都有相继使用，携程今年也在许多业务中使用了 Flutter 进行开发。
@@ -16,7 +17,7 @@
 
 下面整理了常用的空安全语法。
 
-```flutter
+```dart
 int? aNullableInt = null; //可空声明
 late int lateInt; //延迟声明
 int value = a ?? b; //如果a为空则执行b
@@ -39,27 +40,18 @@ func?.call("2"); //ok
 
 #### 可能存在的问题
 
-1）依赖库不支持空安全
+1. 依赖库不支持空安全
+> 只有在所有的依赖都支持空安全的情况下，才可以在健全的空安全下运行项目，所以需要保证所有依赖库都支持空安全，不过现在大部分第三方库都是支持的。
+2. 代码量大
+>不需要一次性迁移完成，指定 Dart 版本号渐进迁移，避免业务修改 Merge 代码的问题。下文会有空安全迁移的推荐步骤。
+3. 契约的更新
+>契约通常文件很多，一般使用脚本批量生成，如果要修改生成的规则、字段是否可空，尽量在空安全迁移之前或者之后统一处理，防止某些字段的空警告消失。尽量避免给 List.add() 这种集合操作的方法加? 可空操作符。
 
-只有在所有的依赖都支持空安全的情况下，才可以在健全的空安全下运行项目，所以需要保证所有依赖库都支持空安全，不过现在大部分第三方库都是支持的。
-
-2）代码量大
-
-不需要一次性迁移完成，指定 Dart 版本号渐进迁移，避免业务修改 Merge 代码的问题。下文会有空安全迁移的推荐步骤。
-
-3）契约的更新
-
-契约通常文件很多，一般使用脚本批量生成，如果要修改生成的规则、字段是否可空，尽量在空安全迁移之前或者之后统一处理，防止某些字段的空警告消失。尽量避免给 List.add() 这种集合操作的方法加? 可空操作符。
-
-4）Migrate 导致的错误
-
-Migrate 是官方提供用来迁移空安全的工具，但是在使用的过程中却存在许多坑点。
-
+4. Migrate 导致的错误
+>Migrate 是官方提供用来迁移空安全的工具，但是在使用的过程中却存在许多坑点。
 -   不合理的强制转换。将可空强转为非空类型。如 Future<T>强转成 FutureOr&lt;T?>。注意 Map 和 Map&lt;String, dynamic>。Object、Object?、dynamic，{} 与 &lt; dynamic, dynamic>{} 的区别。
-
 ![](https://pic1.zhimg.com/80/v2-ca435cd329de957bd95c3df54d4204e4_720w.jpg)
-
--   无法正确的识别可空类型，可能也与原始代码的实现方式有关。会增加代码判空复杂度。
+ -   无法正确的识别可空类型，可能也与原始代码的实现方式有关。会增加代码判空复杂度。
 
 ![](https://pic3.zhimg.com/80/v2-7923ac5f84f8caa8d17d9660bb33d202_720w.jpg)
 
@@ -73,24 +65,20 @@ Migrate 是官方提供用来迁移空安全的工具，但是在使用的过程
 ![](https://pic3.zhimg.com/80/v2-421cb490bfa3c8618a3073afdc8a0422_720w.jpg)
 
 -   还会有一些遗留问题，代码上标识为错误和黄底警告，比如多余的? 操作符等，都需要手动修改。
+5. analysis_options 文件中 exclude 的文件会被 Migrate 工具忽略，同时也会被空安全语法的代码检测忽略。
+6. 空安全迁移后还有 type 'Null' is not a subtype of type 'xxx' 、Null check operator used on a null value 错误。
+> 迁移完空安全后可以免大部分空错误，还会存在一小部分空错误，这是由于! 操作符不合理的使用，dymamic 隐式转换等原因导致的，需要避免使用强制非空以及静态代码扫描来检测。
 
-5）analysis_options 文件中 exclude 的文件会被 Migrate 工具忽略，同时也会被空安全语法的代码检测忽略。
+#### **空安全迁移的推荐步骤**
 
-6）空安全迁移后还有 type 'Null' is not a subtype of type 'xxx' 、Null check operator used on a null value 错误。
+1. flutter pub outdated --mode=null-safety 保证所有库都支持，flutter pub upgrade --null-safety 升级所有依赖库到支持版本。
 
-迁移完空安全后可以免大部分空错误，还会存在一小部分空错误，这是由于! 操作符不合理的使用，dymamic 隐式转换等原因导致的，需要避免使用强制非空以及静态代码扫描来检测。
+2. `dart migrate --skip-import-check` 打开 migrate，反选所有文件，点击 apply，会自动的升级 pubspec.yaml 版本并给所有文件加上 @dart=2.9 注释。
+3. 自底向上的适配项目中的文件。将文件的 @dart=2.9 注释删除会出现很多空安全错误和警告，警告也需要修改。（如果要用 Migrate 修改一定要对检查每个改动）
 
-**空安全迁移的推荐步骤**
+> 迁移顺序：公共库 → 业务基础库、Utils、Model → ViewModel → Widget → main.dart
 
-1）flutter pub outdated --mode=null-safety 保证所有库都支持，flutter pub upgrade --null-safety 升级所有依赖库到支持版本。
-
-2）dart migrate --skip-import-check 打开 migrate，反选所有文件，点击 apply，会自动的升级 pubspec.yaml 版本并给所有文件加上 @dart=2.9 注释。
-
-3）自底向上的适配项目中的文件。将文件的 @dart=2.9 注释删除会出现很多空安全错误和警告，警告也需要修改。（如果要用 Migrate 修改一定要对检查每个改动）
-
-迁移顺序：公共库 → 业务基础库、Utils、Model → ViewModel → Widget → main.dart
-
-4）main.dart 的 @dart=2.9 移除后，项目将以健全的空安全模式运行。
+4. main.dart 的 @dart=2.9 移除后，项目将以健全的空安全模式运行。
 
 ### **2.3 配置静态代码扫描**
 
@@ -106,7 +94,7 @@ include: package:flutter_lints/flutter.yaml
 
 隐式转换会导致 dynamic 转换为非空，产生 Null check 错误，通常在 Map&lt;String, dymamic> 取值、泛型方法返回值的转换等情况容易出现。
 
-```text
+```dart
 [[禁用隐式转换]]
 analyzer:
   strong-mode:
@@ -181,22 +169,17 @@ App 的业务功能随着版本迭代越来越多，手动测试无法覆盖到�
 ### **3.1 Flutter 单元测试的优劣**
 
 -   声明式 UI 与 Provider
-
-由于 Flutter 采用声明式 UI 的布局方式，我们可以很轻易将功能逻辑独立出来，[http://Trip.com](https://link.zhihu.com/?target=http%3A//Trip.com)使用 Provider 来进行状态管理，将一个个业务模块抽成子 ViewModel，可以很方便的对各个模块进行单元测试的编写。
-
+> 由于 Flutter 采用声明式 UI 的布局方式，我们可以很轻易将功能逻辑独立出来，[http://Trip.com](https://link.zhihu.com/?target=http%3A//Trip.com)使用 Provider 来进行状态管理，将一个个业务模块抽成子 ViewModel，可以很方便的对各个模块进行单元测试的编写。
 -   使用 testWidget 模拟 Widget 进行测试
-
-testWidget 给我们提供了 Flutter 测试环境来 Mock 插件、模拟 Widget 生命周期、多种 UI 操作等功能，这在某些对话框、流程较长的功能以及 Widget 场景的测试中十分好用。
-
+> testWidget 给我们提供了 Flutter 测试环境来 Mock 插件、模拟 Widget 生命周期、多种 UI 操作等功能，这在某些对话框、流程较长的功能以及 Widget 场景的测试中十分好用。
 -   不支持反射
-
-Flutter 在 Mock 上有很大局限性。插件的 Mock 使用的是系统提供的方法，Mockito 只支持静态代理。所以在一些需要 Mock 的场景或者结果校验场景需要做一些额外的操作来达到目的。
+> Flutter 在 Mock 上有很大局限性。插件的 Mock 使用的是系统提供的方法，Mockito 只支持静态代理。所以在一些需要 Mock 的场景或者结果校验场景需要做一些额外的操作来达到目的。
 
 ### **3.2 Flutter 单元测试流程**
 
-一个完整的单元测试流程有以下几步：setUp -> groupSetUp -> test -> groupTearDown ->tearDown。具体的代码和步骤描述如下所示。
+一个完整的单元测试流程有以下几步：`setUp -> groupSetUp -> test -> groupTearDown ->tearDown`。具体的代码和步骤描述如下所示。
 
-```text
+```dart
 main() {
   setUp(() {
     //初始化环境以及整个文件用到的数据
@@ -225,13 +208,13 @@ main() {
 
 在单元测试中，各个模块间的依赖往往是最难处理的问题之一。我们在编写单元测试的过程中总结了 3 个步骤，首先尝试构建依赖，当依赖无法构建或者构建过程过于复杂再尝试 Mock 依赖。如果还无法编写测试用例就需要对代码进行重构。
 
-**1）构建依赖**
+#### **构建依赖**
 
 -   初始化 ParentViewModel
 
 在我们项目中，ViewModel 是我们测试的重要部分。通常，我们页面是由一个父的 ViewModel 和大量子 ViewModel 组成。在对子 ViewModel 进行单元测试的编写时，常常会有一些对其他 ViewModel 的依赖，这个时候取构建他们的实例是一件特别费力的事，尤其是他们对结果影响不大的时候。所以我们给了一个初始化父 ViewModel 的方法，在写单元测试的时候就可以快速的构建出被测试实例。
 
-```text
+```dart
 //通过该方法构建出父ViewModel，在每个用例用使用这个方法可以方便的获取到被测试的子ViewModel
 Future<HotelSellingPointViewModel> initSellingPointViewModel(WidgetTester? tester, {
     pageIndex = 0, 
@@ -246,7 +229,7 @@ Future<HotelSellingPointViewModel> initSellingPointViewModel(WidgetTester? teste
 
 在某些场景例如网络请求回调，从 Native 获取复杂数据时，构建这些对象的实例会变得很麻烦，我们通常提供一个通用的 Builder 来构建这些对象。以可定接口的返回来说，我们提供一个默认的 json，并在 build 方法中支持传入自定义 json，支持配置各个子参数，针对层级更深的参数，在进行用例编写的时候可以逐步添加方便其他用例复用。
 
-**2）Mock 依赖**
+#### *Mock 依赖*
 
 -   对插件的依赖
 
@@ -254,7 +237,7 @@ Future<HotelSellingPointViewModel> initSellingPointViewModel(WidgetTester? teste
 
 下面展示了一个 Mock 管理类提供网络插件 Mock 方法的具体实现流程，我们在 hotelSetUp 中调用 setMockMethodCallHandler 设置 Mock 回调，在回调方法中通过 MethodName 来判断调用注册过的 MockFunction，如果是 HttpClient 的话，就从请求参数中取出对应的 Url，最后取到用例中调用 addMockNetwork Mock 的 Response 来返回。
 
-```text
+```dart
 typedef MockFunction = Function(MethodCall methodCall);
 
 MethodChannel _channel = MethodChannel('method_name', JSONMethodCodec());
@@ -303,9 +286,7 @@ void hotelSetUp() {
 
 下面整理了部分 Flutter Mockito 的使用方式，具体的使用可在项目 Git 仓库上查看。
 
-```text
-
-```
+```dart
 
 //dart run build_runner build 生成 Mock 实例类
 @GenerateMocks([Cat])
@@ -328,8 +309,6 @@ await untilCalled(cat.chew()); // Completes when cat.chew() is called.
 
 ```
 
-```
-
 ### **3.4 校验结果**
 
 在单元测试中，确认被测试单元的运行结果满足需求，几乎是最重要的步骤了，需要考虑正常结果、边界条件、异常等情况。Flutter 给我们提供了 expect 方法，我们可以校验方法返回值、ViewModel 的属性，在 testWidget 中还可以校验 Finder 结果。有时还会出现以上方式都无法校验结果的情况，比如调用了 Native 插件，这种情况我们可以 hook 插件调用流程获取结果。
@@ -338,7 +317,7 @@ await untilCalled(cat.chew()); // Completes when cat.chew() is called.
 
 expect 方法的定义如下，我们通常会使用到 actual, matcher, reason 参数。actual 是校验的对象，matcher 可以是一个值或者是 Matcher 对象，reason 为校验结果失败的描述。
 
-```text
+```dart
 void expect(
   dynamic actual,
   dynamic matcher, {
@@ -349,7 +328,7 @@ void expect(
 
 下面整理了一些常见的使用场景，Flutter 给我们提供了非常多的 Match 类型，比如 AllOf、InRange、StringStartOf、Throws 等等。
 
-```text
+```dart
 expect(string.trim(), equals('result')); \\ equals('result')可以使用result代替
 expect('foo,bar,baz', allOf([
       contains('foo'),
@@ -364,7 +343,7 @@ expect(find.text("确认"), findsOneWidget);
 
 在实际场景中，很多时候代码会已插件调用结束，比如发送网络请求、支付、埋点等，我们提供了校验插件调用的方法，并提供了网络请求和埋点的校验场景。
 
-```text
+```dart
 //使用方式
 expect(verifyNetWork(serviceName).last["body"]["isAllowDuplicate"], "T", reason: "isAllowDuplicate应该为T");
 expect(verifyUBT(traceKey), isNotEmpty);
@@ -391,7 +370,7 @@ _channel.setMockMethodCallHandler((MethodCall methodCall) async {
 
 针对预定页的很多用例，需要校验的结果是创单接口的参数是否符合预期，如果每次都去取参数校验会有很多重复代码。我们可以将 request 里的每个数据校验做封装，便可以满足各种场景的使用。
 
-```text
+```dart
 //使用方式
 HotelBookExpectHelper.expectReservationRequest(verifyNetWork(HotelService.reservation.serviceName).last, checkIn: "2021-09-09");
 
@@ -411,11 +390,11 @@ static expectReservationRequest(Map request, {String? checkIn ...}) {
 
 在单元测试中，对于单元定义也是有争论的，有些说法认为一个方法是一个单元，也有认为一个类或者一个功能模块也是一个单元，或许有些说法认为使用 testWidget 会脱离了单元测试的范畴。但是技术是为业务服务的，如果在测试用例中使用、操作、校验 UI 元素可以更好的验证代码正确性，都是有意义的。
 
-**1）校验对话框**
+#### **1）校验对话框**
 
 在项目中，在 ViewModel 中有一些展示对话框的场景，比如在网络接口调用失败后，弹出一个提示框。此时，这个用例的验证结果是是否弹出对话框、弹框上展示的文案是否符合预期等。此时我们便可以使用 testWidget 的功能去校验结果。
 
-```flutter
+```dart
 testWidgets("dialog", (WidgetTester tester) async {
   BuildContext context =
       await HotelDialogTestHelper.listenDialogShow(tester, callback: (DialogRoute<dynamic> route, Widget dialog) {});
@@ -427,7 +406,7 @@ testWidgets("dialog", (WidgetTester tester) async {
 
 其中 listenDialogShow 提供了两种方式展示对话框，一种是和上面的例子一样通过 listenDialogShow 方法返回的 context 展示对话框。除此之外，由于我们在 ViewModel 展示对话需要 context，大部分情况是使用 globalKey 取到 context 去展示对话框，这种情况下将展示对话框所用的 globalKey 传入到 listenDialogShow 方法里也可以正常打开对话框。具体代码如下，通过 tester.pumpWidget 模拟一个环境来打开对话框。
 
-```text
+```dart
 static Future<BuildContext> listenDialogShow(WidgetTester tester,
     {GlobalKey? globalKey, required DialogTestCallback callback}) async {
   await tester.pumpWidget(Builder(builder: (context) {
@@ -441,13 +420,13 @@ static Future<BuildContext> listenDialogShow(WidgetTester tester,
 }
 ```
 
-**2）测试一个完整流程**
+#### **2）测试一个完整流程**
 
 对于一些模块，比如创单模块，需要从其他 ViewModel 获取数据最后调用创单接口，我们很难编写测试用例。mock 其他 ViewModel 返回数据的工作量很大，这样就算通过了测试，其价值也显得不是很大。
 
 此时我们可以将一整个流程看成一个单元去编写测试用例，可以构建完整的 ViewModel 或者使用 tester.pumpWidget 构建整个页面。这里我们使用了构建页面的方式，它的好处是可以不用清楚地知道其他子 ViewModel 的代码逻辑，通过操作页面然后创单，最后校验创单的结果。
 
-```text
+```dart
 testWidgets('BookPage-reservation', (widgetTester) async {
     await HotelBookOperation.pumpBookPage(widgetTester);
     await HotelBookGuestOperation.addGuest(widgetTester, "张", "三");
@@ -471,7 +450,7 @@ testWidgets('BookPage-reservation', (widgetTester) async {
 
 上面的例子是一个最基础的创单用例，流程为填写入住人、联系人后点击创单按钮，校验创单接口的参数是否符合预期。我们将各个模块的操作封装成一个 Operation 方法，这样通过一句话就可以完成一个操作，很容易编写其他场景的测试用例。
 
-```text
+```dart
 static Future addGuest(WidgetTester widgetTester, String surName, String givenName) async {
   try {
     List<HotelBookTextField> testField =
@@ -496,7 +475,7 @@ coverage 命令会生成单测跑过所有 Dart 代码对应的. info 文件，�
 
 我们可以通过 Lcov 工具的 extract 命令筛选需要计算覆盖率的文件，再通过 genhtml 命令去生成一个可视化的 html 文件。
 
-```text
+```dart
 先安装lcov
 brew install lcov
 flutter test --coverage
