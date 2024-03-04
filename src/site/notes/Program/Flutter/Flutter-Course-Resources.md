@@ -2,8 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Flutter/Flutter-Course-Resources/","noteIcon":""}
 ---
 
-# Flutter-Course-Resources
-Collected By： [[Flutter\|Flutter]] [[Program/Program\|Program]] [[Flutter\|Flutter]] 
+#flutter  #resource
 
 ## Section 1: Introduction to Cross-Platform Development with Flutter and Dart
 
