@@ -69,8 +69,7 @@ For more information about this error, try `rustc --explain E0505`.
 
 Rust所有权系统主要是用来做自动化内存管理，那么，我们首先分析下Rust代码内存结构。其示意图如下所示：
 
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--77aGZC1F--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nx7zpi93u1y03ijhrw1g.png)
-](https://res.cloudinary.com/practicaldev/image/fetch/s--77aGZC1F--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nx7zpi93u1y03ijhrw1g.png)
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--77aGZC1F--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nx7zpi93u1y03ijhrw1g.png)
 
 和C语言类似，Rust程序内存布局包括了堆、栈、静态数据区、只读数据区和只读代码区。  
 其中，对于每个区存放的内容，大抵可以如下分类：  
@@ -117,8 +116,8 @@ u = s
 
 
 整个操作的内存变化如下图所示：  
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--Nuo4kLXM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dkg8dr2tv0mybopgq4ri.png)
-](https://res.cloudinary.com/practicaldev/image/fetch/s--Nuo4kLXM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dkg8dr2tv0mybopgq4ri.png)  
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--Nuo4kLXM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dkg8dr2tv0mybopgq4ri.png)
+
 我们分析可以得出结论：  
 1.Python的字符串和列表底层都是胖指针的形式存储，列表指针的存储内容为：引用计数，列表长度，列表数据指针，列表容量。字符串指针的存储内容为：引用计数，字符串长度，文本数据内容。  
 2.局部变量存储在栈中。  
@@ -160,8 +159,8 @@ let u = s;
 Enter fullscreen mode Exit fullscreen mode
 
 Rust内存结构变化如下图所示：  
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--yqU1H9OP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ga4x0js1mzmd5berk9ky.png)
-](https://res.cloudinary.com/practicaldev/image/fetch/s--yqU1H9OP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ga4x0js1mzmd5berk9ky.png)  
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--yqU1H9OP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ga4x0js1mzmd5berk9ky.png)
+
 我们可以得出结论：  
 1.Rust中向量存储和字符串存储方式和C++一样，都是胖指针，指针内容格式一致。  
 2.t = s操作，将t胖指针的堆内存数据地址指向s的堆内存数据地址，s对象变成悬空指针，无法访问。  
@@ -202,8 +201,8 @@ let u:Rc<String> = s.clone();
 2.一个变量被多个线程同时操作。
 
 上段代码在内存中的存储格式为：  
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--0gSGyICo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0qjfex64ad5zejp6izk6.png)
-](https://res.cloudinary.com/practicaldev/image/fetch/s--0gSGyICo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0qjfex64ad5zejp6izk6.png)
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--0gSGyICo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0qjfex64ad5zejp6izk6.png)
+
 
 为了保证整个机制在各个场景下的可靠，不出现数据竞争情况，Rust引入了所有权树。
 
@@ -216,8 +215,8 @@ Rust中，所有权规则总结如下：
 
 如下图所示，变量的所有权可以被借用，主要包括了可变引用和非可变引用。这里的可变引用和不可变引用可以使用读写锁来理解。通常来说，只读的不可变引用即是只读引用，变量可以被多个只读引用来同时借用，由于是只读的，所以不存在变量共享问题。而可修改引用，则要求一个变量只能被一个可修改引用借用，而且，对该变量的访问，只能通过该可变引用来访问。规则如下图所示：
 
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--QxcJV2JA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ni4iifs2cdqct9k3jg7b.png)
-](https://res.cloudinary.com/practicaldev/image/fetch/s--QxcJV2JA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ni4iifs2cdqct9k3jg7b.png)
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--QxcJV2JA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ni4iifs2cdqct9k3jg7b.png)
+
 
 所有权树表示了所有权行为都是可以推导的，也就是说在编译阶段编译器即可发现各类的内存管理问题，所以这也是Rust内存安全性的保证。
 
@@ -271,6 +270,5 @@ v.1;                  //错误，禁止通过其他路径访问可修改引用
 1.Rust中是否不存在内存泄漏？
 
 如下图所示，在Rust中可以创建引用循环，在此情况下，引用计数永远不可能为0，就会发生内存泄漏。  
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--3P8rtLIo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qm8hruu89ac2mm2jwbsd.png)
-](https://res.cloudinary.com/practicaldev/image/fetch/s--3P8rtLIo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qm8hruu89ac2mm2jwbsd.png)  
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--3P8rtLIo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qm8hruu89ac2mm2jwbsd.png)
 为了避免该问题，Rust中引入了RefCell机制，该机制不在本文详细描述，大家可以搜索下相关文章，后续其他文章也会专门讲解。
