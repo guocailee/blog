@@ -10,7 +10,7 @@
 
 | 未整理 | 计划 | 生活 | 编程 | 思考 |
 | ---- | ---- | ---- | ---- | ---- |
-| [[Inbox/Inbox\|Inbox]] | [[GTD\|GTD]] | [[Life\|Life]] | [[Program/Program\|Program]] | [[Thinking/Thinking\|Thinking]] |
+| [[Inbox/Inbox\|Inbox]] | [[GTD\|GTD]] | [[Life/Life\|Life]] | [[Program/Program\|Program]] | [[Thinking/Thinking\|Thinking]] |
 ## 最近修改
 
 | File                                                                                                                                        | Last modified    |
