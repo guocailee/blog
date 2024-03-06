@@ -5,7 +5,7 @@
 
 Kafka最初是由Linkedin公司开发的，是一个分布式的、可扩展的、容错的、支持分区的（Partition）、多副本的（replica）、基于Zookeeper框架的发布-订阅消息系统，Kafka适合离线和在线消息消费。它是分布式应用系统中的重要组件之一，也被广泛应用于大数据处理。Kafka是用Scala语言开发，它的Java版本称为Jafka。Linkedin于2010年将该系统贡献给了Apache基金会并成为顶级开源项目之一。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/P7WuIzkp9iaUNvd2YY7uX8ticY9iat1XxCibnr03SRArbgZ0SSZuFqm7eJ3zn5AnwZZic7pHiaCzIx23XaxlWPWUIRug/640?wx_fmt=png)
+![](/img/user/attchements/media/640-45.png)
 
 
 ----
@@ -32,14 +32,10 @@ Kafka 将消息以 topic 为单位进行归纳，发布消息的程序称为 **P
 ####  2、Kafka 性能高原因
 
 1.  利用了 PageCache 缓存
-    
 2.  磁盘顺序写
-    
-3.  零拷贝技术
-    
+3.  [[Program/Mixed/零拷贝\|零拷贝]]技术
 4.  pull 拉模式
     
-
 #### 3、Kafka 文件高效存储设计原理
 
 1.  Kafka把Topic中一个Partition大文件分成多个小文件段，通过多个小文件段，就容易定期清除或删除已经消费完成的文件，减少磁盘占用
@@ -123,7 +119,7 @@ Kafka 将消息以 topic 为单位进行归纳，发布消息的程序称为 **P
 6.  Sender 线程把一个一个批次发送到服务端
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/P7WuIzkp9iaUNvd2YY7uX8ticY9iat1XxCibakib1eb7PiaqwcRCcpkGCtYPjtk71hwLfbLb4HtVL3DRibUCw9Fl4tcrQ/640?wx_fmt=png)
+![](/img/user/attchements/media/640-44.png)
 
 #### 10、Kafka 中的消息封装
 
