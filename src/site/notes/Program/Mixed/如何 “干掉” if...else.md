@@ -50,7 +50,7 @@
 逻辑表达模式固定的 `if...else`
 
 #### 实现与示例
-
+```java
     if (param.equals(value1)) {
         doAction1(someParams);
     } else if (param.equals(value2)) {
@@ -59,9 +59,10 @@
         doAction3(someParams);
     }
     // ... 
+```
 
 可重构为
-
+```java
     Map<?, Function<?> action> actionMappings = new HashMap<>(); // 这里泛型 ? 是为方便演示，实际可替换为你需要的类型
 
     // When init
@@ -72,12 +73,13 @@
     // 省略 null 判断
     actionMappings.get(param).apply(someParams); 
 
+```
 _上面的示例使用了 Java 8 的 Lambda 和 Functional Interface，这里不做讲解。_
 
 表的映射关系，可以采用集中的方式，也可以采用分散的方式，即每个处理类自行注册。也可以通过配置文件的方式表达。总之，形式有很多。
 
 还有一些问题，其中的条件表达式并不像上例中的那样简单，但稍加变换，同样可以应用表驱动。下面借用《编程珠玑》中的一个税金计算的例子：
-
+```java
     if income <= 2200
       tax = 0
     else if income <= 2700
@@ -89,6 +91,7 @@ _上面的示例使用了 Java 8 的 Lambda 和 Functional Interface，这里不
     ......
     else
       tax = 53090 + 0.7 * (income - 102200) 
+```
 
 对于上面的代码，其实只需将税金的计算公式提取出来，将每一档的标准提取到一个表格，在加上一个循环即可。具体重构之后的代码不给出，大家自己思考。
 
