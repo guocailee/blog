@@ -16,11 +16,7 @@
 
 所以，码哥**今天分享一个正确 Redis 分布式锁代码实战**，让你一飞冲天，该代码可直接用于生产，不是简单的 demo。
 
-  
-
 温馨提示：如果你只想看代码实战部分，可直接翻到 Spring Boot 实战章节。
-
-  
 
 ## **一、错误的分布式锁**
   
@@ -381,21 +377,12 @@ public interface Lock {
 }
 ```
 
-  
-
-===
 
 ## **五、青铜分布式锁实战**
 
-  
-
 DistributedLock 实现 Lock 接口，构造方法实现 resourceName 和 StringRedisTemplate 的属性设置。客户端唯一标识使用uuid:threadId 组成。
 
-  
-
 ### **DistributedLock**
-
-  
 
 ```java
 public class DistributedLock implements Lock {
@@ -434,8 +421,6 @@ public class DistributedLock implements Lock {
 ---
 
 ### **加锁 tryLock、lock**
-
-  
 
 tryLock 以阻塞等待 waitTime 时间的方式来尝试获取锁。获取成功则返回 true，反之 false。tryAcquire 方法相当于执行了 Redis 的SET resourceName uuid:threadID NX PX {leaseTime} 指令。
 
@@ -503,10 +488,8 @@ private Boolean tryAcquire(long leaseTime, TimeUnit unit, long threadId) {
 
 ### **解锁 unlock**
 
-  
 
 解锁的逻辑是通过执行 lua 脚本实现。
-
   
 
 ```java
@@ -515,9 +498,8 @@ private Boolean tryAcquire(long leaseTime, TimeUnit unit, long threadId) {
     long threadId = Thread.currentThread().getId();
 
     // 执行 lua 脚本
-    DefaultRedisScript < Long > redisScript = new DefaultRedisScript < > (LuaScript.unlockScript(), Long.class);
+    DefaultRedisScript <Long> redisScript = new DefaultRedisScript < > (LuaScript.unlockScript(), Long.class);
     Long opStatus = redisTemplate.execute(redisScript, keys, getRequestId(threadId));
-
     if (opStatus == null) {
         throw new IllegalMonitorStateException("attempt to unlock lock, not locked by current thread by node id: " +
             id + " thread-id: " + threadId);
@@ -528,12 +510,9 @@ private Boolean tryAcquire(long leaseTime, TimeUnit unit, long threadId) {
 
 ###   **LuaScript**
 
-  
-
 其实这个脚本就是在讲解青铜板分布式锁原理的那段代码，具体逻辑已经解释过，这里就不再重复分析。
 
   
-
 ```cs
 public class LuaScript {
 
