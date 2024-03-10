@@ -22,8 +22,8 @@
 | [[Program/Mixed/正则表达式\|正则表达式]]                                                                                                           | 2024-03-10 10:54 |
 | [[Program/Mixed/零拷贝\|零拷贝]]                                                                                                               | 2024-03-10 10:54 |
 | [[Program/Mixed/使用前端技术破解掘金滑块验证码\|使用前端技术破解掘金滑块验证码]]                                                                                       | 2024-03-10 10:54 |
-| [[Program/Mixed/如何更好地干掉微服务架构复杂性?\|如何更好地干掉微服务架构复杂性?]]                                                                                     | 2024-03-10 10:54 |
 | [[Program/Mixed/如何 “干掉” if...else\|如何 “干掉” if...else]]                                                                                   | 2024-03-10 10:54 |
+| [[Program/Mixed/如何更好地干掉微服务架构复杂性\|如何更好地干掉微服务架构复杂性]]                                                                                       | 2024-03-10 10:54 |
 | [[Program/Java/SpringBoot Redis 分布式锁的正确实现方式\|SpringBoot Redis 分布式锁的正确实现方式]]                                                              | 2024-03-10 10:54 |
 | [[Program/MessageQueue/刨根问底 Kafka，面试过程真好使\|刨根问底 Kafka，面试过程真好使]]                                                                          | 2024-03-10 10:54 |
 | [[Program/Flutter/Flutter-Course-Resources\|Flutter-Course-Resources]]                                                                   | 2024-03-10 10:54 |
