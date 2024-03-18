@@ -11,6 +11,11 @@ body {
     border-left: 1px solid var(--text-accent);
   }
   .notelink.active-note {
-    transform: translateX(0px);
+    transform: translateX(0px) !important;
+  }
+  .content {
+    img {
+      background-color: #fff !important;
+    }
   }
 }
