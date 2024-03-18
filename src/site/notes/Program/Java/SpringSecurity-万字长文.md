@@ -4,7 +4,7 @@
 
 思维导图如下  
 [![](https://segmentfault.com/img/remote/1460000023052496)
-](https://link.segmentfault.com/?enc=j%2FVrDvo7EV6a8IXiFPQpMg%3D%3D.UB0MgpJMsCvK6HxjlPp%2FTvC3oN4I6l7eJa3SjyeFdmeYc8P7DDe%2FUXfZxebN8HxgpYz6dIFhBLN7CspuQhAW8WTRNPJTa8lJ8NL8eStexboww%2F%2FBdYcPrdr2ks0W%2Bq4l8OOGo3KLSzLR4kMRmnkGDw%3D%3D)
+
 
 ## RBAC权限分析
 
@@ -13,14 +13,13 @@ RBAC 全称为基于角色的权限控制，本段将会从什么是RBAC，模�
 ### 思维导图
 
 绘制思维导图如下  
-[![](https://segmentfault.com/img/remote/1460000023052497)
-](https://link.segmentfault.com/?enc=dxo3A%2FvTF17tOtZztrd1eg%3D%3D.%2B9pj%2BTv23CG8KV3tyqq%2FhoDsSqItR4dx%2BYZVYgceOotN1IUyHvBrews3cJo1nLTLGIOVLBbWEKdwVGP0zDjswsaVj90RKhPap%2BWqZ3Raq50s79xtlI%2BUllAVeBKHF2HM9h8aI3PA8oDuVYtMSy7LCw%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052497)
 
 ### 什么是RBAC
 
 RBAC 全称为用户角色权限控制，通过角色关联用户，角色关联权限，这种方式，间阶的赋予用户的权限，如下图所示  
-[![](https://segmentfault.com/img/remote/1460000023052498)
-](https://link.segmentfault.com/?enc=N9d1jH6uCdUDJHy8NQWQlg%3D%3D.pF9WlrilbJdBFisBKM%2BKOXUgttMmIEow4OiFIkA3uNXatMvG6X4PVjz1K8QWjZFriIlQ5cV711AfzwxJ%2BOyuFj5YX3HX%2B%2BDPTly6yQG36BW6OXKbWZorF1sUIhNmeozUYFVFTyxPsxs2qyPpWEb8uw%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052498)
+
 
 对于通常的系统而言，存在多个用户具有相同的权限，在分配的时候，要为指定的用户分配相关的权限，修改的时候也要依次的对这几个用户的权限进行修改，有了角色这个权限，在修改权限的时候，只需要对角色进行修改，就可以实现相关的权限的修改。这样做增加了效率，减少了权限漏洞的发生。
 
@@ -39,8 +38,8 @@ RBAC0是最简单的RBAC模型，这里面包含了两种。
 #### RBAC1
 
 相对于RBAC0模型来说，增加了子角色，引入了继承的概念。  
-[![](https://segmentfault.com/img/remote/1460000023052499)
-](https://link.segmentfault.com/?enc=%2FxzVaWd%2FmsPX4LE%2B572MWQ%3D%3D.ARaGO4tRL2GzoROo4YSESeCDkoJvlKLDZi6OdN6maydvwnUCwiBaildYQNRJf9WSfjj1xZibQfNlqEoMTw0tzAtXe9MXxRBPgz%2Fxq0iLd9oYtBN2DuKWivgk3r8mqzWpVtNDL1TM92oYVkfCqdNeDA%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052499)
+
 
 #### RBAC2 模型
 
@@ -65,14 +64,12 @@ RBAC0是最简单的RBAC模型，这里面包含了两种。
 #### RBAC3模型
 
 即，RBAC1，RBAC2，两者模型全部累计，称为统一模型。  
-[![](https://segmentfault.com/img/remote/1460000023052501)
-](https://link.segmentfault.com/?enc=0Ak0QTVLK80IeZCsIaDQ9w%3D%3D.EI%2BcRhSYUuDTH%2F0FlUhzOq%2BZjICe3CBda8toGCxSJeW%2F%2BJ6twiQK2HmYUvBlYhK2h9dnZfyTxTdg8%2BAVoRvYdDr8dndVvnyVy8YBWJKvHj3b40XG%2BvbfnmgOtdpihLHhppAS8mOP%2BzGHSx0ldXxclQ%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052501)
 
 #### 什么是权限
 
 权限是资源的集合，这里的资源指的是软件中的所有的内容，即，对页面的操作权限，对页面的访问权限，对数据的增删查改的权限。 举个栗子。 对于下图中的系统而言，  
-[![](https://segmentfault.com/img/remote/1460000023052500)
-](https://link.segmentfault.com/?enc=BtopoKdAQzjHJIh2zXwMlw%3D%3D.WfxdNpeom1bYqQSSoYuLlZ18HYXwjZVbq7DVvIiUGGV%2BwqtfrfPHIOOfoPWIusoRj042mXOigMXhh1S7ZAsXi8nu15aiRpba6e%2BZt8YSrd5adiMHruGAyU2uhondkfz2I%2BCttnrxUvHPM2J2QF1C%2Bw%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052500)
 
 拥有，计划管理，客户管理，合同管理，出入库通知单管理，粮食安全追溯，粮食统计查询，设备管理这几个页面，对这几个页面的访问，以及是否能够访问到菜单，都属于权限。
 
@@ -113,13 +110,11 @@ public class Test {
 
 最后启动项目，在日志中查看相关的密码
 
-[![](https://segmentfault.com/img/remote/1460000023052503)
-](https://link.segmentfault.com/?enc=budSvMA199vKechotK2KGA%3D%3D.6Fod16gcl9N0ZMtDWahLwvpxNipOy0gz30BzCBahbMxZeDqcw%2FjMdn1akpN1i0v5QBJJKDLYcD0PqtGb1%2FXNf3p1Rhp3QHE055Up8edGm1aJ911SjlhWLYwvh1drDyBpWTQwkACjk%2Blr5ln8easHHQ%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052503)
 
 访问接口，可以看到相关的登录界面
 
-[![](https://segmentfault.com/img/remote/1460000023052502)
-](https://link.segmentfault.com/?enc=%2FIFsepPYcLFw3R5DJKaM2g%3D%3D.Qg4%2F6TzCMdNLFotswW95Vdc%2F5PqYZ5dSH%2BkVnBzOxcee3Q9ZMwtciLll0dHfpcwSIus446MqDg100tfUjt26ivINo4p5Olx0I%2FBQGbWBuOTUW9DmyyIqfHOg0t5tCFKhW%2FTC%2BRrxLNrLZi%2BpsvRRVw%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052502)
 
 输入用户名和相关的密码
 
@@ -128,8 +123,7 @@ public class Test {
 密码 984cccf2-ba82-468e-a404-7d32123d0f9c
 ```
 
-[![](https://segmentfault.com/img/remote/1460000023052506)
-](https://link.segmentfault.com/?enc=EmFyQ9WX4zkcSCpaclnTdg%3D%3D.ymu3pDgY80WINXEIx8DmXF9TzWBol6e%2FgDi%2FevTmU6Clm7Qd6btDH7FvGmCAx82vCOC%2F0jTdaLyySiQyIOqgieacEez92M9IuzPKAOgscmeMUB%2Bbgxp6XLUHljzw9efd2kMobK01ygDDgBjSqk44wg%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052506)
 
 登录成功
 
@@ -241,8 +235,7 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 
 ### 导入依赖
 
-添加web依赖[![](https://segmentfault.com/img/remote/1460000023052504)
-](https://link.segmentfault.com/?enc=bQGwBBzv4d8Ex%2FDmdgoMHw%3D%3D.PQq0yIddfwdAVqn60GitXWE64%2BuxCKRD0c0%2BjcVFGvzgVvJfMiz3i%2FLgp0HI%2FyEKsfSYstNicxEyGehMcamTY4lueO7Awsh22oUJ89vWcPw1%2B2nBy8dXiorQ0P7BSsc9mTtJHWZTlsoihDkxlF2DxQ%3D%3D)
+添加web依赖![](https://segmentfault.com/img/remote/1460000023052504)
 
 导入JWT和Security依赖
 
@@ -611,8 +604,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
 ### 运行，返回token
 
-运行，返回结果为token[![](https://segmentfault.com/img/remote/1460000023052505)
-](https://link.segmentfault.com/?enc=YjVt%2BR9rq9tRpOS3fgYkZQ%3D%3D.nQy4GxSwJfyzyF5TRyex5g%2BVBuF49EJxk2pE92eHOQ69I7fs7VMc2ePTQ%2BY3QZr6C9ySN3RZUShRWPvNKBzEuumn6kMoyG86PiU6Is%2BRebhJ%2FoM4xrDVzFNH6GGX32qOOIAZEqkk%2F%2BHMUaDFcYkiKA%3D%3D)
+运行，返回结果为token![](https://segmentfault.com/img/remote/1460000023052505)
 
 ## SpringSecurity JSON登录
 
@@ -755,8 +747,7 @@ public class UserServiceImpl implements UserService {
 
 这里设计数据表
 
-[![](https://segmentfault.com/img/remote/1460000023052507)
-](https://link.segmentfault.com/?enc=Lg91FJ7DB2sZdhm9WGWqQw%3D%3D.o7yPbp4BYQXiYBEr97QeTSRZ2OqoJG%2B%2F%2BbUFHZtSFEjag3siljgl56PJNhiJtvoVu%2BheHP%2BZtSPTuDnm4YLNZ3BWyizd4NvXB7bS0cRT7Hi2YjnkyaF%2F8d2d5ObnsYxHdDQjBBjfmcLtByjy5xmFMQ%3D%3D)
+![](https://segmentfault.com/img/remote/1460000023052507)
 
 ### 着重配置SpringConfig
 
