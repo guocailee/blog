@@ -83,7 +83,7 @@ RBAC0是最简单的RBAC模型，这里面包含了两种。
 
 首先添加依赖
 
-```
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-security</artifactId>
@@ -92,7 +92,7 @@ RBAC0是最简单的RBAC模型，这里面包含了两种。
 
 然后添加相关的访问接口
 
-```
+```java
 package com.example.demo.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -118,7 +118,7 @@ public class Test {
 
 输入用户名和相关的密码
 
-```
+```bash
 用户名： user
 密码 984cccf2-ba82-468e-a404-7d32123d0f9c
 ```
@@ -131,7 +131,7 @@ public class Test {
 
 在配置文件中，书写相关的登录和密码
 
-```
+```yaml
  spring:
  security:
  user:
@@ -147,7 +147,7 @@ public class Test {
 
 需要自定义类继承 WebSecurityConfigurerAdapter 代码如下
 
-```
+```java
 package com.example.demo.config;
 
 import org.springframework.context.annotation.Bean;
@@ -178,7 +178,7 @@ public class MyWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 这里对一些方法进行拦截
 
-```
+```java
 package com.ming.demo.interceptor;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -239,7 +239,7 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 
 导入JWT和Security依赖
 
-```
+```xml
  
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -258,7 +258,7 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 
 创建 一个相关的JavaBean
 
-```
+```java
 package com.example.demo;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -323,7 +323,7 @@ public class JwtUser implements UserDetails {
 
 编写工具类，用来生成token，以及刷新token，以及验证token
 
-```
+```java
 package com.example.demo;
 
 import io.jsonwebtoken.Claims;
@@ -417,7 +417,7 @@ public class JwtTokenUtil implements Serializable {
 
 编写Filter 用来检测JWT
 
-```
+```java
 package com.example.demo;
 
 import org.apache.commons.lang.StringUtils;
@@ -470,7 +470,7 @@ public class JwtAuthenticationTokenFilter  extends OncePerRequestFilter {
 
 在上方代码中，编写userDetailsService，类，实现其验证过程
 
-```
+```java
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -507,7 +507,7 @@ public class JwtUserDetailsServiceImpl  implements UserDetailsService {
 
 编写登录业务的实现类 其login方法会返回一个JWTUtils 的token
 
-```
+```java
 @Service
 public class UserServiceImpl  implements UserService {
     @Autowired
@@ -541,7 +541,7 @@ public class UserServiceImpl  implements UserService {
 
 ### 最后配置Config
 
-```
+```java
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
@@ -651,7 +651,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
 
 ### 配置SecurityConfig
 
-```
+```java
 @Override
 protected void configure(HttpSecurity http) throws Exception {
     http
@@ -689,7 +689,7 @@ CustomAuthenticationFilter customAuthenticationFilter() throws Exception {
 
 需要在Config 类中配置如下内容
 
-```
+```java
  
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
@@ -699,7 +699,7 @@ CustomAuthenticationFilter customAuthenticationFilter() throws Exception {
 
 即，使用此方法，对密码进行加密， 在业务层的时候，使用此加密的方法
 
-```
+```java
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
@@ -751,7 +751,7 @@ public class UserServiceImpl implements UserService {
 
 ### 着重配置SpringConfig
 
-```
+```java
 @Configurable
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
