@@ -20,7 +20,7 @@
 
 掌握了这些原理，这样平时你在使用 Redis 时，就能够做到「游刃有余」。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX75EZA2goC2RDKyhnY6wjCA4wtBJeG5rkr45ibicnogSMhHsM4vodV4ttw/640?wx_fmt=png)
+![](/img/user/attchements/media/640-48.png)
 
 ## 01 从最简单的开始：单机版 Redis
 
@@ -28,7 +28,7 @@
 
 假设现在你有一个业务应用，需要引入 Redis 来提高应用的性能，此时你可以选择部署一个单机版的 Redis 来使用，就像这样：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX7vb1yGDStMUqp2QiblygZYqf6GjYkoTVBeWCljBsT54QleRCZoFk4f5Q/640?wx_fmt=png)
+![](/img/user/attchements/media/640-46.png)
 这个架构非常简单，你的业务应用可以把 Redis 当做缓存来使用，从 MySQL 中查询数据，然后写入到 Redis 中，之后业务应用再从 Redis 中读取这些数据，由于 Redis 的数据都存储在内存中，所以这个速度飞快。
 
 如果你的业务体量并不大，那这样的架构模型基本可以满足你的需求。是不是很简单？
@@ -37,7 +37,7 @@
 
 但是，突然有一天，你的 Redis 因为某些原因宕机了，这时你的所有业务流量，都会打到后端 MySQL 上，这会导致你的 MySQL 压力剧增，严重的话甚至会压垮 MySQL。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX7bBLuCHRjknr2WHqSdqBEM35fN4Kv9NyLTxB1miaWn5e7UZKicrIapibkw/640?wx_fmt=png)
+![](/img/user/attchements/media/640-46.png)
 
 这时你应该怎么办？
 
@@ -59,13 +59,13 @@
 
 现在，你设想的 Redis 数据持久化是这样的：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY2l385bhV0lcBo5Mpu6UbrK6TcLTX0MZhw0xQkfs2BMr1Vn4vhbGuwFtjBqu5yNn6o0KASVUqRBg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-47.png)
 
 但是，数据持久化具体应该怎么做呢？
 
 我猜你最容易想到的一个方案是，Redis 每一次执行写操作，除了写内存之外，同时也写一份到磁盘上，就像这样：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY2l385bhV0lcBo5Mpu6Ubr2kl3K9NDWsSibriazhBzrSmicH5JfIZeHQepiaxU5L5d4w4FdUasps8wDA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-50.png)
 
 没错，这是最简单直接的方案。
 
@@ -95,14 +95,14 @@
 >
 > 2、此时你拿一个相机给这个水杯拍一张照片，拍照的这一瞬间，照片中记录到这个水杯中水的容量，就是水杯的数据快照。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX7qicBHVcDBRbyicn2ES4YuJTLe9fFr5b4HKtSHe04DRMDRsVHkBTh8etA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-50.png)
 也就是说，Redis 的数据快照，是记录某一时刻下 Redis 中的数据，然后只需要把这个数据快照写到磁盘上就可以了。
 
 它的优势在于，只在需要持久化时，把数据「一次性」写入磁盘，其它时间都不需要操作磁盘。
 
 基于这个方案，我们可以**定时**给 Redis 做数据快照，把数据持久化到磁盘上。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX7nSUTGEibHicQW70f6PqAuvAWpnonJsoPEo1rCib3J1ibb58XLJG93QUdiaw/640?wx_fmt=png)
+![](/img/user/attchements/media/640-50.png)
 
 其实，上面说的这些持久化方案，就是 Redis 的「RDB」和「AOF」：
 
@@ -137,7 +137,7 @@
 
 我们可以对 AOF 文件定时 rewrite，避免这个文件体积持续膨胀，这样在恢复时就可以缩短恢复时间了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX76vWjdpNXiaYQ7eYmkYWLbTxDdmjTd50pibZWkEWLdZSNP34iacQWtWoRA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-48.png)
 
 再进一步思考一下，还有没有办法继续缩小 AOF 文件？
 
@@ -153,7 +153,7 @@
 
 具体来说，当 AOF rewrite 时，Redis 先以 RDB 格式在 AOF 文件中写入一个数据快照，再把在这期间产生的每一个写命令，追加到 AOF 文件中。因为 RDB 是二进制压缩写入的，这样 AOF 文件体积就变得更小了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX7NtGtz7Diay9lnnia6spsS6Q3Rz8evApF56RkQic6A6KXlSwHdok8MG1lg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-48.png)
 
 此时，你在使用 AOF 文件恢复数据时，这个恢复时间就会更短了！
 
@@ -175,7 +175,7 @@
 
 此时，你可以部署多个 Redis 实例，架构模型就变成了这样：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX7QXD2zG7gd5bC2HecrN7860WN6hXgOMtYQekN3pAicHcPq8uLKeIDjzg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-47.png)
 
 我们这里把实时读写的节点叫做 master，另一个实时同步数据的节点叫做 slave。
 
@@ -185,7 +185,7 @@
 
 2、提升读性能：让 slave 分担一部分读请求，提升应用的整体性能。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/gB9Yvac5K3M9JeWwVHia7MXxHm00kiau91G6miaDIxedRKeNpfXxT29Itr5fE0BcxRJTppv2Bh8duLhGu76m6QiaicQ/640?wx_fmt=jpeg)
+![](/img/user/attchements/media/640-2.jpg)
 
 这个方案不错，不仅节省了数据恢复的时间，还能提升性能，那它有什么问题吗？
 
@@ -211,13 +211,13 @@
 >
 > 3、哨兵发现异常，发起主从切换。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/gB9Yvac5K3M9JeWwVHia7MXxHm00kiau91Fez6ya3jRoibh1GlxONjicvKyn7KBqrKCmdadILAARZYJwoM5icPD2nnQ/640?wx_fmt=jpeg)
+![](/img/user/attchements/media/640-14.jpg)
 
 有了这个方案，就不需要人去介入处理了，一切就变得自动化了，是不是很爽？
 
 但这里还有一个问题，如果 master 状态正常，但这个哨兵在询问 master 时，它们之间的网络发生了问题，那这个哨兵可能会误判。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/gB9Yvac5K3M9JeWwVHia7MXxHm00kiau91LqSdlTfKSBCxhGvZa3ho7lc4MqBTHiaWjzrtej7uAb1YibjG1zNOvJhw/640?wx_fmt=jpeg)
+![](/img/user/attchements/media/640-13.jpg)
 
 这个问题怎么解决？
 
@@ -267,7 +267,7 @@
 
 现在，我们用多个哨兵共同监测 Redis 的状态，这样一来，就可以避免误判的问题了，架构模型就变成了这样：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY0DeVymvHbtCTDy0cNPYX7GJJKYyIltWMoOw0mCkr9BqeGCUtZOVPGaeec7HjNqlWbjV7HjribGmA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-49.png)
 
 好了，到这里我们先小结一下。
 
@@ -300,7 +300,7 @@
 
 所以，现在的架构模型就变成了这样：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY2l385bhV0lcBo5Mpu6Ubrve1v8eLyN9WcSeibaQbUcbuD1ZKjKaKca4TRZAecokXDu852ibLSmjVg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-51.png)
 
 现在问题又来了，这么多实例如何组织呢？
 
@@ -318,7 +318,7 @@
 
 客户端分片指的是，key 的路由规则放在客户端来做，就是下面这样：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY2l385bhV0lcBo5Mpu6UbrwTUj518S6drHTgMmweep6dxzQju8icG1rBztT9CXmRFfCoic5jLPOgcA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-49.png)
 
 这个方案的缺点是，客户端需要维护这个路由规则，也就是说，你需要把路由规则写到你的业务代码中。
 
@@ -328,7 +328,7 @@
 
 这就是 Redis Cluster 的采用的方案。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY2l385bhV0lcBo5Mpu6Ubrg3iciaOIuIppSsCZkRX4wJyDuVQXMEibmMyTbwjCjJZVibZFzI3mibw5gPA/640?wx_fmt=png)
+![](/img/user/attchements/media/640-52.png)
 
 > Redis Cluster 内置了哨兵逻辑，无需再部署哨兵。
 
@@ -346,7 +346,7 @@ Proxy 会把你的请求根据路由规则，转发到对应的 Redis 节点上�
 
 业界开源的 Redis 分片集群方案，例如 Twemproxy、Codis 就是采用的这种方案。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/AaabKZjib2kY2l385bhV0lcBo5Mpu6UbrhXmy8MXuVokLVHMyR4XtJxGUEkCaQnyhgWiagbV1KeWc9YYlg0Iee2Q/640?wx_fmt=png)
+![](/img/user/attchements/media/640-52.png)
 
 > 分片集群在数据扩容时，还涉及到了很多细节，这块内容不是本文重点，暂不详述。
 
@@ -372,7 +372,7 @@ Proxy 会把你的请求根据路由规则，转发到对应的 Redis 节点上�
 
 这里我画了一个思维导图，方便你更好地去理解它们之间的关系，以及演化的过程。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/gB9Yvac5K3M9JeWwVHia7MXxHm00kiau916fTlPgGXEiaxUEtwTwof7fiazYV8aOtRB0KeviaXuIALWSXicnMwvd38Eg/640?wx_fmt=png)
+![](/img/user/attchements/media/640-47.png)
 
 ## 07 写在最后
 
