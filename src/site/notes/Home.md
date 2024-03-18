@@ -8,15 +8,17 @@
 
 ## 一些笔记
 
-| 未整理 | 计划 | 生活 | 编程 | 思考 |
-| ---- | ---- | ---- | ---- | ---- |
-| [[Inbox/Inbox\|Inbox]] | [[GTD\|GTD]] | [[Life/Life\|Life]] | [[Program/Program\|Program]] | [[Thinking/Thinking\|Thinking]] |
+| 未整理       | 生活       | 编程          | 思考           |
+| --------- | -------- | ----------- | ------------ |
+| [[Inbox/Inbox\|Inbox]] | [[Life/Life\|Life]] | [[Program/Program\|Program]] | [[Thinking/Thinking\|Thinking]] |
 ## 最近修改
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Thinking/怀旧\|怀旧]]                                                                                                                      | 2024-03-18 12:42 |
+| [[Thinking/Thinking\|Thinking]]                                                                                                          | 2024-03-18 12:42 |
+| [[Home\|Home]]                                                                                                                           | 2024-03-18 12:41 |
 | [[Program/Java/SpringSecurity-万字长文\|SpringSecurity-万字长文]]                                                                                | 2024-03-18 11:12 |
-| [[Home\|Home]]                                                                                                                           | 2024-03-12 18:38 |
 | [[Life/Life\|Life]]                                                                                                                      | 2024-03-12 18:37 |
 | [[Program/Mixed/如何更好地干掉微服务架构复杂性\|如何更好地干掉微服务架构复杂性]]                                                                                       | 2024-03-11 11:54 |
 | [[Program/Java/SpringBoot Redis 分布式锁的正确实现方式\|SpringBoot Redis 分布式锁的正确实现方式]]                                                              | 2024-03-07 18:33 |
@@ -140,9 +142,7 @@
 | [[Program/Cache/Cache\|Cache]]                                                                                                           | 2024-02-20 12:13 |
 | [[Life/Tips/移除 Markdown的 links\|移除 Markdown的 links]]                                                                                     | 2024-02-20 12:13 |
 | [[Life/Books/为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感\|为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感]]                                                            | 2024-02-20 12:13 |
-| [[Thinking/怀旧\|怀旧]]                                                                                                                      | 2024-02-19 17:31 |
 | [[Program/Algorithm/Algorithm\|Algorithm]]                                                                                               | 2024-02-19 17:31 |
-| [[Program/JavaScript/JavaScript\|JavaScript]]                                                                                            | 2024-02-19 17:30 |
 
 { .block-language-dataview}
 
