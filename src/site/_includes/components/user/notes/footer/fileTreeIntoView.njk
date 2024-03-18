@@ -1,8 +1,12 @@
 <script>
     window.addEventListener('DOMContentLoaded', function () {
-        Array
+        const element = Array
             .from(document.querySelectorAll("a"))
             .find(it => it.attributes.href.value == decodeURIComponent(location.pathname))
-            .scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+        if (element) {
+            element
+                .parentNode
+                .scrollIntoView({behavior: "smooth"})
+        }
     });
 </script>
