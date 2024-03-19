@@ -15,6 +15,7 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Inbox/Redis只能做缓存？太out了！\|Redis只能做缓存？太out了！]]                                                                                           | 2024-03-19 18:10 |
 | [[Program/Container/Dockfile详解\|Dockfile详解]]                                                                                             | 2024-03-19 18:07 |
 | [[Program/Cache/16 张图吃透 Redis 架构演进\|16 张图吃透 Redis 架构演进]]                                                                                 | 2024-03-18 18:07 |
 | [[Program/Algorithm/剑指Offer/30. 包含 min 函数的栈\|30. 包含 min 函数的栈]]                                                                           | 2024-03-18 17:47 |
@@ -142,7 +143,6 @@
 | [[Program/Database/SQL 练习\|SQL 练习]]                                                                                                      | 2024-02-20 12:13 |
 | [[Program/Database/SQL 语法\|SQL 语法]]                                                                                                      | 2024-02-20 12:13 |
 | [[Program/Cache/缓存\|缓存]]                                                                                                                 | 2024-02-20 12:13 |
-| [[Program/Cache/Cache\|Cache]]                                                                                                           | 2024-02-20 12:13 |
 
 { .block-language-dataview}
 
