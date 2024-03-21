@@ -2,10 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Build Tools/how pnpm links/","noteIcon":""}
 ---
 
-[[npm\|npm]]
-背景
-
---
+### 背景
 
 日常我们会经常碰到关于 pnpm 以及幻影依赖的问题，有的问题比较复杂，涉及到了 pnpm 背后的实现原理，因此本文展开讲一讲 pnpm 的 link 机制。
 
