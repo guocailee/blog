@@ -15,6 +15,7 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Program/Mixed/如何 “干掉” if...else\|如何 “干掉” if...else]]                                                                                   | 2024-03-22 11:25 |
 | [[Program/Java/Spring/Spring Cloud Gateway一次请求调用源码解析Spring Cloud Gateway 调度分析\|Spring Cloud Gateway一次请求调用源码解析Spring Cloud Gateway 调度分析]] | 2024-03-22 11:16 |
 | [[Program/Database/图解 SQL 的执行顺序，优雅\|图解 SQL 的执行顺序，优雅]]                                                                                    | 2024-03-22 11:16 |
 | [[Program/Container/Kubernetes 入门教程\|Kubernetes 入门教程]]                                                                                   | 2024-03-22 11:16 |
@@ -36,7 +37,6 @@
 | [[XLife/Life\|Life]]                                                                                                                     | 2024-03-12 18:37 |
 | [[Program/Mixed/如何更好地干掉微服务架构复杂性\|如何更好地干掉微服务架构复杂性]]                                                                                       | 2024-03-11 11:54 |
 | [[Program/Java/SpringBoot Redis 分布式锁的正确实现方式\|SpringBoot Redis 分布式锁的正确实现方式]]                                                              | 2024-03-07 18:33 |
-| [[Program/Mixed/如何 “干掉” if...else\|如何 “干掉” if...else]]                                                                                   | 2024-03-06 11:15 |
 | [[Program/Mixed/正则表达式\|正则表达式]]                                                                                                           | 2024-03-06 11:03 |
 | [[Program/Mixed/使用前端技术破解掘金滑块验证码\|使用前端技术破解掘金滑块验证码]]                                                                                       | 2024-03-06 10:56 |
 | [[Program/Mixed/零拷贝\|零拷贝]]                                                                                                               | 2024-03-06 10:51 |
