@@ -109,8 +109,7 @@ TCP 也提供了快速建立连接的方案 TFO (TCP Fast Open)，原理跟TLS �
  | HTTP/2 + TLS 1.2 首次连接 | HTTP/2 + TLS 1.2 会话恢复 | HTTP/2 + TLS 1.3 首次连接 | HTTP/2 + TLS 1.3 会话恢复 | HTTP/2 + TLS 1.3 会话恢复 + TFO | QUIC 首次连接 | QUIC 会话恢复 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | DNS 解析 | 1-RTT | 0-RTT | 1-RTT | 0-RTT | 0-RTT | 1-RTT | 0-RTT |
-| TCP 握手 | 1-RTT | 1-RTT | 1-RTT | 1-RTT | 0-RTT  
-(TCP Fast Open) | - | - |
+| TCP 握手 | 1-RTT | 1-RTT | 1-RTT | 1-RTT | 0-RTT  (TCP Fast Open) | - | - |
 | TLS 握手 | 2-RTT | 1-RTT | 1-RTT | 0-RTT | 0-RTT | - | - |
 | QUIC 握手 | - | - | - | - | - | 1-RTT | 0-RTT |
 | HTTP 请求 | 1-RTT | 1-RTT | 1-RTT | 1-RTT | 1-RTT | 1-RTT | 1-RTT |
