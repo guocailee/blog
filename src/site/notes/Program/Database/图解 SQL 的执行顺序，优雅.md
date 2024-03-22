@@ -5,7 +5,7 @@
 
 这是一条标准的查询语句:  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MpLabn3VTHvK28W2xiaRmJnfIibnhnzQN82ezbUIa4Kf0dcTjeianQhlNA/640?wx_fmt=png&random=0.8376624600892231&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 
 这是我们实际上SQL执行顺序：
 
@@ -24,13 +24,13 @@
 *   最后合并各组的查询结果，按照order by的条件进行排序
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MliaCnbDiaeeFlM6kDNJDjtquKzlIIHN0opcuCsAXzazRbUtaKXd7zVzQ/640?wx_fmt=png&random=0.9020206554951093&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-2 1.png)
 
 ### **数据的关联过程**
 
 数据库中的两张表
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8M7JiarOd3myPym6BjuZZDic4Tx568nfMNEuDUoT0DIiaASgXEBCanvKxAg/640?wx_fmt=png&random=0.6173145097025767&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 
 ### **from&join&where**
 
@@ -50,7 +50,7 @@ from table1,table2 where table1.id=table2.id
 
 我们会得到满足关联条件的两张表的数据，不加关联条件会出现笛卡尔积。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MQ4kqWiaWbAmb7wNN0EV4g8RlOkyf7iaxRUEJkmYDH2RHkXbIJlDe9NVA/640?wx_fmt=png&random=0.12067204242260776&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 
 ### **group by**
 
@@ -58,7 +58,7 @@ from table1,table2 where table1.id=table2.id
 
 比如我们按照即id的奇偶分组
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MibMyojzzn1zMMib5GDz5fI1K02sufJxS9mKcNN8jX3jR82apoZLXTHAQ/640?wx_fmt=png&random=0.6046945431133164&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 
 ### **having&where**
 
@@ -82,10 +82,10 @@ having中可以是普通条件的筛选，也能是聚合函数。而where只能
 
 当前数据分组情况
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MibMyojzzn1zMMib5GDz5fI1K02sufJxS9mKcNN8jX3jR82apoZLXTHAQ/640?wx_fmt=png&random=0.5118015173602497&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 执行having的筛选条件，可以使用聚合函数。筛选掉工资小于各组平均工资的`having salary<avg(salary)`
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8Mr2MqRTqFxibByXo27ahmhw6pz5PuFvdn6AIItjYujib5f5Fuib9MjzODw/640?wx_fmt=png&random=0.16104042459074108&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-1 1.png)
 
 ### **select**
 
@@ -95,17 +95,17 @@ having中可以是普通条件的筛选，也能是聚合函数。而where只能
 select employee.id,distinct name,salary, avg(salary)
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MOickUy3MbrRY3yJOib87lovfgXibKkYuSLHZvMYqjasf9nqDiapYa7Licpw/640?wx_fmt=png&random=0.7707866383011122&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 
 将各组having之后的数据再合并数据。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MQn9YRISZKmBicnnH8eicakx8q9KZU0ibpNquXQ3YaOl6Ye6ZHOP29PiceQ/640?wx_fmt=png&random=0.26377685340116797&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-1 1.png)
 
 ### **order by**
 
 最后我们执行order by 将数据按照一定顺序排序，比如这里按照id排序。如果此时有limit那么查询到相应的我们需要的记录数时，就不继续往下查了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8MSIeicAibWnoJSrMBZ21ez6fYzyACSMmVrSx8mSXficCGiasIIL6E1KRrCw/640?wx_fmt=png&random=0.8145033475826966&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 
 ### **limit**
 
@@ -113,21 +113,10 @@ select employee.id,distinct name,salary, avg(salary)
 
 我们如果limit 0,3窃取前三个数据再排序，实际上最少工资的是2000,3000,4000。你这里只能是4000,5000,8000了。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/8KKrHK5ic6XBWqRJK93s6iaF9XhibickkT8M1WXX6yU9QRpWW5icOibQ6Ij4KNSiaM7joGtEdvuVHHDkSAkHPKHrc4aGw/640?wx_fmt=png&random=0.6708150334017671&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640 1.png)
 
 > 转自：blog.csdn.net/weixin_44141495/article/details/108744720
 
-\- EOF -
 
-推荐阅读  点击标题可跳转
 
-[Java 被挤出前三](http://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651526419&idx=1&sn=41a857ad5f471a38f081d2db92a2fe3e&chksm=bd24796c8a53f07ab5dec9473f6c155c2f7fc851db60d00b749baeac4820f9e6e2bd34a5aa5d&scene=21#wechat_redirect)  
 
-[生还是不生？SpringBoot3 版本有起飞前兆，最小依赖Java17！](http://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651509875&idx=1&sn=8ff6ff7cc8cd36d2dfbbe5b50a815c32&chksm=bd25b80c8a52311a2e0254f7a67a63b2a3ba94a1301e8d0197ff3a8c75573c6b1805b439a256&scene=21#wechat_redirect)
-
-看完本文有收获？请转发分享给更多人  
-
-**关注「ImportNew」，提升Java技能**
-
-  
-点赞和在看就是最大的支持❤️
