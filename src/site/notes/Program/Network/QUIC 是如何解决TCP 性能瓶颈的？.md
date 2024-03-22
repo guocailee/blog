@@ -3,7 +3,7 @@
 ---
 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dRLouxvzUpDricgUwMibIIanDnUa5wj5BnuqIj08e5rUBE2Rkic1D9iaVug/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-53.png)
   
     
 
@@ -12,18 +12,18 @@
 
 **HTTP/2** 相比HTTP/1.1 设计出的一些优秀的改进方案，大幅提高了HTTP 的网络利用效率。HTTP/2 在应用协议层通过多路复用同一个TCP连接解决了队头阻塞问题，但这是以下层协议比如TCP 协议不出现任何数据包阻塞为前提的。TCP 在实际运行中，特别是遇到网络环境不好时，数据包超时确认或丢失是常有的事，假如某个数据包丢失需要重传时会发生什么呢？  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6n3eFFClQt73p7bNUcqyp5d8IQkESyh7T27EC8WsbU8h6JWVSxX7epdaXnNLf3CG6be7JgIq2vhlA/640?wx_fmt=jpeg)
+![](/img/user/z-attchements/media/640-15.jpg)
 
 TCP 采用正面确认和超时重传机制来保证数据包的可靠交付。比如主机A 向 主机B 发送数据包，主机B 收到该数据包后会向主机A 返回确认应答报文，表示自己确实收到了该数据包，主机A 收到确认应答报文后才确定上一个数据包已经发送成功，开始发送下一个数据包。
 
 如果超过一定时间（根据每次测量的往返时间RTT估算出的动态阈值）未收到确认应答，则主机A 判断上一个数据包丢失了，重新发送上一个数据包，这就相当于阻塞了下一个数据包的发送。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5d7DvUtWOict4R2p2E9P2Y9aqYhUaxCdgqKENEDK9ytQOjElvWWWHa9iaQ/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-59.png)
 逐个发送数据包，等待确认应答到来后再发送下一个数据包，效率太低了，TCP 采用**滑动窗口机制**来提高数据传输效率。窗口大小就是指无需等待确认应答而可以继续发送数据的最大值，这个机制实现了使用大量的缓冲区，通过对多个数据包同时进行确认应答的功能。
 
 当可发送数据的窗口消耗殆尽时，就需要等待收到连续的确认应答后，当前窗口才会向前滑动，为发送下一批数据包腾出窗口。假设某个数据包超时未收到确认应答，当前窗口就会阻塞在原地，重新发送该数据包，在收到该重发数据包的确认应答前，就不会有新增的可发送数据包了。也就是说，因为某个数据包丢失，当前窗口阻塞在原地，同样阻塞了后续所有数据包的发送。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dicWZFgrWt8v6MqhaApiby2m6XWwFKwb1j2ol2NVMgGsQkqia7x0aVBsyw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-60.png)
   
 
 **TCP 因为超时确认或丢包引起的滑动窗口阻塞问题**，是不是有点像HTTP/1.1 管道化机制中出现的队头阻塞问题？HTTP/2 在应用协议层通过**多路复用**解决了队头阻塞问题，但TCP 在传输层依然存在队头阻塞问题，这是TCP 协议的一个主要性能瓶颈。该怎么解决TCP 的队头阻塞问题呢？
@@ -35,7 +35,7 @@ TCP 采用正面确认和超时重传机制来保证数据包的可靠交付。�
 
 TCP 为了保证可靠性，使用了基于字节序号的 Sequence Number 及 Ack 来确认消息的有序到达。QUIC 同样是一个可靠的协议，它使用 Packet Number 代替了 TCP 的 Sequence Number，并且每个 Packet Number 都严格递增，也就是说就算 Packet N 丢失了，重传的 Packet N 的 Packet Number 已经不是 N，而是一个比 N 大的值，比如Packet N+M。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5d3AQwv9kyFOQZCELApaBIy0nsQr5mT2h3rnDgZIHcHIia8wibYRXdCdqw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-56.png)
 
 **QUIC 使用的Packet Number 单调递增的设计，可以让数据包不再像TCP 那样必须有序确认，QUIC 支持乱序确认，当数据包Packet N 丢失后，只要有新的已接收数据包确认，当前窗口就会继续向右滑动**。
 
@@ -47,7 +47,7 @@ TCP 为了保证可靠性，使用了基于字节序号的 Sequence Number 及 A
 
 **有了Stream Offset 字段信息，属于同一个Stream ID 的数据包也可以乱序传输了**（HTTP/2 中仅靠Stream ID 标识，要求同属于一个Stream ID 的数据帧必须有序传输），通过两个数据包的Stream ID 与 Stream Offset 都一致，就说明这两个数据包的内容一致。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dafmrMtDOCJ8yjjxe8NEk5DnAhpicTEezn7tbqibA5DT0PhPq3553212A/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-61.png)
 上图中数据包Packet N 丢失了，后面重传该数据包的编号为Packet N+2，丢失的数据包和重传的数据包Stream ID 与 Offset 都一致，说明这两个数据包的内容一致。这些数据包传输到接收端后，接收端能根据Stream ID 与 Offset 字段信息正确组装成完整的资源。
 
 QUIC 通过单向递增的Packet Number，配合Stream ID 与 Offset 字段信息，可以支持非连续确认应答Ack而不影响数据包的正确组装，摆脱了TCP 必须按顺序确认应答Ack 的限制（也即不能出现非连续的空位），解决了TCP 因某个数据包重传而阻塞后续所有待发送数据包的问题（也即队头阻塞问题）。  
@@ -61,7 +61,7 @@ QUIC 对确认应答Ack 丢失的容忍度比较低，自然对Ack 的传输能�
 
 QUIC 解决了TCP 的队头阻塞问题，同时继承了HTTP/2 的多路复用优点，因为Stream Offset 字段的引入，QUIC 中同一Stream ID 的数据帧也支持乱序传输，不再像HTTP/2 要求的同一Stream ID 的数据帧必须有序传输那么严格。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dpZuvGJIEEy63HibWRya9ysKcXTiaaX3fjLksksoBhpTlkskOTuTg3Hew/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-60.png)
   
 从上面QUIC 的数据包结构中可以看出，同一个Connection ID 可以同时传输多个Stream ID，由于QUIC 支持非连续的Packet Number 确认，某个Packet N 超时确认或丢失，不会影响其它未包含在该数据包中的Stream Frame 的正常传输。
 
@@ -78,12 +78,12 @@ QUIC 解决了TCP 的队头阻塞问题，同时继承了HTTP/2 的多路复用�
 
 TCP 建立连接的三次握手过程都做了哪些工作呢？首先确认双方是否能正常收发数据，通信双方交换待发送数据的初始序列编号并作为有序确认应答的基点，通信双方根据预设的状态转换图完成各自的状态迁移过程，通信双方为分组数据的可靠传输和状态信息的记录管理分配控制块缓存资源等。下面给出TCP 连接建立、数据传输、连接释放三个阶段的报文交互过程和状态迁移图示（详见博文：TCP协议与Transmission Control Protocol）：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dyvgzaw9kou3PhoKDVjyL49UZiaTP0a8ibdZcfDs1o5rYTpfXxoY2ibPXA/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-62.png)
 从上图可以看出，TCP 连接主要是双方记录并同步维护的状态组成的。一般来说，建立连接是为了维护前后分组数据的承继关系，维护前后承继关系最常用的方法就是对其进行状态记录和管理。
 
 TCP 的状态管理可以分为连接状态管理和分组数据状态管理两种，连接状态管理用于双方同步数据发送与接收状态，分组数据状态管理用于保证数据的可靠传输。涉及到状态管理一般都有状态转换图，TCP 连接管理的状态转换图上面已经给出了，HTTP/2 的Stream 实际上也记录并维护了每个Stream Frame 的状态信息，Stream 的状态转换图如下：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5deyxL0JsmsSTILEScHf933UWtjy4T5FjSVxb4fwSjfzPCWzbpM3LiaOw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-56.png)
 
 **2.2 QUIC 如何减少TCP 建立连接的开销？**
 -----------------------------
@@ -96,7 +96,7 @@ TCP 也提供了快速建立连接的方案 TFO (TCP Fast Open)，原理跟TLS �
 
 因为TCP 协议内置于操作系统中，操作系统的升级普及过程较慢，因此TFO 技术至今仍未普及（TFO 在2014年发布于RFC 7413）。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dNNdOMSWkGKa5TX74DZB2fibofHGkaADme7ibghN95AZJlWvzFia1Ll4iaw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-55.png)
 
 从上图可知，TCP 首次建立连接的开销为 1-RTT，快速复用/打开连接的开销为 0-RTT，这与TLS 1.3 协议首次完整握手与快速恢复简短握手的开销一致。  
 
@@ -106,7 +106,6 @@ TCP 也提供了快速建立连接的方案 TFO (TCP Fast Open)，原理跟TLS �
 
 **QUIC** 可以理解为”**TCP + TLS 1.3**“（**QUIC 是基于UDP的，可能使用的是DTLS 1.3**），QUIC 自然也实现了首次建立连接的开销为 1-RTT，快速恢复先前连接的开销为 0-RTT 的效率。QUIC 作为HTTP/2 的改进版，建立连接的开销也有明显降低，下面给出HTTP/2 和QUIC 首次连接和会话恢复过程中，HTTP 请求首个资源的RTT 开销对比：  
 
-|   
  | HTTP/2 + TLS 1.2 首次连接 | HTTP/2 + TLS 1.2 会话恢复 | HTTP/2 + TLS 1.3 首次连接 | HTTP/2 + TLS 1.3 会话恢复 | HTTP/2 + TLS 1.3 会话恢复 + TFO | QUIC 首次连接 | QUIC 会话恢复 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | DNS 解析 | 1-RTT | 0-RTT | 1-RTT | 0-RTT | 0-RTT | 1-RTT | 0-RTT |
@@ -134,7 +133,7 @@ TCP 用来标识连接的四个信息中的任何一个改变，都相当于TCP 
 
 早期移动电话使用Mobile IP 技术来解决网络迁移或切换过程引起的断连问题，Mobile IP 主要是通过新建IP 隧道的方式（也即建立一个新连接来转发数据包）保持原来的连接不断开，但这种方式增加了数据包的传输路径，也就增大了数据包的往返时间，降低了数据包的传输效率。Mobile IP 的工作原理如下（移动主机迁移到外部代理后，为了保持原连接不断开，新建了一条到归属代理的IP 隧道，让归属代理以原主机IP 转发数据包）：  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dHWt5ktGPBgWwja9Fpotb0fPCdj3oxT0mzP0GYxwZDUx6j2HQmu3kEQ/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-62.png)
 
 TCP 为保持前向兼容性，没法重新设计连接标识，但为了解决移动主机连接切换问题还是推出了一套解决方案MPTCP (Multipath TCP，在2013年发布于RFC 6824) 。
 
@@ -142,13 +141,13 @@ TCP 为保持前向兼容性，没法重新设计连接标识，但为了解决�
 
 对于移动主机跨基站连接迁移的问题，也可以在原基站与目标迁移基站之间各建立一个连接链路/子通道，当移动主机从一个基站迁移到另一个基站时，只是从一个链路子通道切换到另一个链路子通道，同样能让连接链路顺畅迁移而不断开连接。MPTCP 跟TFO 技术类似，需要操作系统及网络协议栈支持，更新和部署阻力较大，目前并不适用。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dwWLSTDlVj8NoDSxLfzJGXNa9dTWFiaRvKjcxEtAmyiccSBR0bdCficTMw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-54.png)
 
 **QUIC** 摆脱了TCP 的诸多限制，可以重新设计连接标识，还记得前面给出的QUIC 数据包结构吗？QUIC 数据包结构中有一个**Connection ID 字段**专门标识连接，**Connection ID** 是一个64位的通用唯一标识UUID (Universally Unique IDentifier)。
 
 借助Connection ID，QUIC 的连接不再绑定IP 与 Port 信息，即便因为网络迁移或切换导致Source IP 和Source Port 发生变化，只要Connection ID 不变就仍是同一个连接，协议层只需要将控制块中记录的Source IP 和Source Port 信息更新即可，不需要像TCP 那样先断开连接，这就可以保证连接的顺畅迁移或切换，用户基本不会感知到连接切换过程。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dOSJSZ7W4icv9yj5dELxUtCMWHEO5vVk1iaqV2iaqn4iaIp1TIpg3Dr0RGQ/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-62.png)
 
 **3.1 TCP 拥塞控制机制的瓶颈在哪？**
 ------------------------
@@ -161,7 +160,7 @@ TCP 通信开始时，会通过慢启动算法得出的拥塞窗口大小对发�
 
 为了防止拥塞窗口后期增长过快，当拥塞窗口大小超过慢启动阈值（一般为发生超时重传或重复确认应答时，拥塞窗口一半的大小）后，就变更为线性增长（每收到一个窗口大小数量的确认应答则拥塞窗口大小增加一个数据段），直到发生超时重传或重复确认应答，拥塞窗口向下调整，拥塞窗口大小变化过程如下图示：  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6l1HvYsCdpkibg0DvC6aofRxXSHV2M8Uds2JYmuxnbXuvaQUIaDTQEnXSu8OWP9A0cJib5sNn5Ul67A/640?wx_fmt=jpeg)
+![](/img/user/z-attchements/media/640-16.jpg)
 
 从上图可以看出，TCP 发**生超时重传**时，拥塞窗口直接下调为 1，并从慢启动阶段开始逐渐增大拥塞窗口，当超过慢启动阈值后进入拥塞避免阶段，这个过程对网络传输效率影响较大。
 
@@ -183,12 +182,12 @@ TCP 的拥塞控制机制是被超时重传或者快速重传触发的，想要�
 
 由于TCP 重传 segment 的 Sequence Number 和原始的 segment 的 Sequence Number 保持不变，当发送端触发重传数据包Sequence N后，接收到了该数据包，发送端无法判断接收到的数据包是来自原始请求的响应，还是来自重传请求的响应，这就带来了TCP 重传的歧义性，该问题肯定会影响采样RTT 测量值的准确性，进而影响重发超时阈值计算的准确度，可能会增大数据包超时重传的概率。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dCHyEz2HCly9jATIfk5OFsRmzuQz936ZbV5fUqNDhsVR98VickGm6RWQ/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-58.png)
 QUIC 采用**单向递增的Packet Number** 来标识数据包，原始请求的数据包与重传请求的数据包编号并不一样，自然也就不会引起重传的歧义性，采样RTT 的测量更准确。
 
 除此之外，QUIC 计算RTT 时除去了接收端的应答延迟时间，更准确的反映了网络往返时间，进一步提高了RTT 测量的准确性，降低了数据包超时重传的概率。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dqGiavXmQewNKVCGuyasOPUwamGzIgBhsIDJpmBTVib0bkBtanpxIgsicA/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-57.png)
 TCP 传输的数据只包括校验码，并没有增加纠错码等冗余数据，如果出现部分数据丢失或损坏，只能重新发送该数据包。没有冗余的数据包虽然降低了传输开销，但增加了丢包重传概率，因为重传触发拥塞控制机制，势必会降低网络传输效率。
 
 适当增加点冗余数据，当丢失或损坏的数据量较少时，就可以靠冗余数据恢复丢失或损坏的部分，降低丢包重传概率。只要冗余数据比例设置得当，提高的网络传输效率就可以超过增加的网络传输开销，带来网络利用率的正向提升。
@@ -202,7 +201,7 @@ TCP 传输的数据只包括校验码，并没有增加纠错码等冗余数据�
 
 TCP 的拥塞控制实际上包含了四个算法：**慢启动、拥塞避免、快速重传、快速恢复**。现在网络环境改善速度较快，TCP 的慢启动与拥塞避免过程需要的时间较长，虽然TCP 也在不断更新改进拥塞控制算法，但由于TCP 内置于操作系统，拥塞控制算法的更新速度太过缓慢，跟不上网络环境改善速度，TCP 落后的拥塞控制算法自然会降低网络利用效率。  
 
-![](https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6n3eFFClQt73p7bNUcqyp5dl4GzibUqMWhJZrSwhCt90KdS5DU3AO3ziaJb1EGDpbtVWGicicYV5RVwGQ/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-58.png)
 **QUIC** 协议当前默认使用了 TCP 的 Cubic 拥塞控制算法，同时也支持 CubicBytes、Reno、RenoBytes、BBR、PCC 等拥塞控制算法，相当于将TCP 的拥塞控制算法照搬过来了，**QUIC 是如何改进TCP 的拥塞控制算法的呢？**
 
 **QUIC** 直接照搬TCP 的拥塞控制算法只是借鉴了TCP 经过验证的成熟方案，由于QUIC 是处于应用层的，可以随浏览器更新，QUIC 的拥塞控制算法就可以有较快的迭代速度，在TCP 的拥塞控制算法基础上快速迭代，可以跟上网络环境改善的速度，尽快提高拥塞恢复的效率。  
