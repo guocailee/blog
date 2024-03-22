@@ -5,7 +5,7 @@
 
 
 
-![Pasted image 20231124120408.png](/img/user/z-attchements/Pasted%20image%2020231124120408.png)
+![Pasted image 20231124120408.png](/img/user/z-attchements/media/Pasted%20image%2020231124120408.png)
 ![](ddd-concept-reference/concept-map-hd.png)
 
 DDD 基本概念图
