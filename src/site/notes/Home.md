@@ -15,6 +15,23 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[XLife/Books/opb/race-track-selection-for-opb\|race-track-selection-for-opb]]                                                           | 2024-04-01 19:13 |
+| [[XLife/Books/opb/OPB-SUMMARY\|OPB-SUMMARY]]                                                                                             | 2024-04-01 19:13 |
+| [[XLife/Books/opb/opb-methodology-new-version-and-author\|opb-methodology-new-version-and-author]]                                       | 2024-04-01 19:13 |
+| [[XLife/Books/opb/opb-canvas-and-opb-report\|opb-canvas-and-opb-report]]                                                                 | 2024-04-01 19:13 |
+| [[XLife/Books/opb/one-person-enterprise-does-not-equal-one-person-business\|one-person-enterprise-does-not-equal-one-person-business]]   | 2024-04-01 19:12 |
+| [[XLife/Books/opb/non-competition-strategy\|non-competition-strategy]]                                                                   | 2024-04-01 19:12 |
+| [[XLife/Books/opb/managing-and-utilizing-uncertaint\|managing-and-utilizing-uncertaint]]                                                 | 2024-04-01 19:11 |
+| [[XLife/Books/opb/discovery-of-by-product-advantages\|discovery-of-by-product-advantages]]                                               | 2024-04-01 19:11 |
+| [[XLife/Books/opb/define-opb\|define-opb]]                                                                                               | 2024-04-01 19:09 |
+| [[XLife/Books/opb/why-thinking-big-is-possible\|why-thinking-big-is-possible]]                                                           | 2024-04-01 19:09 |
+| [[XLife/Books/opb/why-scalability-is-possible\|why-scalability-is-possible]]                                                             | 2024-04-01 19:08 |
+| [[XLife/Books/opb/structured-advantage\|structured-advantage]]                                                                           | 2024-04-01 19:08 |
+| [[XLife/Books/opb/start-from-side-project\|start-from-side-project]]                                                                     | 2024-04-01 19:08 |
+| [[XLife/Books/opb/snowballing-and-chain-propagation\|snowballing-and-chain-propagation]]                                                 | 2024-04-01 19:08 |
+| [[Program/Database/MySQL各种“Buffer”之Adaptive Hash Index\|MySQL各种“Buffer”之Adaptive Hash Index]]                                            | 2024-03-29 17:49 |
+| [[Program/Database/MySQL Index\|MySQL Index]]                                                                                            | 2024-03-29 17:48 |
+| [[Program/OS/bash-scp\|bash-scp]]                                                                                                        | 2024-03-29 14:39 |
 | [[Program/Network/QUIC 是如何解决TCP 性能瓶颈的？\|QUIC 是如何解决TCP 性能瓶颈的？]]                                                                           | 2024-03-28 14:00 |
 | [[Program/Mixed/正则表达式\|正则表达式]]                                                                                                           | 2024-03-22 11:40 |
 | [[Program/Mixed/如何 “干掉” if...else\|如何 “干掉” if...else]]                                                                                   | 2024-03-22 11:25 |
@@ -40,23 +57,6 @@
 | [[Program/Mixed/如何更好地干掉微服务架构复杂性\|如何更好地干掉微服务架构复杂性]]                                                                                       | 2024-03-11 11:54 |
 | [[Program/Java/SpringBoot Redis 分布式锁的正确实现方式\|SpringBoot Redis 分布式锁的正确实现方式]]                                                              | 2024-03-07 18:33 |
 | [[Program/Mixed/使用前端技术破解掘金滑块验证码\|使用前端技术破解掘金滑块验证码]]                                                                                       | 2024-03-06 10:56 |
-| [[Program/Mixed/零拷贝\|零拷贝]]                                                                                                               | 2024-03-06 10:51 |
-| [[Program/Rust/从C++转向Rust需要注意哪些问题？\|从C++转向Rust需要注意哪些问题？]]                                                                                | 2024-03-06 10:32 |
-| [[Program/Flutter/Flutter 代码质量探索-Trip\|Flutter 代码质量探索-Trip]]                                                                             | 2024-03-04 16:05 |
-| [[Program/Flutter/Flutter-Course-Resources\|Flutter-Course-Resources]]                                                                   | 2024-03-04 14:56 |
-| [[Program/Mixed/高并发下保证接口幂等的8个锦囊\|高并发下保证接口幂等的8个锦囊]]                                                                                       | 2024-03-04 11:56 |
-| [[XLife/Tips/Calibre\|Calibre]]                                                                                                          | 2024-03-04 11:35 |
-| [[XLife/Tips/你是明白了哪几个基本原理之后而厨艺大增的\|你是明白了哪几个基本原理之后而厨艺大增的]]                                                                                | 2024-03-04 11:34 |
-| [[XLife/Tips/Mac技巧\|Mac技巧]]                                                                                                              | 2024-03-04 11:34 |
-| [[XLife/Tips/IPtables\|IPtables]]                                                                                                        | 2024-03-04 11:31 |
-| [[XLife/Fund/如何变得有钱？《自然》：和有钱人交朋友\|如何变得有钱？《自然》：和有钱人交朋友]]                                                                                  | 2024-03-04 11:27 |
-| [[XLife/Fitness/减肥的冷知识\|减肥的冷知识]]                                                                                                         | 2024-03-04 11:27 |
-| [[XLife/Other/聊聊职业发展，聊聊怎么成事\|聊聊职业发展，聊聊怎么成事]]                                                                                             | 2024-03-04 11:25 |
-| [[XLife/Other/蜜雪冰城：躺在加盟商身上赚大钱\|蜜雪冰城：躺在加盟商身上赚大钱]]                                                                                         | 2024-03-04 11:25 |
-| [[XLife/Other/总听大家说 318 国道，那么 219 国道怎么样\|总听大家说 318 国道，那么 219 国道怎么样]]                                                                     | 2024-03-04 11:24 |
-| [[XLife/Other/如何评价杨超越的土库曼民族装扮\|如何评价杨超越的土库曼民族装扮]]                                                                                         | 2024-03-04 11:23 |
-| [[XLife/Medical/怎样缓解剧烈运动之后带来的肌肉酸痛\|怎样缓解剧烈运动之后带来的肌肉酸痛]]                                                                                   | 2024-03-04 11:19 |
-| [[XLife/Medical/如何改掉晚睡强迫症？ - 从早起做起\|如何改掉晚睡强迫症？ - 从早起做起]]                                                                                 | 2024-03-04 11:19 |
 
 { .block-language-dataview}
 
