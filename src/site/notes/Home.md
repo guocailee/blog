@@ -15,8 +15,9 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Program/Reactive/在Reactor中subscribeOn，publishOn有什么区别\|在Reactor中subscribeOn，publishOn有什么区别]]                                            | 2024-04-02 17:51 |
+| [[XLife/Books/opb/一个人的企业\|一个人的企业]]                                                                                                       | 2024-04-02 14:16 |
 | [[XLife/Books/如何卖货 - 读《营销管理》\|如何卖货 - 读《营销管理》]]                                                                                           | 2024-04-02 12:37 |
-| [[XLife/Books/opb/一个人的企业概述\|一个人的企业概述]]                                                                                                   | 2024-04-02 10:13 |
 | [[XLife/Books/opb/race-track-selection-for-opb\|race-track-selection-for-opb]]                                                           | 2024-04-01 19:13 |
 | [[XLife/Books/opb/opb-methodology-new-version-and-author\|opb-methodology-new-version-and-author]]                                       | 2024-04-01 19:13 |
 | [[XLife/Books/opb/opb-canvas-and-opb-report\|opb-canvas-and-opb-report]]                                                                 | 2024-04-01 19:13 |
@@ -24,11 +25,11 @@
 | [[XLife/Books/opb/non-competition-strategy\|non-competition-strategy]]                                                                   | 2024-04-01 19:12 |
 | [[XLife/Books/opb/managing-and-utilizing-uncertaint\|managing-and-utilizing-uncertaint]]                                                 | 2024-04-01 19:11 |
 | [[XLife/Books/opb/discovery-of-by-product-advantages\|discovery-of-by-product-advantages]]                                               | 2024-04-01 19:11 |
-| [[XLife/Books/opb/define-opb\|define-opb]]                                                                                               | 2024-04-01 19:09 |
+| [[XLife/Books/opb/一人企业的定义\|一人企业的定义]]                                                                                                     | 2024-04-01 19:09 |
 | [[XLife/Books/opb/底层逻辑-为什么以小博大是可能的\|底层逻辑-为什么以小博大是可能的]]                                                                                   | 2024-04-01 19:09 |
 | [[XLife/Books/opb/底层逻辑-为什么规模化是可能的\|底层逻辑-为什么规模化是可能的]]                                                                                     | 2024-04-01 19:08 |
-| [[XLife/Books/opb/structured-advantage\|structured-advantage]]                                                                           | 2024-04-01 19:08 |
-| [[XLife/Books/opb/start-from-side-project\|start-from-side-project]]                                                                     | 2024-04-01 19:08 |
+| [[XLife/Books/opb/竞争策略-结构化优势\|竞争策略-结构化优势]]                                                                                               | 2024-04-01 19:08 |
+| [[XLife/Books/opb/风险评控-从副业开始\|风险评控-从副业开始]]                                                                                               | 2024-04-01 19:08 |
 | [[XLife/Books/opb/snowballing-and-chain-propagation\|snowballing-and-chain-propagation]]                                                 | 2024-04-01 19:08 |
 | [[Program/Database/MySQL各种“Buffer”之Adaptive Hash Index\|MySQL各种“Buffer”之Adaptive Hash Index]]                                            | 2024-03-29 17:49 |
 | [[Program/Database/MySQL Index\|MySQL Index]]                                                                                            | 2024-03-29 17:48 |
@@ -56,7 +57,6 @@
 | [[Program/Java/SpringSecurity-万字长文\|SpringSecurity-万字长文]]                                                                                | 2024-03-18 11:12 |
 | [[XLife/Life\|Life]]                                                                                                                     | 2024-03-12 18:37 |
 | [[Program/Mixed/如何更好地干掉微服务架构复杂性\|如何更好地干掉微服务架构复杂性]]                                                                                       | 2024-03-11 11:54 |
-| [[Program/Java/SpringBoot Redis 分布式锁的正确实现方式\|SpringBoot Redis 分布式锁的正确实现方式]]                                                              | 2024-03-07 18:33 |
 
 { .block-language-dataview}
 
