@@ -15,6 +15,7 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[XLife/Books/如何卖货 - 读《营销管理》\|如何卖货 - 读《营销管理》]]                                                                                           | 2024-04-02 12:37 |
 | [[XLife/Books/opb/一个人的企业概述\|一个人的企业概述]]                                                                                                   | 2024-04-02 10:13 |
 | [[XLife/Books/opb/race-track-selection-for-opb\|race-track-selection-for-opb]]                                                           | 2024-04-01 19:13 |
 | [[XLife/Books/opb/opb-methodology-new-version-and-author\|opb-methodology-new-version-and-author]]                                       | 2024-04-01 19:13 |
@@ -56,7 +57,6 @@
 | [[XLife/Life\|Life]]                                                                                                                     | 2024-03-12 18:37 |
 | [[Program/Mixed/如何更好地干掉微服务架构复杂性\|如何更好地干掉微服务架构复杂性]]                                                                                       | 2024-03-11 11:54 |
 | [[Program/Java/SpringBoot Redis 分布式锁的正确实现方式\|SpringBoot Redis 分布式锁的正确实现方式]]                                                              | 2024-03-07 18:33 |
-| [[Program/Mixed/使用前端技术破解掘金滑块验证码\|使用前端技术破解掘金滑块验证码]]                                                                                       | 2024-03-06 10:56 |
 
 { .block-language-dataview}
 
