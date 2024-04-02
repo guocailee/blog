@@ -15,8 +15,8 @@
 
 | File                                                                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[XLife/Books/opb/一个人的企业概述\|一个人的企业概述]]                                                                                                   | 2024-04-02 10:13 |
 | [[XLife/Books/opb/race-track-selection-for-opb\|race-track-selection-for-opb]]                                                           | 2024-04-01 19:13 |
-| [[XLife/Books/opb/OPB-SUMMARY\|OPB-SUMMARY]]                                                                                             | 2024-04-01 19:13 |
 | [[XLife/Books/opb/opb-methodology-new-version-and-author\|opb-methodology-new-version-and-author]]                                       | 2024-04-01 19:13 |
 | [[XLife/Books/opb/opb-canvas-and-opb-report\|opb-canvas-and-opb-report]]                                                                 | 2024-04-01 19:13 |
 | [[XLife/Books/opb/one-person-enterprise-does-not-equal-one-person-business\|one-person-enterprise-does-not-equal-one-person-business]]   | 2024-04-01 19:12 |
@@ -24,8 +24,8 @@
 | [[XLife/Books/opb/managing-and-utilizing-uncertaint\|managing-and-utilizing-uncertaint]]                                                 | 2024-04-01 19:11 |
 | [[XLife/Books/opb/discovery-of-by-product-advantages\|discovery-of-by-product-advantages]]                                               | 2024-04-01 19:11 |
 | [[XLife/Books/opb/define-opb\|define-opb]]                                                                                               | 2024-04-01 19:09 |
-| [[XLife/Books/opb/why-thinking-big-is-possible\|why-thinking-big-is-possible]]                                                           | 2024-04-01 19:09 |
-| [[XLife/Books/opb/why-scalability-is-possible\|why-scalability-is-possible]]                                                             | 2024-04-01 19:08 |
+| [[XLife/Books/opb/底层逻辑-为什么以小博大是可能的\|底层逻辑-为什么以小博大是可能的]]                                                                                   | 2024-04-01 19:09 |
+| [[XLife/Books/opb/底层逻辑-为什么规模化是可能的\|底层逻辑-为什么规模化是可能的]]                                                                                     | 2024-04-01 19:08 |
 | [[XLife/Books/opb/structured-advantage\|structured-advantage]]                                                                           | 2024-04-01 19:08 |
 | [[XLife/Books/opb/start-from-side-project\|start-from-side-project]]                                                                     | 2024-04-01 19:08 |
 | [[XLife/Books/opb/snowballing-and-chain-propagation\|snowballing-and-chain-propagation]]                                                 | 2024-04-01 19:08 |
