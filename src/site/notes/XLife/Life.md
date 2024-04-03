@@ -2,22 +2,7 @@
 {"dg-publish":true,"permalink":"/XLife/Life/","noteIcon":""}
 ---
 
-- [[XLife/Books/为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感\|为什么我看王小波的书觉得他有一股从西方视角俯视中国人的优越感]]
 - [[XLife/Books/道诡异仙到底讲的什么\|道诡异仙到底讲的什么]]
-- [[XLife/Books/opb/discovery-of-by-product-advantages\|discovery-of-by-product-advantages]]
-- [[XLife/Books/opb/managing-and-utilizing-uncertaint\|managing-and-utilizing-uncertaint]]
-- [[XLife/Books/opb/non-competition-strategy\|non-competition-strategy]]
-- [[XLife/Books/opb/one-person-enterprise-does-not-equal-one-person-business\|one-person-enterprise-does-not-equal-one-person-business]]
-- [[XLife/Books/opb/opb-canvas-and-opb-report\|opb-canvas-and-opb-report]]
-- [[XLife/Books/opb/opb-methodology-new-version-and-author\|opb-methodology-new-version-and-author]]
-- [[XLife/Books/opb/race-track-selection-for-opb\|race-track-selection-for-opb]]
-- [[XLife/Books/opb/snowballing-and-chain-propagation\|snowballing-and-chain-propagation]]
-- [[XLife/Books/opb/底层逻辑-为什么规模化是可能的\|底层逻辑-为什么规模化是可能的]]
-- [[XLife/Books/opb/底层逻辑-为什么以小博大是可能的\|底层逻辑-为什么以小博大是可能的]]
-- [[XLife/Books/opb/一个人的企业\|一个人的企业]]
-- [[XLife/Books/opb/一人企业的定义\|一人企业的定义]]
-- [[XLife/Books/opb/竞争策略-结构化优势\|竞争策略-结构化优势]]
-- [[XLife/Books/opb/风险评控-从副业开始\|风险评控-从副业开始]]
 - [[XLife/Books/如何卖货 - 读《营销管理》\|如何卖货 - 读《营销管理》]]
 - [[XLife/Fitness/减肥的冷知识\|减肥的冷知识]]
 - [[XLife/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]
@@ -38,6 +23,7 @@
 - [[XLife/Tips/Calibre\|Calibre]]
 - [[XLife/Tips/你是明白了哪几个基本原理之后而厨艺大增的\|你是明白了哪几个基本原理之后而厨艺大增的]]
 - [[XLife/Tips/IPtables\|IPtables]]
+- [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]
 - [[XLife/Life\|Life]]
 
 { .block-language-dataview}
