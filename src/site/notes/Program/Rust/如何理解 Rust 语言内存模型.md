@@ -90,8 +90,7 @@ let poodles = "👁_👁";
 
 该段代码内存布局如下图所示：
 
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--AfOEaRTP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6fxzquzvfwcheb598c49.png)
-](https://res.cloudinary.com/practicaldev/image/fetch/s--AfOEaRTP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6fxzquzvfwcheb598c49.png)  
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--AfOEaRTP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6fxzquzvfwcheb598c49.png)  
 分析内存结构图，我们可以了解到下面结论：  
 1.noodles,oodles,poodles三个变量都存储在栈上，并且都是三个胖指针。  
 2.noodles和oodles是指向同一块内存，只不过指针首地址不一样。  
