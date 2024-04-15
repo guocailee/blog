@@ -14,7 +14,7 @@ DDD 软件建模工作坊（以下简称 “工作坊”）有多种形式，当
 *   用例驱动法
 
 事件风暴是一种 “自底向上” 的设计方法，先关注具体的业务细节，然后通过归纳、聚合、抽象的方法获得整体层面的认知和设计。
-![Pasted image 20231124120457.png](/img/user/z-attchements/media/Pasted%20image%2020231124120457.png)
+![Pasted image 20231124120457.webp](/img/user/z-attchements/media/Pasted%20image%2020231124120457.webp)
 
 
 DDD 建模的基本原理
@@ -205,7 +205,7 @@ DDD 建模的基本原理
     2.  用户个人中心
     3.  用户管理
 3.  通用域。验证码发送、自动审核
-![Pasted image 20231124141044.png](/img/user/z-attchements/media/Pasted%20image%2020231124141044.png)
+![Pasted image 20231124141044.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141044.webp)
 
 场景地图
 
@@ -244,13 +244,13 @@ DDD 建模的基本原理
 
 便利贴参考图例：
 
-![Pasted image 20231124141105.png](/img/user/z-attchements/media/Pasted%20image%2020231124141105.png)
+![Pasted image 20231124141105.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141105.webp)
 风暴图例
 
 6.3 示例
 ------
 
-![Pasted image 20231124141117.png](/img/user/z-attchements/media/Pasted%20image%2020231124141117.png)
+![Pasted image 20231124141117.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141117.webp)
 事件风暴
 
 7 识别命令
@@ -334,7 +334,7 @@ DDD 建模的基本原理
 8.3 示例
 ------
 
-![Pasted image 20231124141133.png](/img/user/z-attchements/media/Pasted%20image%2020231124141133.png)
+![Pasted image 20231124141133.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141133.webp)
 识别模型
 
 9 模型展开
@@ -365,7 +365,7 @@ DDD 建模的基本原理
 5.  使用单独的便利贴为每个模型写出属性 \[可选，用于编码时容易落地\]
 
 参考图例：
-![Pasted image 20231124141146.png](/img/user/z-attchements/media/Pasted%20image%2020231124141146.png)
+![Pasted image 20231124141146.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141146.webp)
 
 
 模型图例
@@ -379,7 +379,7 @@ DDD 建模的基本原理
 9.3 示例
 ------
 
-![Pasted image 20231124141155.png](/img/user/z-attchements/media/Pasted%20image%2020231124141155.png)
+![Pasted image 20231124141155.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141155.webp)
 模型展开
 
 10 限界上下文划分
@@ -411,12 +411,12 @@ DDD 建模的基本原理
 10.3 示例
 -------
 
-![Pasted image 20231124141217.png](/img/user/z-attchements/media/Pasted%20image%2020231124141217.png)
+![Pasted image 20231124141217.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141217.webp)
 上下文映射
 
 由于我们的示例比较简单，这里再补充一个复杂的示例。
 
-![Pasted image 20231124141223.png](/img/user/z-attchements/media/Pasted%20image%2020231124141223.png)
+![Pasted image 20231124141223.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141223.webp)
 上下文映射-2
 
 11 规范化输出
@@ -468,7 +468,7 @@ UML 描述语言：
 ```
 
 图形：
-![Pasted image 20231124141242.png](/img/user/z-attchements/media/Pasted%20image%2020231124141242.png)
+![Pasted image 20231124141242.webp](/img/user/z-attchements/media/Pasted%20image%2020231124141242.webp)
 
 UML 输出
 
