@@ -5,7 +5,7 @@
 ## 架构图
 还是先来放一张MySQL的InnoDB体系架构图：（MySQL 5.7）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pbP64TZaiaOPRCQibByCP6H9m7Iia2UQMfLVFxKyibVd89HaeqLibL1COxZNicLWlaibAu6Jl8PXpqsFdrFw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-65.webp)
 
 如图所示，在InnoDB体系架构图的内存结构中，还有一块区域（已经用红框标出）名为：**Adaptive Hash Index**，翻译成中文：**自适应哈希索引**，缩写：**AHI**。它是一个纯内存结构，今天就来盘它。 
 
@@ -47,9 +47,9 @@ ADD
 SHOW CREATE TABLE `student`;
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pbP64TZaiaOPRCQibByCP6H9mGKNWce2kDlvUhR9juNvumNADbrBkPiaMic7I2qjHR5fu6SO2HhC1zYbw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pbP64TZaiaOPRCQibByCP6H9m7kNwYP7qzTQEeR97aIeNkiaYBv0PPNDCMwZlQatBXx8OBic8CPbtZ5FA/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-65.webp)
 
 从图中可以看到，我们的**哈希索引创建成功**了。但是，我们再执行一下SHOW INDEXES操作看一下：
 
@@ -57,7 +57,7 @@ SHOW CREATE TABLE `student`;
 SHOW INDEXES FROM `student`;
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pbP64TZaiaOPRCQibByCP6H9mYib35kPJ3ibmMIia2stQCum4wB2F3sicK5OQu9YYFQwoffvVs3TLVYvmLQ/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-66.webp)
 
 从图中的显示结果看，你会惊人的发现，**刚创建的Hash Index，终归还是B+树Index**。  
 
@@ -82,7 +82,7 @@ SHOW INDEXES FROM `student`;
 SHOW VARIABLES LIKE '%adaptive%';
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pbP64TZaiaOPRCQibByCP6H9mhERY1vpplWbMQibicINlxzmDvb9LlfCFVLRJw3x6wrRnGicgL1FnJtc5w/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-1.webp)
 
 *   **参数：** **innodb\_adaptive\_hash_index**
     
@@ -147,7 +147,7 @@ FROM
     student;
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pYqZNyVQRBGeVEUOk3Ufh5Wv9SvbkHTm6tla6q8gkOIyYpojxqtsVXIr38xtzkkYe94qUKRLT0vRA/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-65.webp)
 
 ### 通过聚簇索引和普通索引访问记录的过程
 
@@ -157,7 +157,7 @@ FROM
 
 **student学生表中的数据我们可以简易画一个B+树的结构图（真实的B+树结构要复杂的多，后期会开辟单独的文章详细讲解），如下所示：** 
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pYqZNyVQRBGeVEUOk3Ufh5WSGOK3tia5ZfJXaY2ibWubd7GMMZDyUN828bVicsWSjicSxBesWYiccXvqVA/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-65.webp)
 
 **InnoDB会在主键student\_id上建立聚集索引（Clustered Index），Leaf叶子节点存储记录本身，在student\_name上会建立普通索引（Secondary Index），叶子节点存储主键值（聚集索引就是数据的完整记录，普通索引也是单独的物理结构，两者均存放在.ibd文件中）。发起主键student_id查询时，能够通过聚集索引，直接定位到行记录。** 
 
@@ -167,7 +167,7 @@ SELECT * FROM `student` WHERE student_id = 6;
 
 此时的过程如下图所示：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pYqZNyVQRBGeVEUOk3Ufh5W5JQsV0NpCGqMwKHICw7IyQOt6bvSxPXkicIuU2cg588vUqOHADhS74A/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-1.webp)
 
 普通索引访问记录过程
 
@@ -175,7 +175,7 @@ SELECT * FROM `student` WHERE student_id = 6;
 SELECT * FROM `student` WHERE student_name = '褚壬';
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pYqZNyVQRBGeVEUOk3Ufh5WvFkFxibvnfia23iaR2icwzJe6ia59ax3OlZDJvdST8icIPKsEicd0vr17Ej1Q/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-65.webp)
 
 **通过普通索引查询记录时，和通过聚簇索引查询记录有所不同，分为两步：** 
 - **步骤1：查询会先访问普通索引，定位到主键值9；**
@@ -196,7 +196,7 @@ SELECT * FROM `student` WHERE student_name = '褚壬';
 
 Adaptive Hash Index访问记录原理
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pYqZNyVQRBGeVEUOk3Ufh5W2vegV6aPSDWn1X9DM44aiaj7iaq1VjGR4Id3Qrg37LX9ESGeAGiby8Xtg/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-2.webp)
 
 **通过上面的流程图，我们可以得出以下结论**：
 
@@ -218,7 +218,7 @@ Adaptive Hash Index状态监控
 SHOW ENGINE INNODB STATUS\G
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/Oh9CMdyU4pYqZNyVQRBGeVEUOk3Ufh5WILdm2QIGkJFyC7kgIoQfiaRNfCudSFTGawftGx7urbibGbaGXEmibRBAw/640?wx_fmt=png)
+![](/img/user/z-attchements/media/640-1.webp)
 
 **（※ 注意：这是一段时间的结果。通过hash searches、non-hash searches计算AHI带来的收益以及成本，确定是否开启AHI）**
 
