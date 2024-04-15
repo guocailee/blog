@@ -78,7 +78,7 @@ devDependencies:
     version: 6.1.13
   sass:
     specifier: ^1.49.9
-    version: 1.74.1
+    version: 1.75.0
 
 packages:
 
@@ -2677,8 +2677,8 @@ packages:
       deffy: 2.0.0
     dev: false
 
-  /sass@1.74.1:
-    resolution: {integrity: sha512-w0Z9p/rWZWelb88ISOLyvqTWGmtmu2QJICqDBGyNnfG4OUnPX9BBjjYIXUpXCMOOg5MQWNpqzt876la1fsTvUA==}
+  /sass@1.75.0:
+    resolution: {integrity: sha512-ShMYi3WkrDWxExyxSZPst4/okE9ts46xZmJDSawJQrnte7M1V9fScVB+uNXOVKRBt0PggHOwoZcn8mYX4trnBw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
