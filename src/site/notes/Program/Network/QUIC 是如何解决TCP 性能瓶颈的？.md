@@ -140,7 +140,7 @@ TCP 为保持前向兼容性，没法重新设计连接标识，但为了解决�
 
 对于移动主机跨基站连接迁移的问题，也可以在原基站与目标迁移基站之间各建立一个连接链路/子通道，当移动主机从一个基站迁移到另一个基站时，只是从一个链路子通道切换到另一个链路子通道，同样能让连接链路顺畅迁移而不断开连接。MPTCP 跟TFO 技术类似，需要操作系统及网络协议栈支持，更新和部署阻力较大，目前并不适用。
 
-![](/img/user/z-attchements/media/640-54.png)
+![](/img/user/z-attchements/media/640-54.webp)
 
 **QUIC** 摆脱了TCP 的诸多限制，可以重新设计连接标识，还记得前面给出的QUIC 数据包结构吗？QUIC 数据包结构中有一个**Connection ID 字段**专门标识连接，**Connection ID** 是一个64位的通用唯一标识UUID (Universally Unique IDentifier)。
 
