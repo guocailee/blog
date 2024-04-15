@@ -27,7 +27,7 @@
 
 以下是容器技术 & 云原生生态的大致发展历程：
 
-![](/img/user/z-attchements/media/v2-9c218912a4c4285963042706311fbad4_720w.jpg)
+![](/img/user/z-attchements/media/v2-9c218912a4c4285963042706311fbad4_720w.webp)
 
 **图 1 ，容器技术发展历程**
 
@@ -35,7 +35,7 @@
 
 ## **Chroot 带来的安全性问题**
 
-![](/img/user/z-attchements/media/v2-23007c60e1fd6a0bdff18a3341ba01f3_720w.jpg)
+![](/img/user/z-attchements/media/v2-23007c60e1fd6a0bdff18a3341ba01f3_720w.webp)
 
 **图 2 ，chroot 示例**
 
@@ -109,7 +109,7 @@ exit status 1
 
 Linux-VServer 是一种基于 _Security Contexts_ 的软分区技术，可以做到虚拟服务器隔离，共享相同的硬件资源。主要问题是 VServer 应用程序针对 "chroot-again" 类型的攻击没有很好的进行安全保护，攻击者可以利用这个漏洞脱离限制环境，访问限制目录之外的任意文件。（自 2004 年开始，国家信息安全漏洞库就登出了相关漏洞问题）
 
-![](/img/user/z-attchements/media/v2-353b950487847030efee1f58782ecc63_720w.jpg)
+![](/img/user/z-attchements/media/v2-353b950487847030efee1f58782ecc63_720w.webp)
 
 **图 3 ，国家信息安全漏洞库网站图标**
 
@@ -140,7 +140,7 @@ cgroup 主要限制的资源是：
 
 当我们将可用系统资源按特定百分比分配给 cgroup 时，剩余的资源可供系统上的其他 cgroup 或其他进程使用。
 
-![](/img/user/z-attchements/media/v2-4165195ad4ee7d85a2de52ce47856078_720w.jpg)
+![](/img/user/z-attchements/media/v2-4165195ad4ee7d85a2de52ce47856078_720w.webp)
 
 **图 4 ，cgroup 资源分配及剩余可用资源示例**
 
