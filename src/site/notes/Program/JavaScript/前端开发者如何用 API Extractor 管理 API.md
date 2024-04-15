@@ -55,7 +55,7 @@ API Extractor 需要配合 TSDoc 使用。TSDoc 类似于 JSDoc，是微软提�
 -   将凌乱的 d.ts 打包并删减
 -   生成文档描述模型（xxx.api.json）可以通过微软提供的 api-documenter 进一步转换成 Markdown 文档。
 
-![](/img/user/z-attchements/media/v2-69ad66b9d7c9bd1678bc61ee174dd84a_720w.jpg)
+![](/img/user/z-attchements/media/v2-69ad66b9d7c9bd1678bc61ee174dd84a_720w.webp)
 
 **生成 api 报告**
 
