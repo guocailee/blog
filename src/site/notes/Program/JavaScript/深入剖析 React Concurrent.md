@@ -8,7 +8,7 @@
 
 Concurrent 并不是一个新的概念，在 Fiber 诞生之初就被不停地提及。如果你是 React 的忠实关注者，你一定会对 React Conf 2017 上 Lin Clark 的 [A Cartoon Intro to Fiber](https://link.zhihu.com/?target=https%3A//www.youtube.com/watch%3Fv%3DZCuYPiUIONs)，以及 2018 JSConf Iceland 上 Dan Abramov 的 [Beyond React 16](https://link.zhihu.com/?target=https%3A//www.youtube.com/watch%3Fv%3Dv6iR3Zk4oDY) 记忆犹新。早在 2 年前，Lin Clark 就用漫画的方式形象地向我们展现了 Stack Reconciler 与 Fiber Reconciler 运行区别，Fiber Reconciler 就是 Concurrent 的雏形。
 
-![](/img/user/z-attchements/media/v2-85024acf40defb83d9e4839fc8ba8c45_720w.jpg)
+![](/img/user/z-attchements/media/v2-85024acf40defb83d9e4839fc8ba8c45_720w.webp)
 
 Dan 在 JSConf Iceland 上演示的 [Demo](https://link.zhihu.com/?target=https%3A//codesandbox.io/s/koyz664q35) (演示代码已放到 codesandbox，读者可自行体验）一度引起了社区广泛的关注，我们可以明显感受到三种模式带来的体验差异，Sync 模式下页面是完全卡顿的，input 连续输入得不到响应，Debounced 模式下尽管连续输入流畅，但由于变更被统一延迟，下方图表没有随输入改变而重渲染，只有 Concurrent 下是正常的体验，输入流畅，图表也随之而变更。
 
@@ -20,7 +20,7 @@ Dan 在 JSConf Iceland 上演示的 [Demo](https://link.zhihu.com/?target=https%
 
 那么 JS 执行时间多久会是合理的呢？这里就需要提到帧率了，大多数设备的帧率为 60 次 / 秒，也就是每帧消耗 16.67 ms 能让用户感觉到相当流畅。浏览器的一帧中包含如下图过程：
 
-![](/img/user/z-attchements/media/v2-4b6d2d2212fb3b9bd9bd4b713a38ead7_720w.jpg)
+![](/img/user/z-attchements/media/v2-4b6d2d2212fb3b9bd9bd4b713a38ead7_720w.webp)
 
 在一帧中，我们需要将 JS 执行时间控制在合理的范围内，不影响后续 Layout 与 Paint 的过程。而经常被大家所提及的 requestIdleCallback 就能够充分利用帧与帧之间的空闲时间来执行 JS，可以根据 callback 传入的 dealine 判断当前是否还有空闲时间（timeRemaining）用于执行。由于浏览器可能始终处于繁忙的状态，导致 callback 一直无法执行，它还能够设置超时时间（timeout），一旦超过时间（didTimeout）能使任务被强制执行。
 
