@@ -305,7 +305,7 @@ public static final int value = "666";
 *   对齐填充（Padding）
 
 这三块区域的内存分布如下图所示：
-
+![JVM 面试题第二版，据说看完要一小时-20240415181734222.webp](/img/user/z-attchements/JVM%20%E9%9D%A2%E8%AF%95%E9%A2%98%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%8C%E6%8D%AE%E8%AF%B4%E7%9C%8B%E5%AE%8C%E8%A6%81%E4%B8%80%E5%B0%8F%E6%97%B6-20240415181734222.webp)
 我们来详细介绍一下上面对象中的内容。
 
 ### **6.1 对象头 Header**
