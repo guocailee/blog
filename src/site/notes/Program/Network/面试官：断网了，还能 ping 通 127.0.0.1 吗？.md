@@ -20,7 +20,8 @@
 然后在控制台输入`ping 127.0.0.1`。
 
 ```
-$ ping 127.0.0.1PING 127.0.0.1 (127.0.0.1): 56 data bytes64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.080 ms64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.093 ms64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.074 ms64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.079 ms64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.079 ms^C--- 127.0.0.1 ping statistics ---5 packets transmitted, 5 packets received, 0.0% packet lossround-trip min/avg/max/stddev = 0.074/0.081/0.093/0.006 ms
+$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1): 56 data bytes64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.080 ms64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.093 ms64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.074 ms64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.079 ms64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.079 ms^C--- 127.0.0.1 ping statistics ---5 packets transmitted, 5 packets received, 0.0% packet lossround-trip min/avg/max/stddev = 0.074/0.081/0.093/0.006 ms
 ```
 
 说明，拔了网线，`ping 127.0.0.1`  是**能ping通的**。
