@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Home/","tags":["gardenEntry"],"noteIcon":""}
+{"dg-publish":true,"permalink":"/Home/","title":"G‘s Blog","tags":["gardenEntry"],"noteIcon":""}
 ---
 
 ## 关于我
@@ -12,14 +12,17 @@
 | --------- | -------- | ----------- | ------------ |
 | [[Inbox/Inbox\|Inbox]] | [[XLife/Life\|Life]] | [[Program/Program\|Program]] | [[Thinking/Thinking\|Thinking]] |
 
-### Awsome
+### Awesome
 
 - [统计方法的代码实现](https://github.com/fengdu78/lihang-code)
+- [KISS Translator](https://github1s.com/fishjar/kiss-translator)
 
 ## 最近修改
 
 | File                                                                                                                                                                                               | Last modified    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[Home\|Home]]                                                                                                                                                                                  | 2024-04-19 17:37 |
+| [[Thinking/为什么专家不再关心技术细节\|为什么专家不再关心技术细节]]                                                                                                                                                       | 2024-04-19 11:49 |
 | [[Program/Java/JVM 面试题第二版，据说看完要一小时\|JVM 面试题第二版，据说看完要一小时]]                                                                                                                                       | 2024-04-15 18:17 |
 | [[Program/Java/Java IO\|Java IO]]                                                                                                                                                               | 2024-04-15 17:42 |
 | [[Program/Java/Java 基础\|Java 基础]]                                                                                                                                                               | 2024-04-15 17:42 |
@@ -51,8 +54,6 @@
 | [[Program/Mixed/复杂推理模型从服务器移植到Web浏览器的理论和实战\|复杂推理模型从服务器移植到Web浏览器的理论和实战]]                                                                                                                          | 2024-04-15 17:42 |
 | [[Program/Mixed/如何 “干掉” if...else\|如何 “干掉” if...else]]                                                                                                                                          | 2024-04-15 17:42 |
 | [[Program/Mixed/使用前端技术破解掘金滑块验证码\|使用前端技术破解掘金滑块验证码]]                                                                                                                                              | 2024-04-15 17:42 |
-| [[Program/Mixed/短域名系统实现\|短域名系统实现]]                                                                                                                                                              | 2024-04-15 17:42 |
-| [[Program/Mixed/正则表达式\|正则表达式]]                                                                                                                                                                  | 2024-04-15 17:42 |
 
 { .block-language-dataview}
 
