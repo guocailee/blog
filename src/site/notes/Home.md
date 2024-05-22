@@ -19,41 +19,41 @@
 
 ## 最近修改
 
-| File                                                                                                                                                                                               | Last modified    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| [[Program/Mixed/V8 TurboFan的IR设计\|V8 TurboFan的IR设计]]                                                                                                                                            | 2024-05-10 10:50 |
-| [[XLife/Tips/小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗\|小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗]]                                                                                                             | 2024-05-08 17:09 |
-| [[Program/Framework/Java DDD目录结构\|Java DDD目录结构]]                                                                                                                                                | 2024-04-22 12:04 |
-| [[Home\|Home]]                                                                                                                                                                                  | 2024-04-19 17:37 |
-| [[Thinking/为什么专家不再关心技术细节\|为什么专家不再关心技术细节]]                                                                                                                                                       | 2024-04-19 11:49 |
-| [[Program/Java/JVM 面试题第二版，据说看完要一小时\|JVM 面试题第二版，据说看完要一小时]]                                                                                                                                       | 2024-04-15 18:17 |
-| [[Program/Java/Java IO\|Java IO]]                                                                                                                                                               | 2024-04-15 17:42 |
-| [[Program/Java/Java 基础\|Java 基础]]                                                                                                                                                               | 2024-04-15 17:42 |
-| [[Program/Java/Java 容器\|Java 容器]]                                                                                                                                                               | 2024-04-15 17:42 |
-| [[Program/Java/Java 并发\|Java 并发]]                                                                                                                                                               | 2024-04-15 17:42 |
-| [[Program/Java/Java 异步编程：从 Future 到 Loom\|Java 异步编程：从 Future 到 Loom]]                                                                                                                           | 2024-04-15 17:42 |
-| [[Program/Java/Java 虚拟机\|Java 虚拟机]]                                                                                                                                                             | 2024-04-15 17:42 |
-| [[Program/Java/Spring Cloud Gateway一次请求调用源码解析Spring Cloud Gateway 调度分析\|Spring Cloud Gateway一次请求调用源码解析Spring Cloud Gateway 调度分析]]                                                               | 2024-04-15 17:42 |
-| [[Program/Java/Spring Cloud Stream 体系及原理介绍 Format's Notes\|Spring Cloud Stream 体系及原理介绍 Format's Notes]]                                                                                         | 2024-04-15 17:42 |
-| [[Program/Java/BeanDefinition的资源定位过程\|BeanDefinition的资源定位过程]]                                                                                                                                   | 2024-04-15 17:42 |
-| [[Program/Java/What's the difference between @Component, @Repository & @Service annotations in Spring\|What's the difference between @Component, @Repository & @Service annotations in Spring]] | 2024-04-15 17:42 |
-| [[Program/Java/构建工具\|构建工具]]                                                                                                                                                                     | 2024-04-15 17:42 |
-| [[Program/Java/面向对象思想\|面向对象思想]]                                                                                                                                                                 | 2024-04-15 17:42 |
-| [[Program/Java/SpringSecurity-万字长文\|SpringSecurity-万字长文]]                                                                                                                                       | 2024-04-15 17:42 |
-| [[Program/Java/SpringBoot Redis 分布式锁的正确实现方式\|SpringBoot Redis 分布式锁的正确实现方式]]                                                                                                                     | 2024-04-15 17:42 |
-| [[Program/Kotlin/Coroutine/Kotlin Coroutine 原理解析\|Kotlin Coroutine 原理解析]]                                                                                                                       | 2024-04-15 17:42 |
-| [[Program/Kotlin/Coroutine/Kotlin Coroutine 是如何与 Spring WebFlux 整合的\|Kotlin Coroutine 是如何与 Spring WebFlux 整合的]]                                                                                 | 2024-04-15 17:42 |
-| [[Program/Kotlin/Coroutine/Kotlin Coroutine 初探\|Kotlin Coroutine 初探]]                                                                                                                           | 2024-04-15 17:42 |
-| [[Program/Kotlin/Kotlin 内联函数 inline\|Kotlin 内联函数 inline]]                                                                                                                                       | 2024-04-15 17:42 |
-| [[Program/Kotlin/了解Kotlin协程实现原理这篇就够了\|了解Kotlin协程实现原理这篇就够了]]                                                                                                                                     | 2024-04-15 17:42 |
-| [[Program/MessageQueue/一文带你搞定RabbitMQ延迟队列\|一文带你搞定RabbitMQ延迟队列]]                                                                                                                                 | 2024-04-15 17:42 |
-| [[Program/MessageQueue/消息队列\|消息队列]]                                                                                                                                                             | 2024-04-15 17:42 |
-| [[Program/MessageQueue/刨根问底 Kafka，面试过程真好使\|刨根问底 Kafka，面试过程真好使]]                                                                                                                                 | 2024-04-15 17:42 |
-| [[Program/MessageQueue/一文带你搞定RabbitMQ死信队列\|一文带你搞定RabbitMQ死信队列]]                                                                                                                                 | 2024-04-15 17:42 |
-| [[Program/Mixed/Clean  Code\|Clean  Code]]                                                                                                                                                      | 2024-04-15 17:42 |
-| [[Program/Mixed/Every Programmer Should Know\|Every Programmer Should Know]]                                                                                                                    | 2024-04-15 17:42 |
-| [[Program/Mixed/System Design 101\|System Design 101]]                                                                                                                                          | 2024-04-15 17:42 |
-| [[Program/Mixed/代码可读性\|代码可读性]]                                                                                                                                                                  | 2024-04-15 17:42 |
+| File                                                                                                                         | Last modified    |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| [[XLife/Tips/技术与市场\|技术与市场]]                                                                                               | 2024-05-22 16:21 |
+| [[XLife/Tips/Calibre\|Calibre]]                                                                                           | 2024-05-22 16:17 |
+| [[XLife/Tips/IPtables\|IPtables]]                                                                                         | 2024-05-22 16:17 |
+| [[XLife/Tips/Mac技巧\|Mac技巧]]                                                                                               | 2024-05-22 16:17 |
+| [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]                                       | 2024-05-22 16:17 |
+| [[XLife/Tips/你是明白了哪几个基本原理之后而厨艺大增的\|你是明白了哪几个基本原理之后而厨艺大增的]]                                                                 | 2024-05-22 16:17 |
+| [[XLife/Tips/小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗\|小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗]]                                       | 2024-05-22 16:17 |
+| [[XLife/Tips/移除 Markdown的 links\|移除 Markdown的 links]]                                                                     | 2024-05-22 16:17 |
+| [[XLife/Other/如何评价杨超越的土库曼民族装扮\|如何评价杨超越的土库曼民族装扮]]                                                                          | 2024-05-22 16:17 |
+| [[XLife/Other/总听大家说 318 国道，那么 219 国道怎么样\|总听大家说 318 国道，那么 219 国道怎么样]]                                                      | 2024-05-22 16:17 |
+| [[XLife/Other/我在荷兰做程序员的体验\|我在荷兰做程序员的体验]]                                                                                  | 2024-05-22 16:17 |
+| [[XLife/Other/聊聊职业发展，聊聊怎么成事\|聊聊职业发展，聊聊怎么成事]]                                                                              | 2024-05-22 16:17 |
+| [[XLife/Other/蜜雪冰城：躺在加盟商身上赚大钱\|蜜雪冰城：躺在加盟商身上赚大钱]]                                                                          | 2024-05-22 16:17 |
+| [[XLife/Home Furnishing/如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？\|如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？]]                                  | 2024-05-22 16:17 |
+| [[XLife/Life\|Life]]                                                                                                      | 2024-05-22 16:17 |
+| [[XLife/Medical/如何改掉晚睡强迫症？ - 从早起做起\|如何改掉晚睡强迫症？ - 从早起做起]]                                                                  | 2024-05-22 16:17 |
+| [[XLife/Medical/怎样缓解剧烈运动之后带来的肌肉酸痛\|怎样缓解剧烈运动之后带来的肌肉酸痛]]                                                                    | 2024-05-22 16:17 |
+| [[XLife/Other/北欧真的是人间净土吗？\|北欧真的是人间净土吗？]]                                                                                  | 2024-05-22 16:17 |
+| [[XLife/Other/历史真的有规律吗？\|历史真的有规律吗？]]                                                                                      | 2024-05-22 16:17 |
+| [[XLife/Books/道诡异仙到底讲的什么\|道诡异仙到底讲的什么]]                                                                                    | 2024-05-22 16:17 |
+| [[XLife/Fitness/减肥的冷知识\|减肥的冷知识]]                                                                                          | 2024-05-22 16:17 |
+| [[XLife/Fund/如何变得有钱？《自然》：和有钱人交朋友\|如何变得有钱？《自然》：和有钱人交朋友]]                                                                   | 2024-05-22 16:17 |
+| [[XLife/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]                                                                                 | 2024-05-22 16:17 |
+| [[XLife/Hardware/如何评价 10 月 16 日发布的 Intel 14代酷睿处理器，这代性能提升如何，有哪些亮点和不足\|如何评价 10 月 16 日发布的 Intel 14代酷睿处理器，这代性能提升如何，有哪些亮点和不足]] | 2024-05-22 16:17 |
+| [[XLife/Books/如何卖货 - 读《营销管理》\|如何卖货 - 读《营销管理》]]                                                                            | 2024-05-22 16:17 |
+| [[Thinking/为什么专家不再关心技术细节\|为什么专家不再关心技术细节]]                                                                                 | 2024-05-22 16:17 |
+| [[Thinking/人生平坦\|人生平坦]]                                                                                                   | 2024-05-22 16:17 |
+| [[Thinking/怀旧\|怀旧]]                                                                                                       | 2024-05-22 16:17 |
+| [[Thinking/技术部门Leader是不是一定要技术大牛担任\|技术部门Leader是不是一定要技术大牛担任]]                                                               | 2024-05-22 16:17 |
+| [[Thinking/普通人怎么在一年内挣够50万？\|普通人怎么在一年内挣够50万？]]                                                                             | 2024-05-22 16:17 |
+| [[Thinking/融创会是下一个恒大吗\|融创会是下一个恒大吗]]                                                                                       | 2024-05-22 16:17 |
+| [[Program/Rust/从C++转向Rust需要注意哪些问题？\|从C++转向Rust需要注意哪些问题？]]                                                                 | 2024-05-22 16:17 |
+| [[Program/Rust/如何理解 Rust 语言内存模型\|如何理解 Rust 语言内存模型]]                                                                       | 2024-05-22 16:17 |
 
 { .block-language-dataview}
 
