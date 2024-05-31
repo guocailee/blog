@@ -329,7 +329,3 @@ from bar import ...
 4、手册：
 
 [https://emscripten.org/docs/api\\\_reference/Filesystem-API.html](https://emscripten.org/docs/api\_reference/Filesystem-API.html)
-
-* * *
-
-* * *
