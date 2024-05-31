@@ -5,6 +5,9 @@
 > ⚠️ **WARNING: You must add your own serial number in `EFI/OC/config.plist`.** Related fields are: `PlatformInfo - Generic - MLB / SystemProductName / SystemSerialNumber / SystemUUID`. You can generate some random numbers by [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS). See [official guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) for details.  
 > Recommend using OCC to generate MacPro7,1 platform information
 
+## EFI
+
+You can download [EFI](https://github.com/guocailee/oc-b760m-13700-6500) by Github.
 
 ## Hardware
 
