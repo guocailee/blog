@@ -30,13 +30,13 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 
 承接：粉版、Web、必剪、H5、OGV、课堂、开放平台、直播、地方电视台、动态、商业化等10多个业务方，技术稳定性意味着业务稳定性，投稿不可用、转码开放延迟、稿件数据同步失败导致不可观看，都会引起极大的社区舆情、客诉反馈、商业化行为的损失。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgenqMibtiaRS3icSQu7RnBwGxsTdAicKZiabkc1J7Ute2jsiaETRkwfWj15Uw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 ### **链路之复杂**
 
 整个稿件生产从投稿到开放链路涉及环节众多，分四个大步骤：创作工具（剪辑/直传）、发布上传、稿件生产、数据开放。下图是一张简化版的端到端流程图。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg4tx9CYhEIVodnUMkIluYib9DegaavVFWWkhQZGgADlJuS0l2OPJp9rw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 涉及到的业务/团队有：
 
@@ -94,13 +94,13 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 
 围绕着稿件大体上分为3类角色：UP、审核和用户，这三类角色通过各种各样的系统作用于稿件这个核心实体，并在各种行为中不断丰富稿件这个核心实体。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgGcha8p4EdV5sbCic8RqnnPN1wtxOTxJvIdwwwic5RETefmia2faC8eVqA/640?wx_fmt=png&from=appmsg)
+![](/img/user/z-attchements/media/640-1.png)
 
 ### **业务架构概览**
 
 在这条复杂的业务路径中，多个团队在其中各司其职来确保稿件生产端到端的链路稳定性和系统的高可用。将上文介绍复杂性举例的业务流程图进行技术模块的逐层拆解，得到了如下这张架构分层图。图中只是简述了一些关键的服务模块，涉及到的微服务和模块太多，无法全部罗列在内。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgBP1ibgYKaNEcaJXnvicgA4OibNqzGqTibKOxEObkRkesLoe0FlMnYWEJqw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-6.webp)
 
 分层解释：
 
@@ -117,7 +117,7 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 
 内容生产系统支持多业务场景注册、实现原子能力节点、自定义调度路径，具备基本的同异步调度、重试降级、failure callback、事件上报观测等能力，拥有面向研发人员的控制面，具备平台化能力与职责。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgLOM5tWevjKkbRTP8gzGYt8LKlvyabAfPSCCslANRhpUeMpYmRc7Olg/640?wx_fmt=png&from=appmsg)
+![](/img/user/z-attchements/media/640.png)
 
 模块构成上，主要分为DAG管理，DAG调度服务（调度和指派），DAG状态服务，DAG监听服务和执行器。
 
@@ -128,17 +128,17 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 *   执行器，具体执行处理单元，设置队列提供处理单元的入列出列操作，保障处理单元的有序操作
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgfibfhkOPwjzGXSKSmmHLKobh8qakjjfQRiaFCyh1v2AvhuoicdTWgIK8g/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-7.webp)
 
 以稿件为例介绍业务是如何在内容生产系统中被执行的。
 
 左侧B端稿件生产部分，从端侧上传原片进入服务端逻辑开始，生产系统调度过程中的审核域、流媒体域、版权域、AI模型域等不同系统模块，系统内部通过消息队列分发任务并等待任务完成的Callback Notify，进而转入下一层工作节点。有些节点虽然是并行调度，但是需要归并等待完成后才能进入下个节点，比如需要完成稿件、视频审核和视频的转码任务，才能进入开放节点。人群画像分类、转码效率优化、流程调度并行化、提升机审覆盖率、资源潮汐调度等等都是全局上可以使用帮助提效的技术手段。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg780EhIANeZV4cd5z1FpHW0s1glCMlECtTGrWyk5icwXRm3aeWM0f5Mw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-3.webp)
 
 进入开放节点后，右侧B->C的指向部分，体现的是稿件生产到开放的CQRS架构实现。CQRS拆分是稿件业务系统在多年前进行的操作，B端范畴的“稿件生产链路”，生产完成后基于领域事件消息驱动同步数据到C端稿件服务，由B到C的数据同步机制是经过CQRS思想架构拆分设计而成。技术架构依据组织架构边界，BC稿件也是两个团队在负责的。为了确保数据最终一致性，数据同步消费者有重试措施，并有数据同步对账脚本进行对比监控。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgXG13fvBEia3EJ62LkfInRXs3icG8OFalkqhIyrjL6ZR5icuWvIna2Yg6A/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-3.webp)
 
 ### **可观测性**
 
@@ -183,9 +183,9 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 *   容量大盘：DB、Cache等组件的容量水位线...
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg6BQ80qWHDPOfBglhr61E1IDj8ZU189j2HQ3qIfUlGXENWapvWwibtiag/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg4pict8b2VqXUyIRkHoiarSowFUW2ibOkMna5LPHI4ApEMTQ61stRgusiag/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 ### **故障召回，1-5-10**
 
@@ -195,13 +195,13 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 
 我们借助SLO大盘工具构建了核心业务场景，服务SLO下跌到一定阈值会有SRE Bot自动拉群触达；同时我们自己设置了多种档位的告警方式，包括企微Bot、短信、电话告警，根据核心与否和紧急程度逐级上升，业务告警规则List统一订阅到固定的告警组，规则已覆盖50+核心子场景，半年内通过这套机制主动发现Case 10+，早发现早解决，将Case升级成为事故的可能性扼杀在摇篮中。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgBWT04mjA8l9jmiax2uTV8MZLOolT5XRLYMIPz4fCF0nqw6PheIe3Fsg/640?wx_fmt=png&from=appmsg)
+![](/img/user/z-attchements/media/640-1.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgaa2WAVM7diaJGDPySE9e1BrYRUeiaAtia95vSQoibibZcS7picsoNC853yAQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-3.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgU8Heqd5Hy3e42bdtX9otHloIXFcUfo20Wib71Qhu4ymuWc6IFibMsILA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-7.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg1I7rmRFC7LSnZaoEUoibgv2FouXriaibiahs4PseGx7Lm8QvWPibflftpXw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 ### **生产效率指标**
 
@@ -211,11 +211,11 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 
 在服务系统稳定运行的前提下，我们开始下钻生产效率指标，首先需要将大盘指标转化为归一化的单位指标：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgmjznWzFWBzRHf21350h5icuIXbaE8EtJic9aKHPCYw4PPwaSicnwsKeww/640?wx_fmt=png&from=appmsg)
+![](/img/user/z-attchements/media/640-1.png)
 
 这个公式可以理解为：每一秒可以生产X秒的视频内容，我们希望通过各种技术手段优化这个效率越高越好（但是会有体验上的权衡），直至前资源能做到的边际效应边界。将以上公式做环节拆解（注意：下述公式最新有一些UPDATE，因为转码阶段做了优化转码措施，不再是串行加法关系，这里可以略加参考）：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgx5kK721JshX12HEWEG9to58m1UqberdDQyOZ12mA4EpOWBibBEHia38Q/640?wx_fmt=png&from=appmsg)
+![](/img/user/z-attchements/media/640-1.png)
 
 通过归一化公式可以统计每天的均值效率指标，再拆分到每个环节的均值效率，辅助判断每日的效率趋势，发现一些潜在问题，比如系统资源调度是否存在空转的问题进而导致效率降低。根据投稿分区、分端、UP主粉丝数圈层、稿件短中长视频、风险账户/高优UP等不同的参数进行数据聚类，再套用以上公式计算效率均值也是常用的观察业务异动的手段，eg：
 
@@ -223,7 +223,7 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 *   风险账户投稿效率均值 VS 大盘效率（风险账户的效率如果跑赢大盘的效率，那么说明前置风险识别和资源分配的策略上有一些问题）
 *   特殊稿件效率 VS 大盘效率
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgwIHksJ2eCMpDQL5tdppM42Cia8vmnAwCVicUbRtEibibqUEpNtQNRnVL3g/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 ### **业务全链路Trace**
 
@@ -243,23 +243,23 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 4.  建立准实时flink任务，通过查询数据平台ck，展现trace-tree
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg2jNiaJOPp720IJIZ4WKZxd45KT9Heia4TnuhiayzYbTePXBhlIBwFytKw/640?wx_fmt=png&from=appmsg)
+![](/img/user/z-attchements/media/640-2.png)
 
 ### **跨多个业务团队：拆分上报链路**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg3ia5GzktzNcOtAAavwcvZko2sJSYu3KIBiccH6H0wjzlg2xamB50JrEQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/z-attchements/media/640-54.png)
 
 ### **事件尽可能详细语义通用：约定事件协议**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgC6ibSyJhquoT9iaz4XMI1Uuoib4icn2ib6iczFszbbsfyNbf0icT0GGj4K2Nw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 ### **尽可能实时：数据实时入仓流程**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgPSymGuKKTianRqQZ1LvYAV9wL5d053sKAPeDuuavMib2IJMaiaAQ1NR6A/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-8.webp)
 
 ### **工具直观展示：Lego后台工具自助搭建**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg6ic1iaBWjQA1ncfQCbmTcU4O3icvLGVhQPc0H6PuwYibH3johrdz1Evu3A/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-5.webp)
 
 这个工具的好处是，正向的用户反馈点查（已知用户id、稿件id）可以快速定位整条链路，反向的根据已有上报事件数据，可以主动下钻排查，**让隐藏在技术指标之下的具体个例可以被感知**：
 
@@ -297,9 +297,9 @@ B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.c
 
 实践下来还是不要将业务域内的核心DB Binlog暴露给其他业务，而是暴露重新定义的领域事件Topic，否则数据库字段增改牵扯下游众多，不敢轻易DDL，也直接拉长了分库切换的项目战线，算是早期系统设计过程中的一个设计缺失。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgnXY1cola8YsXPCjczOcFM6Wngetqt613SI9Q7Fv79ATibSnMEXE90Ag/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgGibeEAY6CIZHpHZcGjhjcibs4NxbpFlztcAg1dYhcmgh8FbLfUV53EuQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 ### **ES索引 & DTS优化**
 
@@ -311,19 +311,19 @@ UP主稿件列表提供搜索过滤和展示用户名下稿件的能力，是用
 *   稿件分库改造，需要切换到新的分库数据源，新老分库切换涉及30+ ES索引，需在DTS链路上切换数据源
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgMlpUWut5icXvOujJicyFOMzTT5q5oHibff5b4NS1Wb9hLpFxo1GsRF3xA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-63.png)
 
 优化后独立集群部署，单索引120分片，根据mid分片，容器化部署ES on K8S，可低成本扩容。性能上根据压测支持到2000QPS，并可支持水平扩容，性能接近线性提升，PT99超时问题得到了较大缓解。下图为新旧索引对比监控，新索引60%流量旧索引40%流量，P50持平P80/P90/P99新索引均优于旧索引，其中P99新索引抖动尖刺显著减少，耗时降为旧索引1/3，P90耗时降为旧索引1/2。B端稿件列表需要互动数据进行粗排序，而全站用户对稿件互动QPS较高，B端ES集群无法承担上万QPS写入量，最终采用消费互动数据后聚合一段时间再刷新到ES的Delay Merge方案，因为业务上是根据互动指标粗排序，可以容忍数据的更新延迟，还有优化空间。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgibd7jvodVGOKKoS3CtSleHiclCTw32D40lK7hBkIETVtYPYawhO9Xvjw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-7.webp)
 
 上文提到的DTS是公司内部的数据传输链路组件，平台上支持配置Data Source（比如DB Binlog Topic）、Data Destination（比如ES、KV、Cache等），可以比较方便且可靠地实现异构数据传输，链路稳定性有保障。DTS支持在数据源事件触发时，聚合一些其他的数据（Join Other DB/Table，比如商业订单 Join 稿件表Archive，属于跨业务域DB Table被Join），组装数据格式后传输到目的存储。
 
 在处理跨DB/跨表Join数据时遇到了边界的数据不一致问题，假设A表binlog触发去Join B表时，B表主从同步还未完成导致聚合不到数据，异构数据落ES会缺失字段，数据完整性被破坏了；重试逻辑也很难做，因为DTS不具备业务属性，无法进入到业务逻辑中去判断是B表数据就是不存在还是因为某种原因延迟了。当时不得已采用了Delay Join来规避，即配置可延迟触发Join的时间。另外这种Join的弊端是，就算可以切换到主表Join解决主从一致延迟，DB层面仍然会被各种跨业务域的任务直连查库，主库不被保护得暴露会有系统性风险。因此与DTS团队沟通，平台迭代来支持从DB Join到API Call，业务提供的Data API中需要自行保障数据完整性，API协议通用化设计，DTS组件本身做好数据传输确保高可用一致性的原生职责。以下是一个稿件业务相关索引的DTS配置界面，左边的表是触发数据源，右边的是被Join DB Table，支持DB字段到ES字段的映射Mapping。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgibVOmtDQHfqXLmz6KgeGnCOicew0NosKFt9tMJapdRChk4jhbA1zCYjQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-9.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgNs6kFQhbrwMqXSOL8N8NzR43zdl5l0qtQZP0KDzQUtojhNUTLGYjEQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-6.webp)
 
 ### **ID INT64升级**
 
@@ -351,7 +351,7 @@ UP主稿件列表提供搜索过滤和展示用户名下稿件的能力，是用
 
 投稿涉及到的上下游节点非常多，从账号、话题、评论、标签到风控、审核、Push等。投稿是写操作（当然也包含很多数据读取），我们要把对下游服务的写入全部Mock掉（这些下游依赖服务应该定期完成自己业务内的压测，来对上游输出可信赖的服务SLA标准，这是微服务系统内的契约精神），避免模拟的压测流量对下游服务造成干扰。所以我们对整条链路做了详细的梳理，并做了多次code review确保万无一失。下图是投稿压测涉及到的系统：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgcq4vL5JSlAmAg1srvUj4xxjshhhn3oLyj4JtD1JicoER3S7ULoayiaGQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 我们对在高负载的情况下，稿件系统可能出现的瓶颈点做了埋点：如MQ的积压、多线程队列的积压、常规硬件资源监控、各存储引擎的监控等。异步任务场景，MQ积压通过通用的基础组件Metrics比较容易发现，不过如果在代码中有使用本地内存队列，需要对内存队列进行积压埋点观测，避免因为内存fanout队列削峰，压测时以为接口可以承载大量QPS，但是其实在内存中有大量任务堆积，影响对于接口的QPS的误判，所以也要把内存队列积压情况作为指标纳入看板中。
 
@@ -359,9 +359,9 @@ UP主稿件列表提供搜索过滤和展示用户名下稿件的能力，是用
 
 了解线上服务的负载极限，也有助于设置合理的业务限流Quota，可以对下游核心服务做好保护；堆积的投稿生产任务可以慢慢消费，确保数据最终可以处理。另外通过压测的实操演练，沉淀了通用压测方案，支撑未来大型活动上线前的服务能力巡检。未来针对大型投稿活动，我们根据相应的预期流量峰值方便的在线上进行压测回归。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgsDm3b7rib7k568pqRT93xWpTIKjPeWN1xsNosqrF68UB2CajF2sHhtg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgFycia8K55sdXmj3Jp7WHib5yrAwnJlJLacaspADkDaSuibbdiarz5D5NGA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-5.webp)
 
 ### **混沌工程演练**
 
@@ -375,7 +375,7 @@ UP主稿件列表提供搜索过滤和展示用户名下稿件的能力，是用
 
 为了达成目标，首先需要将业务场景的依赖进行梳理，这一步要结合着实际代码完成，最终对超过220个依赖进行梳理，覆盖全流程，包括稿件测试、审核测试和视频云测试等。借助依赖强弱标记的工具，对下游依赖服务接口进行标记，验证依赖关系，确保系统在面对故障时能够正确响应。这一步是一个递归递进的过程，在完成大部分的依赖标记后，在测试环境进行模拟故障来测试系统的稳定性和恢复能力。一旦Case可以通过手动制造模拟故障完成，那么接着就需要将演练案例自动化，我们通过在测试环境自动化投递各类型构造的稿件，并注入Case编写的下游依赖故障，以提高效率和覆盖率。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg8VXcic1uDiborXcibJ0QpBYkELibrOsiaxTUgRlFic1hmFX4Y9ib2YjKu6z1Q/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 实践下来，在混沌演练中，我们解决了UAT环境不完整、监控和告警缺失以及数据流和案例依赖验证的挑战。复制线上规则，来适配UAT环境，开发了自动投稿审核脚本，实现可控速率，并结合多个平台，进行多个方案的验证。
 
@@ -383,11 +383,11 @@ UP主稿件列表提供搜索过滤和展示用户名下稿件的能力，是用
 
 复杂的写读，同步异步消息混合场景，当时平台工具还不支持，因此研发测试一起做了技术攻坚，尝试多种方案，最终采用场景化方案来做依赖验证和混沌演练。从几十个Case抽象成四种通用Case。分阶段拆开来，构造不同阶段的故障Case（审核、bvcflow、开放）然后去查看稿件状态是否符合预期。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgKgsxiaU482FibEbCic72PsYflo7cHGLjw0e8wZbibynRHwvLQsQC5Utr8g/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-4.webp)
 
 通过混沌工程，我们补齐了生产场景中的空缺，梳理出全链路依赖，实现了全链路故障监控和规则告警。这不仅提高了系统的稳定性，还帮助我们快速定位故障并制定恢复SOP，实现了1-5-10的快速响应和恢复目标。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYghaNNWuvPfEVnkueL7t5NibdW88fmGWcS54aYvmV6lBdmKDspdQjC4vA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-6.webp)
 
 ### **投稿业务多活**
 
@@ -399,7 +399,7 @@ UP主稿件列表提供搜索过滤和展示用户名下稿件的能力，是用
 
 我们当前正在与视频云团队一起梳理视频上传和存储的架构，需要向云原生/混合云部署的架构演进，这样才可以更方便的对后续的架构进行扩展，比如存算分离，原片上传后应该尽可能地标准化存储，与后续业务行为可解耦。多活正在进行中，到目前也已经经过多轮讨论和方案共识，本文篇幅有限不在这里做过多赘述了，后续完整执行落地后可以单独出文介绍。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgIomOMwDLINzXmm71es9BiaKYKT2icGUdXdmMZYqrNcNh2Zwsib7z1cjzg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/z-attchements/media/640-6.webp)
 
 ### **结语**
 
