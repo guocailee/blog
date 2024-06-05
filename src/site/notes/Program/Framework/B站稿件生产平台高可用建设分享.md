@@ -1,0 +1,427 @@
+---
+{"dg-publish":true,"permalink":"/Program/Framework/B站稿件生产平台高可用建设分享/","noteIcon":""}
+---
+
+## **背景**
+
+B站作为国内领先的内容分享平台，其核心功能之一便是支持UP主们创作并分享各类视频内容。UP主稿件系统作为B站内容生产的关键环节，承担着从内容创作到发布的全过程管理。
+
+为了满足不同创作者的需求，B站提供了多种投稿渠道，包括移动端的粉大加号、必剪APP，以及Web端和PC端的上传方式，确保创作者可以随时随地上传自己的作品。同时，B站的内容来源多样化，既有用户生成内容（UGC），也有专业生成内容（PGC），以及商业合作稿件等。这些内容通过分区品类、话题和标签等多维度进行分类，以满足不同用户的兴趣和需求。这就要求B站必须具备一套高效、稳定的稿件生产系统，以确保内容的顺利上传、处理和分发。
+
+随着业务的快速发展，技术团队面临着组织变革、业务需求快速迭代以及系统劣化的挑战。在此过程中，技术债务逐渐累积。技术债务主要源于为了迅速适应市场变化而采取的临时解决方案，或者是已经过时的历史技术架构，这些问题若不及时解决，将会导致系统维护难度加大、系统复杂性提升和性能下降，进而影响用户体验和业务的持续发展。
+
+作为负责稿件生产链路的业务团队，我们致力于优化系统服务，提高系统的稳定性和可用性。我们通过持续的技术改进和创新，努力减少技术债务，确保B站的稿件生产系统能够稳定、高效地服务于广大UP主和用户，支持B站内容生态的繁荣发展。本文会介绍下B站稿件生产的服务架构，并从系统可观测性和服务高可用优化两个角度分享技术实践上的经验和思考。
+
+## **问题和挑战**
+
+### **历史债之重**
+
+B站于2009年6月26日创建，B站的第一个[稿件]( https://www.bilibili.com/video/av2/)也是2009年6月26日创建提交的，稿件技术服务从09年以来已经有15年，历经多轮负责人的变更和多次技术架构迭代，演变为了如今较为复杂的微服务体系。如果将链路上所有模块系统统计在内，代码行数达到百万行规模。得益于业务的增速，稿件数量增长也非常快，在近两年多内增长了几倍，各类数据总和有千亿级别，分布在多个存储系统。
+
+历史债只要迭代就会存在，甚至代码本身不迭代，外部环境组件随着时间前进，性能劣化也会产生技术债务需要治理。需要直面的现实是，很多技术优化都是线上问题驱动型，通过问题暴露“水面下的风险”。
+
+1.  **Out of Maintance：** 老旧的组件/平台/SDK已经不适用不维护不迭代，需要做迁移/重构/重新选型
+2.  **No Owner：** 维护人员离职或者转岗，导致老旧的业务逻辑无人认领熟悉，维护成本极高；No Owner + Out of Maintance的服务，需要更新组件版本更迭接口版本时，往往会遇到较大阻力
+3. **Dirty Code：** 代码本身在历次迭代重构中“妥协”或者不充分的技术设计，导致的dirty code甚至dirty data
+
+### **业务之重要**
+
+稿件生产在公司业务的定位，**创作业务入口 + 中台能力支持。** 
+
+承接：粉版、Web、必剪、H5、OGV、课堂、开放平台、直播、地方电视台、动态、商业化等10多个业务方，技术稳定性意味着业务稳定性，投稿不可用、转码开放延迟、稿件数据同步失败导致不可观看，都会引起极大的社区舆情、客诉反馈、商业化行为的损失。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgenqMibtiaRS3icSQu7RnBwGxsTdAicKZiabkc1J7Ute2jsiaETRkwfWj15Uw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **链路之复杂**
+
+整个稿件生产从投稿到开放链路涉及环节众多，分四个大步骤：创作工具（剪辑/直传）、发布上传、稿件生产、数据开放。下图是一张简化版的端到端流程图。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg4tx9CYhEIVodnUMkIluYib9DegaavVFWWkhQZGgADlJuS0l2OPJp9rw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+涉及到的业务/团队有：
+
+*   工具客户端、H5&Web端
+*   稿件服务/内容生产系统
+*   审核
+*   AI工程与模型
+*   转码调度/计算/存储
+*   CDN，稿件媒体元信息刷新
+*   C端服务
+*   ...
+
+这些链路上一些**核心依赖的不可用就会导致稿件生产阻塞**，进而影响稿件开放的时长，比如假设：
+
+1.  生产工具App核心场景打开持续crash或白屏，将在生产源头阻塞用户，无法产生投稿行为
+2.  原片上传有问题，将阻塞视频上传，导致用户投稿失败
+3.  生产系统有问题，将无法驱动业务调度开展工作流，影响稿件开放时间
+4.  审核系统有问题，将在待审通道阻塞堆积大量稿件对象，影响稿件开放时间
+5.  转码系统有问题，将在转码队列中阻塞堆积大量视频对象，影响稿件开放时间
+6.  CDN刷新视频元数据有问题，将导致稿件状态已更新为开放但是视频无法观看，引起UP主和用户的客诉舆情
+7.  ...
+    
+
+以上这些Case都会直接影响稿件生产的业务北极星指标，直接引起客诉，更甚会引发大规模舆情。简单的数学公式：SLA(Biz) = SLA(Core System1) * SLA(Core System2) * SLA(Core System3) * SLA(Core System4) * ...，因此整个链路上的强依赖模块都需要做到高可用。
+
+## **系统架构介绍**
+
+先介绍一些技术名词解释和概念，后续再介绍系统架构时可以更方便理解。
+
+### **名词解释**
+
+|  archive |  稿件 |
+|--|--|
+|  video |  视频，一个稿件可以有多个视频，一个视频内部成为1P |
+|  aid |  内部系统流转的稿件ID |
+|  bvid |  用户可见的稿件ID |
+|  cid |  视频ID |
+|  mid |  用户ID |
+|  filename |  用户上传媒体文件唯一编号 |
+|  upfrom |  投稿渠道，业务来源标识 |
+|  UGC |  指用户生产内容 |
+|  PGC |  指专业团队/机构生产内容 |
+|  原片 |  原始上传的数字媒体 |
+|  preupload |  原片上传行为的代称，实际的上传行为更复杂，会有多种策略决定上传的Endpoint |
+|  upos |  原片上传后的媒资文件存储服务 |
+|  DAG |  Directed Acyclic Graph，有向无环图，本文代指生产系统的流程图 |
+|  转码 |  将原片进行编码格式转换，为了优化内容存储和传输效率，提高广泛用户群体的播放兼容体验，会有多路清晰度转码的环节 |
+|  审核 |  对数字媒体内容进行审核，视生产渠道和稿件类型不同，审核环节也会有差异 |
+|  多P稿件 |  包含多个视频的稿件，多P稿件生产流程比一般稿件复杂，需要等待所有P的视频内容完成审核与转码后才能开放 |
+|  合集 |  多个稿件组成的集合 |
+
+### **一个稿件包含的元素**
+
+稿件是一个容器，呈现给用户的包括：视频，图文信息，互动信息等；幕后支撑系统运转的包括：状态，流量管控，多媒体相关信息等。
+
+围绕着稿件大体上分为3类角色：UP、审核和用户，这三类角色通过各种各样的系统作用于稿件这个核心实体，并在各种行为中不断丰富稿件这个核心实体。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgGcha8p4EdV5sbCic8RqnnPN1wtxOTxJvIdwwwic5RETefmia2faC8eVqA/640?wx_fmt=png&from=appmsg)
+
+### **业务架构概览**
+
+在这条复杂的业务路径中，多个团队在其中各司其职来确保稿件生产端到端的链路稳定性和系统的高可用。将上文介绍复杂性举例的业务流程图进行技术模块的逐层拆解，得到了如下这张架构分层图。图中只是简述了一些关键的服务模块，涉及到的微服务和模块太多，无法全部罗列在内。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgBP1ibgYKaNEcaJXnvicgA4OibNqzGqTibKOxEObkRkesLoe0FlMnYWEJqw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+分层解释：
+
+1. 前台，除了列举的常规业务入口之外，还包括了内部投稿渠道、运营审核人员使用的后台，一般会针对渠道进行网关入口隔离（服务部署级别 / 代码接口级别）。
+2. 网关，内部称之为BFF（Backend For Frontend），Client端的接入面，业务CRUD逻辑编排层，包含投稿视频上传、投稿接口、稿件列表、稿件编辑，是稿件产生的业务入口，更上游是创作工具（粉/必剪）和其他的投稿业务渠道（商单/OGV/直播/开放平台...）。
+> 前台应用到网关之间的流量路径：Client -> WebCDN -> LB（四层/七层）-> API Gateway -> BFF，在源站SLB上有WAF，APIGW层有内嵌Gaia风控组件，做到统一转发/风控/限流/降级控制面。
+3. 业务应用，业务逻辑层Service，微服务部署形式，提供业务功能实现的标准接口；按照生产与消费职能可以分为B端业务域服务和C端业务域服务
+> 外部服务依赖如稿件绑定tag/绑定topic/审核过机审模型等；通用域是基础服务，承担了全公司服务的流量调用，如账号/鉴权等。
+4. 内容生产平台，是一个基于DAG实现的调度系统，可以根据不同业务配置的执行调度作业串联起原子方法进行内容生产流程，支持业务注册接入并制定生产链路流程，审核系统、转码系统、版权系统、AI工程等作为能力方，暴露接口被DAG执行调度，节点之间通过同异步方式进行状态更迭通知与回调，确保节点状态更迭有序。
+> 稿件系统基于CQRS职责拆分，B端稿件在生产侧完成后，内容生产服务会回调稿件服务的原子方法做开放通知Notify，通过Domain Message通知C端稿件服务，更新数据落库。C端稿件服务上游是稿件消费应用服务和网关，如搜索、推荐、空间、动态、收藏夹等等。
+5. 元数据存储，业务模块都有各自的数据实体对象，如稿件实体、视频实体等，这些元数据（包括媒资文件）存储在多个不同的存储介质中，有传统的关系型数据库，也有KV存储和分布式存储系统。
+
+### **生产系统 \- 基于DAG的内容加工平台**
+
+内容生产系统支持多业务场景注册、实现原子能力节点、自定义调度路径，具备基本的同异步调度、重试降级、failure callback、事件上报观测等能力，拥有面向研发人员的控制面，具备平台化能力与职责。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgLOM5tWevjKkbRTP8gzGYt8LKlvyabAfPSCCslANRhpUeMpYmRc7Olg/640?wx_fmt=png&from=appmsg)
+
+模块构成上，主要分为DAG管理，DAG调度服务（调度和指派），DAG状态服务，DAG监听服务和执行器。
+
+*   DAG管理 ，管理DAG和处理单元（创建，编辑，配置）
+*   DAG调度服务，分为调度和指派，调度是服务内部自动触发（资源变化和处理单元执行完成），指派是外部内容管理指定处理单元执行
+*   DAG状态服务，主要是提供查询，更新和删除处理单元状态
+*   DAG监听服务，利用Databus（一个基础组件，消息队列的封装）提供调度消息的缓存
+*   执行器，具体执行处理单元，设置队列提供处理单元的入列出列操作，保障处理单元的有序操作
+    
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgfibfhkOPwjzGXSKSmmHLKobh8qakjjfQRiaFCyh1v2AvhuoicdTWgIK8g/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+以稿件为例介绍业务是如何在内容生产系统中被执行的。
+
+左侧B端稿件生产部分，从端侧上传原片进入服务端逻辑开始，生产系统调度过程中的审核域、流媒体域、版权域、AI模型域等不同系统模块，系统内部通过消息队列分发任务并等待任务完成的Callback Notify，进而转入下一层工作节点。有些节点虽然是并行调度，但是需要归并等待完成后才能进入下个节点，比如需要完成稿件、视频审核和视频的转码任务，才能进入开放节点。人群画像分类、转码效率优化、流程调度并行化、提升机审覆盖率、资源潮汐调度等等都是全局上可以使用帮助提效的技术手段。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg780EhIANeZV4cd5z1FpHW0s1glCMlECtTGrWyk5icwXRm3aeWM0f5Mw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+进入开放节点后，右侧B->C的指向部分，体现的是稿件生产到开放的CQRS架构实现。CQRS拆分是稿件业务系统在多年前进行的操作，B端范畴的“稿件生产链路”，生产完成后基于领域事件消息驱动同步数据到C端稿件服务，由B到C的数据同步机制是经过CQRS思想架构拆分设计而成。技术架构依据组织架构边界，BC稿件也是两个团队在负责的。为了确保数据最终一致性，数据同步消费者有重试措施，并有数据同步对账脚本进行对比监控。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgXG13fvBEia3EJ62LkfInRXs3icG8OFalkqhIyrjL6ZR5icuWvIna2Yg6A/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **可观测性**
+
+系统想要高可用，先要了解当前的可用性是什么状态，期望优化目标是什么，这些都是客观事实的技术指标来体现，这样技术优化才能有的放矢。
+
+如果把稿件生产整体视为一个”大黑盒“，首先需要确定这个系统运行的指标是什么，例如：
+
+*   从input/output视角：流入（上传多少稿件）、流出（开放多少稿件）、吞吐效率（上传到开放的时延）
+*   从端的视角：上传成功率、接口可用性、接口QPS、RT
+    
+
+接着将这个”大黑盒“拆解，分拆到不同环节模块下核心的服务、模块之间的协议、服务之间的数据流转链路，以上这个过程可以不断迭代演进，可观测性建设就是帮助感知到系统的运行状态，构建排查工具协助快速定位问题，更进一步能够做到业务异动分析。在对一个复杂系统进行拆解优化前，我们需要了解现状感知异常，因此可观测性比上来就做优化和重构优先级更高更有价值，这一章节会花一些笔墨来介绍下我们逐步建设的思路。
+
+### **业务北极星指标**
+
+低头赶路找不到方向的时候，抬头看看北极星。
+
+稿件生产的北极星指标是“**首次开放耗时M90/M95/M99**”，稿件可以多次编辑/打回重新提交进入生产流程，因此业务首先关注首次开放耗时。这是一个偏创作体验的指标，影响这个指标的客观因素有：原片时长、是否HDR、是否4K、长短视频占比、转码资源潮汐调度、人审耗时波动、黑灰产投稿量等。
+
+这个指标的计算逻辑不复杂，统计每一天所有稿件T = (开放时间 - 投稿时间)的均值分位数，不过需要剔除一些如定时投稿的特殊业务场景。大数据平台每日任务处理，BI看板体现数据。
+
+其他一些会关注的业务指标有：
+
+*   供给规模：日投稿量、日视频数、日投稿DAU等
+*   创作者规模：新/老/留人群指标、粉丝跃迁等
+*   有效消费指标：X日内有效观看>=Y的稿件数、有效VV数等
+    
+
+### **技术系统大盘与监控**
+
+业务北极星指标是T+1的，技术服务系统更关注实时的运行状态，先要知道负责的服务有无系统性风险，了解线上运行健康度，感知异常快速解决问题。
+
+技术系统一般借助Log + Metrics + OpenTelemetry等手段建设系统观测体系，这三者的数据是以时序为基础、互为补充信息的参考系。
+
+稿件生产链路目前已经整体覆盖【投稿】->【投稿-多P】->【转码】->【审核】->【开放】，做到了All Metrics In OnePage，方便一页可以总览各个环节的关键曲线变化。
+
+技术关键指标基本都被囊括在了OnePage中，eg：
+
+*   大盘量的走势：稿件量、视频量、创作者PV、创作者UV...
+*   错误量趋势：客户端错误量、投稿核心接口错误率...
+*   成功率趋势：整体/分渠道/分端投稿成功率、投稿QPS、送审成功数、转码完成数、稿件同步开放数...
+*   容量大盘：DB、Cache等组件的容量水位线...
+    
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg6BQ80qWHDPOfBglhr61E1IDj8ZU189j2HQ3qIfUlGXENWapvWwibtiag/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg4pict8b2VqXUyIRkHoiarSowFUW2ibOkMna5LPHI4ApEMTQ61stRgusiag/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **故障召回，1-5-10**
+
+研发只要经常观察监控曲线、日志错误数曲线，自然会得到一些经验值来辅助判断当前系统的运行情况。不过线上监控抖动也不一定意味着系统发生了故障，我们肯定希望对于系统故障是“高召准”的，因此需要基于已有的、通过不同渠道上报的旁路数据，通过经验值来制定分层告警规则，并逐步对告警噪音降噪，找到比较合适的配置标准。现有多种故障召回渠道，包括：核心服务SLO下跌召回、监控告警召回、客诉反馈召回等，基本上一个线上问题产生，会按照时序依次在不同渠道体现（研发发现告警、SLO下跌，跟着用户有感客诉进线）。
+
+我们期望比用户更早发现与定位问题，做到1-5-10是一个目标。当然实际操作下来也是有一些难度，有很多干扰因素导致无法达成1-5-10，比如第一分钟的异常发现延迟RT，应尽可能地小，从采集频率、计算频率、告警聚合、异常投递触达，都可以做优化。假如一些指标的采集窗口就在30s了，置信的告警需要观察N个窗口的走势，那么一般都会超过1min。5min定位问题和10min恢复，需要响应够快（1min感知是第一步） + 经验能力（业务熟悉程度、SRE能力、快速止预案、临场应急指挥调度能力等） + 平台工具好用（辅助观察类Trace/Log/Metrics、快速止损类APIGW、容量转发/降级/兜底等） + 运气成分（比如是否是半夜，懵逼情况下大家状态都不好）...
+
+我们借助SLO大盘工具构建了核心业务场景，服务SLO下跌到一定阈值会有SRE Bot自动拉群触达；同时我们自己设置了多种档位的告警方式，包括企微Bot、短信、电话告警，根据核心与否和紧急程度逐级上升，业务告警规则List统一订阅到固定的告警组，规则已覆盖50+核心子场景，半年内通过这套机制主动发现Case 10+，早发现早解决，将Case升级成为事故的可能性扼杀在摇篮中。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgBWT04mjA8l9jmiax2uTV8MZLOolT5XRLYMIPz4fCF0nqw6PheIe3Fsg/640?wx_fmt=png&from=appmsg)
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgaa2WAVM7diaJGDPySE9e1BrYRUeiaAtia95vSQoibibZcS7picsoNC853yAQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgU8Heqd5Hy3e42bdtX9otHloIXFcUfo20Wib71Qhu4ymuWc6IFibMsILA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg1I7rmRFC7LSnZaoEUoibgv2FouXriaibiahs4PseGx7Lm8QvWPibflftpXw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **生产效率指标**
+
+有了业务大盘北极星指标，服务系统线上运行状态也可以做到监控了，下一步做什么呢？
+
+如果将整个生产系统想象成一个内容供应链，已知每日的供应“货物”总数，每个“货物”又有大小轻重之分，大盘指标太笼统，下钻到供应链的子环节看下每个子环节的效率如何，是一个很自然的思考。
+
+在服务系统稳定运行的前提下，我们开始下钻生产效率指标，首先需要将大盘指标转化为归一化的单位指标：
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgmjznWzFWBzRHf21350h5icuIXbaE8EtJic9aKHPCYw4PPwaSicnwsKeww/640?wx_fmt=png&from=appmsg)
+
+这个公式可以理解为：每一秒可以生产X秒的视频内容，我们希望通过各种技术手段优化这个效率越高越好（但是会有体验上的权衡），直至前资源能做到的边际效应边界。将以上公式做环节拆解（注意：下述公式最新有一些UPDATE，因为转码阶段做了优化转码措施，不再是串行加法关系，这里可以略加参考）：
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgx5kK721JshX12HEWEG9to58m1UqberdDQyOZ12mA4EpOWBibBEHia38Q/640?wx_fmt=png&from=appmsg)
+
+通过归一化公式可以统计每天的均值效率指标，再拆分到每个环节的均值效率，辅助判断每日的效率趋势，发现一些潜在问题，比如系统资源调度是否存在空转的问题进而导致效率降低。根据投稿分区、分端、UP主粉丝数圈层、稿件短中长视频、风险账户/高优UP等不同的参数进行数据聚类，再套用以上公式计算效率均值也是常用的观察业务异动的手段，eg：
+
+*   Video Duration < X min 短视频的生产效率 VS Video Duration >= Xmin 中长视频的生产效率
+*   风险账户投稿效率均值 VS 大盘效率（风险账户的效率如果跑赢大盘的效率，那么说明前置风险识别和资源分配的策略上有一些问题）
+*   特殊稿件效率 VS 大盘效率
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgwIHksJ2eCMpDQL5tdppM42Cia8vmnAwCVicUbRtEibibqUEpNtQNRnVL3g/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **业务全链路Trace**
+
+以上几项措施，从北极星到大盘监控再到大盘数据下钻，是拿已经发生过的数据“以果推因”，我们还需要能够有一些别的手段，可以在这个“因”发生初期就感知到，串联起所有主要环节，精确到每一个Case的个例数据。为什么需要如此呢，考虑以下几个线上实际发生过的案例：
+
+*   就算接口可用性达到了99.99%，损失的0.01%对谁的业务行为会有损，我们能定位到目标群体吗？
+*   To B型业务就算只有一次失败，如果是【政务号】、【重要商单】、【S级活动演出】遇到了投稿上传失败，那么影响也是很大的
+*   UGC创作业务复杂度不断提升，有一些失败行为发生在端上有一些则是在服务端，端到端的日常问题排查、用户行为回溯该怎么做？
+
+一般的排查姿势是让用户在客户端尝试复现路径，然后点击本地日志上报 + 多个业务服务观察从SLB到Service的一连串日志和trace去定位原因，这个方式可以work但是不够高效，有些偶发性问题也不一定能够再复现，持续追查的资源投入比较高。
+
+因此我们联合客户端和其他相关团队引入了业务全链路Trace能力，通过定义创作业务关键事件链路，并聚合串联客户端埋点，业务服务端 context trace传递，实现用户视角的全链路事件Trace。全链路Trace通过定义关键事件行为，做到**端到端可串联、定义尽可能详细、跨多个业务团队、上报尽可能实时、排查工具尽可能直观。** 大致技术方案描述：
+
+1.  端到端的全链路业务追踪，客户端生成 origin\_trace\_id，和服务端trace_id打通（将客户端行为事件链接起来）
+2.  服务端复用 Open Trace 协议（框架层面已有能力），将客户端的 origin\_trace\_id 与 服务端的trace_id做映射上报
+3.  服务端的每个业务系统，通过lancer独立上报（如果上下游有origin\_trace\_id，就建立与服务端trace_id关系）到数据平台
+4.  建立准实时flink任务，通过查询数据平台ck，展现trace-tree
+    
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg2jNiaJOPp720IJIZ4WKZxd45KT9Heia4TnuhiayzYbTePXBhlIBwFytKw/640?wx_fmt=png&from=appmsg)
+
+### **跨多个业务团队：拆分上报链路**
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg3ia5GzktzNcOtAAavwcvZko2sJSYu3KIBiccH6H0wjzlg2xamB50JrEQ/640?wx_fmt=png&from=appmsg)
+
+### **事件尽可能详细语义通用：约定事件协议**
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgC6ibSyJhquoT9iaz4XMI1Uuoib4icn2ib6iczFszbbsfyNbf0icT0GGj4K2Nw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **尽可能实时：数据实时入仓流程**
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgPSymGuKKTianRqQZ1LvYAV9wL5d053sKAPeDuuavMib2IJMaiaAQ1NR6A/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **工具直观展示：Lego后台工具自助搭建**
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg6ic1iaBWjQA1ncfQCbmTcU4O3icvLGVhQPc0H6PuwYibH3johrdz1Evu3A/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+这个工具的好处是，正向的用户反馈点查（已知用户id、稿件id）可以快速定位整条链路，反向的根据已有上报事件数据，可以主动下钻排查，**让隐藏在技术指标之下的具体个例可以被感知**：
+
+*   pending在某个事件状态的稿件集合，delay了多久
+*   在关键事件节点fail的个例可筛查，发现水面下的个例问题，帮助排查代码中的边缘bug
+*   关键事件耗时可视化，排序后可以知道每天耗时较多TOP N稿件是哪些等等
+    
+
+当前已经做到：
+
+1.  基于端到端的数据通道，落地业务全链路Trace工具，具备分析全链路问题的工具
+2.  可以下钻到技术层Trace查看调用，通道可以携带非常多的辅助数据，供技术排障使用
+3.  数据已经覆盖端上、投稿、视频上传、审核、版权、开放，40+ 事件定义 日2kw+事件上报
+4.  通过反向筛查每日输出报表，发现边界Case N例并fix
+
+## **小结**
+
+本节大致将技术和业务两个视角下的“可观测性”建设过程介绍了下，在使用观测系统的过程中，研发日常可以感知到系统的异常状态，发现了诸如合集异常、延迟稿件开发异常、稿件管理列表页偶发超时等业务Case；在技术改造是否值得投入执行需要决策时，也是结合了系统的当前指标来决定我们应该从哪些方向去进行优化和重构。下一个章节以几个案例介绍服务高可用的建设。
+
+### **高可用建设，负重前行**
+
+在一个已经存在了15年的服务系统中，历史债务一定是比较重的，要面对的不仅是代码质量劣化本身，还有诸如技术组件老化、技术选型过时、数据协议滥用、维护心智负担重、迭代效率低等多方面的问题。我们需要在治理债务的同时还需要保障好这个核心业务的稳定性不受损失，做到“边开飞机边换引擎”。
+
+### **存储优化**
+
+稿件服务中使用了多种存储来应对不同业务场景下的需求，在业务快速发展过程中，我们需要对现有的存储系统进行全面的风险评估和容量规划，制定合理的扩容计划和备份策略，确保存储系统的稳定性和可靠性。过去的一年多面对线上暴露出来的问题，我们决定先从存储切入，包括MySQL、TiDB、ES、泰山KV多个存储组件，涉及到稿件分库、ES索引分片拆分、TiDB IO尖刺优化、MySQL磁盘容量问题等技改项目。同时系统容量是业务不断发展带来的要求，以N年翻M倍的投稿量增长公式来计算，系统的负载吞吐是需要走在业务实际发生之前。除了上述提到技改项目之外，内容生产的性能吞吐优化、稿件ID INT32到INT64位升级、状态流转异常自动恢复机制、全链路自动化测试，都是必要合理的方式来达成系统稳定这一目标。
+
+### **稿件分库**
+
+随着业务增长投稿量逐渐增多，现有的单Mysql的架构将会成为系统瓶颈，难以支持后续的业务增长，所以需要使用多数据库来扩大存储容量和IOPS能力。按照之前测算的数据进行分析，单库容量剩余50%可用空间，以当时稿件每日增速，到24年底该单库存储将到达极限。
+
+为了提前应对将来的危机，对DB进行分库改造，跟随业务线性增长的10+表（每张表十亿级数据量）拆分到8个逻辑新库，其余表在老库不动，逻辑分库可以根据资源和业务需要部署在N个实际的物理节点上，只要考虑好流量均衡即可。技术复杂点：稿件作为最基础的底层数据服务，上游依赖服务众多，数据影响需要逐级扩散梳理，涉及到服务代码存储读写改动、发号器逻辑修改、历史数据迁移，同时在数据底层切换操作过程中，要确保核心功能需无损业务无感。项目管理上，整个项目关联了几乎公司所有主要技术团队，从立项之初到灰度放量时间跨度周期长，底层代码在变更周期内不能阻塞业务代码的迭代，代码管理难度大，因此需要有较多的心力放在整体项目风险把控上，要准备好完善的上线和回滚SOP，核心服务不容有失。
+
+整体项目进行大约1年，截止到去年底DB切换基本完成，DB Proxy Service服务负责收敛所有稿件库表SQL，代理上游依赖服务对数据库的读写流量，老库保留双写读已全切新库，核心库表已无容量和QPS风险；8个逻辑库DB Binlog Topic聚合成一个消息Topic，与老库消息结构体保持一致，陆续推动100+依赖数据源下游切换Topic；大数据平台实时/离线50+任务全部完成改造。
+
+实践下来还是不要将业务域内的核心DB Binlog暴露给其他业务，而是暴露重新定义的领域事件Topic，否则数据库字段增改牵扯下游众多，不敢轻易DDL，也直接拉长了分库切换的项目战线，算是早期系统设计过程中的一个设计缺失。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgnXY1cola8YsXPCjczOcFM6Wngetqt613SI9Q7Fv79ATibSnMEXE90Ag/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgGibeEAY6CIZHpHZcGjhjcibs4NxbpFlztcAg1dYhcmgh8FbLfUV53EuQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **ES索引 & DTS优化**
+
+UP主稿件列表提供搜索过滤和展示用户名下稿件的能力，是用户编辑、查看管理自己稿件的重要业务入口，底层使用了ES存储聚合的宽字段数据。在优化前，稿件列表存在诸多问题：
+
+*   10亿+数据单索引16分片，根据doc id分片，不具备业务routing语义，大部分请求需要全分片检索，查询超时长尾效果很明显
+*   旧索引部署在混部集群上，出现过IO竞争导致的查询接口可用性抖动问题，导致过某一年年报活动，稿件生产完成同步到ES中数据写入夯住的线上问题
+*   UP稿件排序需要观看、点赞、收藏等C端用户行为的数据，用户行为数据量级很大，此类数据刷入ES集群负担较重，且数据同步流程原先是非标的，走的全量scan DB同步数据，稳定性较差不是一个好的可扩展的方案
+*   稿件分库改造，需要切换到新的分库数据源，新老分库切换涉及30+ ES索引，需在DTS链路上切换数据源
+    
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgMlpUWut5icXvOujJicyFOMzTT5q5oHibff5b4NS1Wb9hLpFxo1GsRF3xA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+优化后独立集群部署，单索引120分片，根据mid分片，容器化部署ES on K8S，可低成本扩容。性能上根据压测支持到2000QPS，并可支持水平扩容，性能接近线性提升，PT99超时问题得到了较大缓解。下图为新旧索引对比监控，新索引60%流量旧索引40%流量，P50持平P80/P90/P99新索引均优于旧索引，其中P99新索引抖动尖刺显著减少，耗时降为旧索引1/3，P90耗时降为旧索引1/2。B端稿件列表需要互动数据进行粗排序，而全站用户对稿件互动QPS较高，B端ES集群无法承担上万QPS写入量，最终采用消费互动数据后聚合一段时间再刷新到ES的Delay Merge方案，因为业务上是根据互动指标粗排序，可以容忍数据的更新延迟，还有优化空间。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgibd7jvodVGOKKoS3CtSleHiclCTw32D40lK7hBkIETVtYPYawhO9Xvjw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+上文提到的DTS是公司内部的数据传输链路组件，平台上支持配置Data Source（比如DB Binlog Topic）、Data Destination（比如ES、KV、Cache等），可以比较方便且可靠地实现异构数据传输，链路稳定性有保障。DTS支持在数据源事件触发时，聚合一些其他的数据（Join Other DB/Table，比如商业订单 Join 稿件表Archive，属于跨业务域DB Table被Join），组装数据格式后传输到目的存储。
+
+在处理跨DB/跨表Join数据时遇到了边界的数据不一致问题，假设A表binlog触发去Join B表时，B表主从同步还未完成导致聚合不到数据，异构数据落ES会缺失字段，数据完整性被破坏了；重试逻辑也很难做，因为DTS不具备业务属性，无法进入到业务逻辑中去判断是B表数据就是不存在还是因为某种原因延迟了。当时不得已采用了Delay Join来规避，即配置可延迟触发Join的时间。另外这种Join的弊端是，就算可以切换到主表Join解决主从一致延迟，DB层面仍然会被各种跨业务域的任务直连查库，主库不被保护得暴露会有系统性风险。因此与DTS团队沟通，平台迭代来支持从DB Join到API Call，业务提供的Data API中需要自行保障数据完整性，API协议通用化设计，DTS组件本身做好数据传输确保高可用一致性的原生职责。以下是一个稿件业务相关索引的DTS配置界面，左边的表是触发数据源，右边的是被Join DB Table，支持DB字段到ES字段的映射Mapping。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgibVOmtDQHfqXLmz6KgeGnCOicew0NosKFt9tMJapdRChk4jhbA1zCYjQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgNs6kFQhbrwMqXSOL8N8NzR43zdl5l0qtQZP0KDzQUtojhNUTLGYjEQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **ID INT64升级**
+
+历史上稿件ID（aid）及视频ID（cid）都是INT32数据类型，最多支撑20亿数据量，INT64升级改造改动范围颇大，但是不得不未雨绸缪提前布局，在项目发起时，按稿件量每年翻倍的业务目标来测算，结合当时稿件ID INT32位剩余数据量预估，仅能再支撑1年多时间急需扩容。扩容成64位后，基本上可以永久使用，不再考虑容量问题。由于aid/cid为公司内部最为核心的ID之二，牵涉面很广很深，因此需要各条线配合升级改造或兼容，这里也有一个改造过程和灰度放量的观察周期，注定是一个长线任务。
+
+内部改造：数据源头的改造，理论上INT64最大使用空间\[-9,223,372,036,854,775,808， 9,223,372,036,854,775,807\]，但由于JS默认的Number使用的是64位双精度的IEE754浮点数，导致JS只能识别最大整数位2^53-1, 剩余的位保留给指数部分，因此采用不大于51位INT64的发号器产出数据ID。
+
+外部改造：由于稿件系统庞大历史悠久，下游很多，采用广度优先的方法推进，
+
+1、稿件业务根据接口监控，找出一级下游，并确定一级下游服务的负责人与对应业务负责人
+2、每个下游服务/业务的负责人，如果依赖的下游与aid/cid有关，则需要找到自己依赖下游的负责人并推动其改造，并向项目组报备自己的相关下游
+3、根据资源和排期情况，各个业务方制定计划及Milestone，会定期同步各业务方的进度
+
+改造梳理模版：按照树状结构自顶向下传递，需要每个业务模块同时梳理自己的 传输、应用、存储 三大方面。开发工具检查代码仓库中的Proto定义、Codebase中的代码字段、DB/HIVE中的字段Schema，检索出来一批可以快速定位需要修改的范围。如果字段有特殊别名，比如aid被别名为object_id作为存储字段，那么需要单独拉出来所有INT32字段并梳理确认。这一步基本可以覆盖95%的业务场景，在面对剩余5%“我不知道我不知道”的case里，在测试环境定时构造INT64 ID数据下发来尝试发现问题，测试环境一直有业务在日常回归使用，构造的数据流会不断流转直至遇到问题，如端字段未兼容导致Crash、服务端未兼容导致Server Error。
+
+灰度方案：涉及客户端更改需要新版本覆盖率达到一定阈值后进行放量，灰度需要确保可以随时回退到INT32的发号器逻辑，通过开关控制大的新旧切换逻辑。再使用诸如内部人群号码包、粉丝段分层MID取尾号逐步灰度（如：<100粉人群MID取余，做百分比例灰度）等放量手段逐步验证观察。
+
+### **全链路写压测**
+
+年报是每年年末固定会开展的重点业务项目，总结一年观看B站的数据化表达，并引导转化为投稿。这种一键投稿业务形态就决定了会有短时的高峰投稿行为产生，加上日常进行的代码治理、存储短板优化等技术改造，也希望通过写压测来观察线上系统的真实负载情况。
+
+为了在线上环境做写入压测，这就要求我们把线上真实流量数据和存储数据完全分开，基架提供了很好的压测平台能够支持，支持在计算层通过Context打标识，在存储层通过影子表，MQ也有影子Topic，这样就把计算流量到存储完全隔离开，业务研发可以很方便的进行压测。
+
+全链路压测的目标是检验线上服务的抗压能力，包括代码逻辑及配置等。因此，压测流量途径的应用都是线上的应用，但资源都是影子资源。难点在于，投稿都是异步化流程，且过程中有异构语言（C++/Python/Lua）无法全程串联起压测流量标识Mirror标记，只能在部分阶段做Mirror Mock来绕过无法串联的服务。特别地，需要确保Mirror流量是正确按照配置走入到Shadow DB & Cache，否则会污染线上存储。
+
+投稿涉及到的上下游节点非常多，从账号、话题、评论、标签到风控、审核、Push等。投稿是写操作（当然也包含很多数据读取），我们要把对下游服务的写入全部Mock掉（这些下游依赖服务应该定期完成自己业务内的压测，来对上游输出可信赖的服务SLA标准，这是微服务系统内的契约精神），避免模拟的压测流量对下游服务造成干扰。所以我们对整条链路做了详细的梳理，并做了多次code review确保万无一失。下图是投稿压测涉及到的系统：
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgcq4vL5JSlAmAg1srvUj4xxjshhhn3oLyj4JtD1JicoER3S7ULoayiaGQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+我们对在高负载的情况下，稿件系统可能出现的瓶颈点做了埋点：如MQ的积压、多线程队列的积压、常规硬件资源监控、各存储引擎的监控等。异步任务场景，MQ积压通过通用的基础组件Metrics比较容易发现，不过如果在代码中有使用本地内存队列，需要对内存队列进行积压埋点观测，避免因为内存fanout队列削峰，压测时以为接口可以承载大量QPS，但是其实在内存中有大量任务堆积，影响对于接口的QPS的误判，所以也要把内存队列积压情况作为指标纳入看板中。
+
+我们通过基架的Melloi压测平台发起多轮压测并回收数据结果，过程中发现并优化了如服务间Context丢失、MQ消费端并发读不够、内存队列并发度不够、TIDB LSM-Tree写放大性能抖动、限流不正确导致数据丢失等等问题，最终这些瓶颈优化后稿件系统生产能力QPS吞吐上升了5倍。
+
+了解线上服务的负载极限，也有助于设置合理的业务限流Quota，可以对下游核心服务做好保护；堆积的投稿生产任务可以慢慢消费，确保数据最终可以处理。另外通过压测的实操演练，沉淀了通用压测方案，支撑未来大型活动上线前的服务能力巡检。未来针对大型投稿活动，我们根据相应的预期流量峰值方便的在线上进行压测回归。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgsDm3b7rib7k568pqRT93xWpTIKjPeWN1xsNosqrF68UB2CajF2sHhtg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgFycia8K55sdXmj3Jp7WHib5yrAwnJlJLacaspADkDaSuibbdiarz5D5NGA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **混沌工程演练**
+
+通过技术优化和压测手段了解线上服务系统的性能现状，这是很常见的思路。然而考虑到整个链路依赖的下游繁杂众多，依赖的强弱程度不同，某个环节出问题可能影响整个链路，很难找到所有潜在风险，因此需要一些逆向思路。混沌工程是一种通过在系统中引入可控的故障来测试系统稳定性和弹性的实践。综合考虑平台混沌工具能力和对系统的影响，我们最终决定在测试环境进行混沌演练，下面介绍下混沌工程在业务生产链路中的应用，以及它如何帮助我们识别和优化系统中的短板。
+
+我们之所以实践混沌工程，希望达成三个目标：
+
+*   识别短板：通过混沌工程，可以清晰地识别出生产链路中的潜在问题和短板。
+*   依赖透明化：依赖关系变得透明，不合理的依赖可以被识别并优化。
+*   故障与恢复：通过混沌工程，可以明确故障路线和恢复路线，实现快速响应和恢复。
+
+为了达成目标，首先需要将业务场景的依赖进行梳理，这一步要结合着实际代码完成，最终对超过220个依赖进行梳理，覆盖全流程，包括稿件测试、审核测试和视频云测试等。借助依赖强弱标记的工具，对下游依赖服务接口进行标记，验证依赖关系，确保系统在面对故障时能够正确响应。这一步是一个递归递进的过程，在完成大部分的依赖标记后，在测试环境进行模拟故障来测试系统的稳定性和恢复能力。一旦Case可以通过手动制造模拟故障完成，那么接着就需要将演练案例自动化，我们通过在测试环境自动化投递各类型构造的稿件，并注入Case编写的下游依赖故障，以提高效率和覆盖率。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYg8VXcic1uDiborXcibJ0QpBYkELibrOsiaxTUgRlFic1hmFX4Y9ib2YjKu6z1Q/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+实践下来，在混沌演练中，我们解决了UAT环境不完整、监控和告警缺失以及数据流和案例依赖验证的挑战。复制线上规则，来适配UAT环境，开发了自动投稿审核脚本，实现可控速率，并结合多个平台，进行多个方案的验证。
+
+一般的业务场景都是API Call串行流程，接入混沌SDK后，构造下游依赖的case可以验证API Response，比较直观。但是投稿链路都是异步环节，投稿请求完成后，后续审核、转码、同步都是异步的，基于事件驱动的消费行为，比较难以注入故障点，而且MQ里无法携带故障信息。eg："API Call，构造DB Query Block/Timeout" VS "投稿完成，需要构造一审完成回调失败这个case，应该往哪个实例去注入这个Case？继续下钻，回调失败可能是审核DB写失败回调Block，也可能Databus异常回调Block"。
+
+复杂的写读，同步异步消息混合场景，当时平台工具还不支持，因此研发测试一起做了技术攻坚，尝试多种方案，最终采用场景化方案来做依赖验证和混沌演练。从几十个Case抽象成四种通用Case。分阶段拆开来，构造不同阶段的故障Case（审核、bvcflow、开放）然后去查看稿件状态是否符合预期。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgKgsxiaU482FibEbCic72PsYflo7cHGLjw0e8wZbibynRHwvLQsQC5Utr8g/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+通过混沌工程，我们补齐了生产场景中的空缺，梳理出全链路依赖，实现了全链路故障监控和规则告警。这不仅提高了系统的稳定性，还帮助我们快速定位故障并制定恢复SOP，实现了1-5-10的快速响应和恢复目标。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYghaNNWuvPfEVnkueL7t5NibdW88fmGWcS54aYvmV6lBdmKDspdQjC4vA/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **投稿业务多活**
+
+以上的优化手段针对服务高可用进行，如果并非是服务单点而是机房单点故障导致业务不可用，那业务连续性将会受到直接影响，因此投稿核心业务的多活部署就需要开始着手实施。
+
+将稿件产生到开放浏览整个流程划分为四个步骤，分别是创作、上传、生产、开放，其中创作&上传视为一阶段，当前我们正在与SRE、DBA、基架、测试等团队一起合作进行一阶段的多活技术方案梳理。阶段一的核心目标是：**保障用户可以打开工具，上传视频成功，接受有限程度的生产开放延迟。eg：30分钟不能投稿，直接返回“投稿失败” vs 可以上传视频投稿成功但是30分钟稿件开放延迟，是不同等级的事故损失。** 
+
+下图蓝色模块当前优先规划需要完成多活，B站当前主体机房是两地两中心，首先梳理网络流量调用，将Zone1部署的、与创作工具&投稿上传有关的服务进行多活部署到Zone2；流量读写上考虑写回源读多活策略，用户的入口流量可以通过CDN&APIGW进行调度。阶段一的难点是投稿是个写行为，并非简单地将读流量切Zone就可以解决问题，用户上传视频文件存储上就需要做到多活，只有原片上传这一步做到高可用，阶段一的多活才算是达成目标的，即上传不因机房问题而阻塞，上传后的后续转码审核等步骤可以慢慢消费处理。
+
+我们当前正在与视频云团队一起梳理视频上传和存储的架构，需要向云原生/混合云部署的架构演进，这样才可以更方便的对后续的架构进行扩展，比如存算分离，原片上传后应该尽可能地标准化存储，与后续业务行为可解耦。多活正在进行中，到目前也已经经过多轮讨论和方案共识，本文篇幅有限不在这里做过多赘述了，后续完整执行落地后可以单独出文介绍。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/1BMf5Ir754RxCiaxZWqvtWZ2cARkKiaeYgIomOMwDLINzXmm71es9BiaKYKT2icGUdXdmMZYqrNcNh2Zwsib7z1cjzg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+### **结语**
+
+整个稿件生产链路是B站内容产生源头的大动脉，涉及环节与团队众多，肯定无法在一个篇幅中说明，高可用建设之路还有很多TODO要做，比如投稿架构的混合云云原生架构演进、多活完全落地实现、全链路自动化测试覆盖等重点项目。本文是抛砖引玉，主要围绕生产侧的业务架构做了一些系统高可用建设的分享，可以期待下后续其他环节的技术文章。另文章如有错漏请指出，感谢各位阅读。
+
+-End-
+
+作者丨熊猫匡
+
+**参考阅读**
+
+*   [Java线程池的实现原理及其在业务中的最佳实践](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=2653563648&idx=1&sn=99bd51354d246ce0c340ea9f81402097&chksm=8139ba98b64e338ea2eb0c8b0db9c7c84e639c2f8d3edd6127871f0eba8aa391c6a412afca4d&scene=21#wechat_redirect)
+    
+*   [无用代码扫描组件设计](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=2653563625&idx=1&sn=1c4ecae885368021c884b64b52d775bc&chksm=8139bb71b64e3267f340a6d2f2d55176a90974860ccf5e1cde9097a774593d2a7d20f0abd1e4&scene=21#wechat_redirect)
+    
+*   [当中台过气，微服务回归单体，DDD的意义何在？](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=2653563610&idx=1&sn=9f59132197ca5b4a9d5742f130788922&chksm=8139bb42b64e3254d2baaf5e2e5817f723b8a89d3ffce7bcdc1253dced0d45f20ecf9057a16c&scene=21#wechat_redirect)
+    
+*   [全链路压测改造之全链自动化测试实践](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=2653560408&idx=1&sn=807d49bbf34fcf7201b04bc5c0f7f958&chksm=81398fc0b64e06d6bda68b77f2a38b777a8d678e66ebfc6eac33f56b82f5b59d03e772882cff&scene=21#wechat_redirect)
+    
+*   [视频网站播放全链路压测实践之路](http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=2653563683&idx=1&sn=4db8edbdd8924b101d332c842676f23f&chksm=8139babbb64e33adc354740c554acdcddfc57378d22b6c12c5cc44808bc7a616cb40494951bc&scene=21#wechat_redirect)  
+    
+
+本文由高可用架构转载。技术原创及架构实践文章，欢迎通过公众号菜单「联系我们」进行投稿  
+
+，
