@@ -2,13 +2,14 @@
 {"dg-publish":true,"permalink":"/Program/Algorithm/LeetCode/Leetcode 题解 - 位运算/","noteIcon":""}
 ---
 
+
 ## 0. 原理
 
-**基本原理** 
+**基本原理**
 
 0s 表示一串 0，1s 表示一串 1。
 
-```
+```cpp
 x ^ 0s = x      x & 0s = 0      x | 0s = x
 x ^ 1s = ~x     x & 1s = x      x | 1s = 1s
 x ^ x = 0       x & x = x       x | x = x
@@ -38,7 +39,7 @@ x ^ x = 0       x & x = x       x | x = x
 01111111
 ```
 
-**位与运算技巧** 
+**位与运算技巧**
 
 n&(n-1) 去除 n 的位级表示中最低的那一位 1。例如对于二进制表示 01011011，减去 1 得到 01011010，这两个数相与得到 01011010。
 
@@ -60,7 +61,7 @@ n&(-n) 得到 n 的位级表示中最低的那一位 1。-n 得到 n 的反码�
 
 n-(n&(-n)) 则可以去除 n 的位级表示中最低的那一位 1，和 n&(n-1) 效果一样。
 
-**移位运算** 
+**移位运算**
 
 \\>\\> n 为算术右移，相当于除以 2n，例如 -7 \\>\\> 2 = -2。
 
@@ -86,7 +87,7 @@ n-(n&(-n)) 则可以去除 n 的位级表示中最低的那一位 1，和 n&(n-1
 11111111111111111111111111100100
 ```
 
-**mask 计算** 
+**mask 计算**
 
 要获取 111111111，将 0 取反即可，\~0。
 
@@ -96,12 +97,10 @@ n-(n&(-n)) 则可以去除 n 的位级表示中最低的那一位 1，和 n&(n-1
 
 要得到 1 到 i 位为 0 的 mask，只需将 1 到 i 位为 1 的 mask 取反，即 \~((1\<\<i)-1)。
 
-**Java 中的位操作**  
+**Java 中的位操作**
 
 ```html
-static int Integer.bitCount();           // 统计 1 的数量
-static int Integer.highestOneBit();      // 获得最高位
-static String toBinaryString(int i);     // 转换为二进制表示的字符串
+static int Integer.bitCount(); // 统计 1 的数量 static int Integer.highestOneBit(); // 获得最高位 static String toBinaryString(int i); // 转换为二进制表示的字符串
 ```
 
 ## 1. 统计两个数的二进制表示有多少位不同
@@ -111,16 +110,7 @@ static String toBinaryString(int i);     // 转换为二进制表示的字符串
 [Leetcode](https://leetcode.com/problems/hamming-distance/) / [力扣](https://leetcode-cn.com/problems/hamming-distance/)
 
 ```html
-Input: x = 1, y = 4
-
-Output: 2
-
-Explanation:
-1   (0 0 0 1)
-4   (0 1 0 0)
-       ↑   ↑
-
-The above arrows point to positions where the corresponding bits are different.
+Input: x = 1, y = 4 Output: 2 Explanation: 1 (0 0 0 1) 4 (0 1 0 0) ↑ ↑ The above arrows point to positions where the corresponding bits are different.
 ```
 
 对两个数进行异或操作，位级表示不同的那一位为 1，统计有多少个 1 即可。
@@ -166,8 +156,7 @@ public int hammingDistance(int x, int y) {
 [Leetcode](https://leetcode.com/problems/single-number/description/) / [力扣](https://leetcode-cn.com/problems/single-number/description/)
 
 ```html
-Input: [4,1,2,1,2]
-Output: 4
+Input: [4,1,2,1,2] Output: 4
 ```
 
 两个相同的数异或的结果为 0，对所有数进行异或操作，最后的结果就是单独出现的那个数。
@@ -187,8 +176,7 @@ public int singleNumber(int[] nums) {
 [Leetcode](https://leetcode.com/problems/missing-number/description/) / [力扣](https://leetcode-cn.com/problems/missing-number/description/)
 
 ```html
-Input: [3,0,1]
-Output: 2
+Input: [3,0,1] Output: 2
 ```
 
 题目描述：数组元素在 0-n 之间，但是有一个数是缺失的，要求找到这个缺失的数。
@@ -308,7 +296,7 @@ public boolean isPowerOfTwo(int n) {
 }
 ```
 
-## 8.  判断一个数是不是 4 的 n 次方
+## 8. 判断一个数是不是 4 的 n 次方
 
 342\. Power of Four (Easy)
 
@@ -337,15 +325,7 @@ public boolean isPowerOfFour(int num) {
 [Leetcode](https://leetcode.com/problems/binary-number-with-alternating-bits/description/) / [力扣](https://leetcode-cn.com/problems/binary-number-with-alternating-bits/description/)
 
 ```html
-Input: 10
-Output: True
-Explanation:
-The binary representation of 10 is: 1010.
-
-Input: 11
-Output: False
-Explanation:
-The binary representation of 11 is: 1011.
+Input: 10 Output: True Explanation: The binary representation of 10 is: 1010. Input: 11 Output: False Explanation: The binary representation of 11 is: 1011.
 ```
 
 对于 1010 这种位级表示的数，把它向右移动 1 位得到 101，这两个数每个位都不同，因此异或得到的结果为 1111。
@@ -364,9 +344,7 @@ public boolean hasAlternatingBits(int n) {
 [Leetcode](https://leetcode.com/problems/number-complement/description/) / [力扣](https://leetcode-cn.com/problems/number-complement/description/)
 
 ```html
-Input: 5
-Output: 2
-Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+Input: 5 Output: 2 Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
 ```
 
 题目描述：不考虑二进制表示中的首 0 部分。
@@ -397,9 +375,7 @@ public int findComplement(int num) {
 对于 10000000 这样的数要扩展成 11111111，可以利用以下方法：
 
 ```html
-mask |= mask >> 1    11000000
-mask |= mask >> 2    11110000
-mask |= mask >> 4    11111111
+mask |= mask >> 1 11000000 mask |= mask >> 2 11110000 mask |= mask >> 4 11111111
 ```
 
 ```java
@@ -437,9 +413,7 @@ public int getSum(int a, int b) {
 [Leetcode](https://leetcode.com/problems/maximum-product-of-word-lengths/description/) / [力扣](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/description/)
 
 ```html
-Given ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]
-Return 16
-The two words can be "abcw", "xtfn".
+Given ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"] Return 16 The two words can be "abcw", "xtfn".
 ```
 
 题目描述：字符串数组的字符串只含有小写字符。求解字符串数组中两个字符串长度的最大乘积，要求这两个字符串不能含有相同字符。
@@ -484,4 +458,3 @@ public int[] countBits(int num) {
     return ret;
 }
 ```
-
