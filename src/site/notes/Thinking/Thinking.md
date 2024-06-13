@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/Thinking/Thinking/","noteIcon":""}
 ---
 
+
 - [[Thinking/Thinking\|Thinking]]
 - [[Thinking/一个人能不能赚钱，能赚多少钱\|一个人能不能赚钱，能赚多少钱]]
 - [[Thinking/为什么专家不再关心技术细节\|为什么专家不再关心技术细节]]
