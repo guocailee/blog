@@ -2,9 +2,9 @@
 {"dg-publish":true,"permalink":"/XLife/Life/","noteIcon":""}
 ---
 
-- [[XLife/Books/道诡异仙到底讲的什么\|道诡异仙到底讲的什么]]
-- [[XLife/Books/如何卖货 - 读《营销管理》\|如何卖货 - 读《营销管理》]]
 - [[XLife/Fitness/减肥的冷知识\|减肥的冷知识]]
+- [[XLife/Books/如何卖货 - 读《营销管理》\|如何卖货 - 读《营销管理》]]
+- [[XLife/Books/道诡异仙到底讲的什么\|道诡异仙到底讲的什么]]
 - [[XLife/Fund/如何变得有钱？《自然》：和有钱人交朋友\|如何变得有钱？《自然》：和有钱人交朋友]]
 - [[XLife/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]
 - [[XLife/Hardware/HackIntoOs\|HackIntoOs]]
