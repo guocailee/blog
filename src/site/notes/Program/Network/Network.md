@@ -2,8 +2,8 @@
 {"dg-publish":true,"permalink":"/Program/Network/Network/","noteIcon":""}
 ---
 
-- [[Program/Network/HTTP\|HTTP]]
 - [[Program/Network/Network\|Network]]
+- [[Program/Network/HTTP\|HTTP]]
 - [[Program/Network/QUIC 是如何解决TCP 性能瓶颈的？\|QUIC 是如何解决TCP 性能瓶颈的？]]
 - [[Program/Network/Socket\|Socket]]
 - [[Program/Network/ping 没有端口号, 如何保证数据的正确接收？\|ping 没有端口号, 如何保证数据的正确接收？]]
