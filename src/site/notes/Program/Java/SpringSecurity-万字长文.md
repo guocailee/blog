@@ -3,7 +3,7 @@
 ---
 
 思维导图如下  
-[![](https://segmentfault.com/img/remote/1460000023052496)
+![](https://segmentfault.com/img/remote/1460000023052496)
 
 
 ## RBAC权限分析
@@ -204,10 +204,6 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
                 .withUser("itguang").password("123456").roles("USER").and()
                 .withUser("admin").password("{noop}" + "123456").roles("ADMIN");
     }
-
-
-
-
 
     //请求拦截
     @Override
