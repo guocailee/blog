@@ -16,18 +16,20 @@
 
 - [统计方法的代码实现](https://github.com/fengdu78/lihang-code)
 - [KISS Translator](https://github1s.com/fishjar/kiss-translator)
+- [程序员做菜指南](https://cook.aiursoft.cn/)
 
 ## 最近修改
 
 | File                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------- | ---------------- |
+| [[Home\|Home]]                                                                           | 2024-07-02 19:32 |
+| [[Program/Mixed/最常用的IntelliJ IDEA快捷键\|最常用的IntelliJ IDEA快捷键]]                             | 2024-06-28 11:11 |
 | [[Program/Algorithm/Java 知识进阶面试之海量数据处理\|Java 知识进阶面试之海量数据处理]]                             | 2024-06-28 10:21 |
 | [[Program/Java/SpringSecurity-万字长文\|SpringSecurity-万字长文]]                                | 2024-06-28 10:11 |
 | [[Program/Java/Java 异步编程：从 Future 到 Loom\|Java 异步编程：从 Future 到 Loom]]                    | 2024-06-28 10:09 |
 | [[XLife/Medical/手足口病及疱疹性咽峡炎居家防治指引（2024年版）\|手足口病及疱疹性咽峡炎居家防治指引（2024年版）]]                   | 2024-06-28 10:07 |
 | [[Program/Algorithm/剑指Offer/剑指 Offer 题解\|剑指 Offer 题解]]                                   | 2024-06-28 10:05 |
 | [[Program/Algorithm/Algorithm\|Algorithm]]                                               | 2024-06-28 10:04 |
-| [[Program/Mixed/最常用的IntelliJ IDEA快捷键\|最常用的IntelliJ IDEA快捷键]]                             | 2024-06-17 11:39 |
 | [[Program/Crawler/别让你的老板进监狱也别让你的用户受伤害，谈爬虫反爬虫套路\|别让你的老板进监狱也别让你的用户受伤害，谈爬虫反爬虫套路]]           | 2024-06-13 12:19 |
 | [[Program/Algorithm/LeetCode/Leetcode 题解 - 位运算\|Leetcode 题解 - 位运算]]                      | 2024-06-13 12:15 |
 | [[Program/Algorithm/DataStructure/二分搜索树\|二分搜索树]]                                         | 2024-06-13 12:14 |
@@ -51,7 +53,6 @@
 | [[XLife/Other/聊聊职业发展，聊聊怎么成事\|聊聊职业发展，聊聊怎么成事]]                                             | 2024-05-22 16:17 |
 | [[XLife/Other/蜜雪冰城：躺在加盟商身上赚大钱\|蜜雪冰城：躺在加盟商身上赚大钱]]                                         | 2024-05-22 16:17 |
 | [[XLife/Home Furnishing/如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？\|如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？]] | 2024-05-22 16:17 |
-| [[XLife/Life\|Life]]                                                                     | 2024-05-22 16:17 |
 | [[XLife/Medical/如何改掉晚睡强迫症？ - 从早起做起\|如何改掉晚睡强迫症？ - 从早起做起]]                                 | 2024-05-22 16:17 |
 | [[XLife/Medical/怎样缓解剧烈运动之后带来的肌肉酸痛\|怎样缓解剧烈运动之后带来的肌肉酸痛]]                                   | 2024-05-22 16:17 |
 
