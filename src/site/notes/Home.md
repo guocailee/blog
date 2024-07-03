@@ -17,12 +17,13 @@
 - [统计方法的代码实现](https://github.com/fengdu78/lihang-code)
 - [KISS Translator](https://github1s.com/fishjar/kiss-translator)
 - [程序员做菜指南](https://cook.aiursoft.cn/)
+- [Awesome DDD](https://github.com/heynickc/awesome-ddd)
 
 ## 最近修改
 
 | File                                                                                        | Last modified    |
 | ------------------------------------------------------------------------------------------- | ---------------- |
-| [[Home\|Home]]                                                                           | 2024-07-02 19:32 |
+| [[Home\|Home]]                                                                           | 2024-07-03 10:59 |
 | [[Program/Mixed/最常用的IntelliJ IDEA快捷键\|最常用的IntelliJ IDEA快捷键]]                             | 2024-06-28 11:11 |
 | [[Program/Algorithm/Java 知识进阶面试之海量数据处理\|Java 知识进阶面试之海量数据处理]]                             | 2024-06-28 10:21 |
 | [[Program/Java/SpringSecurity-万字长文\|SpringSecurity-万字长文]]                                | 2024-06-28 10:11 |
