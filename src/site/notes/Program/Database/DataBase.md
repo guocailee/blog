@@ -12,8 +12,8 @@
 - [[Program/Database/SQL 练习\|SQL 练习]]
 - [[Program/Database/SQL 语法\|SQL 语法]]
 - [[Program/Database/图解 SQL 的执行顺序，优雅\|图解 SQL 的执行顺序，优雅]]
-- [[Program/Database/如何写一个读写分离中间件\|如何写一个读写分离中间件]]
 - [[Program/Database/数据库系统原理\|数据库系统原理]]
+- [[Program/Database/如何写一个读写分离中间件\|如何写一个读写分离中间件]]
 - [[Program/Database/阿里二面：为什么要分库分表？\|阿里二面：为什么要分库分表？]]
 
 { .block-language-dataview}
