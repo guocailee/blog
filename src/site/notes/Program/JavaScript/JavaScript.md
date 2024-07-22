@@ -3,7 +3,6 @@
 ---
 
 - [[Program/JavaScript/How to test custom prop validators in Vue.js - Vue.js Tutorials\|How to test custom prop validators in Vue.js - Vue.js Tutorials]]
-- [[Program/JavaScript/JavaScript Interview Q&A\|JavaScript Interview Q&A]]
 - [[Program/JavaScript/JavaScript\|JavaScript]]
 - [[Program/JavaScript/React Hooks 使用误区，驳官方文档\|React Hooks 使用误区，驳官方文档]]
 - [[Program/JavaScript/React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现\|React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现]]
@@ -16,9 +15,7 @@
 - [[Program/JavaScript/preventDefault的一点妙用\|preventDefault的一点妙用]]
 - [[Program/JavaScript/「2021」高频前端面试题汇总之CSS篇\|「2021」高频前端面试题汇总之CSS篇]]
 - [[Program/JavaScript/「2021」高频前端面试题汇总之HTML篇\|「2021」高频前端面试题汇总之HTML篇]]
-- [[Program/JavaScript/「2021」高频前端面试题汇总之JavaScript篇\|「2021」高频前端面试题汇总之JavaScript篇]]
-- [[Program/JavaScript/「2021」高频前端面试题汇总之React篇\|「2021」高频前端面试题汇总之React篇]]
-- [[Program/JavaScript/「2021」高频前端面试题汇总之Vue篇\|「2021」高频前端面试题汇总之Vue篇]]
+- [[Program/JavaScript/JavaScript Interview Q&A\|JavaScript Interview Q&A]]
 - [[Program/JavaScript/「2021」高频前端面试题汇总之代码输出结果篇\|「2021」高频前端面试题汇总之代码输出结果篇]]
 - [[Program/JavaScript/「2021」高频前端面试题汇总之前端性能优化篇\|「2021」高频前端面试题汇总之前端性能优化篇]]
 - [[Program/JavaScript/「2021」高频前端面试题汇总之手写代码篇\|「2021」高频前端面试题汇总之手写代码篇]]
@@ -29,6 +26,9 @@
 - [[Program/JavaScript/使用 React Hooks 的心智负担\|使用 React Hooks 的心智负担]]
 - [[Program/JavaScript/关于 JavaScript 数据类型，有哪些你不知道的细节？\|关于 JavaScript 数据类型，有哪些你不知道的细节？]]
 - [[Program/JavaScript/前端开发者如何用 API Extractor 管理 API\|前端开发者如何用 API Extractor 管理 API]]
+- [[Program/JavaScript/「2021」高频前端面试题汇总之JavaScript篇\|「2021」高频前端面试题汇总之JavaScript篇]]
+- [[Program/JavaScript/「2021」高频前端面试题汇总之React篇\|「2021」高频前端面试题汇总之React篇]]
+- [[Program/JavaScript/「2021」高频前端面试题汇总之Vue篇\|「2021」高频前端面试题汇总之Vue篇]]
 - [[Program/JavaScript/前端面试通关宝典：解析44道React测试题\|前端面试通关宝典：解析44道React测试题]]
 - [[Program/JavaScript/听说「React Fiber」很难？六个问题快速理解 React Fiber\|听说「React Fiber」很难？六个问题快速理解 React Fiber]]
 - [[Program/JavaScript/完全理解React Fiber\|完全理解React Fiber]]
