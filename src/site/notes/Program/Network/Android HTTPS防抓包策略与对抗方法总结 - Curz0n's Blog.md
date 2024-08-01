@@ -437,7 +437,6 @@ openssl x509 -inform DER -subject_hash_old -in FiddlerRoot.cer
 
 ```arduino
 openssl x509 -inform DER -in FiddlerRoot.cer -text > 269953fb.0
-
 ```
 
 ##### 编辑`269953fb.0`
@@ -468,7 +467,7 @@ openssl x509 -subject_hash_old -in charles.pem
 adb root
 adb remount 
 adb push charles.pem /system/etc/security/cacerts/3abb2d3f.0
-
+chmod 644 /system/etc/security/cacerts/3abb2d3f.0
 ```
 
 ##### shell里重新mount system
@@ -485,7 +484,6 @@ mount -o rw,remount /
 ```
 
 ##### remount报错或者push没权限
-------------------
 
 ```null
 adb root 
@@ -493,7 +491,6 @@ adb disable-verity
 adb reboot 重启设备 
 adb root 
 adb remount 
-
 ```
 
 ##### Magisk root方式导入
