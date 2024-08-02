@@ -485,7 +485,7 @@ mount -o rw,remount /
 
 ##### remount报错或者push没权限
 
-```null
+```bash
 adb root 
 adb disable-verity 
 adb reboot 重启设备 
