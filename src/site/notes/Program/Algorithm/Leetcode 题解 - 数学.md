@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 数学/","noteIcon":""}
 ---
 
-
+#LeetCode #Algorithm
 ## 素数分解
 
 每一个数都可以分解成素数的乘积，例如 84 = 2<sup>2</sup> \* 3<sup>1</sup> \* 5<sup>0</sup> \* 7<sup>1</sup> \* 11<sup>0</sup> \* 13<sup>0</sup> \* 17<sup>0</sup> \* …
