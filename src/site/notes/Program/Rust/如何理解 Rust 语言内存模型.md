@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Rust/如何理解 Rust 语言内存模型/","noteIcon":""}
 ---
 
-#rust 
+#Rust 
 ## 背景
 
 随着Rust越来越多的应用良好表现，吸引了越来越多的开发者关注和各领域对应的Rust解决方案出现。对于从C/GO/Java/Python这些语言开发者来说，学习Rust语言最大的挑战就是需要理解Rust语言的内存管理模型。而Rust开创性的所有权管理机制，是我们理解和精通该门语言必须要首先弄清楚的要点。而这也是为什么大家一致认为Rust的学习曲线陡峭的最核心原因。
