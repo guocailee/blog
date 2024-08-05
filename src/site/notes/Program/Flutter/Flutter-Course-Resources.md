@@ -2,8 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Flutter/Flutter-Course-Resources/","noteIcon":""}
 ---
 
-#flutter  #resource
-
+#Flutter
 ## Section 1: Introduction to Cross-Platform Development with Flutter and Dart
 
 * [Download the Course Syllabus](https://drive.google.com/uc?export=download&id=1itL9AXx7Z-RxFAjSLLhsTeTFZYrkfweR)
