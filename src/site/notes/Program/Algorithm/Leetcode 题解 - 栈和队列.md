@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 栈和队列/","noteIcon":""}
 ---
 
-
+#Algorithm #LeetCode
 
 ## 1. 用栈实现队列
 
