@@ -5,10 +5,8 @@
 
 [[Program/Algorithm/Algorithm\|Algorithm]]  索引
 
-- [[Deep Learning\|Deep Learning]]
-- [[Program/Algorithm/剑指Offer/剑指 Offer 题解\|剑指 Offer 题解]]
-- [[Leetcode 题解\|Leetcode 题解]]
-- [[Program/Algorithm/算法/基础算法\|基础算法]]
+- [[剑指 Offer 题解\|剑指 Offer 题解]]
+- [[基础算法\|基础算法]]
 - [[Program/Algorithm/12306 座位分配算法\|12306 座位分配算法]]
 
 
