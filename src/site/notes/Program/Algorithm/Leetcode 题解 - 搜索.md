@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 搜索/","noteIcon":""}
 ---
 
-
+#LeetCode #Algorithm
 
 深度优先搜索和广度优先搜索广泛运用于树和图中，但是它们的应用远远不止如此。
 
