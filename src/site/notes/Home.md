@@ -5,17 +5,13 @@
 ## About Me
 * email : [guocailee@gmail.com](mailto:guocailee@gmail.com)
 * github: [guocailee](https://github.com/guocailee)
-## Awesome
 
-- [统计方法的代码实现](https://github.com/fengdu78/lihang-code)
-- [KISS Translator](https://github1s.com/fishjar/kiss-translator)
-- [程序员做菜指南](https://cook.aiursoft.cn/)
-- [Awesome DDD](https://github.com/heynickc/awesome-ddd)
 
 ## Last Notes
 
 | File                                                                                        | CreatedAt  |
 | ------------------------------------------------------------------------------------------- | ---------- |
+| [[Inbox/Awesome\|Awesome]]                                                               | 2024/08/05 |
 | [[Inbox/张一鸣 5 万字观点整理\|张一鸣 5 万字观点整理]]                                                     | 2024/08/01 |
 | [[Program/OS/驱动程序\|驱动程序]]                                                                | 2024/07/22 |
 | [[Program/OS/文件描述符\|文件描述符]]                                                              | 2024/07/18 |
@@ -32,19 +28,18 @@
 | [[XLife/Tips/Mac技巧\|Mac技巧]]                                                              | 2024/07/15 |
 | [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]      | 2024/05/22 |
 | [[XLife/Tips/你是明白了哪几个基本原理之后而厨艺大增的\|你是明白了哪几个基本原理之后而厨艺大增的]]                                | 2024/05/22 |
-| [[XLife/Tips/小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗\|小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗]]      | 2024/05/22 |
 | [[XLife/Tips/移除 Markdown的 links\|移除 Markdown的 links]]                                    | 2024/05/22 |
+| [[XLife/Tips/小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗\|小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗]]      | 2024/05/22 |
 | [[XLife/Other/总听大家说 318 国道，那么 219 国道怎么样\|总听大家说 318 国道，那么 219 国道怎么样]]                     | 2024/05/22 |
 | [[XLife/Other/我在荷兰做程序员的体验\|我在荷兰做程序员的体验]]                                                 | 2024/05/22 |
-| [[XLife/Other/聊聊职业发展，聊聊怎么成事\|聊聊职业发展，聊聊怎么成事]]                                             | 2024/05/22 |
 | [[XLife/Other/蜜雪冰城：躺在加盟商身上赚大钱\|蜜雪冰城：躺在加盟商身上赚大钱]]                                         | 2024/07/11 |
+| [[XLife/Other/聊聊职业发展，聊聊怎么成事\|聊聊职业发展，聊聊怎么成事]]                                             | 2024/05/22 |
 | [[XLife/Home Furnishing/如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？\|如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？]] | 2024/05/22 |
 | [[XLife/Life\|Life]]                                                                     | 2024/05/22 |
-| [[XLife/Medical/如何改掉晚睡强迫症？ - 从早起做起\|如何改掉晚睡强迫症？ - 从早起做起]]                                 | 2024/05/22 |
-| [[XLife/Medical/怎样缓解剧烈运动之后带来的肌肉酸痛\|怎样缓解剧烈运动之后带来的肌肉酸痛]]                                   | 2024/05/22 |
 | [[XLife/Other/北欧真的是人间净土吗？\|北欧真的是人间净土吗？]]                                                 | 2024/05/22 |
 | [[XLife/Other/历史真的有规律吗？\|历史真的有规律吗？]]                                                     | 2024/05/22 |
 | [[XLife/Other/如何评价杨超越的土库曼民族装扮\|如何评价杨超越的土库曼民族装扮]]                                         | 2024/05/22 |
+| [[XLife/Medical/如何改掉晚睡强迫症？ - 从早起做起\|如何改掉晚睡强迫症？ - 从早起做起]]                                 | 2024/05/22 |
 
 { .block-language-dataview}
 
@@ -52,3 +47,4 @@
 
 
 >Powered By [Obsidian.md](https://obsidian.md/)  All Note is stored in [Blog](https://github.com/guocailee/blog)
+> 一些有趣的收集[[Inbox/Awesome\|Awesome]]
