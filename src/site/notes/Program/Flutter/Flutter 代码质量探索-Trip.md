@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Flutter/Flutter 代码质量探索-Trip/","noteIcon":""}
 ---
 
-#flutter 
+#Flutter 
 ## 一、前言
 
 距离 Flutter 正式发布已经 3 年了，国内各大互联网公司都有相继使用，携程今年也在许多业务中使用了 Flutter 进行开发。
