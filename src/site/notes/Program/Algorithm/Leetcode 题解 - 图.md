@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 图/","noteIcon":""}
 ---
 
-
+#LeetCode #Algorithm 
 ## 二分图
 
 如果可以用两种颜色对图中的节点进行着色，并且保证相邻的节点颜色不同，那么这个图就是二分图。
