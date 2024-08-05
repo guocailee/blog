@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Rust/如何理解 Rust 语言生命周期管理/","noteIcon":""}
 ---
 
-#rust #rustlifecycle
+#Rust #RustLifecycle
 ## 前言
 
 前面我们了解了 [[Program/Rust/如何理解 Rust 语言内存模型\|如何理解 Rust 语言内存模型]]，知道了 Rust 语言精妙的无 GC 自动内存回收设计。那么，Rust 语言变量在何时开始回收，就属于这节我们需要了解的内容。所谓的生命周期，即一个变量从出现到销毁的过程，对应就是计算机内存的申请和释放。我们将在此节讲解 Rust 语言中局部变量，全局变量，函数变量等等变量生命周期的管理方式，深入理解 Rust 语言对该问题解决思路。
