@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 排序/","noteIcon":""}
 ---
 
-
+#LeetCode #Algorithm 
 ## 快速选择
 
 用于求解   **Kth Element**   问题，也就是第 K 个元素的问题。
