@@ -49,7 +49,10 @@ scp \[可选参数\] file\_source file\_target
 命令格式：
 
 ```bash
-scp local\_file remote\_username@remote\_ip:remote\_folder 或者 scp local\_file remote\_username@remote\_ip:remote\_file 或者 scp local\_file remote\_ip:remote\_folder 或者 scp local\_file remote\_ip:remote\_file 
+scp local_file remote_username@remote_ip:remote_folder 
+scp local_file remote_username@remote_ip:remote_file 
+scp local_file remote_ip:remote_folder
+scp local_file remote_ip:remote_file 
 ```
 
 -   第 1,2 个指定了用户名，命令执行后需要再输入密码，第 1 个仅指定了远程的目录，文件名字不变，第 2 个指定了文件名；
@@ -59,14 +62,16 @@ scp local\_file remote\_username@remote\_ip:remote\_folder 或者 scp local\_fil
 
 ```bash
 scp /home/space/music/1.mp3 root@www.runoob.com:/home/root/others/music 
-scp /home/space/music/1.mp3 root@www.runoob.com:/home/root/others/music/001.mp3 scp /home/space/music/1.mp3 www.runoob.com:/home/root/others/music 
+scp /home/space/music/1.mp3 root@www.runoob.com:/home/root/others/music/001.mp3 
+scp /home/space/music/1.mp3 www.runoob.com:/home/root/others/music 
 scp /home/space/music/1.mp3 www.runoob.com:/home/root/others/music/001.mp3  
 ```
 
 复制目录命令格式：
 
 ```bash
-scp \-r local\_folder remote\_username@remote\_ip:remote\_folder 或者 scp \-r local\_folder remote\_ip:remote\_folder 
+scp -r local_folder remote_username@remote_ip:remote_folder 
+scp -r local_folder remote_ip:remote_folder 
 ```
 
 -   第 1 个指定了用户名，命令执行后需要再输入密码；
@@ -75,7 +80,8 @@ scp \-r local\_folder remote\_username@remote\_ip:remote\_folder 或者 scp \-r 
 应用实例：
 
 ```bash
-scp \-r /home/space/music/ root@www.runoob.com:/home/root/others/ scp \-r /home/space/music/ www.runoob.com:/home/root/others/  
+scp -r /home/space/music/ root@www.runoob.com:/home/root/others/
+scp -r /home/space/music/ www.runoob.com:/home/root/others/  
 ```
 
 上面命令将本地 music 目录复制到远程 others 目录下。
@@ -95,7 +101,8 @@ scp root@www.runoob.com:/home/root/others/music /home/space/music/1.mp3 scp \-r 
 1. 如果远程服务器防火墙有为 scp 命令设置了指定的端口，我们需要使用 -P 参数来设置命令的端口号，命令格式如下：
 
 ```bash
-[[scp]] 命令使用端口号 4588 scp \-P 4588 remote@www.runoob.com:/usr/local/sin.sh /home/administrator
+# [[scp]] 命令使用端口号 4588 
+scp -P 4588 remote@www.runoob.com:/usr/local/sin.sh /home/administrator
 ```
 
 2. 使用 scp 命令要确保使用的用户具有可读取远程服务器相应文件的权限，否则 scp 命令是无法起作用的。

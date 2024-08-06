@@ -192,7 +192,7 @@ Main run
 java.lang.InterruptedException: sleep interrupted
     at java.lang.Thread.sleep(Native Method)
     at InterruptExample.lambda$main$0(InterruptExample.java:5)
-    at InterruptExample$$Lambda$1/713338599.run(Unknown Source)
+    at InterruptExample$Lambda$1/713338599.run(Unknown Source)
     at java.lang.Thread.run(Thread.java:745)
 ```
 
@@ -256,7 +256,7 @@ Main run
 java.lang.InterruptedException: sleep interrupted
     at java.lang.Thread.sleep(Native Method)
     at ExecutorInterruptExample.lambda$main$0(ExecutorInterruptExample.java:9)
-    at ExecutorInterruptExample$$Lambda$1/1160460865.run(Unknown Source)
+    at ExecutorInterruptExample$Lambda$1/1160460865.run(Unknown Source)
     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
     at java.lang.Thread.run(Thread.java:745)

@@ -381,8 +381,8 @@ redis-sfs    ClusterIP   None         <none>        6379/TCP   33s
 1:S 05 Nov 2021 08:23:31.431 * RDB age 0 seconds
 1:S 05 Nov 2021 08:23:31.431 * RDB memory usage when created 1.83 Mb
 1:S 05 Nov 2021 08:23:31.431 # Done loading RDB, keys loaded: 0, keys expired: 0.
-1:S 05 Nov 2021 08:23:31.431 * MASTER <-> REPLICA sync: Finished with success{ #C}
-
+1:S 05 Nov 2021 08:23:31.431 * MASTER <-> REPLICA sync: Finished with success
+^C
 ➜  ~ kubectl exec -it redis-sfs-1 -- bash
 root@redis-sfs-1:/data# redis-cli -h redis-sfs-0.redis-sfs.default.svc.cluster.local
 redis-sfs-0.redis-sfs.default.svc.cluster.local:6379> ping
