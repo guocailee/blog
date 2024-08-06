@@ -67,8 +67,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       '@11ty/eleventy-plugin-rss':
-        specifier: ^1.2.0
-        version: 1.2.0
+        specifier: ^2.0.2
+        version: 2.0.2
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -100,11 +100,15 @@ packages:
     resolution: {integrity: sha512-qMotOn0ywxwuRd2zF2gNfJSwVQNbSBdzVQ2N1UPQeiXNZrxPGIitfraSf/OfWJbgGI9Cje12AtXdzr3Qc6wctw==}
     engines: {node: '>=14.15.0'}
 
-  '@11ty/eleventy-plugin-rss@1.2.0':
-    resolution: {integrity: sha512-YzFnSH/5pObcFnqZ2sAQ782WmpOZHj1+xB9ydY/0j7BZ2jUNahn53VmwCB/sBRwXA/Fbwwj90q1MLo01Ru0UaQ==}
+  '@11ty/eleventy-plugin-rss@2.0.2':
+    resolution: {integrity: sha512-BiPsNbCvaqAORsg2NA4YqcSvMy/PZiefDU3PtGgwYJQ7A5rkRq/gdod2nu1AzwBG/0c5Qe7D49BxV0SByq9vCw==}
 
   '@11ty/eleventy-utils@1.0.2':
     resolution: {integrity: sha512-Zy2leMK1DQR6Q6ZPSagv7QpJaAz9uVbb+RmVetYFp3foMeQtOSZx7w2u5daRFmP+PeNq9vO9H4xtBToYFWZwHA==}
+    engines: {node: '>=12'}
+
+  '@11ty/eleventy-utils@1.0.3':
+    resolution: {integrity: sha512-nULO91om7vQw4Y/UBjM8i7nJ1xl+/nyK4rImZ41lFxiY2d+XUz7ChAj1CDYFjrLZeu0utAYJTZ45LlcHTkUG4g==}
     engines: {node: '>=12'}
 
   '@11ty/eleventy@2.0.1':
@@ -115,6 +119,10 @@ packages:
   '@11ty/lodash-custom@4.17.21':
     resolution: {integrity: sha512-Mqt6im1xpb1Ykn3nbcCovWXK3ggywRJa+IXIdoz4wIIK+cvozADH63lexcuPpGS/gJ6/m2JxyyXDyupkMr5DHw==}
     engines: {node: '>=14'}
+
+  '@11ty/posthtml-urls@1.0.0':
+    resolution: {integrity: sha512-CcsRdI933x613u7CjM+QGs7iD/m8SaDup3Apohg1+7dybigrEUHc2jGS3mcMgQKvF2+IphqmepD/FrKLlPkPEg==}
+    engines: {node: '>= 6'}
 
   '@babel/helper-string-parser@7.23.4':
     resolution: {integrity: sha512-803gmbQdqwdf4olxrX4AJyFBV/RTr3rSmOj0rKwesmzlfhYNDEs+/iOcznzpNWlJlIlTJC2QfPFcHB6DlzdVLQ==}
@@ -466,6 +474,15 @@ packages:
       supports-color:
         optional: true
 
+  debug@4.3.6:
+    resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
   decompress-response@6.0.0:
     resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
     engines: {node: '>=10'}
@@ -599,6 +616,10 @@ packages:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
 
+  es-object-atoms@1.0.0:
+    resolution: {integrity: sha512-MZ4iQ6JwHOBQjahnjwaC1ZtIBH+2ohjamzAO3oaHcXYup7qxjF2fixyH+Q71voWHeOkI2q/TnJao/KfXYIZWbw==}
+    engines: {node: '>= 0.4'}
+
   es-set-tostringtag@2.0.3:
     resolution: {integrity: sha512-3T8uNMC3OQTHkFUsFq8r/BwAXLHvU/9O9mE0fBc/MY5iq/8H7ncvO947LmYA6ldWw9Uh8Yhf25zu6n7nML5QWQ==}
     engines: {node: '>= 0.4'}
@@ -634,6 +655,10 @@ packages:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
     engines: {node: '>=4'}
     hasBin: true
+
+  evaluate-value@2.0.0:
+    resolution: {integrity: sha512-VonfiuDJc0z4sOO7W0Pd130VLsXN6vmBWZlrog1mCb/o7o/Nl5Lr25+Kj/nkCCAhG+zqeeGjxhkK9oHpkgTHhQ==}
+    engines: {node: '>= 8'}
 
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
@@ -824,6 +849,10 @@ packages:
   http-equiv-refresh@1.0.0:
     resolution: {integrity: sha512-TScO04soylRN9i/QdOdgZyhydXg9z6XdaGzEyOgDKycePeDeTT4KvigjBcI+tgfTlieLWauGORMq5F1eIDa+1w==}
     engines: {node: '>= 0.10'}
+
+  http-equiv-refresh@2.0.1:
+    resolution: {integrity: sha512-XJpDL/MLkV3dKwLzHwr2dY05dYNfBNlyPu4STQ8WvKCFdc6vC5tPXuq28of663+gHVg03C+16pHHs/+FmmDjcw==}
+    engines: {node: '>= 6'}
 
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
@@ -1254,6 +1283,10 @@ packages:
 
   object.assign@4.1.5:
     resolution: {integrity: sha512-byy+U7gp+FVwmyzKPYhW2h5l3crpmGsxl7X2s8y43IgxvG4g3QZ6CffDtsNQy1WsmZpQbO+ybo0AlW7TY6DcBQ==}
+    engines: {node: '>= 0.4'}
+
+  object.entries@1.1.8:
+    resolution: {integrity: sha512-cmopxi8VwRIAw/fkijJohSfpef5PdN0pMQJN6VC/ZKvn0LIknWD8KtgY6KlQdEc4tIjcQ3HxSMmnvtzIscdaYQ==}
     engines: {node: '>= 0.4'}
 
   on-finished@2.4.1:
@@ -1882,15 +1915,20 @@ snapshots:
       - encoding
       - supports-color
 
-  '@11ty/eleventy-plugin-rss@1.2.0':
+  '@11ty/eleventy-plugin-rss@2.0.2':
     dependencies:
-      debug: 4.3.4
+      '@11ty/eleventy-utils': 1.0.3
+      '@11ty/posthtml-urls': 1.0.0
+      debug: 4.3.6
       posthtml: 0.16.6
-      posthtml-urls: 1.0.0
     transitivePeerDependencies:
       - supports-color
 
   '@11ty/eleventy-utils@1.0.2':
+    dependencies:
+      normalize-path: 3.0.0
+
+  '@11ty/eleventy-utils@1.0.3':
     dependencies:
       normalize-path: 3.0.0
 
@@ -1940,6 +1978,14 @@ snapshots:
       - utf-8-validate
 
   '@11ty/lodash-custom@4.17.21': {}
+
+  '@11ty/posthtml-urls@1.0.0':
+    dependencies:
+      evaluate-value: 2.0.0
+      http-equiv-refresh: 2.0.1
+      list-to-array: 1.1.0
+      object.entries: 1.1.8
+      parse-srcset: 1.0.2
 
   '@babel/helper-string-parser@7.23.4': {}
 
@@ -2328,6 +2374,10 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
+  debug@4.3.6:
+    dependencies:
+      ms: 2.1.2
+
   decompress-response@6.0.0:
     dependencies:
       mimic-response: 3.1.0
@@ -2496,6 +2546,10 @@ snapshots:
 
   es-errors@1.3.0: {}
 
+  es-object-atoms@1.0.0:
+    dependencies:
+      es-errors: 1.3.0
+
   es-set-tostringtag@2.0.3:
     dependencies:
       get-intrinsic: 1.2.4
@@ -2521,6 +2575,8 @@ snapshots:
   esm@3.2.25: {}
 
   esprima@4.0.1: {}
+
+  evaluate-value@2.0.0: {}
 
   eventemitter3@4.0.7: {}
 
@@ -2749,6 +2805,8 @@ snapshots:
       entities: 4.5.0
 
   http-equiv-refresh@1.0.0: {}
+
+  http-equiv-refresh@2.0.1: {}
 
   ieee754@1.2.1: {}
 
@@ -3156,6 +3214,12 @@ snapshots:
       define-properties: 1.2.1
       has-symbols: 1.0.3
       object-keys: 1.1.1
+
+  object.entries@1.1.8:
+    dependencies:
+      call-bind: 1.0.7
+      define-properties: 1.2.1
+      es-object-atoms: 1.0.0
 
   on-finished@2.4.1:
     dependencies:
