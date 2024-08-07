@@ -9,42 +9,44 @@
 
 ## Last Notes
 
-| File                                                                                        | CreatedAt  |
-| ------------------------------------------------------------------------------------------- | ---------- |
-| [[Program/Algorithm/Algorithm\|Algorithm]]                                               | 2024/08/07 |
-| [[Inbox/Awesome\|Awesome]]                                                               | 2024/08/05 |
-| [[XLife/Other/张一鸣 5 万字观点整理\|张一鸣 5 万字观点整理]]                                               | 2024/08/01 |
-| [[Program/OS/驱动程序\|驱动程序]]                                                                | 2024/07/22 |
-| [[Program/OS/文件描述符\|文件描述符]]                                                              | 2024/07/18 |
-| [[Program/Kotlin/Kotlin run,apply,also, let,with区别\|Kotlin run,apply,also, let,with区别]]  | 2024/07/18 |
-| [[XLife/Other/洞庭湖决堤226米的背后，这个年轻的湖泊发生了什么？\|洞庭湖决堤226米的背后，这个年轻的湖泊发生了什么？]]                   | 2024/07/16 |
-| [[Program/Mixed/最常用的IntelliJ IDEA快捷键\|最常用的IntelliJ IDEA快捷键]]                             | 2024/06/28 |
-| [[Program/Framework/B站稿件生产平台高可用建设分享\|B站稿件生产平台高可用建设分享]]                                   | 2024/06/05 |
-| [[XLife/Medical/手足口病及疱疹性咽峡炎居家防治指引（2024年版）\|手足口病及疱疹性咽峡炎居家防治指引（2024年版）]]                   | 2024/06/28 |
-| [[Program/Mixed/哪些语言特性，有助于开发大型系统\|哪些语言特性，有助于开发大型系统]]                                     | 2024/07/03 |
-| [[XLife/Hardware/HackIntoOs\|HackIntoOs]]                                                | 2024/05/31 |
-| [[XLife/Tips/技术与市场\|技术与市场]]                                                              | 2024/05/22 |
-| [[XLife/Tips/Calibre\|Calibre]]                                                          | 2024/05/22 |
-| [[XLife/Tips/IPtables\|IPtables]]                                                        | 2024/05/22 |
-| [[XLife/Tips/Mac技巧\|Mac技巧]]                                                              | 2024/07/15 |
-| [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]      | 2024/05/22 |
-| [[XLife/Tips/你是明白了哪几个基本原理之后而厨艺大增的\|你是明白了哪几个基本原理之后而厨艺大增的]]                                | 2024/05/22 |
-| [[XLife/Tips/移除 Markdown的 links\|移除 Markdown的 links]]                                    | 2024/05/22 |
-| [[XLife/Tips/小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗\|小区门口200多平小超市转让费四十万 月利润一万五左右 可以接手吗]]      | 2024/05/22 |
-| [[XLife/Other/总听大家说 318 国道，那么 219 国道怎么样\|总听大家说 318 国道，那么 219 国道怎么样]]                     | 2024/05/22 |
-| [[XLife/Other/我在荷兰做程序员的体验\|我在荷兰做程序员的体验]]                                                 | 2024/05/22 |
-| [[XLife/Other/蜜雪冰城：躺在加盟商身上赚大钱\|蜜雪冰城：躺在加盟商身上赚大钱]]                                         | 2024/07/11 |
-| [[XLife/Other/聊聊职业发展，聊聊怎么成事\|聊聊职业发展，聊聊怎么成事]]                                             | 2024/05/22 |
-| [[XLife/Home Furnishing/如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？\|如何形象地解释「单开双联」、「双开双联」和「三开双联」开关？]] | 2024/05/22 |
-| [[XLife/Life\|Life]]                                                                     | 2024/05/22 |
-| [[XLife/Other/北欧真的是人间净土吗？\|北欧真的是人间净土吗？]]                                                 | 2024/05/22 |
-| [[XLife/Other/历史真的有规律吗？\|历史真的有规律吗？]]                                                     | 2024/05/22 |
-| [[XLife/Other/如何评价杨超越的土库曼民族装扮\|如何评价杨超越的土库曼民族装扮]]                                         | 2024/05/22 |
+| File                                                              | UpdatedAt  |
+| ----------------------------------------------------------------- | ---------- |
+| [[Program/Algorithm/12306 座位分配算法\|12306 座位分配算法]]               | 2024/05/22 |
+| [[Program/Algorithm/Java 知识进阶面试之海量数据处理\|Java 知识进阶面试之海量数据处理]]   | 2024/08/07 |
+| [[Program/Algorithm/Raft 共识算法\|Raft 共识算法]]                     | 2024/05/22 |
+| [[Program/Algorithm/通用排序框架在爱奇艺推荐的应用\|通用排序框架在爱奇艺推荐的应用]]         | 2024/08/05 |
+| [[Program/Algorithm/从此明白了卷积神经网络-CNN\|从此明白了卷积神经网络-CNN]]         | 2024/08/05 |
+| [[Program/Algorithm/二分搜索树\|二分搜索树]]                             | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 链表\|Leetcode 题解 - 链表]]       | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 贪心思想\|Leetcode 题解 - 贪心思想]]   | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 二分查找\|Leetcode 题解 - 二分查找]]   | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 位运算\|Leetcode 题解 - 位运算]]     | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 分治\|Leetcode 题解 - 分治]]       | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 动态规划\|Leetcode 题解 - 动态规划]]   | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 双指针\|Leetcode 题解 - 双指针]]     | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 哈希表\|Leetcode 题解 - 哈希表]]     | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 图\|Leetcode 题解 - 图]]         | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 字符串\|Leetcode 题解 - 字符串]]     | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 排序\|Leetcode 题解 - 排序]]       | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 搜索\|Leetcode 题解 - 搜索]]       | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 数学\|Leetcode 题解 - 数学]]       | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 数组与矩阵\|Leetcode 题解 - 数组与矩阵]] | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 栈和队列\|Leetcode 题解 - 栈和队列]]   | 2024/08/05 |
+| [[Program/Algorithm/Leetcode 题解 - 树\|Leetcode 题解 - 树]]         | 2024/08/05 |
+| [[Program/Algorithm/图解错位排列\|图解错位排列]]                           | 2024/05/22 |
+| [[Program/Algorithm/算法 - BitMap 求QQ号的交集\|算法 - BitMap 求QQ号的交集]] | 2024/05/22 |
+| [[Program/Algorithm/算法 - 其它\|算法 - 其它]]                         | 2024/05/22 |
+| [[Program/Algorithm/算法 - 并查集\|算法 - 并查集]]                       | 2024/05/22 |
+| [[Program/Algorithm/算法 - 排序\|算法 - 排序]]                         | 2024/05/22 |
+| [[Program/Algorithm/算法 - 栈和队列\|算法 - 栈和队列]]                     | 2024/05/22 |
+| [[Program/Algorithm/算法 - 符号表\|算法 - 符号表]]                       | 2024/05/22 |
+| [[Program/Algorithm/3. 数组中重复的数字\|3. 数组中重复的数字]]                 | 2024/08/07 |
+| [[Program/Algorithm/4. 二维数组中的查找\|4. 二维数组中的查找]]                 | 2024/05/22 |
+| [[Program/Algorithm/5. 替换空格\|5. 替换空格]]                         | 2024/05/22 |
 
 { .block-language-dataview}
 
-## Tags
 
-
->Powered By [Obsidian.md](https://obsidian.md/)  All Note is stored in [Blog](https://github.com/guocailee/blog)
+>Powered By [Obsidian.md](https://obsidian.md/) 
+ All Note is stored in [Blog](https://github.com/guocailee/blog)
 > 一些有趣的收集[[Inbox/Awesome\|Awesome]]
