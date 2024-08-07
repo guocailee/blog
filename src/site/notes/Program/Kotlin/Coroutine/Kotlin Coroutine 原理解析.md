@@ -259,11 +259,9 @@ Kotlin Coroutine Suspending 方法父子调用
 
 Kotlin Coroutine suspending 方法在编译之后会发生显著变化：
 
-**首先，suspending 方法增加一个 `Continuation` 类型的入参，用于实现回调。返回值变为 Object 类型，既可以表示真实的结果，也可表示 Coroutine 的执行状态。**
-
-**然后，编译器会为这个 suspending 方法生产一个类型为 `Continuation` 的匿名内部类（扩展 `CoroutineImpl`），用于对这个 suspending 方法自身的回调，并可以在这个 suspending 方法执行完毕之后，回调这个 suspending 方法上一级的父方法。**
-
-**最后，这个 suspending 方法如果调用其它 suspending 方法，会将这些调用转换为一个 switch 形式的状态机，每个 case 表示对一个 suspending 子方法的调用或最后的 return。同时，生成的 `Continuation` 匿名内部类会保存下一步需要调用的 suspending 方法的 label 值，表示应该执行 switch 中的哪个 case，从而串联起整个调用过程。**
+1. 首先，suspending 方法增加一个 `Continuation` 类型的入参，用于实现回调。返回值变为 Object 类型，既可以表示真实的结果，也可表示 Coroutine 的执行状态。
+2. 然后，编译器会为这个 suspending 方法生产一个类型为 `Continuation` 的匿名内部类（扩展 `CoroutineImpl`），用于对这个 suspending 方法自身的回调，并可以在这个 suspending 方法执行完毕之后，回调这个 suspending 方法上一级的父方法。
+3. 最后，这个 suspending 方法如果调用其它 suspending 方法，会将这些调用转换为一个 switch 形式的状态机，每个 case 表示对一个 suspending 子方法的调用或最后的 return。同时，生成的 `Continuation` 匿名内部类会保存下一步需要调用的 suspending 方法的 label 值，表示应该执行 switch 中的哪个 case，从而串联起整个调用过程。
 
 ## （二）suspendCoroutine 方法
 

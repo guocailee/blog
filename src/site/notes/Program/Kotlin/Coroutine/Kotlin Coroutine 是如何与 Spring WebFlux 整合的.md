@@ -15,7 +15,7 @@ Kotlin Coroutine 与 Spring Reactor 的整合主要是通过 `kotlinx-coroutines
 
 ## 二、示例
 
-本文将继续使用《Kotlin Coroutine 初探》一文中的在 Spring WebFlux 中使用 Kotlin Coroutine 的示例：
+本文将继续使用《[[Program/Kotlin/Coroutine/Kotlin Coroutine 初探\|Kotlin Coroutine 初探]]》一文中的在 Spring WebFlux 中使用 Kotlin Coroutine 的示例：
 
 ```kotlin
 @GetMapping("/coroutine/{personId}")

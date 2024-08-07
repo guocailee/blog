@@ -4,7 +4,7 @@
 
 -  [[Program/OS/OS\|OS]]
 - [[Program/JavaScript/JavaScript\|JavaScript]]
-- [[Algorithm\|Algorithm]]
+- [[Program/Algorithm/Algorithm\|Algorithm]]
 -  [[Program/Network/Network\|Network]]
 - [[Program/Database/DataBase\|DataBase]]
 - [[Program/Container/Container\|Container]]
