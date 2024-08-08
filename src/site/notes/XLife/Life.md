@@ -20,6 +20,7 @@
 - [[XLife/Other/我在荷兰做程序员的体验\|我在荷兰做程序员的体验]]
 - [[XLife/Other/洞庭湖决堤226米的背后，这个年轻的湖泊发生了什么？\|洞庭湖决堤226米的背后，这个年轻的湖泊发生了什么？]]
 - [[XLife/Other/蜜雪冰城：躺在加盟商身上赚大钱\|蜜雪冰城：躺在加盟商身上赚大钱]]
+- [[XLife/Other/计算神经科学能否成为未来人工智能的发展方向\|计算神经科学能否成为未来人工智能的发展方向]]
 - [[XLife/Tips/Calibre\|Calibre]]
 - [[XLife/Tips/IPtables\|IPtables]]
 - [[XLife/Tips/Mac技巧\|Mac技巧]]
