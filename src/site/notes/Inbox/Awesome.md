@@ -7,3 +7,5 @@
 - [KISS Translator](https://github1s.com/fishjar/kiss-translator)
 - [程序员做菜指南](https://cook.aiursoft.cn/)
 - [Awesome DDD](https://github.com/heynickc/awesome-ddd)
+- [算法图解](https://github.com/krahets/hello-algo)
+- [凤凰架构](https://icyfenix.cn/)
