@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/MessageQueue/刨根问底 Kafka，面试过程真好使/","noteIcon":""}
 ---
 
-
+#Kafka #MQ
 Kafka最初是由Linkedin公司开发的，是一个分布式的、可扩展的、容错的、支持分区的（`Partition`）、多副本的（`replica`）、基于`Zookeeper`框架的发布-订阅消息系统，Kafka适合离线和在线消息消费。它是分布式应用系统中的重要组件之一，也被广泛应用于大数据处理。Kafka是用Scala语言开发，它的Java版本称为Jafka。Linkedin于2010年将该系统贡献给了Apache基金会并成为顶级开源项目之一。
 
 ![](/img/user/z-attchements/media/640-45.png)
