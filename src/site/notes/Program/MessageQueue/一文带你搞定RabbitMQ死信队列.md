@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/MessageQueue/一文带你搞定RabbitMQ死信队列/","noteIcon":""}
 ---
 
-
+#MQ #RabbitMQ
 ## 一、说明 
 
 RabbitMQ 是流行的开源消息队列系统，使用 erlang 语言开发，由于其社区活跃度高，维护更新较快，性能稳定，深得很多企业的欢心（当然，也包括我现在所在公司【手动滑稽】）。

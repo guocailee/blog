@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/MessageQueue/一文带你搞定RabbitMQ延迟队列/","noteIcon":""}
 ---
 
+#MQ #RabbitMQ 
 ## 一、说明 
 
 在上一篇中，介绍了[[Program/MessageQueue/一文带你搞定RabbitMQ死信队列\|一文带你搞定RabbitMQ死信队列]]，何时使用以及如何使用 RabbitMQ 的死信队列。相信通过上一篇的学习，对于死信队列已经有了更多的了解，这一篇的内容也跟死信队列息息相关，如果你还不了解死信队列，那么建议你先进行上一篇文章的阅读。
