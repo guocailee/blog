@@ -11,7 +11,7 @@
 
 | File                                                                  | Tags                         | UpdatedAt  |
 | --------------------------------------------------------------------- | ---------------------------- | ---------- |
-| [[Inbox/Awesome\|Awesome]]                                         | <ul></ul>                    | 2024/08/08 |
+| [[Inbox/Awesome\|Awesome]]                                         | <ul></ul>                    | 2024/08/09 |
 | [[Inbox/Inbox\|Inbox]]                                             | <ul></ul>                    | 2024/05/22 |
 | [[Program/Algorithm/10.1 斐波那契数列\|10.1 斐波那契数列]]                     | <ul><li>#Algorithm</li></ul> | 2024/08/08 |
 | [[Program/Algorithm/10.2 矩形覆盖\|10.2 矩形覆盖]]                         | <ul><li>#Algorithm</li></ul> | 2024/08/08 |

@@ -3,7 +3,7 @@
 ---
 
 
-Kafka最初是由Linkedin公司开发的，是一个分布式的、可扩展的、容错的、支持分区的（Partition）、多副本的（replica）、基于Zookeeper框架的发布-订阅消息系统，Kafka适合离线和在线消息消费。它是分布式应用系统中的重要组件之一，也被广泛应用于大数据处理。Kafka是用Scala语言开发，它的Java版本称为Jafka。Linkedin于2010年将该系统贡献给了Apache基金会并成为顶级开源项目之一。
+Kafka最初是由Linkedin公司开发的，是一个分布式的、可扩展的、容错的、支持分区的（`Partition`）、多副本的（`replica`）、基于`Zookeeper`框架的发布-订阅消息系统，Kafka适合离线和在线消息消费。它是分布式应用系统中的重要组件之一，也被广泛应用于大数据处理。Kafka是用Scala语言开发，它的Java版本称为Jafka。Linkedin于2010年将该系统贡献给了Apache基金会并成为顶级开源项目之一。
 
 ![](/img/user/z-attchements/media/640-45.png)
 
@@ -138,7 +138,7 @@ Kafka 将消息以 topic 为单位进行归纳，发布消息的程序称为 **P
 
 > Kafka采用大部分消息系统遵循的传统模式：Producer将消息推送到Broker，Consumer从Broker获取消息。
 
-如果采用 **Push** 模式，则Consumer难以处理不同速率的上游推送消息。
+如果采用 **Push** 模式，则`Consumer`难以处理不同速率的上游推送消息。
 
 采用 Pull 模式的好处是Consumer可以自主决定是否批量的从Broker拉取数据。Pull模式有个缺点是，如果Broker没有可供消费的消息，将导致Consumer不断在循环中轮询，直到新消息到达。为了避免这点，Kafka有个参数可以让Consumer阻塞直到新消息到达。
 
@@ -254,7 +254,7 @@ Leader 会维护一个与自己基本保持同步的Replica列表，该列表称
 
 Kafka可以接收的最大消息默认为**1000000**字节，如果想调整它的大小，可在Broker中修改配置参数：`Message.max.bytes`的值
 
-> 但要注意的是，修改这个值，还要同时注意其他对应的参数值是正确的，否则就可能引发一些系统异常。首先这个值要比消费端的fetch.Message.max.bytes（默认值1MB，表示消费者能读取的最大消息的字节数）参数值要小才是正确的设置，否则Broker就会因为消费端无法使用这个消息而挂起。
+> 但要注意的是，修改这个值，还要同时注意其他对应的参数值是正确的，否则就可能引发一些系统异常。首先这个值要比消费端的`fetch.Message.max.bytes`（默认值1MB，表示消费者能读取的最大消息的字节数）参数值要小才是正确的设置，否则Broker就会因为消费端无法使用这个消息而挂起。
 
 ####  27、Kafka 的 ACK 机制
 

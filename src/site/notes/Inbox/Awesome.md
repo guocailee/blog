@@ -9,3 +9,4 @@
 - [Awesome DDD](https://github.com/heynickc/awesome-ddd)
 - [算法图解](https://github.com/krahets/hello-algo)
 - [凤凰架构](https://icyfenix.cn/)
+- [java知识体系](https://pdai.tech/)
