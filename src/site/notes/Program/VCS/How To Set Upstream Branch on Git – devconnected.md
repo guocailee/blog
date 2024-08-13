@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/VCS/How To Set Upstream Branch on Git – devconnected/","noteIcon":""}
 ---
 
+#Git 
 
 When cloning a Git repository or creating new feature branches, you will have **to set upstream branches** in order to work properly.
 

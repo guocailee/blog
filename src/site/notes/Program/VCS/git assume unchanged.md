@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/VCS/git assume unchanged/","noteIcon":""}
 ---
 
+#Git 
 
 ```bash
 # unchanged
