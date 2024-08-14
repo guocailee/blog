@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/Mixed/最常用的IntelliJ IDEA快捷键/","noteIcon":""}
 ---
 
-
+#IDEA #Keymap
 IntelliJ IDEA 作为一款强大的 IDE，拥有丰富的功能和快捷键，熟练掌握这些快捷键可以显著提高开发效率。本文将从入门到精通，带你全面了解 IntelliJ IDEA 的常用快捷键，并提供一些使用技巧和实战案例。
 
 ### 一、基础操作

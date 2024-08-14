@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/Program/Kotlin/Kotlin 内联函数 inline/","noteIcon":""}
 ---
 
+#Kotlin
+
 `Kotlin` 中新增了「内联函数」，内联函数起初是在 `C++` 里面的。
 
 那在 `Kotlin` 中加入内联函数，是有什么作用呢？
