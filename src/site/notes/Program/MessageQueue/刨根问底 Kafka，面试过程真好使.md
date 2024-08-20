@@ -364,7 +364,7 @@ Kafka 有两个消息消费的 consumer 接口，分别是 `low-level` 和 `hign
 1.  它是一个简单的、轻量级的Java类库，能够被集成到任何Java应用中
 2.  除了Kafka之外没有任何其他的依赖，利用Kafka的分区模型支持水平扩容和保证顺序性
 3.  支持本地状态容错，可以执行非常快速有效的有状态操作
-4.  支持 eexactly-once 语义
+4.  支持 [[Program/MessageQueue/Kafka Exactly-once\|Kafka Exactly-once]]语义
 5.  支持一次处理一条记录，实现 ms 级的延迟
     
 

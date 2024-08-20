@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/JavaScript/完全理解React Fiber/","noteIcon":""}
 ---
 
+#React 
 ## 一. 目标
 
 Fiber 是对 React 核心算法的重构，2 年重构的产物就是 Fiber reconciler

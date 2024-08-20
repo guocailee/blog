@@ -568,7 +568,7 @@ type PartialedWindow = DeepPartial<Window\>; // 现在window 上所有属性都�
 
 虽然泛型支持函数的嵌套，甚至递归，但是其语法能力肯定和 JS 没法比， 想要实现一个泛型功能真的不是一件容易的事情。这里提供几个例子，看完这几个例子，相信你至少可以达到比葫芦画瓢的水平。这样多看多练，慢慢水平就上来了。
 
-截止目前（2020-06-21），TS 提供了 [16 种工具类型](https://link.segmentfault.com/?enc=OYi6IBzgeqvPZoFs3wxOJQ%3D%3D.qoh3KVjk6lBhN3CHeHzf9b9TcrcpfFyGam7saZIunaVlDNThxbiFNK5aA%2FkunXNdmR%2FBOs18YXnwi%2BBpKWvkUKpztBlOvu71bnG14tL1lJc%3D)。
+截止目前（2020-06-21），TS 提供了 [16 种工具类型](https://www.typescriptlang.org/docs/handbook/utility-types.html)。
 
 ![](https://segmentfault.com/img/remote/1460000022993518)
 

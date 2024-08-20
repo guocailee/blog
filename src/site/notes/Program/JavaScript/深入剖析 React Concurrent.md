@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/Program/JavaScript/深入剖析 React Concurrent/","noteIcon":""}
 ---
 
+#React
+
 随着 React 16.8 正式发布，意味着 hooks 可以被正式使用了。根据官方发布的 [React 16.x Roadmap](https://link.zhihu.com/?target=https%3A//reactjs.org/blog/2018/11/27/react-16-roadmap.html)，2019 Q2，下一个 minor 将正式发布 Concurrent Mode。你或许会对 Concurrent 略感陌生，但你一定对异步渲染（Async Mode）与时间分片（Time Slicing）印象深刻。Concurrent Mode 只是 Async Mode 的 [重新定义](https://link.zhihu.com/?target=https%3A//github.com/facebook/react/pull/13732)，来凸显出 React 在不同优先级上的执行能力，与其它的异步渲染方式进行区分。
 
 ## **Concurrent 究竟是什么？**

@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Program/JavaScript/浏览器是如何工作的？ Chrome V8 引擎让你更懂JavaScript！「三万字精华，从V8角度了解JS」 - 知乎/","noteIcon":""}
 ---
 
-
+#JavaScript #V8
 
 ## 1、JavaScript 的基本特性和设计思想
 
