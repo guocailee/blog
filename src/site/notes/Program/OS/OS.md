@@ -3,8 +3,8 @@
 ---
 
 
-- [[Program/OS/Linux\|Linux]]
 - [[Program/OS/OS\|OS]]
+- [[Program/OS/Linux\|Linux]]
 - [[Program/OS/bash-scp\|bash-scp]]
 - [[Program/OS/一篇文章搞懂android存储目录结构\|一篇文章搞懂android存储目录结构]]
 - [[Program/OS/文件描述符\|文件描述符]]
