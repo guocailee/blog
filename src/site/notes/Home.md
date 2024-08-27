@@ -22,7 +22,7 @@
 | [[Thinking/张一鸣 5 万字观点整理\|张一鸣 5 万字观点整理]]                                                 | <ul></ul>                               | 2024/08/12 |
 | [[Program/OS/驱动程序\|驱动程序]]                                                               | <ul></ul>                               | 2024/08/12 |
 | [[Program/OS/文件描述符\|文件描述符]]                                                             | <ul></ul>                               | 2024/08/13 |
-| [[Program/Kotlin/Kotlin run,apply,also, let,with区别\|Kotlin run,apply,also, let,with区别]] | <ul></ul>                               | 2024/08/12 |
+| [[Program/Kotlin/Kotlin run,apply,also, let,with区别\|Kotlin run,apply,also, let,with区别]] | <ul><li>#Kotlin</li></ul>               | 2024/08/26 |
 | [[XLife/Other/洞庭湖决堤226米的背后，这个年轻的湖泊发生了什么？\|洞庭湖决堤226米的背后，这个年轻的湖泊发生了什么？]]                  | <ul></ul>                               | 2024/08/12 |
 | [[Program/Mixed/新QQNT桌面版如何实现内存优化探索\|新QQNT桌面版如何实现内存优化探索]]                                | <ul><li>#Desktop</li></ul>              | 2024/08/12 |
 | [[Program/Mixed/最常用的IntelliJ IDEA快捷键\|最常用的IntelliJ IDEA快捷键]]                            | <ul><li>#IDEA</li><li>#Keymap</li></ul> | 2024/08/14 |

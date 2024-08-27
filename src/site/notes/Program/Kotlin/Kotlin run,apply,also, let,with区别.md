@@ -2,9 +2,11 @@
 {"dg-publish":true,"permalink":"/Program/Kotlin/Kotlin run,apply,also, let,with区别/","noteIcon":""}
 ---
 
+#Kotlin 
+
 在 Kotlin 中，`run`、`with`、`apply`、`also` 和 `let` 是标准库中的几个扩展函数，它们都用于对象的上下文中执行代码块，并具有不同的用途和返回值。下面是它们之间的主要区别：
 
-1. **`run`**：
+###  **`run`**：
     - 作用：在对象上下文中执行一个代码块，并返回代码块的结果。
     - 语法：`object.run { }`
     - 返回值：Lambda 表达式的结果。
@@ -16,7 +18,7 @@
       println(result) // 输出 6
       ```
 
-2. **`with`**：
+###  **`with`**：
     - 作用：在不需要返回值的情况下使用对象的上下文执行代码块，返回代码块的结果。
     - 语法：`with(object) { }`
     - 返回值：Lambda 表达式的结果。
@@ -28,7 +30,7 @@
       println(result) // 输出 6
       ```
 
-3. **`apply`**：
+### **`apply`**：
     - 作用：在对象上下文中执行一个代码块，并返回该对象本身。
     - 语法：`object.apply { }`
     - 返回值：对象本身。
@@ -41,7 +43,7 @@
       println(result.toString()) // 输出 "Kotlin is awesome"
       ```
 
-4. **`also`**：
+### **`also`**：
     - 作用：在对象上下文中执行一个代码块，并返回该对象本身。
     - 语法：`object.also { }`
     - 返回值：对象本身。
@@ -53,7 +55,7 @@
       println(result) // 输出 "Kotlin"
       ```
 
-5. **`let`**：
+###  **`let`**：
     - 作用：在对象上下文中执行一个代码块，并返回代码块的结果。通常用于处理可空对象。
     - 语法：`object?.let { }`
     - 返回值：Lambda 表达式的结果。
