@@ -3,6 +3,7 @@
 ---
 
 #Redis #Cache
+
 大多数数据库，由于经常和磁盘打交道，在高并发场景下，响应会非常的慢。为了解决这种速度差异，大多数系统都习惯性的加入一个缓存层，来加速数据的读取。redis由于它优秀的处理能力和丰富的数据结构，已经成为了事实上的分布式缓存标准。
 
 但是，如果你以为redis只能做缓存的话，那就太小看它了。
@@ -17,9 +18,7 @@ redis提供了非常丰富的集群模式：`主从`、`哨兵`、`cluster`，�
 
 幸运的是，redis是内存型的数据库，主丛同步的速度是非常快的。如果你的集群维护的好，内存分配的合理，那么除非机房断电，否则redis的SLA，会一直保持在非常高的水平。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/cvQbJDZsKLpC5qoRiaAwsMjYQOG6yQkGDy1oiaMheyDZKdLtoTYwrfjNdlG9KDNRZgtrCzxIprh9MmALibw4ciaOGw/640?wx_fmt=jpeg)
 
-img
 
 听起来不是绝对可靠啊，有丢失数据的可能！这在一般CRUD的业务中，是无法忍受的。但为什么redis能够满足大多数互联网公司的需求？这也是由业务属性所决定的。
 
@@ -40,9 +39,6 @@ img
 
 Redis具有松散的文档结构，丰富的数据类型，能够适应千变万化的scheme变更需求，接下来我将介绍Redis除缓存外的大量的应用场景。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/cvQbJDZsKLpC5qoRiaAwsMjYQOG6yQkGDRfEHdQibTLHlnudfPJ9INn10XREDlheqtkJWPtcE3bNFnbB1icrdpz1Q/640?wx_fmt=jpeg)
-
-img
 
 ### 2.1 基本用户数据存储
 
@@ -205,7 +201,7 @@ Redis还有PUB/SUB模式，不过pubsub更适合做消息广播之类的业务�
 
 要看redis能干什么，就不得不提以下java的客户端类库redisson。redisson包含丰富的分布式数据结构，全部是基于redis进行设计的。
 
-redisson提供了比如Set、 SetMultimap、 ScoredSortedSet、 SortedSet, Map、 ConcurrentMap、 List、 ListMultimap、 Queue、BlockingQueue等非常多的数据结构，使得基于redis的编程更加的方便。在github上，可以看到有上百个这样的数据结构：https://github.com/redisson/redisson/tree/master/redisson/src/main/java/org/redisson/api。
+redisson提供了比如`Set`、 `SetMultimap`、 `ScoredSortedSet`、 `SortedSet`, `Map`、 `ConcurrentMap`、 `List`、 `ListMultimap`、 `Queue`、`BlockingQueue`等非常多的数据结构，使得基于redis的编程更加的方便。在github上，可以看到有上百个这样的数据结构：[Redis API](https://github.com/redisson/redisson/tree/master/redisson/src/main/java/org/redisson/api)。
 
 对于某个语言来说，基本的数组、链表、集合等api，配合起来能够完成大部分业务的开发。Redis也不例外，它拥有这些基本的api操作能力，同样能够组合成分布式的、线程安全的高并发应用。
 
