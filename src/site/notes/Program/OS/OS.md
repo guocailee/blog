@@ -17,5 +17,6 @@
 - [[Program/OS/驱动程序\|驱动程序]]
 - [[Program/OS/一篇文章搞懂android存储目录结构\|一篇文章搞懂android存储目录结构]]
 - [[Program/OS/文件描述符\|文件描述符]]
+- [[Program/OS/计算机锁的类型\|计算机锁的类型]]
 
 { .block-language-dataview}

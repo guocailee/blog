@@ -11,6 +11,8 @@
 
 | File                                                                                                                                                                                               | Tags                                    | CreatedAt  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ---------- |
+| [[Program/OS/计算机锁的类型\|计算机锁的类型]]                                                                                                                                                                 | <ul></ul>                               | 2024/09/13 |
+| [[Program/Algorithm/31. 栈的压入、弹出序列\|31. 栈的压入、弹出序列]]                                                                                                                                              | <ul><li>#Algorithm</li></ul>            | 2024/09/13 |
 | [[Program/Design pattern/开闭原则\|开闭原则]]                                                                                                                                                           | <ul></ul>                               | 2024/09/13 |
 | [[Program/Framework/一文探寻学习DDD的意义\|一文探寻学习DDD的意义]]                                                                                                                                                | <ul></ul>                               | 2024/09/13 |
 | [[Program/Design pattern/单一职责原则\|单一职责原则]]                                                                                                                                                       | <ul></ul>                               | 2024/09/13 |
@@ -35,18 +37,17 @@
 | [[Program/Algorithm/27. 二叉树的镜像\|27. 二叉树的镜像]]                                                                                                                                                    | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 | [[Program/Algorithm/28. 对称的二叉树\|28. 对称的二叉树]]                                                                                                                                                    | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 | [[Program/Algorithm/29. 顺时针打印矩阵\|29. 顺时针打印矩阵]]                                                                                                                                                  | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
-| [[Program/Algorithm/31. 栈的压入、弹出序列\|31. 栈的压入、弹出序列]]                                                                                                                                              | <ul></ul>                               | 2024/08/27 |
 | [[Program/Algorithm/26. 树的子结构\|26. 树的子结构]]                                                                                                                                                      | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 | [[Program/Algorithm/54. 二叉查找树的第 K 个结点\|54. 二叉查找树的第 K 个结点]]                                                                                                                                      | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 | [[Program/Algorithm/53. 数字在排序数组中出现的次数\|53. 数字在排序数组中出现的次数]]                                                                                                                                      | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 | [[Program/Algorithm/52. 两个链表的第一个公共结点\|52. 两个链表的第一个公共结点]]                                                                                                                                        | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 | [[Program/Algorithm/51. 数组中的逆序对\|51. 数组中的逆序对]]                                                                                                                                                  | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 | [[Program/Algorithm/50. 第一个只出现一次的字符位置\|50. 第一个只出现一次的字符位置]]                                                                                                                                      | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
-| [[Program/Algorithm/49. 丑数\|49. 丑数]]                                                                                                                                                            | <ul><li>#Algorithm</li></ul>            | 2024/08/27 |
 
 { .block-language-dataview}
 
 
->Powered By [Obsidian.md](https://obsidian.md/) 
- All Note is stored in [Blog](https://github.com/guocailee/blog)
-> 一些有趣的收集[[Inbox/Awesome\|Awesome]]
+> Powered By [Obsidian.md](https://obsidian.md/) 
+> Special Thanks [obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden)
+ >All Note is stored in [Blog](https://github.com/guocailee/blog)
+> Some Awesome Collection[[Inbox/Awesome\|Awesome]]
