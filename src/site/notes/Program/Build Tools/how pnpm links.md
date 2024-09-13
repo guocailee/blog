@@ -570,7 +570,6 @@ console.log({Button});
 ```js
 import { Button } from 'button';
 console.log({Button});
-
 ```
 
 此时如果我们在 form 中，使用 button 并进行打包，就惊讶的发现了一个错误
