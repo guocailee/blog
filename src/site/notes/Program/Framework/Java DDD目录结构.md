@@ -213,7 +213,7 @@ common
 
 - `configuration`：全局配置项，如数据库配置、缓存配置等。
 - `messaging`：事件总线或消息系统的配置与实现。
-- `util`：工具类和通用方法。
+- `util`：工具类和通用方法[[Program/Framework/。\|。]]
 - `exception`：全局异常处理。
 
 ### 7. 总结
