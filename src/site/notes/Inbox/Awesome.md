@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/Inbox/Awesome/","noteIcon":""}
 ---
 
-
+> 一些有趣的收集，随缘更新
 - [统计方法的代码实现](https://github.com/fengdu78/lihang-code)
 - [KISS Translator](https://github1s.com/fishjar/kiss-translator)
 - [程序员做菜指南](https://cook.aiursoft.cn/)
