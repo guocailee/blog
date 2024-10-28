@@ -80,7 +80,7 @@ importers:
         version: 6.1.13
       sass:
         specifier: ^1.49.9
-        version: 1.80.3
+        version: 1.80.4
 
 packages:
 
@@ -1776,8 +1776,8 @@ packages:
   same-time@2.3.5:
     resolution: {integrity: sha512-SnVw4CihgrwwcZs38vqW1890OwilOQPnath+kQCX7Un+PfcjR52rThxPfuNpNEd3UrphL22/SleM7hcbiaJu1A==}
 
-  sass@1.80.3:
-    resolution: {integrity: sha512-ptDWyVmDMVielpz/oWy3YP3nfs7LpJTHIJZboMVs8GEC9eUmtZTZhMHlTW98wY4aEorDfjN38+Wr/XjskFWcfA==}
+  sass@1.80.4:
+    resolution: {integrity: sha512-rhMQ2tSF5CsuuspvC94nPM9rToiAFw2h3JTrLlgmNw1MH79v8Cr3DH6KF6o6r+8oofY3iYVPUf66KzC8yuVN1w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3943,7 +3943,7 @@ snapshots:
     dependencies:
       deffy: 2.0.0
 
-  sass@1.80.3:
+  sass@1.80.4:
     dependencies:
       '@parcel/watcher': 2.4.1
       chokidar: 4.0.1
