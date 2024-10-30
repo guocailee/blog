@@ -116,10 +116,9 @@ services:
 
 每个`service` 配置下也可以指定`networks`配置，来指定一级配置的网络。
 
-```bash
+```yaml
 version: "3"
 services:
-
   proxy:
     build: ./proxy
     networks:
@@ -582,7 +581,7 @@ external_links:
   - project_db_1:postgresql
 ```
 
-## 二十、extra_hosts
+## 二十、extra_hosts 主机名映射
 
 添加主机名映射。使用与 docker 客户端`--add-host`类似。
 
