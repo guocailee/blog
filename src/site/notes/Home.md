@@ -11,6 +11,7 @@
 
 | File                                                                                                 | Tags                                      | UpdatedAt  |
 | ---------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| [[XLife/Tips/如何激活WIndow或Office\|如何激活WIndow或Office]]                                               | <ul></ul>                                 | 2024/11/01 |
 | [[Program/Container/docker compose配置文件全面指南\|docker compose配置文件全面指南]]                              | <ul></ul>                                 | 2024/10/30 |
 | [[XLife/Other/为什么电视剧《狂飙》中的强盛公司不洗白上岸？ \|为什么电视剧《狂飙》中的强盛公司不洗白上岸？ ]]                                  | <ul></ul>                                 | 2024/10/30 |
 | [[Inbox/Awesome\|Awesome]]                                                                        | <ul></ul>                                 | 2024/10/24 |
@@ -42,7 +43,6 @@
 | [[Program/Framework/国内酒店交易DDD应用与实践——代码篇\|国内酒店交易DDD应用与实践——代码篇]]                                    | <ul></ul>                                 | 2024/09/13 |
 | [[Program/Program\|Program]]                                                                      | <ul></ul>                                 | 2024/09/13 |
 | [[Thinking/生命是一种长期而持续的累积过程\|生命是一种长期而持续的累积过程]]                                                     | <ul></ul>                                 | 2024/09/13 |
-| [[XLife/Books/如何卖货 - 读《营销管理》\|如何卖货 - 读《营销管理》]]                                                    | <ul><li>#Reading</li></ul>                | 2024/09/04 |
 
 { .block-language-dataview}
 
