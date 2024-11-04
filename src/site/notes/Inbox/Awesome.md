@@ -12,6 +12,7 @@
 - [java知识体系](https://pdai.tech/)
 - [All-in-One Project Management Platform](https://github1s.com/hcengineering/platform)
 - [Code Interview University](https://github.com/jwasham/coding-interview-university/blob/main/translations/README-cn.md)
+- [ Reactor 3 参考指南](https://easywheelsoft.github.io/reactor-core-zh/index.html)
 
 ## Game
 -  [卡牌类游戏为什么“过牌”很重要呢？](https://www.zhihu.com/question/666964567)

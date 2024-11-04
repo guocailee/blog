@@ -11,12 +11,13 @@
 
 | File                                                                                                           | Tags                                      | UpdatedAt  |
 | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]                         | <ul></ul>                                 | 2024/11/04 |
+| [[Inbox/Awesome\|Awesome]]                                                                                  | <ul></ul>                                 | 2024/11/01 |
 | [[Program/FrontEnd/JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？\|JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？]] | <ul></ul>                                 | 2024/11/01 |
 | [[XLife/Parenting/被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ \|被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ ]]                              | <ul></ul>                                 | 2024/11/01 |
 | [[XLife/Tips/如何激活WIndow或Office\|如何激活WIndow或Office]]                                                         | <ul></ul>                                 | 2024/11/01 |
 | [[Program/Container/docker compose配置文件全面指南\|docker compose配置文件全面指南]]                                        | <ul></ul>                                 | 2024/10/30 |
 | [[XLife/Other/为什么电视剧《狂飙》中的强盛公司不洗白上岸？ \|为什么电视剧《狂飙》中的强盛公司不洗白上岸？ ]]                                            | <ul></ul>                                 | 2024/10/30 |
-| [[Inbox/Awesome\|Awesome]]                                                                                  | <ul></ul>                                 | 2024/10/24 |
 | [[Program/Mixed/流程图DSL设计\|流程图DSL设计]]                                                                        | <ul></ul>                                 | 2024/10/23 |
 | [[Startup/仙侠乱/游戏系统设计\|游戏系统设计]]                                                                              | <ul></ul>                                 | 2024/10/21 |
 | [[Startup/仙侠乱/游戏开发指南\|游戏开发指南]]                                                                              | <ul></ul>                                 | 2024/10/21 |
@@ -42,7 +43,6 @@
 | [[Program/Build Tools/how pnpm links\|how pnpm links]]                                                      | <ul></ul>                                 | 2024/09/13 |
 | [[Thinking/Thinking\|Thinking]]                                                                             | <ul></ul>                                 | 2024/09/13 |
 | [[Program/Framework/微服务架构的演进\|微服务架构的演进]]                                                                    | <ul></ul>                                 | 2024/09/13 |
-| [[Program/Framework/国内酒店交易DDD应用与实践——代码篇\|国内酒店交易DDD应用与实践——代码篇]]                                              | <ul></ul>                                 | 2024/09/13 |
 
 { .block-language-dataview}
 
@@ -50,4 +50,4 @@
 > Powered By [Obsidian.md](https://obsidian.md/) 
 > Special Thanks [obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden)
  >All Note is stored in [Blog](https://github.com/guocailee/blog)
-> Some Awesome Collection[[Inbox/Awesome\|Awesome]]
+> Some Awesome Collection: [[Inbox/Awesome\|Awesome]]
