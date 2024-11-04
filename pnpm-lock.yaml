@@ -80,7 +80,7 @@ importers:
         version: 6.1.13
       sass:
         specifier: ^1.49.9
-        version: 1.80.3
+        version: 1.80.6
 
 packages:
 
@@ -1776,8 +1776,8 @@ packages:
   same-time@2.3.5:
     resolution: {integrity: sha512-SnVw4CihgrwwcZs38vqW1890OwilOQPnath+kQCX7Un+PfcjR52rThxPfuNpNEd3UrphL22/SleM7hcbiaJu1A==}
 
-  sass@1.80.3:
-    resolution: {integrity: sha512-ptDWyVmDMVielpz/oWy3YP3nfs7LpJTHIJZboMVs8GEC9eUmtZTZhMHlTW98wY4aEorDfjN38+Wr/XjskFWcfA==}
+  sass@1.80.6:
+    resolution: {integrity: sha512-ccZgdHNiBF1NHBsWvacvT5rju3y1d/Eu+8Ex6c21nHp2lZGLBEtuwc415QfiI1PJa1TpCo3iXwwSRjRpn2Ckjg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2416,6 +2416,7 @@ snapshots:
       '@parcel/watcher-win32-arm64': 2.4.1
       '@parcel/watcher-win32-ia32': 2.4.1
       '@parcel/watcher-win32-x64': 2.4.1
+    optional: true
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -2813,7 +2814,8 @@ snapshots:
 
   dependency-graph@0.11.0: {}
 
-  detect-libc@1.0.3: {}
+  detect-libc@1.0.3:
+    optional: true
 
   detect-libc@2.0.2: {}
 
@@ -3571,7 +3573,8 @@ snapshots:
 
   node-addon-api@5.1.0: {}
 
-  node-addon-api@7.1.1: {}
+  node-addon-api@7.1.1:
+    optional: true
 
   node-fetch@2.7.0:
     dependencies:
@@ -3943,12 +3946,13 @@ snapshots:
     dependencies:
       deffy: 2.0.0
 
-  sass@1.80.3:
+  sass@1.80.6:
     dependencies:
-      '@parcel/watcher': 2.4.1
       chokidar: 4.0.1
       immutable: 4.3.5
       source-map-js: 1.0.2
+    optionalDependencies:
+      '@parcel/watcher': 2.4.1
 
   section-matter@1.0.0:
     dependencies:
