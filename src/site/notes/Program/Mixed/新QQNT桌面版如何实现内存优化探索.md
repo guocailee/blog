@@ -4,7 +4,7 @@
 
 #Desktop
 
-![](https://static001.infoq.cn/resource/image/93/76/93758bfbc71a75ee4192d69663278176.jpg)
+![](/img/user/z-attchements/media/93758bfbc71a75ee4192d69663278176.jpg)
 
 ## 背景
 
@@ -20,7 +20,7 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
 新版 QQ 在内存上的挑战主要表现在以下 4 个方面：
 
 *   **产品形态**：由 1 个复杂的大面板（100+ 复杂程度不等的模块）和一系列独立功能窗口构成。窗口与渲染进程一一对应，窗口进程数很大程度影响 Electron 的内存占用。对于那个复杂的大面板， 一旦没有精细控制就很容易导致内存持续走高。
-![Electron 窗口多进程](https://static001.geekbang.org/infoq/02/029591e46ffc663d334e439945fe7d12.png)
+![Electron 窗口多进程](/img/user/z-attchements/media/Electron_窗口多进程.png)
 
 
 
@@ -30,7 +30,7 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
     
 
 
-![桌面端 QQ 整体架构](https://static001.geekbang.org/infoq/2d/2d229c00080c5ea6902a079209bc8ad4.png)
+![桌面端 QQ 整体架构](/img/user/z-attchements/media/桌面端_QQ_整体架构.png)
 
   
 
@@ -46,7 +46,7 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
 1. 第一阶段目标，单个进程内存 < 300M。早先因为没有腾出手处理内存问题，代码中存在一些泄漏。长时间挂机后比较容易出现单个进程超过 300M 的情况。我们在去年 9 月份系统地处理过一波内存问题，基本可以保证单个进程的内存占用 < 300M。
 2. 第二阶段目标，**单进程 <100M，整体 < 300M。整体是指启动 QQ 聊天面板后，6 个进程内存占用之和**。内存达标之后才允许交付新版 QQ Windows 版本：
   
-![Windows 任务管理器的 QQ 内存占用详情](https://static001.geekbang.org/infoq/b8/b8c31836a334281ebc936160b044e7f2.png)
+![Windows 任务管理器的 QQ 内存占用详情](/img/user/z-attchements/media/Windows_任务管理器的_QQ_内存占用详情.png)
 
   
 
@@ -64,7 +64,7 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
 然而，随着使用的深入，比如在 QQ 聊天场景中进行一些操作之后，主进程、GPU 进程和渲染进程三个进程的内存占用就已经达到了 600M。这意味着我们距离目标还有超过 50% 的优化空间。
 
 
-![](https://static001.geekbang.org/infoq/71/71a24b817f3b1b6e4c1166abcb88f605.png)
+![](/img/user/z-attchements/media/71a24b817f3b1b6e4c1166abcb88f605.png)
 > 注：AIO 是聊天面板的简称。
 
 这个初步的观察让我们看到了目前的挑战，同时也让我们看到了优化的可能性。我们有信心，通过精心设计和持续优化，逐步接近甚至超越我们设定的目标。
@@ -82,10 +82,10 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
 在进行性能优化之前，我们需要选择合适的工具来帮助我们分析问题。QQ 的代码不仅包含 V8 的 JS 部分，还包括许多 Native 的 C++ 模块。仅依靠 Chromium 开发者工具进行性能分析是不够的，因此我们需要组合使用多种工具来共同解决问题。
   
 
-![](https://static001.geekbang.org/infoq/33/33dd359e46af9e00aad1265461cde235.png)
+![](/img/user/z-attchements/media/33dd359e46af9e00aad1265461cde235.png)
 
 这些工具如何使用，由于篇幅的关系我们在这里不做详细介绍。
-![部分内存分析工具截图](https://static001.geekbang.org/infoq/7d/7d6a9b23d72d5e6ce20683805f39fa63.png)
+![部分内存分析工具截图](/img/user/z-attchements/media/部分内存分析工具截图.png)
 
 
 
@@ -96,7 +96,7 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
 桌面版 QQ 的功能逻辑非常复杂，代码量庞大。虽然代码不需要通过网络请求加载，本地加载速度通常较快，但加载如此庞大的代码会占用大量内存。因此，仍然需要进行代码瘦身、静态资源优化、分包和按需加载等优化措施。
 
 
-![Devtools > Memory 分析 QQ 主窗口内存占用](https://static001.geekbang.org/infoq/e9/e9112bb142ddfb69f5a1a379a677018d.png)
+![Devtools > Memory 分析 QQ 主窗口内存占用](/img/user/z-attchements/media/Devtools_!_Memory_分析_QQ_主窗口内存占用.png)
 
 
 
@@ -108,7 +108,7 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
 - 3）当具体使用不同功能时动态加载，如点击搜索、打开表情面板、转发消息激活好友选择器的时候才会分别加载对应功能模块代码。
   
 
-![QQ 主窗口业务模块的拆解](https://static001.geekbang.org/infoq/54/544ba03b1745f3dd1634b4c8845a266e.png)
+![QQ 主窗口业务模块的拆解](/img/user/z-attchements/media/QQ_主窗口业务模块的拆解.png)
 
   
 
@@ -117,12 +117,12 @@ QQ 作为国民级应用，从互联网兴起就一直陪伴着大家，是很�
 此外，其他静态资源（如 SVG、base64 图像）在加载时也会占用不少内存，所以我们采取了按需加载的策略：只在可见时加载，不可见时主动销毁和回收。
 
 
-![svg 及 base64 资源的 string 内存占用](https://static001.geekbang.org/infoq/f2/f2f56e8c8a2b5d7aebe4ebac32da8c3d.png)
+![svg 及 base64 资源的 string 内存占用](/img/user/z-attchements/media/svg_及_base64_资源的_string_内存占用.png)
 
 为了提升执行效率和代码保护的目的，我们将 JS 代码转成了字节码。尽管跳过了源码编译，直接将字节码交给 V8 执行，但在程序报错还原堆栈等运行时步骤中，V8 仍然会引用源码字符串。为了去掉这份源码，我们使用和源码等长的空格来占位，但通过 devtool 检查发现这些空格字符串仍会占用不少内存空间。最终，我们采取修改和移除 V8 对源码字符串引用的方式，彻底解决了源码字符串的内存占用问题。
 
 
-![](https://static001.geekbang.org/infoq/60/60a21fa94a54c4d99405a98ca760df66.png)
+![](/img/user/z-attchements/media/60a21fa94a54c4d99405a98ca760df66.png)
 
 
 *   **图片资源**
@@ -131,14 +131,14 @@ QQ 作为一款 IM 工具，会涉及到大量的图片收发。然而，图片�
 
   
 
-![图片尺寸对内存影响举例](https://static001.geekbang.org/infoq/03/038fa2660ec94cb55892f3bb433a92e5.png)
+![图片尺寸对内存影响举例](/img/user/z-attchements/media/图片尺寸对内存影响举例.png)
 
   
 在聊天消息列表中的大部分图片仅仅起到预览作用，缩略图渲染就满足了需要。而仅仅在用户真正打开图片查看器放大查看时，才会需要用原图渲染。
 
 实测在聊天中多张不同大尺寸分辨率图片在展示时，渲染进程和 GPU 进程的内存占用有着明显差别。在收发图片时，我们会根据屏幕设备信息和计算展示区域所需实际渲染分辨率，当原图分辨率超出计算所需值，则先调用压缩服务进行图片压缩，生成渲染所需分辨率的缩略图，并在聊天区域进行渲染上屏。在这个策略的优化下，一般聊天图片场景测试下来，使用缩略图比原图约有 30M ~ 50M 的内存优化。
 
-![QQ 优化图片上屏策略](https://static001.geekbang.org/infoq/92/92ec5f6ed4f3f505239399636cabdba3.png)
+![QQ 优化图片上屏策略](/img/user/z-attchements/media/QQ_优化图片上屏策略.png)
 
   
 
@@ -149,7 +149,7 @@ QQ 作为一款 IM 工具，会涉及到大量的图片收发。然而，图片�
 在 DOM 元素使用数量我们也有严格的控制，总体采用”所见即占用“的 DOM 渲染策略。在 QQ 大面板中只有视口所见的内容才会渲染对应 DOM 元素。其他所有组件在不渲染展示时，均会移除组件及其 DOM 元素来避免其内存开销。
 
 
-![大虚拟列表控制 DOM 数量](https://static001.geekbang.org/infoq/62/622aab0e323ae3a6b879b67cfb9e7545.png)
+![大虚拟列表控制 DOM 数量](/img/user/z-attchements/media/大虚拟列表控制_DOM_数量.png)
 
 
 尤其对于各个大列表模块，比如联系人列表和群成员列表，DOM 元素都非常多。最开始的内测版本中，使用有大量好友和群聊的 QQ 号，窗口平均 DOM 数达到 13000。我们将 QQ 所有的普通分页列表替换为虚拟滚动列表，并且对列表滚动 buffer 进行极限压缩甚至是 0 buffer 。由于不再一味采取空间换时间，没有 buffer 的情况下必然面对列表滑动性能挑战，因此也需不断优化各类 item 组件渲染性能。
@@ -164,7 +164,7 @@ QQ 作为一款 IM 工具，会涉及到大量的图片收发。然而，图片�
 
   
 
-![QQ 对于渲染合成层的优化处理](https://static001.geekbang.org/infoq/96/963c78c7b4b496b19d3c26cb621dc6a6.png)
+![QQ 对于渲染合成层的优化处理](/img/user/z-attchements/media/QQ_对于渲染合成层的优化处理.png)
 
   
 
@@ -178,7 +178,7 @@ QQ 支持丰富的消息类型，从简单的文本、图文消息，到复杂�
 新版 QQ 针对这类复杂消息上屏，使用了 JavaScript 事件机制结合 WebWorker 来实现消息异步上屏，并使用 OffscreenCanvas +  Worker 池绘制来提升渲染性能。
 
 
-![QQ 结构化消息的处理方案](https://static001.geekbang.org/infoq/82/8249ade1b6ca578cf8e7332a202af84d.png)
+![QQ 结构化消息的处理方案](/img/user/z-attchements/media/QQ_结构化消息的处理方案.png)
 
   
 
@@ -186,13 +186,13 @@ QQ 支持丰富的消息类型，从简单的文本、图文消息，到复杂�
 
   
 
-![Yoga 渲染引擎的原始内存占用](https://static001.geekbang.org/infoq/d2/d2c5a2c99e1e4e0bbd7b4c41711b4bfe.png)
+![Yoga 渲染引擎的原始内存占用](/img/user/z-attchements/media/Yoga_渲染引擎的原始内存占用.png)
 
   
 为了优化 WebAssembly 的内存占用，我们调整了编译方式，将 Yoga 编译成独立的 wasm 文件，这种方式相比 asm.js 支持动态内存分配。同时结合聊天窗口的消息卸载策略，经过不断的测试调优，在既要保证初始内存较少又要尽可能避免内存爆发式增长带来的性能损耗的前提下，我们把 WebAssembly 的初始内存分配优化到 2M，再加上对象共享、享元模式等策略，WebWorker 的内存占用有了非常可观的优化。
   
 
-![QQ 结构化消息渲染引擎优化前后的内存占用对比](https://static001.geekbang.org/infoq/a9/a908fe10955a238611e3d5508f5adf86.png)
+![QQ 结构化消息渲染引擎优化前后的内存占用对比](/img/user/z-attchements/media/QQ_结构化消息渲染引擎优化前后的内存占用对比.png)
 
   
 
@@ -209,7 +209,7 @@ QQ 支持丰富的消息类型，从简单的文本、图文消息，到复杂�
 
   
 
-![QQ Lottie 动画示例](https://static001.geekbang.org/infoq/aa/aa0f6e90895aa205e2cb7ed654468470.png)
+![QQ Lottie 动画示例](/img/user/z-attchements/media/QQ_Lottie_动画示例.png)
 
   
 
@@ -226,14 +226,14 @@ QQ 支持丰富的消息类型，从简单的文本、图文消息，到复杂�
 最后，旧策略对于渲染过且暂时不用的 Lottie 表情，会 buffer 它的第一帧，总共 31 个 Lottie 表情：2.3k * 31 = 7M（最多），经评估之后，我们暂时也拿掉了该策略。
   
 
-![QQ Lottie 动画缓存首帧对内存的影响](https://static001.geekbang.org/infoq/87/87e0f7d1ab8d5cf26032cdece0335656.png)
+![QQ Lottie 动画缓存首帧对内存的影响](/img/user/z-attchements/media/QQ_Lottie_动画缓存首帧对内存的影响.png)
 
   
 
 另外，桌面 QQ 左侧导航栏目，为了与移动端统一体验，使用 Lottie 动画来实现，从 memory 面板来看， 4 个 icon 导航条会占用约 6M 的内存。改用 CSS 实现，不仅效果与 Lottie 的几乎一致，而且这 6M 的内存占用就完全省掉了。
 
 
-![QQ 导航条动画对内存的影响](https://static001.geekbang.org/infoq/79/79d45683279114a04031764574489a70.png)
+![QQ 导航条动画对内存的影响](/img/user/z-attchements/media/QQ_导航条动画对内存的影响.png)
 
   
 
@@ -244,7 +244,7 @@ APNG 是一个基于 PNG 的位图动画格式，后缀名也是.png，在一些
 
   
 
-![](https://static001.geekbang.org/infoq/6c/6cc80af426e0b4aeaa812e382ef5369e.png)
+![](/img/user/z-attchements/media/6cc80af426e0b4aeaa812e382ef5369e.png)
 
   
 
@@ -261,7 +261,7 @@ APNG 是一个基于 PNG 的位图动画格式，后缀名也是.png，在一些
 
   
 
-![QQ 聊天消息列表的加载策略](https://static001.geekbang.org/infoq/87/87007c21196a65f2763792ea2291a88e.png)
+![QQ 聊天消息列表的加载策略](/img/user/z-attchements/media/QQ_聊天消息列表的加载策略.png)
 
   
 消息组件实例是内存占用的大户，每条消息组件内部包含头像 / 昵称 / 状态 / 内容等多个实例，如果不对消息实例进行回收销毁，每百条消息约能带来 20M+ 的内存增量，因此消息实例的回收策略尤为关键。
@@ -274,7 +274,7 @@ APNG 是一个基于 PNG 的位图动画格式，后缀名也是.png，在一些
 使用虚拟列表维持计算高度后，列表不再依赖保持真实消息内容的渲染，理论上我们可以将可视区域以外的消息实例全部销毁，仅保留用户可见的消息，最大程度地压缩消息实例数量，指保留很少的 buffer 消息实例。在实际滚动中由于消息实例在滚动过程被不断创建和销毁，占用主线程，影响 UI 绘制和用户输入。因此我们还做了：1. 对创建销毁做一定聚合，批量处理消息上屏。2. 精简优化单条组件的渲染性能。3. 不同滚动方向调整上下不同 buffer 大小 等等措施。4、会话切换和窗口聚失焦最小化等操作时对不再使用的消息资源内存进行主动回收。
 
 
-![QQ 聊天消息列表的上屏策略](https://static001.geekbang.org/infoq/87/87ee108caf93890a45677863a75f1c7c.png)
+![QQ 聊天消息列表的上屏策略](/img/user/z-attchements/media/QQ_聊天消息列表的上屏策略.png)
 
   
 
@@ -290,18 +290,18 @@ Electron 给主进程提供了不少对系统能力调用的 API，如托盘、�
 
   
 
-![](https://static001.geekbang.org/infoq/1f/1f7149bd29341fbde6e9884155daa4e8.png)
+![](/img/user/z-attchements/media/1f7149bd29341fbde6e9884155daa4e8.png)
 
   
 
-![Windows 托盘图标内存泄漏定位](https://static001.geekbang.org/infoq/67/6739fb9efd910bf91dda432b856c0899.png)
+![Windows 托盘图标内存泄漏定位](/img/user/z-attchements/media/Windows_托盘图标内存泄漏定位.png)
 
   
 
 类似的问题还有在 macOS 中调用 API dock.setIcon 也会持续占用约 20M 的 CGImage 位图内存，正确的方案应该是不通过 Electron API 指定，而是通过打包 plist(属性文件) 指定 dock 栏图标。
 
 
-![macOS dock 图标内存泄漏定位](https://static001.geekbang.org/infoq/ff/ff4272ee8c213ad70bca04ef217d031e.png)
+![macOS dock 图标内存泄漏定位](/img/user/z-attchements/media/macOS_dock_图标内存泄漏定位.png)
 
   
 
@@ -337,7 +337,7 @@ Electron 给主进程提供了不少对系统能力调用的 API，如托盘、�
 
   
 
-![](https://static001.geekbang.org/infoq/66/66bd1c95041358d138d1eff9c5a4e711.png)
+![](/img/user/z-attchements/media/66bd1c95041358d138d1eff9c5a4e711.png)
 
   
 
@@ -345,7 +345,7 @@ Electron 给主进程提供了不少对系统能力调用的 API，如托盘、�
 
   
 
-![QQ 内存监控整体方案](https://static001.geekbang.org/infoq/0f/0fa8a8501bb6f3e79272b010b5b73465.png)
+![QQ 内存监控整体方案](/img/user/z-attchements/media/QQ_内存监控整体方案.png)
 
 
   
@@ -355,7 +355,7 @@ Electron 给主进程提供了不少对系统能力调用的 API，如托盘、�
 从登录后使用过程中的内存指标如下：整体应用的内存平均占用约为 228M；其中中位数占用约为 211M，90% 分位用户内存占用约为 350M。
   
 
-![QQ 线上内存监控视图](https://static001.geekbang.org/infoq/85/852f8b9bec219586977711104ad9a35a.png)
+![QQ 线上内存监控视图](/img/user/z-attchements/media/QQ_线上内存监控视图.png)
 
 
 当然，这个目标只是阶段性的，我们还会持续针对更多使用场景进行内存优化。
@@ -375,7 +375,7 @@ Electron 给主进程提供了不少对系统能力调用的 API，如托盘、�
       
     
 
-![](https://static001.geekbang.org/infoq/51/51b58f88305aa7f6d4f7a0536d67e21f.png)
+![](/img/user/z-attchements/media/51b58f88305aa7f6d4f7a0536d67e21f.png)
 
   
 
@@ -387,11 +387,11 @@ Electron 给主进程提供了不少对系统能力调用的 API，如托盘、�
 
   
 
-![](https://static001.geekbang.org/infoq/a0/a0d7a8f67f0f6dac3a15ff6fb10db44c.png)
+![](/img/user/z-attchements/media/a0d7a8f67f0f6dac3a15ff6fb10db44c.png)
 
   
 
-![](https://static001.geekbang.org/infoq/43/43e4c4fd61c4230acc18b0991ea80e0b.png)
+![](/img/user/z-attchements/media/43e4c4fd61c4230acc18b0991ea80e0b.png)
 
   
 
@@ -407,9 +407,3 @@ Electron 给主进程提供了不少对系统能力调用的 API，如托盘、�
 
 
 最后，让我们再次聚焦在内存优化的工作上，下图是我们在桌面 QQ 中针对 Electron 内存优化工作的一个概览。内存优化没有银弹，有的只是一步一个脚印深入做下去，芝麻西瓜都要捡，从量变到质变。未来我们完全有信心，凭着已有的经验和对其技术的理解，守住现在这些成果的同时，进一步优化 QQ 生态下的各个子业务、子模块的内存占用问题。因此，也希望通过我们实践经验分享， 让大家从更多辩证的视角来重新看待 Electron 或类 CEF 的技术方案。
-
-  
-
-![](https://static001.geekbang.org/infoq/12/127d60c67c1612d7a8c9f96aacfed334.png)
-
-  
