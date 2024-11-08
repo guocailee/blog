@@ -11,6 +11,7 @@
 
 | File                                                                                                           | Tags                                      | UpdatedAt  |
 | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| [[Startup/仙侠乱/炉石传说游戏机制\|炉石传说游戏机制]]                                                                          | <ul></ul>                                 | 2024/11/08 |
 | [[Program/Mixed/新QQNT桌面版如何实现内存优化探索\|新QQNT桌面版如何实现内存优化探索]]                                                    | <ul><li>#Desktop</li></ul>                | 2024/11/05 |
 | [[XLife/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]                                                                   | <ul></ul>                                 | 2024/11/05 |
 | [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]                         | <ul></ul>                                 | 2024/11/04 |
@@ -42,7 +43,6 @@
 | [[Program/Database/MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查\|MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查]]                         | <ul></ul>                                 | 2024/09/13 |
 | [[Program/Database/如何理解MySQL MVCC\|如何理解MySQL MVCC]]                                                         | <ul></ul>                                 | 2024/09/13 |
 | [[Program/Build Tools/how pnpm links\|how pnpm links]]                                                      | <ul></ul>                                 | 2024/09/13 |
-| [[Thinking/Thinking\|Thinking]]                                                                             | <ul></ul>                                 | 2024/09/13 |
 
 { .block-language-dataview}
 
