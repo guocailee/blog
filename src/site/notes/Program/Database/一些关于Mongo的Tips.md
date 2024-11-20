@@ -41,12 +41,12 @@ db.wm_user.createIndex(
 )
 // create user
 db.createUser({
-  user: 'savvy',
-  pwd: 'savvy',
+  user: 'booom',
+  pwd: 'booom123',
   roles: [
     {
       role: 'readWrite',
-      db: 'savvy_cloud_metadata'
+      db: 'booom'
     }
   ]
 })

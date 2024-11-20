@@ -106,7 +106,7 @@ TCP 也提供了快速建立连接的方案 TFO (TCP Fast Open)，原理跟TLS �
 
 **QUIC** 可以理解为”**TCP + TLS 1.3**“（**QUIC 是基于UDP的，可能使用的是DTLS 1.3**），QUIC 自然也实现了首次建立连接的开销为 1-RTT，快速恢复先前连接的开销为 0-RTT 的效率。QUIC 作为HTTP/2 的改进版，建立连接的开销也有明显降低，下面给出HTTP/2 和QUIC 首次连接和会话恢复过程中，HTTP 请求首个资源的RTT 开销对比：  
 
- -|HTTP/2 + TLS 1.2 首次连接 | HTTP/2 + TLS 1.2 会话恢复 | HTTP/2 + TLS 1.3 首次连接 | HTTP/2 + TLS 1.3 会话恢复 | HTTP/2 + TLS 1.3 会话恢复 + TFO | QUIC 首次连接 | QUIC 会话恢复 |
+ |-|HTTP/2 + TLS 1.2 首次连接 | HTTP/2 + TLS 1.2 会话恢复 | HTTP/2 + TLS 1.3 首次连接 | HTTP/2 + TLS 1.3 会话恢复 | HTTP/2 + TLS 1.3 会话恢复 + TFO | QUIC 首次连接 | QUIC 会话恢复 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | DNS 解析 | 1-RTT | 0-RTT | 1-RTT | 0-RTT | 0-RTT | 1-RTT | 0-RTT |
 | TCP 握手 | 1-RTT | 1-RTT | 1-RTT | 1-RTT | 0-RTT  (TCP Fast Open) | - | - |
