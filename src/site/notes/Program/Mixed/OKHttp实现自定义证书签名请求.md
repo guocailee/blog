@@ -5,6 +5,7 @@
 ```kotlin
 data class SSLConfig(  
     val keyType: String? = "PKCS12",  
+    // 证书签名的base64编码
     val keyFile: String? = null,  
     /**  
      * 密码  
