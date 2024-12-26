@@ -1,10 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/新QQNT桌面版如何实现内存优化探索/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Mixed/新QQNT桌面版如何实现内存优化探索/","tags":["Desktop","Electron"],"noteIcon":""}
 ---
-
-#Desktop
-
-![](/img/user/z-attchements/media/93758bfbc71a75ee4192d69663278176.jpg)
 
 ## 背景
 
