@@ -64,7 +64,7 @@ fun main() {
 
 #### 输出
 
-```text
+```bash
 [(1, banana), (3, apple), (3, cherry), (2, date)]
 ```
 

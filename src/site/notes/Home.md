@@ -11,6 +11,7 @@
 
 | File                                                                                                           | Tags                                         | UpdatedAt  |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
+| [[Program/Mixed/Uber数据仓库搭建\|Uber数据仓库搭建]]                                                                    | <ul></ul>                                    | 2025/01/02 |
 | [[Program/Kotlin/Kotlin多字段排序\|Kotlin多字段排序]]                                                                 | <ul></ul>                                    | 2024/12/30 |
 | [[Program/Mixed/新QQNT桌面版如何实现内存优化探索\|新QQNT桌面版如何实现内存优化探索]]                                                    | <ul><li>#Desktop</li><li>#Electron</li></ul> | 2024/12/26 |
 | [[Startup/仙侠乱/译介丨卡牌游戏——简单的设计就是好设计\|译介丨卡牌游戏——简单的设计就是好设计]]                                                    | <ul><li>#Game</li></ul>                      | 2024/12/26 |
@@ -42,7 +43,6 @@
 | [[Program/Framework/Java DDD目录结构\|Java DDD目录结构]]                                                            | <ul></ul>                                    | 2024/10/12 |
 | [[Program/MessageQueue/消息队列选型看这一篇就够了\|消息队列选型看这一篇就够了]]                                                       | <ul><li>#MQ</li></ul>                        | 2024/10/11 |
 | [[Program/FrontEnd/浏览器是如何工作的？ Chrome V8 引擎让你更懂JavaScript\|浏览器是如何工作的？ Chrome V8 引擎让你更懂JavaScript]]           | <ul><li>#JavaScript</li><li>#V8</li></ul>    | 2024/10/10 |
-| [[Thinking/如何拍出爆款视频\|如何拍出爆款视频]]                                                                             | <ul></ul>                                    | 2024/09/29 |
 
 { .block-language-dataview}
 
