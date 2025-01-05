@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/React Hooks 使用误区，驳官方文档/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/React Hooks 使用误区，驳官方文档/","tags":["React"],"noteIcon":""}
 ---
 
 作为 React Hooks 库 [ahooks](https://github.com/alibaba/hooks) 的作者，我应该算一个非常非常资深的 React Hooks 用户。在两年多的 React Hooks 使用过程中，我越来越发现大家（包括我自己）对 React Hooks 的使用姿势存在很大误区，归根到底是官方文档的教程很不严谨，存在错误的指引。
