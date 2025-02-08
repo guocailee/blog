@@ -109,10 +109,6 @@ exit status 1
 
 Linux-VServer 是一种基于 _Security Contexts_ 的软分区技术，可以做到虚拟服务器隔离，共享相同的硬件资源。主要问题是 VServer 应用程序针对 "chroot-again" 类型的攻击没有很好的进行安全保护，攻击者可以利用这个漏洞脱离限制环境，访问限制目录之外的任意文件。（自 2004 年开始，国家信息安全漏洞库就登出了相关漏洞问题）
 
-![](/img/user/z-attchements/media/v2-353b950487847030efee1f58782ecc63_720w.webp)
-
-**图 3 ，国家信息安全漏洞库网站图标**
-
 ## **现代化容器技术带来的优势**
 
 -   轻量级，基于 Linux 内核所提供的 cgroup 和 namespace 能力，创建容器的成本很低；  
