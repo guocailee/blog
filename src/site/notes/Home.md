@@ -11,6 +11,7 @@
 
 | File                                                                                                                     | Tags                                         | UpdatedAt  |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------- |
+| [[XLife/Fake Cursor Machine\|Fake Cursor Machine]]                                                                    | <ul></ul>                                    | 2025/02/13 |
 | [[Startup/仙侠乱/TCG卡牌如何设计\|TCG卡牌如何设计]]                                                                                  | <ul></ul>                                    | 2025/02/11 |
 | [[Program/FrontEnd/C++代码能完美转换成JS代码吗\|C++代码能完美转换成JS代码吗]]                                                               | <ul></ul>                                    | 2025/02/08 |
 | [[Program/FrontEnd/React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现\|React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现]] | <ul></ul>                                    | 2025/02/07 |
@@ -42,7 +43,6 @@
 | [[Program/FrontEnd/JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？\|JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？]]           | <ul></ul>                                    | 2024/11/01 |
 | [[XLife/Parenting/被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ \|被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ ]]                                        | <ul></ul>                                    | 2024/11/01 |
 | [[XLife/Tips/如何激活WIndow或Office\|如何激活WIndow或Office]]                                                                   | <ul></ul>                                    | 2024/11/01 |
-| [[Program/Container/docker compose配置文件全面指南\|docker compose配置文件全面指南]]                                                  | <ul></ul>                                    | 2024/10/30 |
 
 { .block-language-dataview}
 
