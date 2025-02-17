@@ -11,6 +11,7 @@
 
 | File                                                                                                                     | Tags                                         | UpdatedAt  |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------- |
+| [[Program/Database/MongoDB 全方位知识图谱\|MongoDB 全方位知识图谱]]                                                                 | <ul></ul>                                    | 2025/02/17 |
 | [[Program/Algorithm/去哪儿酒店搜索排序模型的演进\|去哪儿酒店搜索排序模型的演进]]                                                                  | <ul></ul>                                    | 2025/02/17 |
 | [[Inbox/Awesome\|Awesome]]                                                                                            | <ul></ul>                                    | 2025/02/17 |
 | [[XLife/Fake Cursor Machine\|Fake Cursor Machine]]                                                                    | <ul></ul>                                    | 2025/02/13 |
@@ -42,7 +43,6 @@
 | [[XLife/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]                                                                             | <ul></ul>                                    | 2024/11/05 |
 | [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]                                   | <ul></ul>                                    | 2024/11/04 |
 | [[Program/FrontEnd/JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？\|JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？]]           | <ul></ul>                                    | 2024/11/01 |
-| [[XLife/Parenting/被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ \|被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ ]]                                        | <ul></ul>                                    | 2024/11/01 |
 
 { .block-language-dataview}
 
