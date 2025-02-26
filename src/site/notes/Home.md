@@ -11,9 +11,10 @@
 
 | File                                                                                                                     | Tags                                         | UpdatedAt  |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------- |
+| [[Thinking/数据技术专家能力模型\|数据技术专家能力模型]]                                                                                   | <ul></ul>                                    | 2025/02/26 |
+| [[Inbox/Awesome\|Awesome]]                                                                                            | <ul></ul>                                    | 2025/02/21 |
 | [[Program/Database/MongoDB 全方位知识图谱\|MongoDB 全方位知识图谱]]                                                                 | <ul></ul>                                    | 2025/02/17 |
 | [[Program/Algorithm/去哪儿酒店搜索排序模型的演进\|去哪儿酒店搜索排序模型的演进]]                                                                  | <ul></ul>                                    | 2025/02/17 |
-| [[Inbox/Awesome\|Awesome]]                                                                                            | <ul></ul>                                    | 2025/02/17 |
 | [[XLife/Fake Cursor Machine\|Fake Cursor Machine]]                                                                    | <ul></ul>                                    | 2025/02/13 |
 | [[Startup/仙侠乱/TCG卡牌如何设计\|TCG卡牌如何设计]]                                                                                  | <ul></ul>                                    | 2025/02/11 |
 | [[Program/FrontEnd/C++代码能完美转换成JS代码吗\|C++代码能完美转换成JS代码吗]]                                                               | <ul></ul>                                    | 2025/02/08 |
@@ -42,7 +43,6 @@
 | [[Startup/仙侠乱/炉石传说游戏机制\|炉石传说游戏机制]]                                                                                    | <ul></ul>                                    | 2024/11/08 |
 | [[XLife/Game/艾尔登法环全支线图文攻略\|艾尔登法环全支线图文攻略]]                                                                             | <ul></ul>                                    | 2024/11/05 |
 | [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]]                                   | <ul></ul>                                    | 2024/11/04 |
-| [[Program/FrontEnd/JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？\|JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？]]           | <ul></ul>                                    | 2024/11/01 |
 
 { .block-language-dataview}
 
