@@ -70,8 +70,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       '@11ty/eleventy-plugin-rss':
-        specifier: ^1.2.0
-        version: 1.2.0
+        specifier: ^2.0.3
+        version: 2.0.3
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -103,12 +103,16 @@ packages:
     resolution: {integrity: sha512-MSCkZRJk9rWa7nojx9HBMZJePOrm+V3XNpT091qguj61SG5UsgXbxAkoeejO3npmKIQJTyVIV/rrA6d7xZYOvw==}
     engines: {node: '>=18'}
 
-  '@11ty/eleventy-plugin-rss@1.2.0':
-    resolution: {integrity: sha512-YzFnSH/5pObcFnqZ2sAQ782WmpOZHj1+xB9ydY/0j7BZ2jUNahn53VmwCB/sBRwXA/Fbwwj90q1MLo01Ru0UaQ==}
+  '@11ty/eleventy-plugin-rss@2.0.3':
+    resolution: {integrity: sha512-ubK97uahCLpKhORLfblgxLcoaNqTcKde1cH8CeRKNTFoUuuDSEjWZtodV9fKrg+uOp5X74dO43z1/io6hhs5Bw==}
 
   '@11ty/eleventy-utils@1.0.3':
     resolution: {integrity: sha512-nULO91om7vQw4Y/UBjM8i7nJ1xl+/nyK4rImZ41lFxiY2d+XUz7ChAj1CDYFjrLZeu0utAYJTZ45LlcHTkUG4g==}
     engines: {node: '>=12'}
+
+  '@11ty/eleventy-utils@2.0.1':
+    resolution: {integrity: sha512-hicG0vPyqfLvgHJQLtoh3XAj6wUbLX4yY2se8bQLdhCIcxK46mt4zDpgcrYVP3Sjx4HPifQOdwRfOEECoUcyXQ==}
+    engines: {node: '>=18'}
 
   '@11ty/eleventy@2.0.1':
     resolution: {integrity: sha512-t8XVUbCJByhVEa1RzO0zS2QzbL3wPY8ot1yUw9noqiSHxJWUwv6jiwm1/MZDPTYtkZH2ZHvdQIRQ5/SjG9XmLw==}
@@ -118,6 +122,10 @@ packages:
   '@11ty/lodash-custom@4.17.21':
     resolution: {integrity: sha512-Mqt6im1xpb1Ykn3nbcCovWXK3ggywRJa+IXIdoz4wIIK+cvozADH63lexcuPpGS/gJ6/m2JxyyXDyupkMr5DHw==}
     engines: {node: '>=14'}
+
+  '@11ty/posthtml-urls@1.0.1':
+    resolution: {integrity: sha512-6EFN/yYSxC/OzYXpq4gXDyDMlX/W+2MgCvvoxf11X1z76bqkqFJ8eep5RiBWfGT5j0323a1pwpelcJJdR46MCw==}
+    engines: {node: '>= 6'}
 
   '@babel/helper-string-parser@7.25.7':
     resolution: {integrity: sha512-CbkjYdsJNHFk8uqpEkpCvRs3YRp9tY6FmFY7wLMSYuGYkrdUi7r2lc4/wqsvlHoMznX3WJ9IP8giGPq68T/Y6g==}
@@ -908,6 +916,10 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
+  evaluate-value@2.0.0:
+    resolution: {integrity: sha512-VonfiuDJc0z4sOO7W0Pd130VLsXN6vmBWZlrog1mCb/o7o/Nl5Lr25+Kj/nkCCAhG+zqeeGjxhkK9oHpkgTHhQ==}
+    engines: {node: '>= 8'}
+
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
 
@@ -1121,6 +1133,10 @@ packages:
   http-equiv-refresh@1.0.0:
     resolution: {integrity: sha512-TScO04soylRN9i/QdOdgZyhydXg9z6XdaGzEyOgDKycePeDeTT4KvigjBcI+tgfTlieLWauGORMq5F1eIDa+1w==}
     engines: {node: '>= 0.10'}
+
+  http-equiv-refresh@2.0.1:
+    resolution: {integrity: sha512-XJpDL/MLkV3dKwLzHwr2dY05dYNfBNlyPu4STQ8WvKCFdc6vC5tPXuq28of663+gHVg03C+16pHHs/+FmmDjcw==}
+    engines: {node: '>= 6'}
 
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
@@ -2229,17 +2245,20 @@ snapshots:
       - encoding
       - supports-color
 
-  '@11ty/eleventy-plugin-rss@1.2.0':
+  '@11ty/eleventy-plugin-rss@2.0.3':
     dependencies:
+      '@11ty/eleventy-utils': 2.0.1
+      '@11ty/posthtml-urls': 1.0.1
       debug: 4.4.0
       posthtml: 0.16.6
-      posthtml-urls: 1.0.0
     transitivePeerDependencies:
       - supports-color
 
   '@11ty/eleventy-utils@1.0.3':
     dependencies:
       normalize-path: 3.0.0
+
+  '@11ty/eleventy-utils@2.0.1': {}
 
   '@11ty/eleventy@2.0.1':
     dependencies:
@@ -2287,6 +2306,13 @@ snapshots:
       - utf-8-validate
 
   '@11ty/lodash-custom@4.17.21': {}
+
+  '@11ty/posthtml-urls@1.0.1':
+    dependencies:
+      evaluate-value: 2.0.0
+      http-equiv-refresh: 2.0.1
+      list-to-array: 1.1.0
+      parse-srcset: 1.0.2
 
   '@babel/helper-string-parser@7.25.7': {}
 
@@ -3084,6 +3110,8 @@ snapshots:
 
   esprima@4.0.1: {}
 
+  evaluate-value@2.0.0: {}
+
   eventemitter3@4.0.7: {}
 
   expand-template@2.0.3: {}
@@ -3345,6 +3373,8 @@ snapshots:
       entities: 4.5.0
 
   http-equiv-refresh@1.0.0: {}
+
+  http-equiv-refresh@2.0.1: {}
 
   ieee754@1.2.1: {}
 
