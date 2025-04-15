@@ -38,7 +38,7 @@ param1=1&param2=2
 - 一个空行分隔首部和内容主体
 - 最后是响应的内容主体
 
-```
+```html
 HTTP/1.1 200 OK
 Age: 529651
 Cache-Control: max-age=604800

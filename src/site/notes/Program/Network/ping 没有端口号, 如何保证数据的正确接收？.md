@@ -26,9 +26,8 @@
 > 数据：数据长度最小为46字节，不足`46`字节时，填充至`46`字节。因为最小帧长度是64字节，所以，`46+6+6+2+4=64`。（不算前导码）  
 > FCS: 就是CRC校验值
 
-[以太网数据格式与封装解封 \- SevenFormer - 博客园​www.cnblogs.com/qishui/p/5437301.html![](https://pic4.zhimg.com/v2-a31f7782726e3ab502a60a82d29f9eab_180x120.jpg)
-](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/qishui/p/5437301.html)
-
+[以太网数据格式与封装解封](https://www.cnblogs.com/qishui/p/5437301.html)
+![](https://pic4.zhimg.com/v2-a31f7782726e3ab502a60a82d29f9eab_180x120.jpg)
   
 
 和`COM口`通讯一样，以太网的[[Program/OS/驱动程序\|驱动程序]]（可以直接固化在网卡固件里，从而不需要驱动，而是直接用网卡自带的芯片解码）通过“前导码”从位流中识别出以太网帧、查看其中的目的地址`MAC`，确认它是不是给自己的——如果不是，就丢弃它（当然，如果网卡被设置到混杂模式Promiscuous Mode，则数据并不会自动丢弃；此时你可以直接在以太网层监控局域网本地交换机下的所有通信）。
