@@ -3,7 +3,7 @@
 ---
 
 > 一些有趣的收集，随缘更新
-## Program
+### Program
 - [统计方法的代码实现](https://github.com/fengdu78/lihang-code)
 - [KISS Translator](https://github1s.com/fishjar/kiss-translator)
 - [Awesome DDD](https://github.com/heynickc/awesome-ddd)
@@ -14,13 +14,18 @@
 - [Code Interview University](https://github.com/jwasham/coding-interview-university/blob/main/translations/README-cn.md)
 - [ Reactor 3 参考指南](https://easywheelsoft.github.io/reactor-core-zh/index.html)
 - [Ktor](https://github.dev/ktorio/ktor)
+
+
 ### workflow
 - [flume](https://flume.dev/docs/root-engine)
 - [React Flow Dev](https://reactflow.dev/)
 
-
-## Game
+### Movie
+```bash
+docker run -d --name libretv -p 8899:80 bestzwei/libretv:latest
+```
+### Game
 -  [卡牌类游戏为什么“过牌”很重要呢？](https://www.zhihu.com/question/666964567)
 
-## Life
+### Life
 - [程序员做菜指南](https://cook.aiursoft.cn/)
