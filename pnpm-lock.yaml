@@ -2077,8 +2077,8 @@ packages:
     resolution: {integrity: sha512-yMi0PlwuznKHxKmcpoOdeLwxBoVPkqZxd7q2FgMkmD3bNwvF5VW0+UlUQ1k1vmktTu4Yu13Q0RIxEP8+B+wloA==}
     engines: {node: '>= 0.4'}
 
-  typpy@2.3.14:
-    resolution: {integrity: sha512-C1V70FdAT/2rCngfzRD0TPTjQ5zuhKdRdRwPL+t1hIS4IsZU+oouXEv8jpycDNWaZlEJWv4NshzaRzsp+BO9TA==}
+  typpy@2.4.0:
+    resolution: {integrity: sha512-a16Uv5doNtvHzaG4wZCHmXN+l9xxmTMpyODtPz7B3DSTsDVNXilTSJGuNw68sUh0Un4bf+ghRMbEcJCI6r06mQ==}
 
   uc-first-array@1.1.11:
     resolution: {integrity: sha512-lJ3rUh/Jyj+JFUZc1TsXLBQijKgaZ/5JqpFLqmlK/7vXLfOIkCzXrXkL3heE1mld000YHTTJqJqkRcrMIC/w1w==}
@@ -2867,11 +2867,11 @@ snapshots:
 
   deffy@2.0.0:
     dependencies:
-      typpy: 2.3.14
+      typpy: 2.4.0
 
   deffy@2.2.5:
     dependencies:
-      typpy: 2.3.14
+      typpy: 2.4.0
 
   define-data-property@1.1.4:
     dependencies:
@@ -4379,7 +4379,7 @@ snapshots:
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
 
-  typpy@2.3.14:
+  typpy@2.4.0:
     dependencies:
       function.name: 1.0.14
 
