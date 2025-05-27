@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/一些关于Mongo的Tips/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Database/一些关于Mongo的Tips/","noteIcon":"","created":"2024-05-22T16:17:54.140+08:00"}
 ---
 
 ## 数据库连接

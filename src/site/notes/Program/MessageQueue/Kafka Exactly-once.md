@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/MessageQueue/Kafka Exactly-once/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/MessageQueue/Kafka Exactly-once/","noteIcon":"","created":"2024-08-20T15:01:04.506+08:00"}
 ---
 
 #MQ  #Kafka 

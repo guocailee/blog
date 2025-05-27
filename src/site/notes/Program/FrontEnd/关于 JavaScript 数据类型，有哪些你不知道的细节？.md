@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/关于 JavaScript 数据类型，有哪些你不知道的细节？/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/关于 JavaScript 数据类型，有哪些你不知道的细节？/","noteIcon":"","created":"2024-05-22T16:17:54.151+08:00"}
 ---
 
 大家好，今天我们再来看点基础知识，看看 JavaScript 数据类型中的一些细节。

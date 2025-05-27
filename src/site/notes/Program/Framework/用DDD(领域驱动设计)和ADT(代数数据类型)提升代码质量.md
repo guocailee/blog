@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/用DDD(领域驱动设计)和ADT(代数数据类型)提升代码质量/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Framework/用DDD(领域驱动设计)和ADT(代数数据类型)提升代码质量/","noteIcon":"","created":"2024-05-22T16:17:54.140+08:00"}
 ---
 
 很多开发者都有一个迷思，认为项目里的代码质量和可维护性的持续下降，主要根源在于时间紧迫、需求变动频繁。如果产品需求更加明确，并给予足够的开发时间，开发团队可以长期保证代码质量和可维护性。

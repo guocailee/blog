@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Reactive/Reactive Streams 与 Java 8 Stream 有什么区别/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Reactive/Reactive Streams 与 Java 8 Stream 有什么区别/","noteIcon":"","created":"2024-05-22T16:17:54.160+08:00"}
 ---
 
 之前曾写过一篇介绍 Spring 提出的 Reactive Streams 实现方案 —— Project Reactor 的文章：《Reactor 入门与实践》，其中介绍了 Spring Reactor API 的用法。相信很多人都能发现，Spring Reactor 的 API 看上去和 Java 8 Stream 很像：
