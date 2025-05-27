@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/Relational DB & NoSQL/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Database/Relational DB & NoSQL/","noteIcon":"","created":"2024-08-09T12:39:45.160+08:00"}
 ---
 
 关系型数据库（Relational DB）和NoSQL数据库在数据存储和管理方式上有几个主要区别：

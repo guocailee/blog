@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/React Hooks 是否可以改为用类似Vue3 Composition API 的方式实现/","noteIcon":"","created":"2024-05-22T16:17:54.147+08:00"}
 ---
 
 **不能，因为是很不一样的[心智模型]（Mental Model）。**我觉得很多同学只关注到了这两套 API 在功能上都能复用逻辑的相似点，而低估了两个框架体系「大背景」上的差异。

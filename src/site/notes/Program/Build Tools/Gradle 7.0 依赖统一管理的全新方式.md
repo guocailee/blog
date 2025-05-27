@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Build Tools/Gradle 7.0 依赖统一管理的全新方式/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Build Tools/Gradle 7.0 依赖统一管理的全新方式/","noteIcon":"","created":"2024-05-22T16:17:54.135+08:00"}
 ---
 
 
