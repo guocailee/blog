@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/TypeScript 之 More on Functions/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/TypeScript 之 More on Functions/","noteIcon":"","created":"2024-05-22T16:17:54.148+08:00"}
 ---
 
 

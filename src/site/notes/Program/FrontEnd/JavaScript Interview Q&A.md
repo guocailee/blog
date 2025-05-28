@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/JavaScript Interview Q&A/","tags":["JavaScript"],"noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/JavaScript Interview Q&A/","tags":["JavaScript"],"noteIcon":"","created":"2024-05-22T16:17:54.146+08:00"}
 ---
 
 

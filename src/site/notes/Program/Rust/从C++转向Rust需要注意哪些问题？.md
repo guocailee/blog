@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Rust/从C++转向Rust需要注意哪些问题？/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Rust/从C++转向Rust需要注意哪些问题？/","noteIcon":"","created":"2024-05-22T16:17:54.160+08:00"}
 ---
 
 #Rust

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Reactor线程切换解析/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Mixed/Reactor线程切换解析/","noteIcon":"","created":"2025-03-25T15:34:41.180+08:00"}
 ---
 
 在 Reactor（Project Reactor）中，线程切换通常通过 `publishOn` 和 `subscribeOn` 这两个操作符来完成。它们的作用如下：

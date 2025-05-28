@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Tips/如何激活WIndow或Office/","noteIcon":""}
+{"dg-publish":true,"permalink":"/XLife/Tips/如何激活WIndow或Office/","noteIcon":"","created":"2024-11-01T10:43:18.973+08:00"}
 ---
 
 如何激活 Windows、Office呢？
