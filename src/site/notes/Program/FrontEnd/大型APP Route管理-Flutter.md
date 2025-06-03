@@ -124,4 +124,5 @@ Future<T> push<T extends Object>(Route<T> route) {
 
 ## 参考资料
 
-1.  [Flutter 路由源码剖析](https://zhuanlan.zhihu.com/p/208788731) 2. [ Flutter 路由导航](https://zhuanlan.zhihu.com/p/144820879)
+1.  [Flutter 路由源码剖析](https://zhuanlan.zhihu.com/p/208788731) 
+2. [ Flutter 路由导航](https://zhuanlan.zhihu.com/p/144820879)

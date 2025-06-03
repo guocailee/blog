@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/流程图DSL设计/","noteIcon":""}
+{"dg-publish":true,"permalink":"/Program/Mixed/流程图DSL设计/","noteIcon":"","created":"2024-10-23T11:21:18.581+08:00"}
 ---
 
 DSL（**Domain-Specific Language**）是一种专门为特定领域设计的编程语言，主要用于简化特定领域内的问题解决。与通用编程语言（如Java、Python）不同，DSL只针对某一特定领域，因此更容易理解和使用，特别是对于领域专家来说。

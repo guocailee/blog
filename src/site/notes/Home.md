@@ -10,7 +10,8 @@
 
 | File                                                                                                           | Tags                                   | CreatedAt  |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ---------- |
-| [[XLife/有趣的UP主\|有趣的UP主]]                                                                                    | <ul></ul>                              | 2025/05/27 |
+| [[Thinking/有趣的UP主\|有趣的UP主]]                                                                                 | <ul></ul>                              | 2025/06/03 |
+| [[Program/Mixed/Nestjs+Rxjs+DDD架构\|Nestjs+Rxjs+DDD架构]]                                                      | <ul></ul>                              | 2025/06/03 |
 | [[Program/Mixed/AI游戏资源生成系统设计指南\|AI游戏资源生成系统设计指南]]                                                            | <ul></ul>                              | 2025/05/23 |
 | [[XLife/Fitness/高杠杆行动计划\|高杠杆行动计划]]                                                                          | <ul></ul>                              | 2025/05/21 |
 | [[Program/Cache/redis宕机了，如何恢复数据？\|redis宕机了，如何恢复数据？]]                                                        | <ul></ul>                              | 2025/05/07 |
@@ -41,7 +42,6 @@
 | [[Program/FrontEnd/JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？\|JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？]] | <ul></ul>                              | 2024/11/01 |
 | [[XLife/Tips/如何激活WIndow或Office\|如何激活WIndow或Office]]                                                         | <ul></ul>                              | 2024/11/01 |
 | [[XLife/Other/为什么电视剧《狂飙》中的强盛公司不洗白上岸？ \|为什么电视剧《狂飙》中的强盛公司不洗白上岸？ ]]                                            | <ul></ul>                              | 2024/10/30 |
-| [[Program/Mixed/流程图DSL设计\|流程图DSL设计]]                                                                        | <ul></ul>                              | 2024/10/23 |
 
 { .block-language-dataview}
 
