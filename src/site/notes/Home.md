@@ -10,6 +10,7 @@
 
 | File                                                                                                           | Tags                                   | CreatedAt  |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ---------- |
+| [[XLife/Fitness/What is dead\|What is dead]]                                                                | <ul></ul>                              | 2025/06/04 |
 | [[Thinking/有趣的UP主\|有趣的UP主]]                                                                                 | <ul></ul>                              | 2025/06/03 |
 | [[Program/Mixed/Nestjs+Rxjs+DDD架构\|Nestjs+Rxjs+DDD架构]]                                                      | <ul></ul>                              | 2025/06/03 |
 | [[Program/Mixed/AI游戏资源生成系统设计指南\|AI游戏资源生成系统设计指南]]                                                            | <ul></ul>                              | 2025/05/23 |
@@ -41,7 +42,6 @@
 | [[Startup/仙侠乱/炉石传说游戏机制\|炉石传说游戏机制]]                                                                          | <ul></ul>                              | 2024/11/08 |
 | [[Program/FrontEnd/JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？\|JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？]] | <ul></ul>                              | 2024/11/01 |
 | [[XLife/Tips/如何激活WIndow或Office\|如何激活WIndow或Office]]                                                         | <ul></ul>                              | 2024/11/01 |
-| [[XLife/Other/为什么电视剧《狂飙》中的强盛公司不洗白上岸？ \|为什么电视剧《狂飙》中的强盛公司不洗白上岸？ ]]                                            | <ul></ul>                              | 2024/10/30 |
 
 { .block-language-dataview}
 
