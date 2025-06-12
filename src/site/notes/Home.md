@@ -10,6 +10,7 @@
 
 | File                                                                                                           | Tags                                   | CreatedAt  |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ---------- |
+| [[XLife/Books/我的青春，我的合租往事\|我的青春，我的合租往事]]                                                                    | <ul></ul>                              | 2025/06/12 |
 | [[XLife/Fitness/What is dead\|What is dead]]                                                                | <ul></ul>                              | 2025/06/04 |
 | [[Thinking/有趣的UP主\|有趣的UP主]]                                                                                 | <ul></ul>                              | 2025/06/03 |
 | [[Program/Mixed/Nestjs+Rxjs+DDD架构\|Nestjs+Rxjs+DDD架构]]                                                      | <ul></ul>                              | 2025/06/03 |
@@ -41,7 +42,6 @@
 | [[Startup/仙侠乱/Unity HD2D 开发指南\|Unity HD2D 开发指南]]                                                            | <ul></ul>                              | 2024/11/08 |
 | [[Startup/仙侠乱/炉石传说游戏机制\|炉石传说游戏机制]]                                                                          | <ul></ul>                              | 2024/11/08 |
 | [[Program/FrontEnd/JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？\|JavaScript 中的 this 关键字是设计失误了还是一个未完成的半成品特性？]] | <ul></ul>                              | 2024/11/01 |
-| [[XLife/Tips/如何激活WIndow或Office\|如何激活WIndow或Office]]                                                         | <ul></ul>                              | 2024/11/01 |
 
 { .block-language-dataview}
 
