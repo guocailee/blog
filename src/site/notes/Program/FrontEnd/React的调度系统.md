@@ -201,8 +201,5 @@ myQueue.cancelTask(taskId);
 
 <img width=200 src="https://img.alicdn.com/tfs/TB165W0MCzqK1RjSZFLXXcn2XXa-258-258.jpg">
 
-**special Sponsors**
-
-- [DevOps 全流程平台](https://e.coding.net/?utm_source=weekly)
 
 > 版权声明：自由转载-非商用-非衍生-保持署名（[创意共享 3.0 许可证](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)）
