@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/TS类型体操技巧总结/","noteIcon":"","created":"2024-05-22T16:17:54.148+08:00"}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/TS类型体操技巧总结/","noteIcon":"","created":"2025-03-06T21:28:25.972+08:00"}
 ---
 
 最近刷类型体操有点上瘾，本文算是最近刷类型体操的一些思考的集合。刷的时候感觉自己长脑子了，但是过段时间又好像没脑子了，还是得通过博客总结沉淀一下

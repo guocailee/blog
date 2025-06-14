@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Inbox/Awesome/","noteIcon":"","created":"2024-08-05T10:26:59.297+08:00"}
+{"dg-publish":true,"permalink":"/Inbox/Awesome/","noteIcon":"","created":"2025-06-08T17:11:41.971+08:00"}
 ---
 
 > 一些有趣的收集，随缘更新

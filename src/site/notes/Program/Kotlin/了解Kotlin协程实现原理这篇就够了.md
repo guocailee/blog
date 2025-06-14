@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Kotlin/了解Kotlin协程实现原理这篇就够了/","noteIcon":"","created":"2024-05-22T16:17:54.153+08:00"}
+{"dg-publish":true,"permalink":"/Program/Kotlin/了解Kotlin协程实现原理这篇就够了/","noteIcon":"","created":"2025-03-06T21:28:25.977+08:00"}
 ---
 
 > 简单来说 **Kotlin协程** 一种异步编程的同步顺序写法，它跟线程是两个不同的概念，所以不要被 **协程** 两字弄混淆

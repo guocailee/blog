@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/复杂推理模型从服务器移植到Web浏览器的理论和实战/","noteIcon":"","created":"2024-05-22T16:17:54.155+08:00"}
+{"dg-publish":true,"permalink":"/Program/Mixed/复杂推理模型从服务器移植到Web浏览器的理论和实战/","noteIcon":"","created":"2025-03-06T21:28:25.979+08:00"}
 ---
 
 ## 一  背景

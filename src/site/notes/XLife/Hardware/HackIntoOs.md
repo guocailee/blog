@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Hardware/HackIntoOs/","noteIcon":"","created":"2024-05-22T16:23:08.483+08:00"}
+{"dg-publish":true,"permalink":"/XLife/Hardware/HackIntoOs/","noteIcon":"","created":"2025-03-06T21:28:25.988+08:00"}
 ---
 
 > ⚠️ **WARNING: You must add your own serial number in `EFI/OC/config.plist`.** Related fields are: `PlatformInfo - Generic - MLB / SystemProductName / SystemSerialNumber / SystemUUID`. You can generate some random numbers by [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS). See [official guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) for details.  

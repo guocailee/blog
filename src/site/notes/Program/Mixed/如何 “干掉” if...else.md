@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/如何 “干掉” if...else/","noteIcon":"","created":"2024-05-22T16:17:54.155+08:00"}
+{"dg-publish":true,"permalink":"/Program/Mixed/如何 “干掉” if...else/","noteIcon":"","created":"2025-03-06T21:28:25.979+08:00"}
 ---
 
 # 前言

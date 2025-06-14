@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Nestjs+Rxjs+DDD架构/","noteIcon":"","created":"2025-06-03T15:38:30.563+08:00"}
+{"dg-publish":true,"permalink":"/Program/Mixed/Nestjs+Rxjs+DDD架构/","noteIcon":"","created":"2025-05-22T00:54:10.792+08:00"}
 ---
 
 在 NestJS 中结合 RxJS 实现领域驱动设计（DDD）架构，需要将响应式编程与分层架构思想结合。以下是一个详细的设计方案和代码示例：

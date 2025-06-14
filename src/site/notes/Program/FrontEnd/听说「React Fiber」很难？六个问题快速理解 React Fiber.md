@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/听说「React Fiber」很难？六个问题快速理解 React Fiber/","noteIcon":"","created":"2024-05-22T16:17:54.151+08:00"}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/听说「React Fiber」很难？六个问题快速理解 React Fiber/","noteIcon":"","created":"2025-03-06T21:28:25.975+08:00"}
 ---
 
   React Fiber 是Facebook花费两年余时间对 React 做出的一个重大改变与优化，是**对 React 核心算法的一次重新实现**。从Facebook在 React Conf 2017会议上确认，React Fiber 会在React 16 版本发布至今，也已过去三年有余，如今，React 17 业已发布，社区关于Fiber的优秀文章不在少数。

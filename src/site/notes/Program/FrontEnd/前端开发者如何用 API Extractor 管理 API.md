@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/前端开发者如何用 API Extractor 管理 API/","noteIcon":"","created":"2024-05-22T16:17:54.151+08:00"}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/前端开发者如何用 API Extractor 管理 API/","noteIcon":"","created":"2025-03-06T21:28:25.975+08:00"}
 ---
 
 API Extractor 是由微软提供的针对 Typescript 的 API 分析工具，如果你是一个 Typescript 库的开发人员，你可能需要它。它能解决以下问题：

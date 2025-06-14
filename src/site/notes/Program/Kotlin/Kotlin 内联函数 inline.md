@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Kotlin/Kotlin 内联函数 inline/","noteIcon":"","created":"2024-05-22T16:17:54.153+08:00"}
+{"dg-publish":true,"permalink":"/Program/Kotlin/Kotlin 内联函数 inline/","noteIcon":"","created":"2025-03-06T21:28:25.977+08:00"}
 ---
 
 #Kotlin

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/Flutter 代码质量探索-Trip/","noteIcon":"","created":"2024-05-22T16:17:54.143+08:00"}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/Flutter 代码质量探索-Trip/","noteIcon":"","created":"2025-03-06T21:28:25.972+08:00"}
 ---
 
 #Flutter 

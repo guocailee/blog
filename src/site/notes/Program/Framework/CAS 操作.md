@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/CAS 操作/","noteIcon":"","created":"2024-08-13T13:51:56.174+08:00"}
+{"dg-publish":true,"permalink":"/Program/Framework/CAS 操作/","noteIcon":"","created":"2025-03-06T21:28:25.970+08:00"}
 ---
 
 CAS（Compare-And-Swap，比较并交换）是一种用于实现同步的原子操作。它在多线程编程中非常重要，因为它允许在没有锁的情况下实现线程安全的操作。

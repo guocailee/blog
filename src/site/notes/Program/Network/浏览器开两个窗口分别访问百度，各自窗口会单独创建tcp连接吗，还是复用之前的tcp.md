@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Network/浏览器开两个窗口分别访问百度，各自窗口会单独创建tcp连接吗，还是复用之前的tcp/","noteIcon":"","created":"2024-05-22T16:17:54.158+08:00"}
+{"dg-publish":true,"permalink":"/Program/Network/浏览器开两个窗口分别访问百度，各自窗口会单独创建tcp连接吗，还是复用之前的tcp/","noteIcon":"","created":"2025-03-06T21:28:25.981+08:00"}
 ---
 
 
