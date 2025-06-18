@@ -6,20 +6,19 @@
 * email : [guocailee@gmail.com](mailto:guocailee@gmail.com)
 * github: [guocailee](https://github.com/guocailee)
 
-## Last Update
+## Last Created
 
 | File                                                                                                     | Tags                         | CreatedAt  |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
 | [[Program/Mixed/链接器是如何一步步发明出来的？\|链接器是如何一步步发明出来的？]]                                                    | <ul></ul>                    | 2025/06/19 |
 | [[Program/FrontEnd/React的调度系统\|React的调度系统]]                                                           | <ul></ul>                    | 2025/06/15 |
-| [[XLife/Books/我的青春，我的合租往事\|我的青春，我的合租往事]]                                                              | <ul></ul>                    | 2025/06/15 |
+| [[XLife/Other/我的青春，我的合租往事\|我的青春，我的合租往事]]                                                              | <ul></ul>                    | 2025/06/15 |
 | [[Program/Algorithm/41.2 字符流中第一个不重复的字符\|41.2 字符流中第一个不重复的字符]]                                          | <ul><li>#Algorithm</li></ul> | 2025/06/15 |
 | [[Program/Algorithm/42. 连续子数组的最大和\|42. 连续子数组的最大和]]                                                    | <ul><li>#Algorithm</li></ul> | 2025/06/15 |
 | [[Program/FrontEnd/Node.js 并发能力总结\|Node.js 并发能力总结]]                                                   | <ul></ul>                    | 2025/06/15 |
 | [[XLife/Other/厦门出发摩旅中国规划与装备指南\|厦门出发摩旅中国规划与装备指南]]                                                      | <ul></ul>                    | 2025/06/15 |
 | [[Program/Java/Spring Cloud Gateway 调度分析\|Spring Cloud Gateway 调度分析]]                                 | <ul></ul>                    | 2025/06/08 |
 | [[Program/FrontEnd/大型APP Route管理-Flutter\|大型APP Route管理-Flutter]]                                     | <ul></ul>                    | 2025/06/08 |
-| [[Thinking/有趣的UP主\|有趣的UP主]]                                                                           | <ul></ul>                    | 2025/06/08 |
 | [[XLife/Fitness/What is dead\|What is dead]]                                                          | <ul></ul>                    | 2025/06/08 |
 | [[Inbox/Awesome\|Awesome]]                                                                            | <ul></ul>                    | 2025/06/08 |
 | [[Program/Kotlin/Kotlin Coroutine 原理解析\|Kotlin Coroutine 原理解析]]                                       | <ul></ul>                    | 2025/05/28 |
@@ -31,8 +30,8 @@
 | [[XLife/Fitness/高杠杆行动计划\|高杠杆行动计划]]                                                                    | <ul></ul>                    | 2025/05/22 |
 | [[Program/Cache/redis宕机了，如何恢复数据？\|redis宕机了，如何恢复数据？]]                                                  | <ul></ul>                    | 2025/05/22 |
 | [[Program/Network/Android HTTPS防抓包策略与对抗方法总结\|Android HTTPS防抓包策略与对抗方法总结]]                              | <ul></ul>                    | 2025/05/22 |
-| [[XLife/Books/中国朝代历史\|中国朝代历史]]                                                                        | <ul></ul>                    | 2025/04/30 |
 | [[XLife/Fitness/一周减肥计划\|一周减肥计划]]                                                                      | <ul></ul>                    | 2025/04/30 |
+| [[XLife/Other/中国朝代历史\|中国朝代历史]]                                                                        | <ul></ul>                    | 2025/04/30 |
 | [[Program/Network/ping 没有端口号, 如何保证数据的正确接收？\|ping 没有端口号, 如何保证数据的正确接收？]]                                | <ul></ul>                    | 2025/04/22 |
 | [[XLife/Game/杀戮尖塔设计\|杀戮尖塔设计]]                                                                         | <ul></ul>                    | 2025/04/22 |
 | [[XLife/Other/比亚迪磷酸铁锂电池快充慢充选择建议\|比亚迪磷酸铁锂电池快充慢充选择建议]]                                                  | <ul></ul>                    | 2025/04/22 |
@@ -42,6 +41,7 @@
 | [[Program/Mixed/Reactor线程切换解析\|Reactor线程切换解析]]                                                        | <ul></ul>                    | 2025/04/01 |
 | [[Thinking/俞敏洪与董宇辉究竟为什么彻底分裂了？\|俞敏洪与董宇辉究竟为什么彻底分裂了？]]                                                   | <ul></ul>                    | 2025/04/01 |
 | [[Thinking/父女\|父女]]                                                                                   | <ul></ul>                    | 2025/04/01 |
+| [[Thinking/普通人怎么在一年内挣够50万？\|普通人怎么在一年内挣够50万？]]                                                         | <ul></ul>                    | 2025/03/14 |
 
 { .block-language-dataview}
 
