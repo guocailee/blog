@@ -83,7 +83,7 @@ importers:
         version: 6.1.13
       sass:
         specifier: ^1.49.9
-        version: 1.86.3
+        version: 1.89.2
 
 packages:
 
@@ -1130,8 +1130,8 @@ packages:
     engines: {node: '>=16.x'}
     hasBin: true
 
-  immutable@5.1.1:
-    resolution: {integrity: sha512-3jatXi9ObIsPGr3N5hGw/vWWcTkq6hUYhpQz4k0wLC+owqWi/LiugIw9x0EdNZ2yGedKN/HzePiBvaJRXa0Ujg==}
+  immutable@5.1.3:
+    resolution: {integrity: sha512-+chQdDfvscSF1SJqv2gn4SRO2ZyS3xL3r7IW/wWEEzrzLisnOlKiQu5ytC/BVNcS15C39WT2Hg/bjKjDMcu+zg==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -1834,8 +1834,8 @@ packages:
   same-time@2.3.6:
     resolution: {integrity: sha512-dlIuVqhVICrPUBd1raO5h9CYJgSCgrka6MT/os62Tdf4AqMHT0LzPhl92aBg7Np86H2zxMEyXy/3eGKlarioNA==}
 
-  sass@1.86.3:
-    resolution: {integrity: sha512-iGtg8kus4GrsGLRDLRBRHY9dNVA78ZaS7xr01cWnS7PEMQyFtTqBiyCrfpTYTZXRWM94akzckYjh8oADfFNTzw==}
+  sass@1.89.2:
+    resolution: {integrity: sha512-xCmtksBKd/jdJ9Bt9p7nPKiuqrlBMBuuGkQlkhZjjQk3Ty48lv93k5Dq6OPkKt4XwxDJ7tvlfrTa1MPA9bf+QA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3352,7 +3352,7 @@ snapshots:
     dependencies:
       queue: 6.0.2
 
-  immutable@5.1.1: {}
+  immutable@5.1.3: {}
 
   inflight@1.0.6:
     dependencies:
@@ -4084,10 +4084,10 @@ snapshots:
     dependencies:
       deffy: 2.0.0
 
-  sass@1.86.3:
+  sass@1.89.2:
     dependencies:
       chokidar: 4.0.3
-      immutable: 5.1.1
+      immutable: 5.1.3
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.1
