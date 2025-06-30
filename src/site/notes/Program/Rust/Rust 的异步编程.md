@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Rust/Rust 的异步编程/","noteIcon":"","created":"2025-03-06T21:28:25.983+08:00"}
+{"dg-publish":true,"permalink":"/Program/Rust/Rust 的异步编程/","noteIcon":"","created":"2024-05-22T16:17:54.160+08:00"}
 ---
 
 Rust 的异步编程是通过 `async` 关键字和 `.await` 解释器来实现的。这种机制允许开发者编写看似同步的代码，而实际上在底层是异步执行的。以下是 Rust 异步编程的一些关键概念和组件：

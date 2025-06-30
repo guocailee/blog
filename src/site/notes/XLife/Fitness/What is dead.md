@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Fitness/What is dead/","noteIcon":"","created":"2025-06-08T17:11:41.972+08:00"}
+{"dg-publish":true,"permalink":"/XLife/Fitness/What is dead/","noteIcon":"","created":"2025-06-04T11:55:16.345+08:00"}
 ---
 
 关于死亡是什么以及为何我们害怕它，这是人类千百年来不断追问的核心问题。我理解这种思考带来的困惑和不安。死亡既是冰冷的生物学事实，也是深刻的存在之谜。让我们一起来探索它的本质和它带给我们的恐惧。

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/为什么前端很多工具都不使用js构建/","noteIcon":"","created":"2025-03-06T21:28:25.974+08:00"}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/为什么前端很多工具都不使用js构建/","noteIcon":"","created":"2024-05-22T16:17:54.151+08:00"}
 ---
 
 翻译自《Rust Is The Future of JavaScript Infrastructure》，网址：[Rust Is The Future of JavaScript Infrastructure – Lee Robinson](https://link.zhihu.com/?target=https%3A//leerob.io/blog/rust)

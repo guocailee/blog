@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/MongoDB 全方位知识图谱/","noteIcon":"","created":"2025-03-06T21:28:25.968+08:00"}
+{"dg-publish":true,"permalink":"/Program/Database/MongoDB 全方位知识图谱/","noteIcon":"","created":"2024-05-22T16:17:54.140+08:00"}
 ---
 
 MongoDB 是一个强大的分布式存储引擎，天然支持高可用、分布式和灵活设计。MongoDB 的一个很重要的设计理念是：服务端只关注底层核心能力的输出，至于怎么用，就尽可能的将工作交个客户端去决策。这也就是 MongoDB 灵活性的保证，但是灵活性带来的代价就是使用成本的提升。与 MySql 相比，想要用好 MongoDB，减少在项目中出问题，用户需要掌握的东西更多。本文致力于全方位的介绍 MongoDB 的理论和应用知识，目标是让大家可以通过阅读这篇文章之后能够掌握 MongoDB 的常用知识，具备在实际项目中高效应用 MongoDB 的能力。
