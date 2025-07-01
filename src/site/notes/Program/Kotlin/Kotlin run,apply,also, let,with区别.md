@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Kotlin/Kotlin run,apply,also, let,with区别/","noteIcon":"","created":"2025-03-06T21:28:25.977+08:00"}
+{"dg-publish":true,"permalink":"/Program/Kotlin/Kotlin run,apply,also, let,with区别/","noteIcon":"","created":"2024-07-18T14:45:45.906+08:00"}
 ---
 
 #Kotlin 

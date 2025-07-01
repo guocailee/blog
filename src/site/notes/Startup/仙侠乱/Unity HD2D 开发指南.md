@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Startup/仙侠乱/Unity HD2D 开发指南/","noteIcon":"","created":"2025-03-06T21:28:25.983+08:00"}
+{"dg-publish":true,"permalink":"/Startup/仙侠乱/Unity HD2D 开发指南/","noteIcon":"","created":"2024-11-08T18:09:39.924+08:00"}
 ---
 
 在 Unity 中进行 HD2D（高清2D）风格的开发，通常是指使用高质量的 2D 图像、细致的像素艺术风格和现代渲染技术来创建非常精美的2D游戏。与传统的像素艺术风格不同，HD2D 通常采用更精细的细节和更多的动态效果，如光影、透明度、纹理细节等。以下是一些开发 HD2D 游戏时需要关注的要点：

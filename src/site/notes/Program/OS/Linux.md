@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/OS/Linux/","noteIcon":"","created":"2025-03-06T21:28:25.981+08:00"}
+{"dg-publish":true,"permalink":"/Program/OS/Linux/","noteIcon":"","created":"2024-05-22T16:17:54.159+08:00"}
 ---
 
 ## 前言

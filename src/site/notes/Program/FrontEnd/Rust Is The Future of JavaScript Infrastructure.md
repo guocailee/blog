@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/Rust Is The Future of JavaScript Infrastructure/","noteIcon":"","created":"2025-03-06T21:28:25.972+08:00"}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/Rust Is The Future of JavaScript Infrastructure/","noteIcon":"","created":"2024-05-22T16:17:54.148+08:00"}
 ---
 
 

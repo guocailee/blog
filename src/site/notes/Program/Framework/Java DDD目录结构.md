@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/Java DDD目录结构/","noteIcon":"","created":"2025-03-06T21:28:25.970+08:00"}
+{"dg-publish":true,"permalink":"/Program/Framework/Java DDD目录结构/","noteIcon":"","created":"2024-05-22T16:17:54.143+08:00"}
 ---
 
 在设计 Java DDD（领域驱动设计）项目的目录结构时，遵循清晰的分层原则、模块化的设计、以及业务逻辑和技术细节分离的思想是非常重要的。下面是一个典型的 Java DDD 项目的目录设计示例：

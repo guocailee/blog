@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Design pattern/设计模式-Kotlin实现/","noteIcon":"","created":"2025-03-06T21:28:25.970+08:00"}
+{"dg-publish":true,"permalink":"/Program/Design pattern/设计模式-Kotlin实现/","noteIcon":"","created":"2024-05-22T16:17:54.142+08:00"}
 ---
 
 

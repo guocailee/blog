@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/CAP定理/","noteIcon":"","created":"2025-03-06T21:28:25.970+08:00"}
+{"dg-publish":true,"permalink":"/Program/Framework/CAP定理/","noteIcon":"","created":"2024-08-09T12:38:27.997+08:00"}
 ---
 
 CAP定理是由计算机科学家Eric Brewer提出的一个理论，描述了分布式系统在数据存储和管理中面临的三个基本特性，并指出在这三个特性中，系统只能同时满足其中的两个。CAP定理的三个特性是：
