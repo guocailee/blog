@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Tips/Mac技巧/","noteIcon":"","created":"2025-03-06T21:28:25.989+08:00"}
+{"dg-publish":true,"permalink":"/XLife/Tips/Mac技巧/","noteIcon":"","created":"2025-03-21T14:58:32.083+08:00"}
 ---
 
 #MacOS #Tips

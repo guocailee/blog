@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Database/如何理解MySQL MVCC/","noteIcon":"","created":"2025-03-06T21:28:25.969+08:00"}
+{"dg-publish":true,"permalink":"/Program/Database/如何理解MySQL MVCC/","noteIcon":"","created":"2024-09-13T11:10:35.429+08:00"}
 ---
 
 MySQL 的多版本并发控制（MVCC, Multi-Version Concurrency Control）是一种用于处理数据库并发的机制。它允许多个事务并发执行，同时确保数据一致性并避免锁争用，从而提高数据库的性能。

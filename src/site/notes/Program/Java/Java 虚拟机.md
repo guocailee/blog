@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/Java 虚拟机/","noteIcon":"","created":"2025-03-06T21:28:25.976+08:00"}
+{"dg-publish":true,"permalink":"/Program/Java/Java 虚拟机/","noteIcon":"","created":"2024-05-22T16:17:54.145+08:00"}
 ---
 
 本文大部分内容参考   **周志明《深入理解 Java 虚拟机》**  ，想要深入学习的话请看原书。
