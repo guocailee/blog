@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Tips/移除 Markdown的 links/","noteIcon":"","created":"2025-03-06T21:28:25.990+08:00"}
+{"dg-publish":true,"permalink":"/XLife/Tips/移除 Markdown的 links/","noteIcon":"","created":"2024-05-22T16:17:54.169+08:00"}
 ---
 
 1. using the Regex Find and Replace Add on.
