@@ -94,14 +94,14 @@ const pLimit = concurrency => {
 
 稍微解释一下上面的代码：
 
-1.  pLimit 函数的入参 concurrency 是最大并发数，变量 activeCount 表示当前在执行的异步函数的数量  
-    a. 调用一次 pLimit 会生成一个限制并发的函数 generator  
-    b. 多个 generator 函数会共用一个队列  
-    c. activeCount 需要小于 concurrency  
+1.  `pLimit` 函数的入参 `concurrency`是最大并发数，变量 activeCount 表示当前在执行的异步函数的数量  
+    - 调用一次 pLimit 会生成一个限制并发的函数 generator  
+    - 多个 generator 函数会共用一个队列  
+    - `activeCount` 需要小于 `concurrency`
 2.  pLimit 的实现依据队列（yocto-queue）  
-    a. 队列有两个方法：equeue 和 dequeue，equeue 负责进入队列  
-    b. 每个 generator 函数执行会将一个函数压如队列  
-    c. 当发现 activeCount 小于最大并发数时，则调用 dequeue 弹出一个函数，并执行它。  
+    - 队列有两个方法：equeue 和 dequeue，equeue 负责进入队列  
+    - 每个 generator 函数执行会将一个函数压如队列  
+    - 当发现 activeCount 小于最大并发数时，则调用 dequeue 弹出一个函数，并执行它。  
 3.  每次被压入队列的不是原始函数，而是经过 run 函数处理的函数。
 
 ### **函数 run & next**
@@ -133,15 +133,15 @@ const next = () => {
 ```
 
 1.  函数 run 做 3 件事情，这三件事情为顺序执行：  
-    i. 让 activeCount +1  
-    ii. 执行异步函数 fn，并将结果传递给 resolve  
-    a. 为保证 next 的顺序，采用了 await result  
-    iii. 调用 next 函数  
+     -  让 activeCount +1  
+     - 执行异步函数 fn，并将结果传递给 resolve  
+       - 为保证 next 的顺序，采用了 await result  
+    -  调用 next 函数  
 2.  函数 next 做两件事情  
-    i. 让 activeCount -1  
-    ii. 当队列中还有元素时，弹出一个元素并执行，按照上面的逻辑，run 就会被调用  
+    -  让 activeCount -1  
+    - 当队列中还有元素时，弹出一个元素并执行，按照上面的逻辑，run 就会被调用  
 
-通过函数 enqueue、run 和 next，plimit 就产生了一个限制大小但不断消耗的异步函数队列，从而起到限流的作用。
+通过函数 `enqueue`、`run` 和 `next`，`plimit` 就产生了一个限制大小但不断消耗的异步函数队列，从而起到限流的作用。
 
 更详细的 p-limit 使用： **[Node 开发中使用 p-limit 限制并发原理](https://link.zhihu.com/?target=https%3A//tech.bytedance.net/articles/6908747346445041671)**
 
@@ -207,17 +207,11 @@ const pTimeout = (promise, milliseconds, fallback, options) => new Promise((reso
 p-limit 做了更多的校验和更好的封装：
 
 -   把超时和主程序封装在一个 Promise 中
-
 -   更利于用户理解
-
 -   灵活度更高：如果使用 Promise.all 只能通过 reject 表示超时，而 p-limit 可以通过 resolve 和 reject 两个方式触发超时。
-
 -   对于超时后的错误提示做了封装
-
 -   用户可以指定错误信息
-
 -   超时可以触发特定的错误，或者是指定的函数
-
 -   clearTimeout 加在 finally 中的写法更舒服
 
 ## **Async Hooks**
@@ -241,7 +235,7 @@ p-limit 做了更多的校验和更好的封装：
 
 先看一段 async_hooks 的代码
 
-```js
+```javascript
 const fs = require('fs');
 const asyncHooks = require('async_hooks');
 
@@ -295,18 +289,10 @@ Promise.resolve('ok').then(() => {
 -   before：声明之后、执行之前调用
 -   after：异步执行完成后立即调用
 -   destroy：异步资源被销毁时被调用
-
-
 -   变量  
-
-
 -   asyncId：异步的 ID，每一次异步调用会使用唯一的 id，Hook callbacks 的方法，可以使用 asyncId 串起来。
-
 -   triggerAsyncId: 触发当前 asyncId 的 asyncId。
-
 -   使用 asyncId 和 triggerAsyncId 可以完整的追踪到异步调用的顺序  
-
-
 -   其中根节点 root 是 1。
 -   上面代码的调用顺序：1 -> 2 -> 3 -> 4 -> 5,6,7
 -   映射代码上就是：root -> Promise.resolve -> Promise.then -> setTimeout -> console.log
