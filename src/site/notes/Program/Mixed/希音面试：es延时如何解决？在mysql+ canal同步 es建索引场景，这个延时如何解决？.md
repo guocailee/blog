@@ -149,9 +149,9 @@
 
 **核心实现**：
 
-1、Canal端注入Trace信息，为每条数据添加唯一标识和时间戳
-2、Indexer端计算时间差，精确测量处理延迟
-3、双通道上报：Kafka供链路大盘分析+Prometheus供指标收集和告警
+1. Canal端注入Trace信息，为每条数据添加唯一标识和时间戳
+2. Indexer端计算时间差，精确测量处理延迟
+3. 双通道上报：Kafka供链路大盘分析+Prometheus供指标收集和告警
 #### 6.1  如何写一个组件，获取 canal 到es 的 doc 延迟时间t
 
 写一个 **LatencyProbe 组件**，实时测量  “Canal 把一条 binlog 解析出来” → “这条数据在 ES 里可查” 的 **端到端延迟 t**。
@@ -226,7 +226,7 @@ histogram_quantile(0.99,
   rate(canal_es_latency_duration_seconds_bucket[5m]))  
 ```
 
-Grafana 面板即可看到 p50/p99 曲线；若 t > 3s 触发告警。
+Grafana 面板即可看到 p50/p99 曲线；若` t > 3s` 触发告警。
 
 ##### 5、一键接入：Spring Boot Starter
 
