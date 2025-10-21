@@ -23,5 +23,6 @@
 - [[Thinking/张一鸣 5 万字观点整理\|张一鸣 5 万字观点整理]]
 - [[Thinking/生命是一种长期而持续的累积过程\|生命是一种长期而持续的累积过程]]
 - [[Thinking/王莽为什么被认为穿越者\|王莽为什么被认为穿越者]]
+- [[Thinking/拼多多是个INTJ？\|拼多多是个INTJ？]]
 
 { .block-language-dataview}
