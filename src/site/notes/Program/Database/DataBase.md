@@ -2,14 +2,14 @@
 {"dg-publish":true,"permalink":"/Program/Database/DataBase/","noteIcon":"","created":"2024-05-22T16:17:54.140+08:00"}
 ---
 
-- [[Program/Database/DataBase\|DataBase]]
 - [[Program/Database/MongoDB 全方位知识图谱\|MongoDB 全方位知识图谱]]
-- [[Program/Database/MySQL Index\|MySQL Index]]
-- [[Program/Database/MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查\|MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查]]
+- [[Program/Database/DataBase\|DataBase]]
 - [[Program/Database/MySQL\|MySQL]]
+- [[Program/Database/MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查\|MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查]]
+- [[Program/Database/MySQL Index\|MySQL Index]]
 - [[Program/Database/MySQL各种“Buffer”之Adaptive Hash Index\|MySQL各种“Buffer”之Adaptive Hash Index]]
-- [[Program/Database/SQL 练习\|SQL 练习]]
 - [[Program/Database/Relational DB & NoSQL\|Relational DB & NoSQL]]
+- [[Program/Database/SQL 练习\|SQL 练习]]
 - [[Program/Database/SQL 语法\|SQL 语法]]
 - [[Program/Database/一些关于Mongo的Tips\|一些关于Mongo的Tips]]
 - [[Program/Database/图解 SQL 的执行顺序，优雅\|图解 SQL 的执行顺序，优雅]]
