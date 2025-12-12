@@ -218,7 +218,7 @@ redis-deployment-866c4c6cf9-zskkb   1/1     Running   0          6m32s
 
 ## 四  k8s 组件调用流程
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
   
 下面我们看下kubectl create deployment redis-deployment --image=redis下发之后，k8s 集群做了什么。

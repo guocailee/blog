@@ -140,7 +140,7 @@ http handler做的事情第一是将request 和 response转为一个exchange，�
 
 其中WebfilterChainParoxy 又会引出新的一条filter链，主要是安全、日志、认证相关的逻辑，由此可见Spring Cloud Gateway的过滤器设计是层层嵌套，扩展性很强。
 
-![](/img/user/z-attchements/media/640-1 1.png)
+![](/img/user/z-attchements/media/640-1%201.png)
 
 ### 3  寻找路由规则
 
@@ -166,7 +166,7 @@ return this.routeLocator.getRoutes()
 
 这些路由规则都能从官方文档上找到影子。  
 
-![](/img/user/z-attchements/media/640-2 1.png)
+![](/img/user/z-attchements/media/640-2%201.png)
 
 ###    4  核心过滤器链执行
 

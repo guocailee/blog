@@ -5,7 +5,7 @@
 
 这是一条标准的查询语句:  
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
 这是我们实际上SQL执行顺序：
 
@@ -24,13 +24,13 @@
 *   最后合并各组的查询结果，按照order by的条件进行排序
     
 
-![](/img/user/z-attchements/media/640-2 1.png)
+![](/img/user/z-attchements/media/640-2%201.png)
 
 ### **数据的关联过程**
 
 数据库中的两张表
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
 ### **from&join&where**
 
@@ -50,7 +50,7 @@ from table1,table2 where table1.id=table2.id
 
 我们会得到满足关联条件的两张表的数据，不加关联条件会出现笛卡尔积。
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
 ### **group by**
 
@@ -58,7 +58,7 @@ from table1,table2 where table1.id=table2.id
 
 比如我们按照即id的奇偶分组
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
 ### **having&where**
 
@@ -82,10 +82,10 @@ having中可以是普通条件的筛选，也能是聚合函数。而where只能
 
 当前数据分组情况
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 执行having的筛选条件，可以使用聚合函数。筛选掉工资小于各组平均工资的`having salary<avg(salary)`
 
-![](/img/user/z-attchements/media/640-1 1.png)
+![](/img/user/z-attchements/media/640-1%201.png)
 
 ### **select**
 
@@ -95,17 +95,17 @@ having中可以是普通条件的筛选，也能是聚合函数。而where只能
 select employee.id,distinct name,salary, avg(salary)
 ```
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
 将各组having之后的数据再合并数据。
 
-![](/img/user/z-attchements/media/640-1 1.png)
+![](/img/user/z-attchements/media/640-1%201.png)
 
 ### **order by**
 
 最后我们执行order by 将数据按照一定顺序排序，比如这里按照id排序。如果此时有limit那么查询到相应的我们需要的记录数时，就不继续往下查了。
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
 ### **limit**
 
@@ -113,7 +113,7 @@ select employee.id,distinct name,salary, avg(salary)
 
 我们如果limit 0,3窃取前三个数据再排序，实际上最少工资的是2000,3000,4000。你这里只能是4000,5000,8000了。
 
-![](/img/user/z-attchements/media/640 1.png)
+![](/img/user/z-attchements/media/640%201.png)
 
 > 转自：blog.csdn.net/weixin_44141495/article/details/108744720
 
