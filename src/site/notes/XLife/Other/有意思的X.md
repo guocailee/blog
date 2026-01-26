@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/XLife/Other/有意思的X/","noteIcon":"","created":"2026-01-16T11:32:43.824+08:00"}
 ---
 
-第一个[明里](https://zhida.zhihu.com/search?content_id=765141757&content_type=Answer&match_order=1&q=%E6%98%8E%E9%87%8C&zhida_source=entity)，正所谓《拼颜值有颜值，拼身材有颜值，拼演技有颜值》。明里非常宅，没有社媒，不运营粉丝，每次线下活动到点就跑（跟我们上班一样）。颜值放在那，有底气
+第一个[明里](https://zh.wikipedia.org/wiki/%E6%98%8E%E9%87%8C%E7%B4%AC)，正所谓《拼颜值有颜值，拼身材有颜值，拼演技有颜值》。明里非常宅，没有社媒，不运营粉丝，每次线下活动到点就跑（跟我们上班一样）。颜值放在那，有底气
 
 第二个[枫哥](https://zhida.zhihu.com/search?content_id=765141757&content_type=Answer&match_order=1&q=%E6%9E%AB%E5%93%A5&zhida_source=entity)，最任性的主，心情不好不想拍就不拍中断几个月，想隐退就隐退，但一出来大厂专属还是稳稳的，颜值高任性
 

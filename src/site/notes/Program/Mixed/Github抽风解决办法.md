@@ -16,6 +16,7 @@ npm config delete proxy
 ```
 
 ### 设置443端口
+> To set this in your SSH configuration file, edit the file at ~/.ssh/config, and add this section:
 ```bash
 Host github.com
     Hostname ssh.github.com
