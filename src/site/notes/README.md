@@ -10,6 +10,7 @@
 
 | File                                                                                                          | Tags                     | CreatedAt  |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| [[Program/Mixed/面试官灵魂拷问：为什么 SQL 语句不要过多的 join？\|面试官灵魂拷问：为什么 SQL 语句不要过多的 join？]]                             | <ul></ul>                | 2026/03/24 |
 | [[Thinking/高密度人才的组织方式\|高密度人才的组织方式]]                                                                        | <ul></ul>                | 2026/03/23 |
 | [[XLife/Tips/导航的路\|导航的路]]                                                                                  | <ul></ul>                | 2026/03/13 |
 | [[Program/Framework/Database/阿里二面：为什么要分库分表？\|阿里二面：为什么要分库分表？]]                                              | <ul></ul>                | 2026/03/02 |
@@ -29,11 +30,11 @@
 | [[Program/Godot/GDScript 语法\|GDScript 语法]]                                                                 | <ul></ul>                | 2026/01/24 |
 | [[Program/Godot/Godot 入门\|Godot 入门]]                                                                       | <ul></ul>                | 2026/01/24 |
 | [[Program/Godot/UI 系统\|UI 系统]]                                                                             | <ul></ul>                | 2026/01/24 |
+| [[Program/Godot/信号系统\|信号系统]]                                                                               | <ul></ul>                | 2026/01/24 |
 | [[Program/Godot/动画系统\|动画系统]]                                                                               | <ul></ul>                | 2026/01/24 |
+| [[Program/Godot/导出与发布\|导出与发布]]                                                                             | <ul></ul>                | 2026/01/24 |
 | [[Program/Godot/节点与场景\|节点与场景]]                                                                             | <ul></ul>                | 2026/01/24 |
 | [[Program/Godot/资源管理\|资源管理]]                                                                               | <ul></ul>                | 2026/01/24 |
-| [[Program/Godot/导出与发布\|导出与发布]]                                                                             | <ul></ul>                | 2026/01/24 |
-| [[Program/Godot/信号系统\|信号系统]]                                                                               | <ul></ul>                | 2026/01/24 |
 | [[Program/Godot/2D 游戏开发\|2D 游戏开发]]                                                                         | <ul></ul>                | 2026/01/24 |
 | [[Program/Godot/3D 游戏开发\|3D 游戏开发]]                                                                         | <ul></ul>                | 2026/01/24 |
 | [[XLife/Other/有意思的X\|有意思的X]]                                                                               | <ul></ul>                | 2026/01/16 |
@@ -41,7 +42,6 @@
 | [[Program/Mixed/悲观锁\|悲观锁]]                                                                                 | <ul></ul>                | 2025/12/12 |
 | [[Program/Mixed/Python 2 → Python 3：为什么割裂如此之大？是否存在更平稳的升级方式？\|Python 2 → Python 3：为什么割裂如此之大？是否存在更平稳的升级方式？]] | <ul></ul>                | 2025/12/12 |
 | [[Program/AI/ComfyUI 常见模型目录的意义与用途\|ComfyUI 常见模型目录的意义与用途]]                                                  | <ul></ul>                | 2025/12/01 |
-| [[Thinking/为什么要做游戏\|为什么要做游戏]]                                                                              | <ul></ul>                | 2025/11/06 |
 
 { .block-language-dataview}
 
