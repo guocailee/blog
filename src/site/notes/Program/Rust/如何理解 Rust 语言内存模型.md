@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Rust/如何理解 Rust 语言内存模型/","noteIcon":"","created":"2024-05-22T16:17:54.161+08:00"}
+{"dg-publish":true,"permalink":"/Program/Rust/如何理解 Rust 语言内存模型/","noteIcon":"","created":"2026-01-24T01:53:54.574+08:00","dg-note-properties":{}}
 ---
 
 #Rust 

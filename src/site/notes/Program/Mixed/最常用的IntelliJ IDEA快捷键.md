@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/最常用的IntelliJ IDEA快捷键/","noteIcon":"","created":"2024-06-17T11:18:23.519+08:00"}
+{"dg-publish":true,"permalink":"/Program/Mixed/最常用的IntelliJ IDEA快捷键/","noteIcon":"","created":"2026-01-24T01:53:54.569+08:00","dg-note-properties":{}}
 ---
 
 #IDEA #Keymap
