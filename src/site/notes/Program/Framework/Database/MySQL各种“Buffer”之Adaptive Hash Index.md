@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/Database/MySQL各种“Buffer”之Adaptive Hash Index/","noteIcon":"","created":"2026-03-02T21:16:10.356+08:00"}
+{"dg-publish":true,"permalink":"/Program/Framework/Database/MySQL各种“Buffer”之Adaptive Hash Index/","noteIcon":"","created":"2026-03-02T21:16:10.356+08:00","dg-note-properties":{}}
 ---
 
 ## 架构图

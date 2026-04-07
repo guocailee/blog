@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Godot/GDScript 语法/","noteIcon":"","created":"2026-01-24T11:47:43.799+08:00"}
+{"dg-publish":true,"permalink":"/Program/Godot/GDScript 语法/","noteIcon":"","created":"2026-01-24T11:47:43.799+08:00","dg-note-properties":{}}
 ---
 
 # GDScript 语法

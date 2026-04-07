@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Tips/Calibre/","noteIcon":"","created":"2024-05-22T16:17:54.169+08:00"}
+{"dg-publish":true,"permalink":"/XLife/Tips/Calibre/","noteIcon":"","created":"2024-05-22T16:17:54.169+08:00","dg-note-properties":{}}
 ---
 
 ## 章节Xpath

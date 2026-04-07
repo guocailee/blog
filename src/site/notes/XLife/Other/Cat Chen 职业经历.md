@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Other/Cat Chen 职业经历/","noteIcon":"","created":"2024-05-22T16:17:54.167+08:00"}
+{"dg-publish":true,"permalink":"/XLife/Other/Cat Chen 职业经历/","noteIcon":"","created":"2024-05-22T16:17:54.167+08:00","dg-note-properties":{}}
 ---
 
 
