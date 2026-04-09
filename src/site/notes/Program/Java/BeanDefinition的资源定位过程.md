@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Java/BeanDefinition的资源定位过程/","noteIcon":"","created":"2024-05-22T16:17:54.144+08:00"}
+{"dg-publish":true,"permalink":"/Program/Java/BeanDefinition的资源定位过程/","noteIcon":"","created":"2024-05-22T16:17:54.144+08:00","dg-note-properties":{}}
 ---
 
 ## 前言

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/C++代码能完美转换成JS代码吗/","noteIcon":"","created":"2025-02-08T11:47:28.865+08:00"}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/C++代码能完美转换成JS代码吗/","noteIcon":"","created":"2025-02-08T11:47:28.865+08:00","dg-note-properties":{}}
 ---
 
 作者：doodlewind  

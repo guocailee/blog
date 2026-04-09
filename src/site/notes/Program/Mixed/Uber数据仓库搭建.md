@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Uber数据仓库搭建/","noteIcon":"","created":"2025-01-02T16:22:56.395+08:00"}
+{"dg-publish":true,"permalink":"/Program/Mixed/Uber数据仓库搭建/","noteIcon":"","created":"2025-01-02T16:22:56.395+08:00","dg-note-properties":{}}
 ---
 
 > 作者：dbaplus社群  

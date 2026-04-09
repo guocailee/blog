@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 字符串/","noteIcon":"","created":"2024-05-22T16:17:54.117+08:00"}
+{"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 字符串/","noteIcon":"","created":"2024-05-22T16:17:54.117+08:00","dg-note-properties":{}}
 ---
 
 #LeetCode #Algorithm

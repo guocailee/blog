@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Godot/UI 系统/","noteIcon":"","created":"2026-01-24T11:47:43.799+08:00"}
+{"dg-publish":true,"permalink":"/Program/Godot/UI 系统/","noteIcon":"","created":"2026-01-24T11:47:43.799+08:00","dg-note-properties":{}}
 ---
 
 # UI 系统
