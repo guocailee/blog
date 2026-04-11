@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/集群(colony)/","noteIcon":"","created":"2024-05-22T16:17:54.144+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Framework/集群(colony)/","noteIcon":"","created":"2026-01-24T01:53:54.561+08:00","dg-note-properties":{}}
 ---
 
 ## 一、负载均衡

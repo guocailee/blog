@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Thinking/Thinking/","noteIcon":"","created":"2024-05-22T16:17:54.161+08:00","dg-note-properties":{"sticker":"emoji//1f914"}}
+{"dg-publish":true,"permalink":"/Thinking/Thinking/","noteIcon":"","created":"2026-01-24T01:53:54.578+08:00","dg-note-properties":{"sticker":"emoji//1f914"}}
 ---
 
 
@@ -10,6 +10,7 @@
 - [[Thinking/两个变态谈恋爱是什么样的\|两个变态谈恋爱是什么样的]]
 - [[Thinking/为什么专家不再关心技术细节\|为什么专家不再关心技术细节]]
 - [[Thinking/为什么要做游戏\|为什么要做游戏]]
+- [[Thinking/为什么说语言是思维的边界？\|为什么说语言是思维的边界？]]
 - [[Thinking/人生平坦\|人生平坦]]
 - [[Thinking/俞敏洪与董宇辉究竟为什么彻底分裂了？\|俞敏洪与董宇辉究竟为什么彻底分裂了？]]
 - [[Thinking/如何拍出爆款视频\|如何拍出爆款视频]]
@@ -30,6 +31,5 @@
 - [[Thinking/短句\|短句]]
 - [[Thinking/聊聊职业发展，聊聊怎么成事\|聊聊职业发展，聊聊怎么成事]]
 - [[Thinking/高密度人才的组织方式\|高密度人才的组织方式]]
-- [[Thinking/为什么说语言是思维的边界？\|为什么说语言是思维的边界？]]
 
 { .block-language-dataview}

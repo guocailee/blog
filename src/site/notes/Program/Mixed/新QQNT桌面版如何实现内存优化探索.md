@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/新QQNT桌面版如何实现内存优化探索/","tags":["Desktop","Electron"],"noteIcon":"","created":"2024-07-04T10:17:11.434+08:00","dg-note-properties":{"tags":["Desktop","Electron"]}}
+{"dg-publish":true,"permalink":"/Program/Mixed/新QQNT桌面版如何实现内存优化探索/","tags":["Desktop","Electron"],"noteIcon":"","created":"2026-01-24T01:53:54.569+08:00","dg-note-properties":{"tags":["Desktop","Electron"]}}
 ---
 
 ## 背景

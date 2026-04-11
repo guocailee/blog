@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Other/有意思的X/","noteIcon":"","created":"2026-01-16T11:32:43.824+08:00"}
+{"dg-publish":true,"permalink":"/XLife/Other/有意思的X/","noteIcon":"","created":"2026-01-24T01:53:54.584+08:00","dg-note-properties":{}}
 ---
 
 第一个[明里](https://zh.wikipedia.org/wiki/%E6%98%8E%E9%87%8C%E7%B4%AC)，正所谓《拼颜值有颜值，拼身材有颜值，拼演技有颜值》。明里非常宅，没有社媒，不运营粉丝，每次线下活动到点就跑（跟我们上班一样）。颜值放在那，有底气

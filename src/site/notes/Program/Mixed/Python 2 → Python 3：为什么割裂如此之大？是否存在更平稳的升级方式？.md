@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Python 2 → Python 3：为什么割裂如此之大？是否存在更平稳的升级方式？/","noteIcon":"","created":"2025-12-12T15:42:51.518+08:00"}
+{"dg-publish":true,"permalink":"/Program/Mixed/Python 2 → Python 3：为什么割裂如此之大？是否存在更平稳的升级方式？/","noteIcon":"","created":"2026-01-24T01:53:54.568+08:00","dg-note-properties":{}}
 ---
 
 在编程语言的历史上，Python 2 到 Python 3 的迁移被认为是最“痛苦”的升级之一。直到 2020 年 Python 2 正式退役，这场持续十多年的过渡才算告一段落。

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Cache/redis宕机了，如何恢复数据？/","noteIcon":"","created":"2025-05-07T15:08:17.843+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Cache/redis宕机了，如何恢复数据？/","noteIcon":"","created":"2026-01-24T01:53:54.557+08:00","dg-note-properties":{}}
 ---
 
 作者：芯芯点灯  
