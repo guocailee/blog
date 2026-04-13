@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/XLife/Tips/IPtables/","noteIcon":"","created":"2026-01-24T01:53:54.585+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/XLife/Tips/IPtables/","noteIcon":"","created":"2024-05-22T16:17:54.169+08:00","dg-note-properties":{}}
 ---
 
 ## 禁用端口

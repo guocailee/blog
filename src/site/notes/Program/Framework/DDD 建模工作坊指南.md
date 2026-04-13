@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/DDD 建模工作坊指南/","noteIcon":"","created":"2026-01-24T01:53:54.560+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Framework/DDD 建模工作坊指南/","noteIcon":"","created":"2024-05-22T16:17:54.138+08:00","dg-note-properties":{}}
 ---
 
 1 写在前面
