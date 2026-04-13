@@ -1,13 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/Program/OS/OS/","noteIcon":"","created":"2026-01-24T01:53:54.572+08:00","dg-note-properties":{"aliases":null}}
+{"dg-publish":true,"permalink":"/Program/OS/OS/","noteIcon":"","created":"2024-05-22T16:17:54.159+08:00","dg-note-properties":{"aliases":null}}
 ---
 
 
-- [[Program/OS/Linux\|Linux]]
 - [[Program/OS/OS\|OS]]
+- [[Program/OS/Linux\|Linux]]
 - [[Program/OS/bash-scp\|bash-scp]]
-- [[Program/OS/一篇文章搞懂android存储目录结构\|一篇文章搞懂android存储目录结构]]
-- [[Program/OS/文件描述符\|文件描述符]]
 - [[Program/OS/线程的开销\|线程的开销]]
 - [[Program/OS/计算机操作系统 - 内存管理\|计算机操作系统 - 内存管理]]
 - [[Program/OS/计算机操作系统 - 概述\|计算机操作系统 - 概述]]
@@ -17,6 +15,8 @@
 - [[Program/OS/计算机操作系统 - 进程管理\|计算机操作系统 - 进程管理]]
 - [[Program/OS/计算机操作系统 - 链接\|计算机操作系统 - 链接]]
 - [[Program/OS/计算机锁的类型\|计算机锁的类型]]
+- [[Program/OS/文件描述符\|文件描述符]]
 - [[Program/OS/驱动程序\|驱动程序]]
+- [[Program/OS/一篇文章搞懂android存储目录结构\|一篇文章搞懂android存储目录结构]]
 
 { .block-language-dataview}
