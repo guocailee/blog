@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/FrontEnd/What is the difference between expo build android -t apk and expo build android/","noteIcon":"","created":"2024-05-22T16:17:54.148+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/FrontEnd/What is the difference between expo build android -t apk and expo build android/","noteIcon":"","created":"2026-01-24T01:53:54.562+08:00","dg-note-properties":{}}
 ---
 
 If you type the following you will get some more details:

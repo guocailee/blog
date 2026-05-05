@@ -10,6 +10,11 @@
 
 | File                                                                                   | Tags                                   | CreatedAt  |
 | -------------------------------------------------------------------------------------- | -------------------------------------- | ---------- |
+| [[Thinking/杀戮尖塔差评与游戏设计启示\|杀戮尖塔差评与游戏设计启示]]                                           | <ul></ul>                              | 2026/04/28 |
+| [[Thinking/如何避免成为无趣的人\|如何避免成为无趣的人]]                                                 | <ul></ul>                              | 2026/04/13 |
+| [[Thinking/米哈游创始人刘伟2026年交大演讲\|米哈游创始人刘伟2026年交大演讲]]                                   | <ul></ul>                              | 2026/04/13 |
+| [[Thinking/为什么人口少的日本的纸媒存续了下来，中国的纸媒却没落了？\|为什么人口少的日本的纸媒存续了下来，中国的纸媒却没落了？]]             | <ul></ul>                              | 2026/04/13 |
+| [[Thinking/一生中最为辉煌的一天\|一生中最为辉煌的一天]]                                                 | <ul></ul>                              | 2026/04/12 |
 | [[Thinking/为什么说语言是思维的边界？\|为什么说语言是思维的边界？]]                                           | <ul></ul>                              | 2026/04/09 |
 | [[Program/AI/Gemini in Chrome\|Gemini in Chrome]]                                   | <ul></ul>                              | 2026/04/08 |
 | [[Thinking/如何拥有近乎离谱的创造力\|如何拥有近乎离谱的创造力]]                                             | <ul></ul>                              | 2026/04/08 |
@@ -18,8 +23,8 @@
 | [[Program/AI/Coding Agent 使用分享\|Coding Agent 使用分享]]                                 | <ul></ul>                              | 2026/03/28 |
 | [[Program/Mixed/反熵增\|反熵增]]                                                          | <ul></ul>                              | 2026/03/28 |
 | [[Program/Mixed/面试官灵魂拷问：为什么 SQL 语句不要过多的 join？\|面试官灵魂拷问：为什么 SQL 语句不要过多的 join？]]      | <ul></ul>                              | 2026/03/28 |
-| [[Thinking/高密度人才的组织方式\|高密度人才的组织方式]]                                                 | <ul></ul>                              | 2026/03/28 |
 | [[XLife/Parenting/孩子脾气暴躁 妈妈应对有十招\|孩子脾气暴躁 妈妈应对有十招]]                                  | <ul></ul>                              | 2026/03/28 |
+| [[Thinking/高密度人才的组织方式\|高密度人才的组织方式]]                                                 | <ul></ul>                              | 2026/03/28 |
 | [[Program/AI/OpenAI Codex 负责人：不懂底层，拿什么管AI\|OpenAI Codex 负责人：不懂底层，拿什么管AI]]           | <ul></ul>                              | 2026/03/28 |
 | [[Thinking/桥水达利欧：中国大周期 - 知乎\|桥水达利欧：中国大周期 - 知乎]]                                     | <ul></ul>                              | 2026/03/28 |
 | [[XLife/Tips/导航的路\|导航的路]]                                                           | <ul></ul>                              | 2026/03/14 |
@@ -33,15 +38,10 @@
 | [[Program/Godot/节点与场景\|节点与场景]]                                                      | <ul></ul>                              | 2026/01/24 |
 | [[Program/Godot/GDScript 语法\|GDScript 语法]]                                          | <ul></ul>                              | 2026/01/24 |
 | [[Program/Godot/Godot 入门\|Godot 入门]]                                                | <ul></ul>                              | 2026/01/24 |
-| [[XLife/Parenting/幼儿园大班的绘本推荐\|幼儿园大班的绘本推荐]]                                          | <ul></ul>                              | 2026/01/24 |
-| [[XLife/Parenting/注意这 4 个小细节，娃突然就听话了\|注意这 4 个小细节，娃突然就听话了]]                          | <ul></ul>                              | 2026/01/24 |
-| [[XLife/Parenting/被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ \|被曲解的“延迟满足”耽误了多少孩子？正确的方法是什么？ ]]      | <ul></ul>                              | 2026/01/24 |
 | [[XLife/Tips/Calibre\|Calibre]]                                                     | <ul></ul>                              | 2026/01/24 |
-| [[XLife/Tips/IPtables\|IPtables]]                                                   | <ul></ul>                              | 2026/01/24 |
 | [[XLife/Tips/Mac技巧\|Mac技巧]]                                                         | <ul><li>#MacOS</li><li>#Tips</li></ul> | 2026/01/24 |
+| [[XLife/Tips/IPtables\|IPtables]]                                                   | <ul></ul>                              | 2026/01/24 |
 | [[XLife/Tips/cloudflare cancel page deployment\|cloudflare cancel page deployment]] | <ul></ul>                              | 2026/01/24 |
-| [[XLife/Tips/你是明白了哪几个基本原理之后而厨艺大增的\|你是明白了哪几个基本原理之后而厨艺大增的]]                           | <ul><li>#Tips</li></ul>                | 2026/01/24 |
-| [[XLife/Tips/如何激活WIndow或Office\|如何激活WIndow或Office]]                                 | <ul></ul>                              | 2026/01/24 |
 
 { .block-language-dataview}
 
