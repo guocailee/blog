@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/Database/MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查/","noteIcon":"","created":"2026-01-24T01:53:54.558+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Framework/Database/MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查/","noteIcon":"","created":"2026-03-02T21:16:10.355+08:00","dg-note-properties":{}}
 ---
 
 

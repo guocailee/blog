@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/AI/ComfyUI 常见模型目录的意义与用途/","noteIcon":"","created":"2026-01-24T01:53:54.551+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/AI/ComfyUI 常见模型目录的意义与用途/","noteIcon":"","created":"2025-12-01T16:49:18.785+08:00","dg-note-properties":{}}
 ---
 
 ###  checkpoints
