@@ -10,6 +10,7 @@
 
 | File                                                                                                       | Tags      | CreatedAt  |
 | ---------------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| [[Thinking/如何评价张小珺对姚顺宇的4小时访谈？\|如何评价张小珺对姚顺宇的4小时访谈？]]                                                     | <ul></ul> | 2026/05/15 |
 | [[Tips/Telegram Tips\|Telegram Tips]]                                                                   | <ul></ul> | 2026/05/12 |
 | [[Thinking/带一群不太聪明的研究生是什么样的体验\|带一群不太聪明的研究生是什么样的体验]]                                                     | <ul></ul> | 2026/05/08 |
 | [[Program/AI/notes-from-inside-chinas-ai-labs\|notes-from-inside-chinas-ai-labs]]                       | <ul></ul> | 2026/05/08 |
@@ -41,7 +42,6 @@
 | [[Program/Framework/Database/Relational DB & NoSQL\|Relational DB & NoSQL]]                             | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/MySQL各种“Buffer”之Adaptive Hash Index\|MySQL各种“Buffer”之Adaptive Hash Index]] | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查\|MySQL 最佳实践：一次 InnoDB 死锁 Bug 排查]]           | <ul></ul> | 2026/03/02 |
-| [[Program/Framework/Database/MySQL\|MySQL]]                                                             | <ul></ul> | 2026/03/02 |
 
 { .block-language-dataview}
 
