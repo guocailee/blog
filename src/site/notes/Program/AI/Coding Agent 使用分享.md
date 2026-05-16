@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/AI/Coding Agent 使用分享/","noteIcon":"","created":"2026-03-28T21:41:56.945+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/AI/Coding Agent 使用分享/","noteIcon":"","created":"2026-03-28T20:48:00.172+08:00","dg-note-properties":{}}
 ---
 
 最近在公司内外部做了几次关于 Coding Agent 的分享，收到了一些好评。整理了下内容，分享给大家，相信应该有些价值。

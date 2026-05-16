@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Tips/Mac技巧/","noteIcon":"","created":"2025-03-21T14:58:32.083+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Tips/Mac技巧/","noteIcon":"","created":"2026-05-16T12:34:51.580+08:00","dg-note-properties":{}}
 ---
 
 #MacOS #Tips
