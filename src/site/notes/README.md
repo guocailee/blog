@@ -10,6 +10,7 @@
 
 | File                                                                                                                 | Tags      | CreatedAt  |
 | -------------------------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| [[Thinking/为什么老实人总是混不好\|为什么老实人总是混不好]]                                                                             | <ul></ul> | 2026/06/10 |
 | [[Thinking/真诚的问一个问题，一些人是怎么做到不轻易说重话、没有语言暴力的习惯、不经常阴阳怪气、不冷嘲热讽的？\|真诚的问一个问题，一些人是怎么做到不轻易说重话、没有语言暴力的习惯、不经常阴阳怪气、不冷嘲热讽的？]] | <ul></ul> | 2026/05/21 |
 | [[Thinking/如何评价张小珺对姚顺宇的4小时访谈？\|如何评价张小珺对姚顺宇的4小时访谈？]]                                                               | <ul></ul> | 2026/05/15 |
 | [[Tips/Telegram Tips\|Telegram Tips]]                                                                             | <ul></ul> | 2026/05/12 |
@@ -34,14 +35,13 @@
 | [[Thinking/高密度人才的组织方式\|高密度人才的组织方式]]                                                                               | <ul></ul> | 2026/03/23 |
 | [[Tips/导航的路\|导航的路]]                                                                                               | <ul></ul> | 2026/03/13 |
 | [[Program/Framework/Database/阿里二面：为什么要分库分表？\|阿里二面：为什么要分库分表？]]                                                     | <ul></ul> | 2026/03/02 |
-| [[Program/Framework/Database/如何理解MySQL MVCC\|如何理解MySQL MVCC]]                                                     | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/数据库系统原理\|数据库系统原理]]                                                                   | <ul></ul> | 2026/03/02 |
-| [[Program/Framework/Database/图解 SQL 的执行顺序，优雅\|图解 SQL 的执行顺序，优雅]]                                                   | <ul></ul> | 2026/03/02 |
+| [[Program/Framework/Database/如何理解MySQL MVCC\|如何理解MySQL MVCC]]                                                     | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/如何写一个读写分离中间件\|如何写一个读写分离中间件]]                                                         | <ul></ul> | 2026/03/02 |
+| [[Program/Framework/Database/图解 SQL 的执行顺序，优雅\|图解 SQL 的执行顺序，优雅]]                                                   | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/SQL 练习\|SQL 练习]]                                                                     | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/SQL 语法\|SQL 语法]]                                                                     | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/Relational DB & NoSQL\|Relational DB & NoSQL]]                                       | <ul></ul> | 2026/03/02 |
-| [[Program/Framework/Database/MySQL各种“Buffer”之Adaptive Hash Index\|MySQL各种“Buffer”之Adaptive Hash Index]]           | <ul></ul> | 2026/03/02 |
 
 { .block-language-dataview}
 
