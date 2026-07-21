@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/Qunar 酒店基础数据重构DDD落地实践/","noteIcon":"","created":"2024-05-22T16:17:54.139+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Framework/Qunar 酒店基础数据重构DDD落地实践/","noteIcon":"","created":"2026-01-24T01:53:54.560+08:00","dg-note-properties":{}}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Tips/Telegram Tips/","noteIcon":"","created":"2026-05-12T16:13:48.614+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Tips/Telegram Tips/","noteIcon":"","created":"2026-05-16T12:34:51.580+08:00","dg-note-properties":{}}
 ---
 
 - SOSO [https://t.me/soso](https://link.zhihu.com/?target=https%3A//t.me/soso%3Fstart%3Da_6900385777)

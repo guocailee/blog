@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/希音面试：es延时如何解决？在mysql+ canal同步 es建索引场景，这个延时如何解决？/","noteIcon":"","created":"2025-09-05T10:50:07.767+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Mixed/希音面试：es延时如何解决？在mysql+ canal同步 es建索引场景，这个延时如何解决？/","noteIcon":"","created":"2026-01-24T01:53:54.569+08:00","dg-note-properties":{}}
 ---
 
 
