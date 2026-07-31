@@ -16,6 +16,11 @@ const matterOptions = {
   },
 };
 const faviconsPlugin = require("eleventy-plugin-gen-favicons");
+const normalizeFavicon = require("./src/site/normalize-favicon.js");
+
+const FAVICON_SOURCE = "./src/site/favicon.svg";
+const FAVICON_NORMALIZED = "./.cache/favicon.normalized.svg";
+normalizeFavicon(FAVICON_SOURCE, FAVICON_NORMALIZED);
 const tocPlugin = require("eleventy-plugin-nesting-toc");
 const { parse } = require("node-html-parser");
 const htmlMinifier = require("html-minifier-terser");
@@ -29,6 +34,7 @@ const {
 const { basesPlugin } = require("./src/helpers/basesPlugin");
 
 const Image = require("@11ty/eleventy-img");
+const { isDecodableImage } = require("./src/helpers/imageFormat.js");
 function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
   let options = {
     widths: widths,
@@ -37,8 +43,12 @@ function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
     urlPath: "/img/optimized",
   };
 
-  // generate images, while this is async we don’t wait
-  Image(src, options);
+  // Generate images; async, but we don't wait for it. A rejection here
+  // (e.g. a corrupt file) must not become an unhandled rejection, which
+  // would fail the whole build.
+  Image(src, options).catch((err) => {
+    console.warn(`[image] Skipping optimization of ${src}: ${err.message}`);
+  });
   let metadata = Image.statsSync(src, options);
   return metadata;
 }
@@ -52,14 +62,14 @@ function getAnchorAttributes(filePath, linkTitle) {
   let fileName = filePath.replaceAll("&amp;", "&");
   let header = "";
   let headerLinkPath = "";
-  if (filePath.includes("#")) {
-    [fileName, header] = filePath.split("#");
+  if (fileName.includes("#")) {
+    [fileName, header] = fileName.split("#");
     headerLinkPath = `#${headerToId(header)}`;
   }
 
   let noteIcon = process.env.NOTE_ICON_DEFAULT;
   const title = linkTitle ? linkTitle : fileName;
-  let permalink = `/notes/${slugify(filePath)}`;
+  let permalink = `/notes/${slugify(fileName)}`;
   let deadLink = false;
   try {
     const startPath = "./src/site/notes/";
@@ -542,7 +552,7 @@ module.exports = function(eleventyConfig) {
   }
 
 
-  eleventyConfig.addTransform("picture", function(str) {
+  eleventyConfig.addTransform("picture", async function(str) {
     if (!isMarkdownPage(this.page.inputPath)) {
       return str;
     }
@@ -553,6 +563,15 @@ module.exports = function(eleventyConfig) {
     for (const imageTag of parsed.querySelectorAll(".cm-s-obsidian img")) {
       const src = imageTag.getAttribute("src");
       if (src && src.startsWith("/") && !src.endsWith(".svg")) {
+        // Files sharp can't decode (e.g. HEIC or a truncated AVIF renamed
+        // to .jpg) keep their original <img> tag instead of a <picture>
+        // pointing at optimized files that will never exist. This must be
+        // a real decode probe, not just a header check: feeding an
+        // undecodable file to eleventy-img fails the whole build via
+        // unhandled promise rejections in its internals.
+        if (!(await isDecodableImage("./src/site" + decodeURI(src)))) {
+          continue;
+        }
         const cls = imageTag.classList.value;
         const alt = imageTag.getAttribute("alt");
         const width = imageTag.getAttribute("width") || '';
@@ -715,6 +734,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/site/scripts");
   eleventyConfig.addPassthroughCopy("src/site/styles/_theme.*.css");
   eleventyConfig.addPassthroughCopy({ "src/site/logo.*": "/" });
+  eleventyConfig.on("eleventy.before", () => {
+    normalizeFavicon(FAVICON_SOURCE, FAVICON_NORMALIZED);
+  });
+  eleventyConfig.addWatchTarget(FAVICON_SOURCE);
   eleventyConfig.addPlugin(faviconsPlugin, { outputDir: "dist" });
   eleventyConfig.addPlugin(tocPlugin, {
     ul: true,
@@ -744,6 +767,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("jsonify", function(variable) {
     return JSON.stringify(variable) || '""';
+  });
+
+  eleventyConfig.addFilter("notHidden", function (arr) {
+    return (arr || []).filter((item) => !item.data.hide);
   });
 
   eleventyConfig.addFilter("validJson", function(variable) {
