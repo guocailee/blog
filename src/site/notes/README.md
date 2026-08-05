@@ -38,7 +38,7 @@
 | [[Program/Mixed/反熵增\|反熵增]]                                                                                        | <ul></ul> | 2026/03/25 |
 | [[Program/Mixed/面试官灵魂拷问：为什么 SQL 语句不要过多的 join？\|面试官灵魂拷问：为什么 SQL 语句不要过多的 join？]]                                    | <ul></ul> | 2026/03/24 |
 | [[Thinking/高密度人才的组织方式\|高密度人才的组织方式]]                                                                               | <ul></ul> | 2026/03/23 |
-| [[Tips/导航的路\|导航的路]]                                                                                               | <ul></ul> | 2026/03/13 |
+| [[Thinking/导航的路\|导航的路]]                                                                                           | <ul></ul> | 2026/03/13 |
 | [[Program/Framework/Database/阿里二面：为什么要分库分表？\|阿里二面：为什么要分库分表？]]                                                     | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/如何理解MySQL MVCC\|如何理解MySQL MVCC]]                                                     | <ul></ul> | 2026/03/02 |
 | [[Program/Framework/Database/数据库系统原理\|数据库系统原理]]                                                                   | <ul></ul> | 2026/03/02 |
