@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 分治/","noteIcon":"","created":"2024-05-22T16:17:54.116+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Algorithm/Leetcode 题解 - 分治/","noteIcon":"","created":"2026-01-24T01:53:54.554+08:00","dg-note-properties":{}}
 ---
 
 

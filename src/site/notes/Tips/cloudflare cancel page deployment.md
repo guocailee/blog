@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Tips/cloudflare cancel page deployment/","noteIcon":"","created":"2024-05-22T16:17:54.169+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Tips/cloudflare cancel page deployment/","noteIcon":"","created":"2026-05-16T12:34:51.580+08:00","dg-note-properties":{}}
 ---
 
 ## Cancel

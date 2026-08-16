@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Tips/如何激活WIndow或Office/","noteIcon":"","created":"2024-11-01T10:43:18.973+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Tips/如何激活WIndow或Office/","noteIcon":"","created":"2026-05-16T12:34:51.581+08:00","dg-note-properties":{}}
 ---
 
 如何激活 Windows、Office呢？
