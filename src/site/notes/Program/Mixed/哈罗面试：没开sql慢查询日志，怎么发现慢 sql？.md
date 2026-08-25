@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/哈罗面试：没开sql慢查询日志，怎么发现慢 sql？/","noteIcon":"","created":"2025-09-10T10:14:13.643+08:00","dg-note-properties":{"tags":null}}
+{"dg-publish":true,"permalink":"/Program/Mixed/哈罗面试：没开sql慢查询日志，怎么发现慢 sql？/","noteIcon":"","created":"2026-01-24T01:53:54.568+08:00","dg-note-properties":{"tags":null}}
 ---
 
 ## 一：什么是 慢 SQL（慢查询） 日志？

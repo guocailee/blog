@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/AI/notes-from-inside-chinas-ai-labs/","noteIcon":"","created":"2026-05-08T17:44:36.124+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/AI/notes-from-inside-chinas-ai-labs/","noteIcon":"","created":"2026-05-16T12:34:51.579+08:00","dg-note-properties":{}}
 ---
 
 这篇文章由 Nathan Lambert 撰写，记录了他走访中国多家顶级 AI 实验室（如月之暗面 Moonshot、智谱 Zhipu、美团、小米、通义 Qwen、01.ai 等）后的深度观察。

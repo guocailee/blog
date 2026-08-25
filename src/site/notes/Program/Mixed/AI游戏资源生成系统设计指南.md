@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/AI游戏资源生成系统设计指南/","noteIcon":"","created":"2025-05-23T10:18:15.572+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Mixed/AI游戏资源生成系统设计指南/","noteIcon":"","created":"2026-01-24T01:53:54.567+08:00","dg-note-properties":{}}
 ---
 
 设计一个基于AI的游戏资源生成系统需要结合游戏开发需求、AI技术能力和工程化架构。以下是分步骤的设计思路和关键点：

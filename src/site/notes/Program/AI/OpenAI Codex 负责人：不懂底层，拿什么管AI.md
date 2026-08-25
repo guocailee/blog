@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/AI/OpenAI Codex 负责人：不懂底层，拿什么管AI/","noteIcon":"","created":"2026-03-28T21:41:56.946+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/AI/OpenAI Codex 负责人：不懂底层，拿什么管AI/","noteIcon":"","created":"2026-03-28T20:17:34.335+08:00","dg-note-properties":{}}
 ---
 
 

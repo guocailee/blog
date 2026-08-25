@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/刨根问底 Kafka，面试过程真好使/","noteIcon":"","created":"2024-05-22T16:17:54.153+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Mixed/刨根问底 Kafka，面试过程真好使/","noteIcon":"","created":"2026-01-24T01:53:54.568+08:00","dg-note-properties":{}}
 ---
 
 #Kafka #MQ

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Codes/RabbitMQ Code/","noteIcon":"","created":"2026-01-12T11:34:29.834+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Codes/RabbitMQ Code/","noteIcon":"","created":"2026-01-24T01:53:54.557+08:00","dg-note-properties":{}}
 ---
 
 ## 根据Rabbit WEBUI 批量删除队列
