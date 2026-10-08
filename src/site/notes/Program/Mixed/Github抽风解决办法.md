@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/Github抽风解决办法/","noteIcon":"","created":"2026-01-24T01:53:54.567+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Mixed/Github抽风解决办法/","noteIcon":"","created":"2025-09-09T02:08:30.820+08:00","dg-note-properties":{}}
 ---
 
 ## 设置Proxy
