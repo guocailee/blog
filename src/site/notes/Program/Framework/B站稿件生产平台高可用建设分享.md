@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Framework/B站稿件生产平台高可用建设分享/","noteIcon":"","created":"2026-01-24T01:53:54.559+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Framework/B站稿件生产平台高可用建设分享/","noteIcon":"","created":"2024-06-05T10:06:15.754+08:00","dg-note-properties":{}}
 ---
 
 ## **背景**

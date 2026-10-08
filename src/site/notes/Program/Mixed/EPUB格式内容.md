@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Mixed/EPUB格式内容/","noteIcon":"","created":"2026-01-24T01:53:54.567+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Mixed/EPUB格式内容/","noteIcon":"","created":"2024-12-24T10:58:37.300+08:00","dg-note-properties":{}}
 ---
 
 EPUB 是一种开放的电子书格式，其本质是一个包含多个文件（HTML、CSS、图片、XML 等）的压缩包（ZIP 格式）。以下是 EPUB 文件的主要结构和组成部分：

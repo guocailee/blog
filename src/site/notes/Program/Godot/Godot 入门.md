@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Program/Godot/Godot 入门/","noteIcon":"","created":"2026-01-24T10:54:26.988+08:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/Program/Godot/Godot 入门/","noteIcon":"","created":"2026-01-24T11:47:43.799+08:00","dg-note-properties":{}}
 ---
 
 # Godot 引擎入门
