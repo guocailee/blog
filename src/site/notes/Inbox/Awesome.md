@@ -15,6 +15,7 @@
 - [ Reactor 3 参考指南](https://easywheelsoft.github.io/reactor-core-zh/index.html)
 - [Ktor](https://github.dev/ktorio/ktor)
 - [GeekTime Books](https://github.com/it-ebooks-0/geektime-books)
+- [REA](https://github.com/morluto/rea)
 
 
 ### workflow
